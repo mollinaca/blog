@@ -38,6 +38,6 @@ DEFAULT_PAGINATION = 10
 
 # Additional
 #::python
-ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}'
 ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 USE_FOLDER_AS_CATEGORY = True

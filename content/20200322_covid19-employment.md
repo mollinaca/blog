@@ -4,7 +4,6 @@ Category: 時事
 Tags: 時事, covid-19, 政治
 Slug: employment
 Authors: s.hosoya
-Summary: 日米の雇用文化の違い
 
 [日本経済新聞 - 雇用・資金繰り重点　政府、緊急経済対策へヒアリング](https://www.nikkei.com/article/DGXMZO57043200Z10C20A3EA1000/)
 

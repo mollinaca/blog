@@ -4,7 +4,6 @@ Category: 時事
 Tags: news
 Slug: kagawa
 Authors: s.hosoya
-Summary: 香川県の「ネット・ゲーム依存症対策条例」について
 
 [ねとらぼ - 香川県の「ネット・ゲーム依存症対策条例」が可決](https://nlab.itmedia.co.jp/nl/articles/2003/18/news081.html)  
   

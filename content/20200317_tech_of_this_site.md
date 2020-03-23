@@ -4,7 +4,6 @@ Category: tech
 Tags: tech, python
 Slug: about_this_blog
 Authors: s.hosoya
-Summary: このサイトの技術スタックについて
 
 * python pelican による静的ページ生成
 * github のリポジトリにコミット

@@ -4,7 +4,6 @@ Category: misc
 Tags: 
 Slug: aboutthisblog
 Authors: s.hosoya
-Summary: このブログサイトを作成したモチベーション
 
 大きく以下だと思っている。  
 とにかく文章を書くことと、公開すること。  

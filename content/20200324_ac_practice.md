@@ -18,9 +18,9 @@ streak を継続するためには、1日1問以上、まだ一度もACしてい
 
 2020/03/24 現在のステータス。
 
-<a target=_blank href="./images/acp_20200324_stats.png"><img src="./images/acp_20200324_stats.png" width="500"></a>  
-<a target=_blank href="./images/acp_20200324_de.png"><img src="./images/acp_20200324_de.png" width="500"></a>  
-<a target=_blank href="./images/acp_20200324_hm.png"><img src="./images/acp_20200324_hm.png" width="500"></a>  
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/acp_20200324_stats.png"><img src="https://blog.watarinohibi.tokyo/images/acp_20200324_stats.png" width="500"></a>  
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/acp_20200324_de.png"><img src="https://blog.watarinohibi.tokyo/images/acp_20200324_de.png" width="500"></a>  
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/acp_20200324_hm.png"><img src="https://blog.watarinohibi.tokyo/images/acp_20200324_hm.png" width="500"></a>  
 
 現在は、レコメンドで dif500 前後の問題が提案されているので、それに従い概ね500~600のC問題を含む未挑戦のABC過去問の、A-C問題を中心に解いています。
 

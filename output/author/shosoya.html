@@ -20,7 +20,57 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://blog.watarinohibi.tokyo/posts/2020/03/27/practice_20200327">AtCoder Practice 日記</a></h1>
+                    <h1 class="entry-title"><a href="https://blog.watarinohibi.tokyo/posts/2020/03/28/abc160">AtCoder Beginner Contest 159</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2020-03-28T00:00:00+09:00">
+                Published: Sat, 28 Mar 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://blog.watarinohibi.tokyo/author/shosoya.html">s.hosoya</a>
+        </address>
+<p>In <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a>.</p>
+<p>tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">AtCoder</a> <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a> <a href="https://blog.watarinohibi.tokyo/tag/jing-puro.html">競プロ</a> </p>
+</footer><!-- /.post-info --><p>本日は AtCoderBeginnerContest160 でした。今日は無事最初から参加することができました。<br>
+3完で、Dは知識がなくてできない系だったのでちょっと挑んだけど諦めてギブアップ。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_a">A - Coffee</a><br>
+3文字目と4文字目が一致 AND 5文字目と6文字目が一致 が成立したら "Yes"、そうでなければ "No" を出力<br>
+一発AC</p>
+<p><a href="https://atcoder.jp/contests/abc160/submissions/11266646">提出</a>  </p>
+<p>最初？？？だった3項演算子も、こういうときにわりとさくっと書けるようになりました。  </p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_b">B - Golden Coins</a><br>
+入力nを500で割った（切り捨て）値×1000+その残りを5で割った（切り捨て）値×5 を出力<br>
+一発AC</p>
+<p><a href="https://atcoder.jp/contests/abc160/submissions/11273170">提出</a></p>
+<h2>C</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_c">C - Traveling Salesman around Lake</a><br>
+閉路の各頂点を辿るシンプルな巡回セールスマン問題。<br>
+閉路の中で最大の節点間の距離を出して、全体の距離からその値を引いた残りの距離が答えというのがわりとぱっとわかったのでこれもさくっとできました。<br>
+実装上では、1周してきたあとにたどり着く2回目の最初の点を、リストの最後の要素に追加して、各距離感を算出して求めました。<br>
+一発AC</p>
+<p><a href="https://atcoder.jp/contests/abc160/submissions/11285795">提出</a></p>
+<h2>D</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_d">D - Line++</a><br>
+直線状の無向グラフに1ノードを追加して、ノード間の距離をどうたらこうたら～みたいな感じ？<br>
+ここでギブアップ。<br>
+グラフの最短距離を求めるやりかたがわかってれば多分できるなかなーと思いぐぐってるといくつかの聞いたことあるアルゴリズムがでてきたので、改めてそれらについて復習する。</p>
+<p>本日はここまで。パフォーマンスは <code>720</code> でした。<br>
+茶まであと一歩。  </p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://blog.watarinohibi.tokyo/posts/2020/03/27/practice_20200327" rel="bookmark"
+                           title="Permalink to AtCoder Practice 日記">AtCoder Practice 日記</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-03-27T00:00:00+09:00">
                 Published: Fri, 27 Mar 2020
@@ -31,7 +81,7 @@
         </address>
 <p>In <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a>.</p>
 <p>tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">AtCoder</a> <a href="https://blog.watarinohibi.tokyo/tag/jing-puro.html">競プロ</a> <a href="https://blog.watarinohibi.tokyo/tag/puroguramingu.html">プログラミング</a> </p>
-</footer><!-- /.post-info --><h2>今日はできなかった</h2>
+</footer><!-- /.post-info -->                <h2>今日はできなかった</h2>
 <p>本日挑戦してた問題はこちら。<br>
 <a href="https://atcoder.jp/contests/agc016/tasks/agc016_a">AGC016 - A - Shrinking</a>  </p>
 <p>結果的にACはしてるけど、今回は解説を見ても題意をロジックに落とし込めず、カンニング回答なので実質できてません。。orz
@@ -51,27 +101,10 @@
 
 <p>とすればよいらしい。ここでこの操作は</p>
 <p>0) serval  </p>
-<p>eを消去して、
-1_1) srval<br>
-t(4)はvであり、t'(4)をaからt(4)であるvへ置き換えて
-1_2) srvvl</p>
-<p>rを消去して、<br>
-2_1)svvl<br>
-t(4)はvであり、t'(4)をlからt(4)であるvへ置き換えて<br>
-2_2)svvv  </p>
-<p>sを消去して
-3)vvv</p>
-<p>という意味かな。。いやそうなんだろうけど。<br>
-この操作をどう実装するの（シミュレーションするの）？が不明というところ。<br>
-そしてACしてる人たちはこんなシミュレーションをしておらず、この部分は配列の要素数の最大最小からO(1)で求まるっぽいということはわかった（そんな気はする）  </p>
-<p>もしシミュレーションする場合は、文字列のユニークな文字列全部に対して、 ※O(N)<br>
-操作をO(N/2) 繰り返すようなことになりそうだけど、ここがO(1)の実装できそうなので、そこが掴み切れてない、というのが今日のところ。</p>
-<p>うーん、ようわからん。。</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>eを消去して …</p>
+                <a class="readmore" href="https://blog.watarinohibi.tokyo/posts/2020/03/27/practice_20200327">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -177,38 +210,6 @@ Dにも挑戦して、要求された解を得る実装はできたけど、処�
 <h3>A</h3>
 <p><a href="https://atcoder.jp/contests/abc159/submissions/11109386">https://atcoder.jp/contests/abc159/submissions …</a></p>
                 <a class="readmore" href="https://blog.watarinohibi.tokyo/posts/2020/03/22/abc159">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://blog.watarinohibi.tokyo/posts/2020/03/22/employment" rel="bookmark"
-                           title="Permalink to 新型コロナウィルス流行における日米の雇用に対する文化の違い">新型コロナウィルス流行における日米の雇用に対する文化の違い</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-03-22T00:00:00+09:00">
-                Published: Sun, 22 Mar 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://blog.watarinohibi.tokyo/author/shosoya.html">s.hosoya</a>
-        </address>
-<p>In <a href="https://blog.watarinohibi.tokyo/category/shi-shi.html">時事</a>.</p>
-<p>tags: <a href="https://blog.watarinohibi.tokyo/tag/shi-shi.html">時事</a> <a href="https://blog.watarinohibi.tokyo/tag/covid-19.html">covid-19</a> <a href="https://blog.watarinohibi.tokyo/tag/zheng-zhi.html">政治</a> </p>
-</footer><!-- /.post-info -->                <p><a href="https://www.nikkei.com/article/DGXMZO57043200Z10C20A3EA1000/">日本経済新聞 - 雇用・資金繰り重点　政府、緊急経済対策へヒアリング</a></p>
-<p><code>安倍晋三首相はヒアリングの冒頭で「何としても雇用は守りぬかなければならない。個人、あるいは中小・小規模事業者が事業を継続できる状況をつくっていく」と語った。</code></p>
-<p><a href="https://www.newsweekjapan.jp/stories/world/2020/03/1600-4.php">Newsweekjapan - 米コロナ失業1600％増の阿鼻叫喚、雇用統計に注目</a></p>
-<p><code>3月7日には400件だった失業保険の申請件数が、17日には6800件を上回った。10日間で1600％の増加だ。</code></p>
-<p><code>ドナルド・トランプ米大統領の経済諮問委員会の前委員長であるケビン・ハセットは、CNNの金融ニュースサイトに対して、4月の新規失業者数は100万人にのぼる可能性もあり、「雇用統計の数字は、これまでで最悪レベルの落ち込みになるだろう」との見方を示した。</code></p>
-<p><a href="https://www.bloomberg.co.jp/news/articles/2020-03-17/Q7D0SKT0G1L501">Bloomberg - 米財務長官、新型コロナで失業率20％となる公算－行動なければ</a></p>
-<p><code>ムニューシン米財務長官は17日、共和党上院議員との会合で、政府による対応がなければ、米失業率が20％に達する可能性があるとの考えを示した。</code></p>
-<p>とても対照的だなと思い。  </p>
-<p>アメリカでは、レイオフは一般的に行われる。<br>
-市況や企業状況が悪化した場合には、ごく普通にレイオフが行われるため、逆に言うと人々はレイオフにもある意味で慣れているんだろうな。  </p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">アメリカの多くのセクターではレイオフが急速に拡大しており、失業保険の申請数が14日までに28万件/週、21日までに225万件/週という記録的な水準にまで激増するとゴールドマン・サックス。225万人 …</p></blockquote>
-                <a class="readmore" href="https://blog.watarinohibi.tokyo/posts/2020/03/22/employment">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->

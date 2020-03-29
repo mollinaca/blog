@@ -1,6 +1,6 @@
 Title: COVID-19 in Tokyo 20200328
 Date: 2020-03-28
-Category: Tech
+Category: 時事
 Tags: 時事,政治,ニュース,covid19 
 Slug: gov_interview
 Authors: s.hosoya

@@ -24,5 +24,5 @@ A/Bはさくっとできて、Cにまたちょっと苦戦。
 
 結果的に難しく考えすぎてて、条件に収まる範囲での全探索であれば十分for文で行けることがわかったので、それで実装しなおしてACできた。  
 
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/acp_20200329.png"><img src="https://blog.watarinohibi.tokyo/images/acp_20200329.png" width="500"></a>  
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200329_acp.png"><img src="https://blog.watarinohibi.tokyo/images/20200329_acp.png" width="500"></a>  
 うーん、あとで考えればあーこれで良いやなんだけど、これをさくっと思いつきたい。  

@@ -23,3 +23,6 @@ DELETE_OUTPUT_DIRECTORY = True
 
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
+
+# Theme
+THEME = "../pelican-themes/bootstrap2-dark"

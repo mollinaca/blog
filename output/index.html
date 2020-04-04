@@ -1,37 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>渡りの日々.</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>渡りの日々.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="s.hosoya">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="./">渡りの日々.</a></h1>
-                <nav><ul>
-                    <li><a href="./pages/about.html">免責事項</a></li>
-                    <li><a href="./category/misc.html">misc</a></li>
-                    <li><a href="./category/shi-shi.html">時事</a></li>
-                    <li><a href="./category/tech.html">Tech</a></li>
-                    <li><a href="./category/test.html">test</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+    <!-- Le styles -->
+    <link rel="stylesheet" href="https://blog.watarinohibi.tokyo/theme/css/bootstrap.dark.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="https://blog.watarinohibi.tokyo/theme/css/bootstrap-responsive.dark.css" rel="stylesheet">
+        <link href="https://blog.watarinohibi.tokyo/theme/css/font-awesome.css" rel="stylesheet">
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="./posts/2020/03/29/covid19-tokyo-20200329">COVID-19 in Tokyo 20200329</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2020-03-29T00:00:00+09:00">
-                Published: Sun, 29 Mar 2020
-        </abbr>
+    <link href="https://blog.watarinohibi.tokyo/theme/css/pygments.css" rel="stylesheet">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/shosoya.html">s.hosoya</a>
-        </address>
-<p>In <a href="./category/shi-shi.html">時事</a>.</p>
-<p>tags: <a href="./tag/shi-shi.html">時事</a> <a href="./tag/zheng-zhi.html">政治</a> <a href="./tag/niyusu.html">ニュース</a> <a href="./tag/covid19.html">covid19</a> </p>
-</footer><!-- /.post-info --><p>本当に、この人たちはバカすぎてどうしようもないなぁ、、という気持ちでいっぱいだ。<br>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="https://blog.watarinohibi.tokyo/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://blog.watarinohibi.tokyo/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://blog.watarinohibi.tokyo/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://blog.watarinohibi.tokyo/theme/images/apple-touch-icon-114x114.png">
+
+    <link href="https://blog.watarinohibi.tokyo/" type="application/atom+xml" rel="alternate" title="渡りの日々. ATOM Feed" />
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="https://blog.watarinohibi.tokyo/index.html">渡りの日々.</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li><a href="https://blog.watarinohibi.tokyo/pages/about.html">免責事項</a></li>
+                          <li class="divider-vertical"></li>
+                  <li >
+                    <a href="https://blog.watarinohibi.tokyo/category/misc.html">
+						<i class="icon-folder-open icon-large"></i>misc
+					</a>
+                  </li>
+                  <li >
+                    <a href="https://blog.watarinohibi.tokyo/category/shi-shi.html">
+						<i class="icon-folder-open icon-large"></i>時事
+					</a>
+                  </li>
+                  <li >
+                    <a href="https://blog.watarinohibi.tokyo/category/tech.html">
+						<i class="icon-folder-open icon-large"></i>Tech
+					</a>
+                  </li>
+                  <li >
+                    <a href="https://blog.watarinohibi.tokyo/category/test.html">
+						<i class="icon-folder-open icon-large"></i>test
+					</a>
+                  </li>
+
+                          <ul class="nav pull-right">
+                                <li><a href="https://blog.watarinohibi.tokyo/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+        <div class="article">
+                <h1><a href="https://blog.watarinohibi.tokyo/posts/2020/03/29/covid19-tokyo-20200329">COVID-19 in Tokyo 20200329</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2020-03-29T00:00:00+09:00">
+        <i class="icon-calendar"></i>Sun, 29 Mar 2020
+</abbr>
+<span class="label">By</span>
+<a href="https://blog.watarinohibi.tokyo/author/shosoya.html"><i class="icon-user"></i>s.hosoya</a>
+<span class="label">Category</span>
+<a href="https://blog.watarinohibi.tokyo/category/shi-shi.html"><i class="icon-folder-open"></i>時事</a>.
+
+
+<span class="label">Tags</span>
+	<a href="https://blog.watarinohibi.tokyo/tag/shi-shi.html"><i class="icon-tag"></i>時事</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/zheng-zhi.html"><i class="icon-tag"></i>政治</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/niyusu.html"><i class="icon-tag"></i>ニュース</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/covid19.html"><i class="icon-tag"></i>covid19</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>本当に、この人たちはバカすぎてどうしようもないなぁ、、という気持ちでいっぱいだ。<br>
 なぜこれだけ世界中で騒がれている問題に対して、今目の前に危機が迫ってるのに、こうも当事者意識が持てないのだろう。  </p>
 <p><a href="https://www.nikkansports.com/general/nikkan/news/202003290000449.html">警備員も諦めムード…目黒川に指示に従わない花見客</a>  </p>
 <p><a href="https://www.yomiuri.co.jp/national/20200329-OYT1T50138/">女子大学生が自粛せず欧州旅行、帰国後に発症…マスクして卒業式出席</a></p>
@@ -43,41 +131,31 @@
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">コロナで逮捕された四天王 <a href="https://t.co/c2G6zGHNcs">pic.twitter.com/c2G6zGHNcs</a></p>&mdash; 看護メン (@nursemens4321) <a href="https://twitter.com/nursemens4321/status/1244223059168350208?ref_src=twsrc%5Etfw">March 29, 2020</a></blockquote>
 
 <p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>国や都の「自粛要請」について、個々人の判断における自粛ではなくて、もっと強制力のあるモノにしなよ！とは思いつつ、それは法的に難しいらしい。<br>
-※別途調べるが、戦時中の国家総動員法の反省をうけて、法的に国民に行動を強制できない、的な事情があるらしい  </p>
-<p>とはいえ国内の状況や海外の状況を見れば、いままさに（あるいはもうそのターニングポイントは過ぎているかもしれないけれど）全力で拡散防止に努めないといけない状況なのに、こうも自覚を持てない人間がこれだけいるのかというのに愕然としてしまう。  </p>
-<hr>
-<p><a href="https://headlines.yahoo.co.jp/hl?a=20200329-00010013-abema-soci">東京で新たに68人の感染を確認 1日での最多を更新</a>  </p>
-<p>東京都の陽性患者数グラフ<br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200329_covid19_graph.png"><img src="https://blog.watarinohibi.tokyo/images/20200329_covid19_graph.png" width="500"></a>  </p>
-<p><a href="https://stopcovid19.metro.tokyo.lg.jp/">東京都 新型コロナウイルス感染症対策サイト</a> より  </p>
-<p>まさに、終わりの始まり。<br>
-2週間後には日本の医療崩壊が見られるでしょう。  </p>
-<p>せめて、自分と家族だけでも最低でも１～２ヶ月は罹患しないように気を付けなければ。。  </p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>国や都の「自粛要請」について、個々人の判断における自粛ではなくて、もっと強制力のあるモノにしなよ！とは思いつつ、それは法的に難しいらしい …</p>
+                        <a class="btn primary xsmall" href="https://blog.watarinohibi.tokyo/posts/2020/03/29/covid19-tokyo-20200329">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="https://blog.watarinohibi.tokyo/posts/2020/03/29/practice_20200329">競プロ Practice 日記</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2020-03-29T00:00:00+09:00">
+        <i class="icon-calendar"></i>Sun, 29 Mar 2020
+</abbr>
+<span class="label">By</span>
+<a href="https://blog.watarinohibi.tokyo/author/shosoya.html"><i class="icon-user"></i>s.hosoya</a>
+<span class="label">Category</span>
+<a href="https://blog.watarinohibi.tokyo/category/tech.html"><i class="icon-folder-open"></i>Tech</a>.
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="./posts/2020/03/29/practice_20200329" rel="bookmark"
-                           title="Permalink to 競プロ Practice 日記">競プロ Practice 日記</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-03-29T00:00:00+09:00">
-                Published: Sun, 29 Mar 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/shosoya.html">s.hosoya</a>
-        </address>
-<p>In <a href="./category/tech.html">Tech</a>.</p>
-<p>tags: <a href="./tag/atcoder.html">AtCoder</a> <a href="./tag/jing-puro.html">競プロ</a> <a href="./tag/puroguramingu.html">プログラミング</a> <a href="./tag/aoj.html">AOJ</a> </p>
-</footer><!-- /.post-info -->                <h2>AOJ に挑戦した</h2>
+<span class="label">Tags</span>
+	<a href="https://blog.watarinohibi.tokyo/tag/atcoder.html"><i class="icon-tag"></i>AtCoder</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/jing-puro.html"><i class="icon-tag"></i>競プロ</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/puroguramingu.html"><i class="icon-tag"></i>プログラミング</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/aoj.html"><i class="icon-tag"></i>AOJ</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><h2>AOJ に挑戦した</h2>
 <p>競プロの基礎練習編として、AOJがお勧めされていたのでトライしてみた。  </p>
 <p><a href="http://judge.u-aizu.ac.jp/onlinejudge/">AIZU ONLINE JUDGE</a><br>
 <a href="http://judge.u-aizu.ac.jp/onlinejudge/user.jsp?id=hstn2#3">mystatus</a>  </p>
@@ -91,28 +169,29 @@ A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
 <p>結果的に難しく考えすぎてて、条件に収まる範囲での全探索であれば十分for文で行けることがわかったので、それで実装しなおしてACできた。  </p>
 <p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200329_acp.png"><img src="https://blog.watarinohibi.tokyo/images/20200329_acp.png" width="500"></a><br>
 うーん、あとで考えればあーこれで良いやなんだけど、これをさくっと思いつきたい。  </p>
-                <a class="readmore" href="./posts/2020/03/29/practice_20200329">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+                        <a class="btn primary xsmall" href="https://blog.watarinohibi.tokyo/posts/2020/03/29/practice_20200329">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="https://blog.watarinohibi.tokyo/posts/2020/03/28/abc160">AtCoder Beginner Contest 160</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2020-03-28T00:00:00+09:00">
+        <i class="icon-calendar"></i>Sat, 28 Mar 2020
+</abbr>
+<span class="label">By</span>
+<a href="https://blog.watarinohibi.tokyo/author/shosoya.html"><i class="icon-user"></i>s.hosoya</a>
+<span class="label">Category</span>
+<a href="https://blog.watarinohibi.tokyo/category/tech.html"><i class="icon-folder-open"></i>Tech</a>.
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="./posts/2020/03/28/abc160" rel="bookmark"
-                           title="Permalink to AtCoder Beginner Contest 160">AtCoder Beginner Contest 160</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-03-28T00:00:00+09:00">
-                Published: Sat, 28 Mar 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/shosoya.html">s.hosoya</a>
-        </address>
-<p>In <a href="./category/tech.html">Tech</a>.</p>
-<p>tags: <a href="./tag/atcoder.html">AtCoder</a> <a href="./tag/abc.html">abc</a> <a href="./tag/jing-puro.html">競プロ</a> </p>
-</footer><!-- /.post-info -->                <p>本日は AtCoderBeginnerContest160 でした。今日は無事最初から参加することができました。<br>
+<span class="label">Tags</span>
+	<a href="https://blog.watarinohibi.tokyo/tag/atcoder.html"><i class="icon-tag"></i>AtCoder</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/abc.html"><i class="icon-tag"></i>abc</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/jing-puro.html"><i class="icon-tag"></i>競プロ</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>本日は AtCoderBeginnerContest160 でした。今日は無事最初から参加することができました。<br>
 3完で、Dは知識がなくてできない系だったのでちょっと挑んだけど諦めてギブアップ。  </p>
 <h2>A</h2>
 <p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_a">A - Coffee</a><br>
@@ -130,28 +209,30 @@ A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
 閉路の各頂点を辿るシンプルな巡回セールスマン問題。<br>
 閉路の中で最大の節点間の距離を出して、全体の距離からその値を引いた残りの距離が答えというのがわりとぱっとわかったのでこれもさくっとできました。<br>
 実装上では、1周してきたあとにたどり着く2回目の最初の点を、リストの最後の要素に追加して、各距離感を算出して求めました …</p>
-                <a class="readmore" href="./posts/2020/03/28/abc160">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+                        <a class="btn primary xsmall" href="https://blog.watarinohibi.tokyo/posts/2020/03/28/abc160">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="https://blog.watarinohibi.tokyo/posts/2020/03/28/gov_interview">COVID-19 in Tokyo 20200328</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2020-03-28T00:00:00+09:00">
+        <i class="icon-calendar"></i>Sat, 28 Mar 2020
+</abbr>
+<span class="label">By</span>
+<a href="https://blog.watarinohibi.tokyo/author/shosoya.html"><i class="icon-user"></i>s.hosoya</a>
+<span class="label">Category</span>
+<a href="https://blog.watarinohibi.tokyo/category/shi-shi.html"><i class="icon-folder-open"></i>時事</a>.
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="./posts/2020/03/28/gov_interview" rel="bookmark"
-                           title="Permalink to COVID-19 in Tokyo 20200328">COVID-19 in Tokyo 20200328</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-03-28T00:00:00+09:00">
-                Published: Sat, 28 Mar 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/shosoya.html">s.hosoya</a>
-        </address>
-<p>In <a href="./category/shi-shi.html">時事</a>.</p>
-<p>tags: <a href="./tag/shi-shi.html">時事</a> <a href="./tag/zheng-zhi.html">政治</a> <a href="./tag/niyusu.html">ニュース</a> <a href="./tag/covid19.html">covid19</a> </p>
-</footer><!-- /.post-info -->                <p>本日18時、安倍総理から緊急の会見があった。  </p>
+<span class="label">Tags</span>
+	<a href="https://blog.watarinohibi.tokyo/tag/shi-shi.html"><i class="icon-tag"></i>時事</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/zheng-zhi.html"><i class="icon-tag"></i>政治</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/niyusu.html"><i class="icon-tag"></i>ニュース</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/covid19.html"><i class="icon-tag"></i>covid19</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>本日18時、安倍総理から緊急の会見があった。  </p>
 <p><a href="https://www.jiji.com/jc/article?k=2020032800334">新型コロナ「長期戦覚悟を」　事態悪化なら学校再開見直し―安倍首相会見</a>  </p>
 <p>Youtubeの配信でリアルタイムで見ていたが、前置きや比喩表現、繰り返し使われる形容詞が多すぎて、それで何が言いたいのかがさっぱりだった。</p>
 <hr>
@@ -170,28 +251,29 @@ A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
 <p>私はいま新型コロナめちゃめちゃびびってるのでまったくお家から出てかないようにしてるし、幸い職場もかろうじてフルリモート対応できる状態だったので3月中旬からフルリモートで仕事しています。
 制度的には整っていないんだけど、職種的にもともとできる状態になってたのが幸いした感じ。</p>
 <p>すでに犠牲者はでてしまっているけど …</p>
-                <a class="readmore" href="./posts/2020/03/28/gov_interview">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+                        <a class="btn primary xsmall" href="https://blog.watarinohibi.tokyo/posts/2020/03/28/gov_interview">more ...</a>
+                </div>
+        </div>
+        <hr />
+        <div class="article">
+                <h1><a href="https://blog.watarinohibi.tokyo/posts/2020/03/27/practice_20200327">AtCoder Practice 日記</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2020-03-27T00:00:00+09:00">
+        <i class="icon-calendar"></i>Fri, 27 Mar 2020
+</abbr>
+<span class="label">By</span>
+<a href="https://blog.watarinohibi.tokyo/author/shosoya.html"><i class="icon-user"></i>s.hosoya</a>
+<span class="label">Category</span>
+<a href="https://blog.watarinohibi.tokyo/category/tech.html"><i class="icon-folder-open"></i>Tech</a>.
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="./posts/2020/03/27/practice_20200327" rel="bookmark"
-                           title="Permalink to AtCoder Practice 日記">AtCoder Practice 日記</a></h1>
-                </header>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-03-27T00:00:00+09:00">
-                Published: Fri, 27 Mar 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/shosoya.html">s.hosoya</a>
-        </address>
-<p>In <a href="./category/tech.html">Tech</a>.</p>
-<p>tags: <a href="./tag/atcoder.html">AtCoder</a> <a href="./tag/jing-puro.html">競プロ</a> <a href="./tag/puroguramingu.html">プログラミング</a> </p>
-</footer><!-- /.post-info -->                <h2>今日はできなかった</h2>
+<span class="label">Tags</span>
+	<a href="https://blog.watarinohibi.tokyo/tag/atcoder.html"><i class="icon-tag"></i>AtCoder</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/jing-puro.html"><i class="icon-tag"></i>競プロ</a>
+	<a href="https://blog.watarinohibi.tokyo/tag/puroguramingu.html"><i class="icon-tag"></i>プログラミング</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><h2>今日はできなかった</h2>
 <p>本日挑戦してた問題はこちら。<br>
 <a href="https://atcoder.jp/contests/agc016/tasks/agc016_a">AGC016 - A - Shrinking</a>  </p>
 <p>結果的にACはしてるけど、今回は解説を見ても題意をロジックに落とし込めず、カンニング回答なので実質できてません。。orz
@@ -212,33 +294,78 @@ A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
 <p>とすればよいらしい。ここでこの操作は</p>
 <p>0) serval  </p>
 <p>eを消去して …</p>
-                <a class="readmore" href="./posts/2020/03/27/practice_20200327">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 3
-        <a href="./index2.html">&raquo;</a>
-</p>
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+                        <a class="btn primary xsmall" href="https://blog.watarinohibi.tokyo/posts/2020/03/27/practice_20200327">more ...</a>
+                </div>
+        </div>
+        <hr />
 
-                            <li><a href="https://twitter.com/syoutin">twitter</a></li>
-                            <li><a href="https://github.com/mollinaca">github</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        <div class="pagination">
+        <ul>
+                        <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+                        <li class="active"><a href="https://blog.watarinohibi.tokyo/index.html">1</a></li>
+                        <li class=""><a href="https://blog.watarinohibi.tokyo/index2.html">2</a></li>
+                        <li class=""><a href="https://blog.watarinohibi.tokyo/index3.html">3</a></li>
+                        <li class="next"><a href="https://blog.watarinohibi.tokyo/index2.html">Next &rarr;</a></li>
+        </ul>
+        </div>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+        </div><!--/span-->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+                <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+<li><a href="https://blog.watarinohibi.tokyo/" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
+    <li><a href="https://twitter.com/syoutin"><i class="icon-twitter-sign icon-large"></i>twitter</a></li>
+    <li><a href="https://github.com/mollinaca"><i class="icon-github-sign icon-large"></i>github</a></li>
 
-</body>
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="https://blog.watarinohibi.tokyo/category/misc.html">
+    <i class="icon-folder-open icon-large"></i>misc
+</a>
+</li>
+<li>
+<a href="https://blog.watarinohibi.tokyo/category/shi-shi.html">
+    <i class="icon-folder-open icon-large"></i>時事
+</a>
+</li>
+<li>
+<a href="https://blog.watarinohibi.tokyo/category/tech.html">
+    <i class="icon-folder-open icon-large"></i>Tech
+</a>
+</li>
+<li>
+<a href="https://blog.watarinohibi.tokyo/category/test.html">
+    <i class="icon-folder-open icon-large"></i>test
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is based on <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://blog.watarinohibi.tokyo/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="https://blog.watarinohibi.tokyo/theme/js/bootstrap.min.js"></script>
+  </body>
 </html>

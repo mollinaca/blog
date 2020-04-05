@@ -56,7 +56,7 @@
 					<ul class="off-canvas-list">
 						<li><a href="..">Home</a></li>
 						<li><label>Categories</label></li>
-							<li ><a href="../category/misc.html">misc</a></li>
+							<li class="active"><a href="../category/misc.html">misc</a></li>
 							<li ><a href="../category/shi-shi.html">時事</a></li>
 							<li ><a href="../category/tech.html">Tech</a></li>
 							<li ><a href="../category/test.html">test</a></li>
@@ -87,8 +87,7 @@
 							<li><a href="../tag/zheng-zhi.html">政治</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
-									<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
+									<li><a href="/posts/2020/03/index.html">March 2020 (2)</a></li>
 
 						<li><label>Social</label></li>
 							<li><a href="https://github.com/mollinaca">github</a></li>
@@ -106,7 +105,7 @@
 
 					<section class="top-bar-section">
 						<ul class="left">
-								<li ><a href="../category/misc.html">misc</a></li>
+								<li class="active"><a href="../category/misc.html">misc</a></li>
 								<li ><a href="../category/shi-shi.html">時事</a></li>
 								<li ><a href="../category/tech.html">Tech</a></li>
 								<li ><a href="../category/test.html">test</a></li>
@@ -128,40 +127,49 @@
 						<div class="medium-9 small-12 columns" role="content">
 							<div class="row">
 								<div class="small-12 columns">
-									<h2>Posts Tagged With '競プロ'</h2>
+									<h2>Category: misc</h2>
 								</div>
 							</div>
 
 <article>
-	<h3><a href="../posts/2020/03/28/abc160">AtCoder Beginner Contest 160</a></h3>
-	<h6>Written by <a href="../author/s.hosoya.html">s.hosoya</a> in <a href="../category/tech.html">Tech</a> on Sat, 28 Mar 2020. Tags: <a href="../tag/atcoder.html">AtCoder</a>, <a href="../tag/abc.html">abc</a>, <a href="../tag/jing-puro.html">競プロ</a>, </h6>
-	<p>本日は AtCoderBeginnerContest160 でした。今日は無事最初から参加することができました。<br>
-3完で、Dは知識がなくてできない系だったのでちょっと挑んだけど諦めてギブアップ。  </p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_a">A - Coffee</a><br>
-3文字目と4文字目が一致 AND 5文字目と6文字目が一致 が成立したら "Yes"、そうでなければ "No" を出力<br>
-一発AC</p>
-<p><a href="https://atcoder.jp/contests/abc160/submissions/11266646">提出</a>  </p>
-<p>最初？？？だった3項演算子も、こういうときにわりとさくっと書けるようになりました。  </p>
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_b">B - Golden Coins</a><br>
-入力nを500で割った（切り捨て）値×1000+その残りを5で割った（切り捨て）値×5 を出力<br>
-一発AC</p>
-<p><a href="https://atcoder.jp/contests/abc160/submissions/11273170">提出</a></p>
-<h2>C</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_c">C - Traveling Salesman around Lake</a><br>
-閉路の各頂点を辿るシンプルな巡回セールスマン問題。<br>
-閉路の中で最大の節点間の距離を出して、全体の距離からその値を引いた残りの距離が答えというのがわりとぱっとわかったのでこれもさくっとできました。<br>
-実装上では、1周してきたあとにたどり着く2回目の最初の点を、リストの最後の要素に追加して、各距離感を算出して求めました。<br>
-一発AC</p>
-<p><a href="https://atcoder.jp/contests/abc160/submissions/11285795">提出</a></p>
-<h2>D</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_d">D - Line++</a><br>
-直線状の無向グラフに1ノードを追加して、ノード間の距離をどうたらこうたら～みたいな感じ？<br>
-ここでギブアップ。<br>
-グラフの最短距離を求めるやりかたがわかってれば多分できるなかなーと思いぐぐってるといくつかの聞いたことあるアルゴリズムがでてきたので、改めてそれらについて復習する。</p>
-<p>本日はここまで。パフォーマンスは <code>720</code> でした。<br>
-茶まであと一歩。  </p>
+	<h3><a href="../posts/2020/03/15/aboutthisblog">このサイトの目的</a></h3>
+	<h6>Written by <a href="../author/s.hosoya.html">s.hosoya</a> in <a href="../category/misc.html">misc</a> on Sun, 15 Mar 2020.</h6>
+	<p>大きく以下だと思っている。<br>
+とにかく文章を書くことと、公開すること。  </p>
+<p><strong>技術的挑戦</strong></p>
+<ul>
+<li>python を勉強中のため、pythonに触れる機会を増やしたい</li>
+<li>モダンな開発フローでの開発作業を知っておきたい</li>
+</ul>
+<p><strong>言語的挑戦</strong></p>
+<ul>
+<li>言語化の練習</li>
+<li>実際に思ったことや言いたいことの言語化、アウトプットの挑戦</li>
+</ul>
+<p><br>
+<br></p>
+<h2>技術的挑戦</h2>
+<p>サーバインフラエンジニアとして新卒入社してから5年。<br>
+クラウド/オンプレのインフラ運用知見はそれなりにたまったと思ってるが、自社環境から抜け出せてなく、また縦割り組織の外の技術をほとんど知らないことに危機感を覚えている。<br>
+今後転職するであろうことも踏まえて、インフラのみならずな技術、スキルを身に着けておく、最低でも触れておきたく、またいざとなればポートフォリオとしても活用できそうな物を作っておきたかった。</p>
+<p><br>
+<br></p>
+<h2>言語的挑戦</h2>
+<p>エンジニア界隈では、勉強、とくに勉強した内容のアウトプットが大事と言われているし、実際それはそう思う。<br>
+アウトプットするだけなら、Qiitaや各種ブログサービスでも良い（し、実際にQiitaに過去何度か記事を書いているが）が、これらのサービスはアクセス数やランキングの可視化により、モチベーションが下がってしまう、投稿してもあまり見られない、意義がないように感じられてしまった（これはもちろん、自分が価値のある記事を作成できていないのが一番大きい）。</p>
+<p>また、上記のようなサイトでは、投稿内容に制約があったり、自由な投稿ができないという部分もあるため、「自分でサイトを管理すること」と「アクセス数は最初から0であることを前提にしたら、気軽に文章を書けるようになるのではないかと考えて、自前で作成、管理することにした。</p>
+<hr>
+<p>以上により、このブログには</p>
+<ul>
+<li>ジャンル、内容問わず</li>
+<li>記事の質（内容、文章共に）を問わず</li>
+<li>思ったことや書きたいことを自由に</li>
+<li>できるだけ高頻度、1日1回以上を目標に</li>
+</ul>
+<p>記事、文章を量産していくことを目標とする。質より量。<br>
+もし質がいいなと思えるものが書けたら、技術的な内容なら Qiita へ、それ以外の一般的な内容なら note へ転載してみよう。</p>
+<p>コメント欄もなければrssフィードもなし、インターネットに公開しておきながら誰にも見られない（とはいえ気になるので GoogleAnalytics はいれる、いや技術的なソレのためにね）前提でこのサイトを作成している。まぁTwitterとGithubへのリンクは載せてるけど。</p>
+<p>何か問題があったときのため、連絡先メールアドレスは作っておこう。</p>
 </article>
 <hr />
 
@@ -169,15 +177,10 @@
 	<div class="small-12 columns text-center">
 		<div class="pagination-centered">
 			<ul class="pagination">
-				<li class="arrow"><a href="../tag/jing-puro3.html">&larr; Previous</a></li>
-				<li class=""><a href="../tag/jing-puro.html">1</a></li>
-				<li class=""><a href="../tag/jing-puro2.html">2</a></li>
-				<li class=""><a href="../tag/jing-puro3.html">3</a></li>
-				<li class="current"><a href="../tag/jing-puro4.html">4</a></li>
-				<li class=""><a href="../tag/jing-puro5.html">5</a></li>
-				<li class=""><a href="../tag/jing-puro6.html">6</a></li>
-				<li class=""><a href="../tag/jing-puro7.html">7</a></li>
-				<li class="arrow"><a href="../tag/jing-puro5.html">Next &rarr;</a></li>
+				<li class="arrow"><a href="../category/misc.html">&larr; Previous</a></li>
+				<li class=""><a href="../category/misc.html">1</a></li>
+				<li class="current"><a href="../category/misc2.html">2</a></li>
+				<li class="arrow unavailable"><a href="#">&rarr; Next</a></li>
 			</ul>
 		</div>
 	</div>
@@ -202,8 +205,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
-											<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
+											<li><a href="/posts/2020/03/index.html">March 2020 (2)</a></li>
 								</ul>
 							</div>
 

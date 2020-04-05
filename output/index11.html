@@ -85,7 +85,7 @@
 							<li><a href="http://localhost:8000/tag/zheng-zhi.html">政治</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (4)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (5)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 
 						<li><label>Social</label></li>
@@ -126,22 +126,44 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
-	<h3><a href="http://localhost:8000/posts/2020/03/25/covid19-tokyo">COVID-19 in Tokyo</a></h3>
-	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/shi-shi.html">時事</a> on Wed, 25 Mar 2020. Tags: <a href="http://localhost:8000/tag/shi-shi.html">時事</a>, <a href="http://localhost:8000/tag/zheng-zhi.html">政治</a>, <a href="http://localhost:8000/tag/niyusu.html">ニュース</a>, <a href="http://localhost:8000/tag/covid19.html">covid19</a>, </h6>
-	<p><a href="https://www3.nhk.or.jp/news/html/20200325/k10012349681000.html">東京 新たに40人以上の感染確認 新型コロナ</a></p>
-<p>ここにきて、東京での感染者数増加のニュースが報じられました。<br>
-中国で発生してなんとなく日本へも入ってきて、あー水際対策失敗だったなとなんとなくうかうかしてたら、オーストラリアや北米、また欧州で一気に広がりをみせていつのまにか世界は大混乱に。その一方で日本は早い段階で入ってきたにもかかわらず、なんとなく大事には（北海道は緊急事態宣言だしてましたが）至っていないような雰囲気でしたが、東京オリンピックの延期が発表された昨日の今日でこの一報。<br>
-また本日には、小池都知事による記者会見が開かれ、少なくとも今週末の外出自粛が要請されたという状況です。  </p>
-<p><a href="https://www.jiji.com/jc/article?k=2020032501047">都知事、週末の外出自粛要請　感染爆発「重大局面」―新たに４１人確認・新型コロナ</a>  </p>
-<p>僕個人としてはこの事態を重くうけとめ、金曜日の予定はキャンセル、土日も予定入れる調整中でしたがキャンセルとしました。<br>
-また、買い占めに参加しているようで大変不本意ではあるものの、万が一の外出禁止に備えて、ちょっと多めに食料品の備蓄を買い込み。<br>
-とはいえいつもよりちょっと多い（切れそうなものは早めに補充）程度ですが、これで少なくとも週明けまでは外出しない予定です。</p>
-<p>イタリアやスペインでは大変な事態みたいで、心が痛い。。  </p>
-<p><a href="https://www.bloomberg.co.jp/news/articles/2020-03-25/Q7QUBGT1UM0Z01">スペイン、新型コロナ死者数が過去24時間で738人増－これまでで最多</a><br>
-<a href="https://www.madamin2.me/2020/03/24.html">ピエモンテのしあわせマダミン２ - 24年暮らしてきたイタリアが、大変なことになっている。</a>  </p>
-<p>受ける予定だった、令和2年春季の情報処理技術者試験も中止に。<br>
-<a href="https://www.jitec.ipa.go.jp/1_00topic/topic_20200324.html">令和2年度春期情報処理技術者試験・情報処理安全確保支援士試験の取りやめ（中止）について</a>  </p>
-<p>どうか、早く落ち着きますよに。  </p>
+	<h3><a href="http://localhost:8000/posts/2020/03/27/practice_20200327">AtCoder Practice 日記</a></h3>
+	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/tech.html">Tech</a> on Fri, 27 Mar 2020. Tags: <a href="http://localhost:8000/tag/atcoder.html">AtCoder</a>, <a href="http://localhost:8000/tag/jing-puro.html">競プロ</a>, <a href="http://localhost:8000/tag/puroguramingu.html">プログラミング</a>, </h6>
+	<h2>今日はできなかった</h2>
+<p>本日挑戦してた問題はこちら。<br>
+<a href="https://atcoder.jp/contests/agc016/tasks/agc016_a">AGC016 - A - Shrinking</a>  </p>
+<p>結果的にACはしてるけど、今回は解説を見ても題意をロジックに落とし込めず、カンニング回答なので実質できてません。。orz
+問題文が意味する操作の実装が実現できず、回答みても「シミュレーションすればよい」となっているので、これは数学以前に単純な国語の能力の問題なのか。。  </p>
+<p>ACしてる他の人の回答を見ても、問題文で与えられる操作を実際に実装しているのではなく、条件成立で題意を満たすか判定しているので、<br>
+実際に問題文に書いてある操作をそのまま実現して全探索するのではないというのは理解できるが、実際の実装が何を意図してこういう動作をさせているかがつかみきれない。。  </p>
+<hr>
+<h2>問題文の操作の内容</h2>
+<ul>
+<li>長さNの文字列tが与えらえる</li>
+<li>1回の操作につき任意の1文字を消去（長さが N-1 になる）して、各i番目の文字t'i を ti もしくは t(i+1) に置き換える</li>
+</ul>
+<p>入力例1だと、入力は <code>serval</code> であり、例えばこの文字列は</p>
+<div class="highlight"><pre><span></span><span class="err">例えば、serval → srvvl → svvv → vvv と変えればよいです。</span>
+</pre></div>
+
+
+<p>とすればよいらしい。ここでこの操作は</p>
+<p>0) serval  </p>
+<p>eを消去して、
+1_1) srval<br>
+t(4)はvであり、t'(4)をaからt(4)であるvへ置き換えて
+1_2) srvvl</p>
+<p>rを消去して、<br>
+2_1)svvl<br>
+t(4)はvであり、t'(4)をlからt(4)であるvへ置き換えて<br>
+2_2)svvv  </p>
+<p>sを消去して
+3)vvv</p>
+<p>という意味かな。。いやそうなんだろうけど。<br>
+この操作をどう実装するの（シミュレーションするの）？が不明というところ。<br>
+そしてACしてる人たちはこんなシミュレーションをしておらず、この部分は配列の要素数の最大最小からO(1)で求まるっぽいということはわかった（そんな気はする）  </p>
+<p>もしシミュレーションする場合は、文字列のユニークな文字列全部に対して、 ※O(N)<br>
+操作をO(N/2) 繰り返すようなことになりそうだけど、ここがO(1)の実装できそうなので、そこが掴み切れてない、というのが今日のところ。</p>
+<p>うーん、ようわからん。。</p>
 </article>
 <hr />
 
@@ -170,6 +192,7 @@
 				<li class=""><a href="http://localhost:8000/index18.html">18</a></li>
 				<li class=""><a href="http://localhost:8000/index19.html">19</a></li>
 				<li class=""><a href="http://localhost:8000/index20.html">20</a></li>
+				<li class=""><a href="http://localhost:8000/index21.html">21</a></li>
 				<li class="arrow"><a href="http://localhost:8000/index12.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -195,7 +218,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (4)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (5)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 								</ul>
 							</div>

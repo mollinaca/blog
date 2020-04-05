@@ -85,7 +85,7 @@
 							<li><a href="http://localhost:8000/tag/zheng-zhi.html">政治</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (1)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 
 						<li><label>Social</label></li>
@@ -131,33 +131,44 @@
 							</div>
 
 <article>
-	<h3><a href="http://localhost:8000/posts/2020/03/24/practice">AtCoder Practice 日記</a></h3>
-	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/tech.html">Tech</a> on Tue, 24 Mar 2020. Tags: <a href="http://localhost:8000/tag/atcoder.html">AtCoder</a>, <a href="http://localhost:8000/tag/abc.html">abc</a>, <a href="http://localhost:8000/tag/jing-puro.html">競プロ</a>, <a href="http://localhost:8000/tag/puroguramingu.html">プログラミング</a>, </h6>
-	<p>先日の日記
-<a href="https://blog.watarinohibi.tokyo/posts/2020/03/22/abc159/">AtCoder Beginner Contest 159</a>に書いたように、AtCoderで競プロ、およびpythonの勉強を始めました。<br>
-競技プログラミングもpythonもまったく初心者なので、いまはまだ灰レート、茶を目指している段階です。  </p>
-<p>AtCoderには有志で作られている連携サービスのようなものがいくつかあり、そのうちの一つに <a href="https://kenkoooo.com/atcoder#/user/hstn">AtCoder Problems</a> というのがあります。これは私のページ。<br>
-AtCoderで記事を検索すると、この AtCoder Problems を見て、解いていない過去問題を埋めたり、streak を伸ばしたりしながらスコアを上げていったという事例があり、それをまねて頑張って streak を継続しています。<br>
-streak を継続するためには、1日1問以上、まだ一度もACしていない問題をACする、という条件がつきます。<br>
-私はまだ始めたばかりなので、解いていない過去問も大量にあるので、まだしばらく余裕をもって続けられそうですが、早晩A-B問題は尽きると思われるので、そのころには本格的にCは余裕、Dに挑戦できるようになってないとな、、といったところ。</p>
-<p>現在 streak は20日で、AB問題はどちらも 1/4 ほど埋めたので、およそ2ヶ月ぐらいでここからどこまで成長できるか、がんばっていこうと思います。</p>
-<p>2020/03/24 現在のステータス。</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_stats.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_stats.png" width="500"></a><br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_de.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_de.png" width="500"></a><br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_hm.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_hm.png" width="500"></a>  </p>
-<p>現在は、レコメンドで dif500 前後の問題が提案されているので、それに従い概ね500~600のC問題を含む未挑戦のABC過去問の、A-C問題を中心に解いています。</p>
-<h2>本日の挑戦</h2>
-<p>本日挑戦したのは、<a href="https://atcoder.jp/contests/abc094">ABC094</a>。<br>
-A問題B問題は無事さくっと解けたけど、C問題は問題文を見て愚直な解法はすぐに思いついたけど、また数学的にどう計算量を落とすか？で苦戦してギブアップ。</p>
-<p>最初に実装した提出。当然TLE<br>
-<a href="https://atcoder.jp/contests/abc094/submissions/11185141">https://atcoder.jp/contests/abc094/submissions/11185141</a><br>
-毎回元のリストから対象の1要素を抜いたリストを生成し、そこから中央値を抽出するという手法。<br>
-確実に解けるけど、N回リストのコピーとリストの操作が発生するため、O(N^2)かな？  </p>
-<p>解説を見て作った答え、AC<br>
-<a href="https://atcoder.jp/contests/abc094/submissions/11185502">https://atcoder.jp/contests/abc094/submissions/11185502</a><br>
-言われてなるほどと思ったけど、中央値はソート済みの元リスト（Nが偶数）の中央のどちらかの値になるため、それよりも小さい数なら (2/N)-1 番目の要素、大きい数なら (2/N)+1 番目の要素でOK<br>
-これなら、全部の要素に対してO(1)で答えがでるので、トータルはO(N)になる。  </p>
-<p>うーん、解説みたらなるほどだけど、これをぱっと思いつけるようになりたい。。  </p>
+	<h3><a href="http://localhost:8000/posts/2020/03/27/practice_20200327">AtCoder Practice 日記</a></h3>
+	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/tech.html">Tech</a> on Fri, 27 Mar 2020. Tags: <a href="http://localhost:8000/tag/atcoder.html">AtCoder</a>, <a href="http://localhost:8000/tag/jing-puro.html">競プロ</a>, <a href="http://localhost:8000/tag/puroguramingu.html">プログラミング</a>, </h6>
+	<h2>今日はできなかった</h2>
+<p>本日挑戦してた問題はこちら。<br>
+<a href="https://atcoder.jp/contests/agc016/tasks/agc016_a">AGC016 - A - Shrinking</a>  </p>
+<p>結果的にACはしてるけど、今回は解説を見ても題意をロジックに落とし込めず、カンニング回答なので実質できてません。。orz
+問題文が意味する操作の実装が実現できず、回答みても「シミュレーションすればよい」となっているので、これは数学以前に単純な国語の能力の問題なのか。。  </p>
+<p>ACしてる他の人の回答を見ても、問題文で与えられる操作を実際に実装しているのではなく、条件成立で題意を満たすか判定しているので、<br>
+実際に問題文に書いてある操作をそのまま実現して全探索するのではないというのは理解できるが、実際の実装が何を意図してこういう動作をさせているかがつかみきれない。。  </p>
+<hr>
+<h2>問題文の操作の内容</h2>
+<ul>
+<li>長さNの文字列tが与えらえる</li>
+<li>1回の操作につき任意の1文字を消去（長さが N-1 になる）して、各i番目の文字t'i を ti もしくは t(i+1) に置き換える</li>
+</ul>
+<p>入力例1だと、入力は <code>serval</code> であり、例えばこの文字列は</p>
+<div class="highlight"><pre><span></span><span class="err">例えば、serval → srvvl → svvv → vvv と変えればよいです。</span>
+</pre></div>
+
+
+<p>とすればよいらしい。ここでこの操作は</p>
+<p>0) serval  </p>
+<p>eを消去して、
+1_1) srval<br>
+t(4)はvであり、t'(4)をaからt(4)であるvへ置き換えて
+1_2) srvvl</p>
+<p>rを消去して、<br>
+2_1)svvl<br>
+t(4)はvであり、t'(4)をlからt(4)であるvへ置き換えて<br>
+2_2)svvv  </p>
+<p>sを消去して
+3)vvv</p>
+<p>という意味かな。。いやそうなんだろうけど。<br>
+この操作をどう実装するの（シミュレーションするの）？が不明というところ。<br>
+そしてACしてる人たちはこんなシミュレーションをしておらず、この部分は配列の要素数の最大最小からO(1)で求まるっぽいということはわかった（そんな気はする）  </p>
+<p>もしシミュレーションする場合は、文字列のユニークな文字列全部に対して、 ※O(N)<br>
+操作をO(N/2) 繰り返すようなことになりそうだけど、ここがO(1)の実装できそうなので、そこが掴み切れてない、というのが今日のところ。</p>
+<p>うーん、ようわからん。。</p>
 </article>
 <hr />
 
@@ -172,6 +183,7 @@ A問題B問題は無事さくっと解けたけど、C問題は問題文を見�
 				<li class=""><a href="http://localhost:8000/tag/atcoder4.html">4</a></li>
 				<li class="current"><a href="http://localhost:8000/tag/atcoder5.html">5</a></li>
 				<li class=""><a href="http://localhost:8000/tag/atcoder6.html">6</a></li>
+				<li class=""><a href="http://localhost:8000/tag/atcoder7.html">7</a></li>
 				<li class="arrow"><a href="http://localhost:8000/tag/atcoder6.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -197,7 +209,7 @@ A問題B問題は無事さくっと解けたけど、C問題は問題文を見�
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (1)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 								</ul>
 							</div>

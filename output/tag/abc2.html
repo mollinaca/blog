@@ -85,7 +85,7 @@
 							<li><a href="http://localhost:8000/tag/zheng-zhi.html">政治</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (1)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (3)</a></li>
 
 						<li><label>Social</label></li>
@@ -131,35 +131,45 @@
 							</div>
 
 <article>
-	<h3><a href="http://localhost:8000/posts/2020/03/28/abc160">AtCoder Beginner Contest 160</a></h3>
-	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/tech.html">Tech</a> on Sat, 28 Mar 2020. Tags: <a href="http://localhost:8000/tag/atcoder.html">AtCoder</a>, <a href="http://localhost:8000/tag/abc.html">abc</a>, <a href="http://localhost:8000/tag/jing-puro.html">競プロ</a>, </h6>
-	<p>本日は AtCoderBeginnerContest160 でした。今日は無事最初から参加することができました。<br>
-3完で、Dは知識がなくてできない系だったのでちょっと挑んだけど諦めてギブアップ。  </p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_a">A - Coffee</a><br>
-3文字目と4文字目が一致 AND 5文字目と6文字目が一致 が成立したら "Yes"、そうでなければ "No" を出力<br>
-一発AC</p>
-<p><a href="https://atcoder.jp/contests/abc160/submissions/11266646">提出</a>  </p>
-<p>最初？？？だった3項演算子も、こういうときにわりとさくっと書けるようになりました。  </p>
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_b">B - Golden Coins</a><br>
-入力nを500で割った（切り捨て）値×1000+その残りを5で割った（切り捨て）値×5 を出力<br>
-一発AC</p>
-<p><a href="https://atcoder.jp/contests/abc160/submissions/11273170">提出</a></p>
-<h2>C</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_c">C - Traveling Salesman around Lake</a><br>
-閉路の各頂点を辿るシンプルな巡回セールスマン問題。<br>
-閉路の中で最大の節点間の距離を出して、全体の距離からその値を引いた残りの距離が答えというのがわりとぱっとわかったのでこれもさくっとできました。<br>
-実装上では、1周してきたあとにたどり着く2回目の最初の点を、リストの最後の要素に追加して、各距離感を算出して求めました。<br>
-一発AC</p>
-<p><a href="https://atcoder.jp/contests/abc160/submissions/11285795">提出</a></p>
-<h2>D</h2>
-<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_d">D - Line++</a><br>
-直線状の無向グラフに1ノードを追加して、ノード間の距離をどうたらこうたら～みたいな感じ？<br>
-ここでギブアップ。<br>
-グラフの最短距離を求めるやりかたがわかってれば多分できるなかなーと思いぐぐってるといくつかの聞いたことあるアルゴリズムがでてきたので、改めてそれらについて復習する。</p>
-<p>本日はここまで。パフォーマンスは <code>720</code> でした。<br>
-茶まであと一歩。  </p>
+	<h3><a href="http://localhost:8000/posts/2020/04/05/testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></h3>
+	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/tech.html">Tech</a> on Sun, 05 Apr 2020. Tags: <a href="http://localhost:8000/tag/atcoder.html">AtCoder</a>, <a href="http://localhost:8000/tag/abc.html">abc</a>, <a href="http://localhost:8000/tag/jing-puro.html">競プロ</a>, </h6>
+	<hr>
+<p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
+<h1>A</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_a">A - Walking Takahashi</a><br>
+現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い</p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11582231">提出</a><br>
+ちょっと冗長だった。absは不要だな。<br>
+以下でOK</p>
+<div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="n">S</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">R</span> <span class="o">&lt;</span> <span class="n">S</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</pre></div>
+
+
+<p>こっちのほうがシンプル。</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_b">B - Picking Balls</a><br>
+RとBの配列を持って置き、入力を受けてR/Bどちらかの配列に append して、入力を受け終わったらソートして R → B の順番に出力すればよい。  </p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11583370">提出</a>  </p>
+<h1>C</h1>
+<p>ちょっと挑んで、あ！これ深さ優先探索だ！ってとこまではわかったけど、家庭の事情によりここで終了。<br>
+制約が小さいので、全部列挙して出力させたほうが早いのかも。ｗ</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_c.jpg"><img src="https://blog.watarinohibi.tokyo/images/20200405_c.jpg" width="500"></a>  </p>
+<p>と思ったら、やってる人いた。<br>
+unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/JSUTC202004%E8%A7%A3%E8%AA%AC?src=hash&amp;ref_src=twsrc%5Etfw">#JSUTC202004解説</a><br>C問題です。 しっかり手を動かして10通り列挙しましょう。<br>これ以外の回答は認めません。 <a href="https://t.co/sGwr4vEy5V">pic.twitter.com/sGwr4vEy5V</a></p>&mdash; Reider (@Reider_AC) <a href="https://twitter.com/Reider_AC/status/1246786355666903040?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<hr>
+<p>次回のABCで、茶になるぞー</p>
+<p>改めてトライする。</p>
 </article>
 <hr />
 
@@ -172,6 +182,7 @@
 				<li class="current"><a href="http://localhost:8000/tag/abc2.html">2</a></li>
 				<li class=""><a href="http://localhost:8000/tag/abc3.html">3</a></li>
 				<li class=""><a href="http://localhost:8000/tag/abc4.html">4</a></li>
+				<li class=""><a href="http://localhost:8000/tag/abc5.html">5</a></li>
 				<li class="arrow"><a href="http://localhost:8000/tag/abc3.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -197,7 +208,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (1)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (3)</a></li>
 								</ul>
 							</div>

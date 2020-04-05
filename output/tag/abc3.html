@@ -85,7 +85,7 @@
 							<li><a href="http://localhost:8000/tag/zheng-zhi.html">政治</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (1)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (3)</a></li>
 
 						<li><label>Social</label></li>
@@ -131,33 +131,35 @@
 							</div>
 
 <article>
-	<h3><a href="http://localhost:8000/posts/2020/03/24/practice">AtCoder Practice 日記</a></h3>
-	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/tech.html">Tech</a> on Tue, 24 Mar 2020. Tags: <a href="http://localhost:8000/tag/atcoder.html">AtCoder</a>, <a href="http://localhost:8000/tag/abc.html">abc</a>, <a href="http://localhost:8000/tag/jing-puro.html">競プロ</a>, <a href="http://localhost:8000/tag/puroguramingu.html">プログラミング</a>, </h6>
-	<p>先日の日記
-<a href="https://blog.watarinohibi.tokyo/posts/2020/03/22/abc159/">AtCoder Beginner Contest 159</a>に書いたように、AtCoderで競プロ、およびpythonの勉強を始めました。<br>
-競技プログラミングもpythonもまったく初心者なので、いまはまだ灰レート、茶を目指している段階です。  </p>
-<p>AtCoderには有志で作られている連携サービスのようなものがいくつかあり、そのうちの一つに <a href="https://kenkoooo.com/atcoder#/user/hstn">AtCoder Problems</a> というのがあります。これは私のページ。<br>
-AtCoderで記事を検索すると、この AtCoder Problems を見て、解いていない過去問題を埋めたり、streak を伸ばしたりしながらスコアを上げていったという事例があり、それをまねて頑張って streak を継続しています。<br>
-streak を継続するためには、1日1問以上、まだ一度もACしていない問題をACする、という条件がつきます。<br>
-私はまだ始めたばかりなので、解いていない過去問も大量にあるので、まだしばらく余裕をもって続けられそうですが、早晩A-B問題は尽きると思われるので、そのころには本格的にCは余裕、Dに挑戦できるようになってないとな、、といったところ。</p>
-<p>現在 streak は20日で、AB問題はどちらも 1/4 ほど埋めたので、およそ2ヶ月ぐらいでここからどこまで成長できるか、がんばっていこうと思います。</p>
-<p>2020/03/24 現在のステータス。</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_stats.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_stats.png" width="500"></a><br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_de.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_de.png" width="500"></a><br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_hm.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_hm.png" width="500"></a>  </p>
-<p>現在は、レコメンドで dif500 前後の問題が提案されているので、それに従い概ね500~600のC問題を含む未挑戦のABC過去問の、A-C問題を中心に解いています。</p>
-<h2>本日の挑戦</h2>
-<p>本日挑戦したのは、<a href="https://atcoder.jp/contests/abc094">ABC094</a>。<br>
-A問題B問題は無事さくっと解けたけど、C問題は問題文を見て愚直な解法はすぐに思いついたけど、また数学的にどう計算量を落とすか？で苦戦してギブアップ。</p>
-<p>最初に実装した提出。当然TLE<br>
-<a href="https://atcoder.jp/contests/abc094/submissions/11185141">https://atcoder.jp/contests/abc094/submissions/11185141</a><br>
-毎回元のリストから対象の1要素を抜いたリストを生成し、そこから中央値を抽出するという手法。<br>
-確実に解けるけど、N回リストのコピーとリストの操作が発生するため、O(N^2)かな？  </p>
-<p>解説を見て作った答え、AC<br>
-<a href="https://atcoder.jp/contests/abc094/submissions/11185502">https://atcoder.jp/contests/abc094/submissions/11185502</a><br>
-言われてなるほどと思ったけど、中央値はソート済みの元リスト（Nが偶数）の中央のどちらかの値になるため、それよりも小さい数なら (2/N)-1 番目の要素、大きい数なら (2/N)+1 番目の要素でOK<br>
-これなら、全部の要素に対してO(1)で答えがでるので、トータルはO(N)になる。  </p>
-<p>うーん、解説みたらなるほどだけど、これをぱっと思いつけるようになりたい。。  </p>
+	<h3><a href="http://localhost:8000/posts/2020/03/28/abc160">AtCoder Beginner Contest 160</a></h3>
+	<h6>Written by <a href="http://localhost:8000/author/s.hosoya.html">s.hosoya</a> in <a href="http://localhost:8000/category/tech.html">Tech</a> on Sat, 28 Mar 2020. Tags: <a href="http://localhost:8000/tag/atcoder.html">AtCoder</a>, <a href="http://localhost:8000/tag/abc.html">abc</a>, <a href="http://localhost:8000/tag/jing-puro.html">競プロ</a>, </h6>
+	<p>本日は AtCoderBeginnerContest160 でした。今日は無事最初から参加することができました。<br>
+3完で、Dは知識がなくてできない系だったのでちょっと挑んだけど諦めてギブアップ。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_a">A - Coffee</a><br>
+3文字目と4文字目が一致 AND 5文字目と6文字目が一致 が成立したら "Yes"、そうでなければ "No" を出力<br>
+一発AC</p>
+<p><a href="https://atcoder.jp/contests/abc160/submissions/11266646">提出</a>  </p>
+<p>最初？？？だった3項演算子も、こういうときにわりとさくっと書けるようになりました。  </p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_b">B - Golden Coins</a><br>
+入力nを500で割った（切り捨て）値×1000+その残りを5で割った（切り捨て）値×5 を出力<br>
+一発AC</p>
+<p><a href="https://atcoder.jp/contests/abc160/submissions/11273170">提出</a></p>
+<h2>C</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_c">C - Traveling Salesman around Lake</a><br>
+閉路の各頂点を辿るシンプルな巡回セールスマン問題。<br>
+閉路の中で最大の節点間の距離を出して、全体の距離からその値を引いた残りの距離が答えというのがわりとぱっとわかったのでこれもさくっとできました。<br>
+実装上では、1周してきたあとにたどり着く2回目の最初の点を、リストの最後の要素に追加して、各距離感を算出して求めました。<br>
+一発AC</p>
+<p><a href="https://atcoder.jp/contests/abc160/submissions/11285795">提出</a></p>
+<h2>D</h2>
+<p><a href="https://atcoder.jp/contests/abc160/tasks/abc160_d">D - Line++</a><br>
+直線状の無向グラフに1ノードを追加して、ノード間の距離をどうたらこうたら～みたいな感じ？<br>
+ここでギブアップ。<br>
+グラフの最短距離を求めるやりかたがわかってれば多分できるなかなーと思いぐぐってるといくつかの聞いたことあるアルゴリズムがでてきたので、改めてそれらについて復習する。</p>
+<p>本日はここまで。パフォーマンスは <code>720</code> でした。<br>
+茶まであと一歩。  </p>
 </article>
 <hr />
 
@@ -170,6 +172,7 @@ A問題B問題は無事さくっと解けたけど、C問題は問題文を見�
 				<li class=""><a href="http://localhost:8000/tag/abc2.html">2</a></li>
 				<li class="current"><a href="http://localhost:8000/tag/abc3.html">3</a></li>
 				<li class=""><a href="http://localhost:8000/tag/abc4.html">4</a></li>
+				<li class=""><a href="http://localhost:8000/tag/abc5.html">5</a></li>
 				<li class="arrow"><a href="http://localhost:8000/tag/abc4.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -195,7 +198,7 @@ A問題B問題は無事さくっと解けたけど、C問題は問題文を見�
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (1)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (3)</a></li>
 								</ul>
 							</div>

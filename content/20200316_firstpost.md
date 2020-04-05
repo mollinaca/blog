@@ -1,7 +1,7 @@
 Title: 最初の投稿
 Date: 2020-03-16
-Category: test
-Tags: test
+Category: misc
+Tags: misc
 Slug: FirstPost
 Authors: s.hosoya
 Summary: pelican test

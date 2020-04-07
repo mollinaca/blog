@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 's.hosoya'
 SITENAME = '渡りの日々.'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'https://blog.watarinohibi.tokyo'
 PATH = 'content'
 TIMEZONE = 'Asia/Tokyo'
 DEFAULT_LANG = 'en'

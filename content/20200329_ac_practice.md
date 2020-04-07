@@ -1,7 +1,7 @@
 Title: 競プロ Practice 日記
 Date: 2020-03-29
 Category: Tech
-Tags: AtCoder, 競プロ, プログラミング, AOJ
+Tags: atcoder, abc, programming
 Slug: practice_20200329
 Authors: s.hosoya
 

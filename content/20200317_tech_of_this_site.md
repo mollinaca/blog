@@ -1,6 +1,6 @@
 Title: このサイトの技術スタックについて
 Date: 2020-03-17
-Category: tech
+Category: Tech
 Tags: tech, python
 Slug: about_this_blog
 Authors: s.hosoya

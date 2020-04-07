@@ -1,7 +1,7 @@
 Title: AtCoder Judge System Update Test Contest 202004
 Date: 2020-04-05
 Category: Tech
-Tags: AtCoder, abc, 競プロ
+Tags: atcoder, abc, programming
 Slug: testcontest_20200405
 Authors: s.hosoya
 

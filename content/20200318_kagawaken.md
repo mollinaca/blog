@@ -1,7 +1,7 @@
 Title: 香川県の「ネット・ゲーム依存症対策条例」について
 Date: 2020-03-18
-Category: 時事
-Tags: news
+Category: Social
+Tags: social, news, game
 Slug: kagawa
 Authors: s.hosoya
 

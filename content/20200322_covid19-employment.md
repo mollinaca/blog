@@ -1,7 +1,7 @@
 Title: 新型コロナウィルス流行における日米の雇用に対する文化の違い
 Date: 2020-03-22
-Category: 時事
-Tags: 時事, covid-19, 政治
+Category: Social
+Tags: social, politics, news, covid-19
 Slug: employment
 Authors: s.hosoya
 

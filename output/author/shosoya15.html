@@ -81,7 +81,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/test.html">test</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (6)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (7)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 
 						<li><label>Social</label></li>
@@ -121,68 +121,33 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/03/22/abc159">AtCoder Beginner Contest 159</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 22 Mar 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
-	<p>去年の暮れから python の勉強を始めるとともに、競技プログラミングを始めてみました。  </p>
-<p>競技プログラミングをやろう！というよりも、pythonの勉強の一環でプログラムを書く理由のためにという意味合いが強かったですが、やり始めるとけっこう面白い。<br>
-面白いというか、そういえば自分はこういうのを楽しいと思って情報系に進んだんだっけなぁというのを薄ぼんやり思い出すような。。<br>
-これでも一応情報系の大学院を出ているので、授業でアルゴリズムやデータ構造をやってたはずですが、あまり真面目な学生ではなかったので、イチから出発です。  </p>
-<p>現在はまだレートは灰で、そろそろ茶にはあがれそうかな、どうかなというところ。<br>
-緑には完全に実力不足なので、もうちょっと勉強がんばって緑まではあがりたいなという所です。<br>
-しばらく続けるつもり。</p>
-<p>今の目標は、A問題B問題はなるべく早く終えて、C問題をクリアしてできればD問題に挑んで回答の提出までといったところです。とはいえC問題でもまだまだ詰まるので、3完安定がいまの目標かな。</p>
-<p><br>
-<br></p>
-<h2>ABC159</h2>
-<p>本日のABC159は諸事情で30分ほど遅刻して開始しました。
-A、Bはさくっと消化して、今回はCも無事回答することができました。<br>
-とはいえ、今回のCは大分簡単だった気がします。それほど確証はなかったけど、こうかな？でやってみたらACしてしまった感じ。<br>
-Dにも挑戦して、要求された解を得る実装はできたけど、処理効率がよくなくTLE。<br>
-これは、見た目でも自分の実装が効率悪いのは見えていたので、回答・解説がでたら改めて実装しなおしてみようと思います。</p>
-<p><br>
-<br></p>
-<h2>自分の提出</h2>
-<h3>A</h3>
-<p><a href="https://atcoder.jp/contests/abc159/submissions/11109386">https://atcoder.jp/contests/abc159/submissions/11109386</a><br>
-和が偶数になるのは、（奇、奇）or（偶、偶）の組み合わせで選んだ場合なので<br>
-そのまま、mとnそれぞれから2個ずつ選ぶ組み合わせの合計数。<br>
-<br></p>
-<h3>B</h3>
-<p><a href="https://atcoder.jp/contests/abc159/submissions/11117079">https://atcoder.jp/contests/abc159/submissions/11117079</a><br>
-要件通りの実装。3つの条件に対して3回ループしてるから効率よくない気がするけど、制約下では問題なし。1ループで済んだりするのかな。
-<br></p>
-<h3>C</h3>
-<p><a href="https://atcoder.jp/contests/abc159/submissions/11122281">https://atcoder.jp/contests/abc159/submissions/11122281</a><br>
-ちょっと考えて、一端全探索の実装を作って実際に最大になる場合の3つの値の組み合わせを見てみたら、なるべく均等に割った値であることがわかったので、そうなるように実装。<br>
-ただし、小数の考慮がなかった(整数でしか求めてなかった)のでWA。  </p>
-<p>最初の提出(WA)は、全探索パターン。<br>
-<a href="https://atcoder.jp/contests/abc159/submissions/11119056">https://atcoder.jp/contests/abc159/submissions/11119056</a><br>
-ここから結果を出力してみて、lが3なら(1,1,1)、lが999なら(333,333,333)、lが1000なら(334,333,333)ということがわかった。</p>
-<p>2回目の提出は、整数で出力してしまっていたため、WA。<br>
-3回目でAC。  </p>
-<h3>D</h3>
-<p><a href="https://atcoder.jp/contests/abc159/submissions/11127645">https://atcoder.jp/contests/abc159/submissions/11127645</a><br>
-TLE。まぁ雰囲気的にもだめ。題意の解は求められるけど</p>
-<ul>
-<li>配列の要素すべてに対して、一つずつ抜いた配列を作るループ</li>
-<li>上記で作成した配列の全要素に対して、各要素の数をカウントするループ</li>
-<li>上記のカウントに対して、組み合わせの個数を計算するループ</li>
-</ul>
-<p>の3重ループの愚直な実装でTLE。<br>
-これはもうちょい数学的考察で短くできそうなため、解説見て復習する。</p>
-<hr>
-<p>追記：<br>
-<a href="https://atcoder.jp/contests/abc159/submissions/11142253">https://atcoder.jp/contests/abc159/submissions/11142253</a><br>
-解説を参考に無事AC、これは数学的考察力の不足</p>
-<p><br>
-<br></p>
-<h2>感じていること</h2>
-<p>2ヶ月ほど挑戦して、基本的な考え方はつかめてきた一方で、</p>
-<ul>
-<li>単純な実装力の不足、アルゴリズムの知識の不足</li>
-<li>問題に対する数学的考察、計算量を落とす工夫、および基本的な数学の知識</li>
-</ul>
-<p>に対して、勉強する必要があると感じているし、逆にそこが不足していることがだいぶわかってきたので引き続き勉強を続けていきたい。</p>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/03/24/practice_0324">AtCoder Practice 日記</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Tue, 24 Mar 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
+	<p>先日の日記
+<a href="https://blog.watarinohibi.tokyo/posts/2020/03/22/abc159/">AtCoder Beginner Contest 159</a>に書いたように、AtCoderで競プロ、およびpythonの勉強を始めました。<br>
+競技プログラミングもpythonもまったく初心者なので、いまはまだ灰レート、茶を目指している段階です。  </p>
+<p>AtCoderには有志で作られている連携サービスのようなものがいくつかあり、そのうちの一つに <a href="https://kenkoooo.com/atcoder#/user/hstn">AtCoder Problems</a> というのがあります。これは私のページ。<br>
+AtCoderで記事を検索すると、この AtCoder Problems を見て、解いていない過去問題を埋めたり、streak を伸ばしたりしながらスコアを上げていったという事例があり、それをまねて頑張って streak を継続しています。<br>
+streak を継続するためには、1日1問以上、まだ一度もACしていない問題をACする、という条件がつきます。<br>
+私はまだ始めたばかりなので、解いていない過去問も大量にあるので、まだしばらく余裕をもって続けられそうですが、早晩A-B問題は尽きると思われるので、そのころには本格的にCは余裕、Dに挑戦できるようになってないとな、、といったところ。</p>
+<p>現在 streak は20日で、AB問題はどちらも 1/4 ほど埋めたので、およそ2ヶ月ぐらいでここからどこまで成長できるか、がんばっていこうと思います。</p>
+<p>2020/03/24 現在のステータス。</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_stats.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_stats.png" width="500"></a><br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_de.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_de.png" width="500"></a><br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200324_acp_hm.png"><img src="https://blog.watarinohibi.tokyo/images/20200324_acp_hm.png" width="500"></a>  </p>
+<p>現在は、レコメンドで dif500 前後の問題が提案されているので、それに従い概ね500~600のC問題を含む未挑戦のABC過去問の、A-C問題を中心に解いています。</p>
+<h2>本日の挑戦</h2>
+<p>本日挑戦したのは、<a href="https://atcoder.jp/contests/abc094">ABC094</a>。<br>
+A問題B問題は無事さくっと解けたけど、C問題は問題文を見て愚直な解法はすぐに思いついたけど、また数学的にどう計算量を落とすか？で苦戦してギブアップ。</p>
+<p>最初に実装した提出。当然TLE<br>
+<a href="https://atcoder.jp/contests/abc094/submissions/11185141">https://atcoder.jp/contests/abc094/submissions/11185141</a><br>
+毎回元のリストから対象の1要素を抜いたリストを生成し、そこから中央値を抽出するという手法。<br>
+確実に解けるけど、N回リストのコピーとリストの操作が発生するため、O(N^2)かな？  </p>
+<p>解説を見て作った答え、AC<br>
+<a href="https://atcoder.jp/contests/abc094/submissions/11185502">https://atcoder.jp/contests/abc094/submissions/11185502</a><br>
+言われてなるほどと思ったけど、中央値はソート済みの元リスト（Nが偶数）の中央のどちらかの値になるため、それよりも小さい数なら (2/N)-1 番目の要素、大きい数なら (2/N)+1 番目の要素でOK<br>
+これなら、全部の要素に対してO(1)で答えがでるので、トータルはO(N)になる。  </p>
+<p>うーん、解説みたらなるほどだけど、これをぱっと思いつけるようになりたい。。  </p>
 </article>
 <hr />
 
@@ -213,6 +178,7 @@ TLE。まぁ雰囲気的にもだめ。題意の解は求められるけど</p>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya20.html">20</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya21.html">21</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya22.html">22</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya23.html">23</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/author/shosoya16.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -238,7 +204,7 @@ TLE。まぁ雰囲気的にもだめ。題意の解は求められるけど</p>
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (6)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (7)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 								</ul>
 							</div>

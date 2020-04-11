@@ -56,6 +56,7 @@
 					<ul class="off-canvas-list">
 						<li><a href="https://blog.watarinohibi.tokyo">Home</a></li>
 						<li><label>Categories</label></li>
+							<li ><a href="https://blog.watarinohibi.tokyo/category/general.html">General</a></li>
 							<li ><a href="https://blog.watarinohibi.tokyo/category/misc.html">Misc</a></li>
 							<li ><a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a></li>
 							<li ><a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a></li>
@@ -69,6 +70,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/contents.html">contents</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/covid-19.html">covid-19</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/game.html">game</a></li>
+							<li><a href="https://blog.watarinohibi.tokyo/tag/general.html">general</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/misc.html">misc</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/news.html">news</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/pelican.html">pelican</a></li>
@@ -81,7 +83,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/test.html">test</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (8)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (9)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 
 						<li><label>Social</label></li>
@@ -100,6 +102,7 @@
 
 					<section class="top-bar-section">
 						<ul class="left">
+								<li ><a href="https://blog.watarinohibi.tokyo/category/general.html">General</a></li>
 								<li ><a href="https://blog.watarinohibi.tokyo/category/misc.html">Misc</a></li>
 								<li ><a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a></li>
 								<li ><a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a></li>
@@ -121,36 +124,45 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/04/covid19-tokyo-20200404">COVID-19 in Tokyo 20200404</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a> on Sat, 04 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/social.html">social</a>, <a href="https://blog.watarinohibi.tokyo/tag/politics.html">politics</a>, <a href="https://blog.watarinohibi.tokyo/tag/news.html">news</a>, <a href="https://blog.watarinohibi.tokyo/tag/covid-19.html">covid-19</a>, </h6>
-	<p>本日の東京の感染者は、ついに1日で100人を超えた。<br>
-3/25、つまり1週間とちょい前ぐらいには「東京でもつに増え始めた」という状況だったのが、およそ10日でついに1日あたり100人超えの感染確認に。<br>
-発症、検査から陽性確認までおよそ2週間と言われているので、いま発症して確認されている人たちは、あぁきっと3/20の3連休にもらったんだろうなぁと。<br>
-あのタイミングで緩んでいたの、完全に失敗だったんだろうなぁと感じている。</p>
-<iframe width="560" height="315" src="https://stopcovid19.metro.tokyo.lg.jp/cards/number-of-confirmed-cases?embed=true" frameborder="0"></iframe>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/05/testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 05 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
+	<hr>
+<p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
+<h1>A</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_a">A - Walking Takahashi</a><br>
+現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い</p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11582231">提出</a><br>
+ちょっと冗長だった。absは不要だな。<br>
+以下でOK</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="n">S</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">R</span> <span class="o">&lt;</span> <span class="n">S</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</code></pre></div>
 
-<p>この2週間でのぐぐっと増え始めたのは、ニューヨークとおなじ指数関数的な増大の始まりか。<br>
-そして病床数も限界ぎりぎりの模様。というかcovid19の増加で限界近いということは、すでにそれ以外の通常の病床者を収容できない状態なのでは。。<br>
-<a href="https://www.tokyo-np.co.jp/s/article/2020040401002188.html">東京都、新たに感染者１１８人　初の３桁、病床数に懸念</a></p>
+
+<p>こっちのほうがシンプル。</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_b">B - Picking Balls</a><br>
+RとBの配列を持って置き、入力を受けてR/Bどちらかの配列に append して、入力を受け終わったらソートして R → B の順番に出力すればよい。  </p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11583370">提出</a>  </p>
+<h1>C</h1>
+<p>ちょっと挑んで、あ！これ深さ優先探索だ！ってとこまではわかったけど、家庭の事情によりここで終了。<br>
+制約が小さいので、全部列挙して出力させたほうが早いのかも。ｗ</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_c.jpg"><img src="https://blog.watarinohibi.tokyo/images/20200405_c.jpg" width="500"></a>  </p>
+<p>と思ったら、やってる人いた。<br>
+unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/JSUTC202004%E8%A7%A3%E8%AA%AC?src=hash&amp;ref_src=twsrc%5Etfw">#JSUTC202004解説</a><br>C問題です。 しっかり手を動かして10通り列挙しましょう。<br>これ以外の回答は認めません。 <a href="https://t.co/sGwr4vEy5V">pic.twitter.com/sGwr4vEy5V</a></p>&mdash; Reider (@Reider_AC) <a href="https://twitter.com/Reider_AC/status/1246786355666903040?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 <hr>
-<p>政府が打ち出している、国民に直接「病気を予防するための措置」は、相変わらず1世帯あたりマスク2枚の措置のみ。<br>
-経済対策としてのフォローはいろいろやり始めているが、そもそも根本的にこれ以上感染者数が増えるのを抑え込まないと、戦いはジリ貧になっていき、今の日本にジリ貧の戦いを何ヶ月も続けられる力があるのか？というのはとても疑問なところ。<br>
-内部保留がそれなりにある一部の企業は生き残れても、国内企業の大半を占める中小はかなり苦しいでしょう。</p>
-<hr>
-<p>幸いにも、たぶん自分がその「内部保留がそれなりにある大企業」と思われる企業に所属しており、今の所業務にも支障をきたしておらず、フルリモートで在宅勤務できてるので、とりあえず自分が感染しなければ程度には思えているけど、</p>
-<hr>
-<p>結局、日本は法律的な罰則を設けた「ロックダウン」はできないみたい。それ事態はしかたないし、ある意味日本という国の民主主義の正しい状態な気もする。<br>
-<a href="https://www3.nhk.or.jp/news/special/coronavirus/tokyo/correspondence.html">「緊急事態宣言」が出た場合 東京都の対応</a>  </p>
-<p>と同時に、この状態で「なんとかしろ」と言われても何もできない状態の内閣ってほんとかわいそうだな、、ぐらいの気持ち。</p>
-<p>感染症との戦いにおいて、敵は標的を区別しない。人類は人類で団結して戦わないといけないし、身内の攻撃に余計なエネルギーを使ってる場合でもない。<br>
-自分にできることを、粛々とやるのみ。</p>
-<hr>
-<p>はぁ。ほんとにこの世代は、と思ってしまう。
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">事の重大さをわかっていない老人達と<br>危機感を持っている若者達との違い　<br>左巣鴨　右原宿 <a href="https://t.co/dq2nP8HCL0">pic.twitter.com/dq2nP8HCL0</a></p>&mdash; オメガヴェンデッタ (@VRG_Ray) <a href="https://twitter.com/VRG_Ray/status/1246339164766752768?ref_src=twsrc%5Etfw">April 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>もちろんこれは極端な例（わざわざ街を選んでるのだから）だから、これだから〜〜とは言いたくないし言うべきでもないけど、それでもため息でちゃうね。</p>
-<p>最悪の状況になってるイタリアでも。
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">事の重大さをわかっていない老人達と<br>危機感を持っている若者達との違い　<br>左巣鴨　右原宿 <a href="https://t.co/dq2nP8HCL0">pic.twitter.com/dq2nP8HCL0</a></p>&mdash; オメガヴェンデッタ (@VRG_Ray) <a href="https://twitter.com/VRG_Ray/status/1246339164766752768?ref_src=twsrc%5Etfw">April 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br>
-ナポリはそこまで被害が大きくないのかな、とても余裕があるように見えるけど、これだとまだしばらく最悪の状況は続きそう。。</p>
+<p>次回のABCで、茶になるぞー</p>
+<p>改めてトライする。</p>
 </article>
 <hr />
 
@@ -183,6 +195,7 @@
 				<li class=""><a href="https://blog.watarinohibi.tokyo/index22.html">22</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/index23.html">23</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/index24.html">24</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/index25.html">25</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/index7.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -208,7 +221,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (8)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (9)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 								</ul>
 							</div>

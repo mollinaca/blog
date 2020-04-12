@@ -86,7 +86,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (3)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 
 						<li><label>Social</label></li>
@@ -132,22 +132,45 @@
 							</div>
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/03/29/practice_20200329">競プロ Practice 日記</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 29 Mar 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
-	<h2>AOJ に挑戦した</h2>
-<p>競プロの基礎練習編として、AOJがお勧めされていたのでトライしてみた。  </p>
-<p><a href="http://judge.u-aizu.ac.jp/onlinejudge/">AIZU ONLINE JUDGE</a><br>
-<a href="http://judge.u-aizu.ac.jp/onlinejudge/user.jsp?id=hstn2#3">mystatus</a>  </p>
-<p>入門編である ITP1 について、ITP1_1からITP1_6 まで、24問を解いた。<br>
-ABCでA/Bは概ねできてるのでほとんど躓かずにできたけど、一部やったことないタイプの問題とかもあって面白かった。<br>
-ITP1は全部挑戦しようと思います。</p>
-<h2>AtCoder 本日の練習</h2>
-<p>ABC133のA～Cに挑戦。<br>
-A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
-最初見た時に、全探索すると計算量が間に合わないから計算量落とす工夫がいるなと思い、その過程で場合分け等々を考えて計算していたけど、そもそも答えがWAしてしまい導出ロジックがうまく組めず。。  </p>
-<p>結果的に難しく考えすぎてて、条件に収まる範囲での全探索であれば十分for文で行けることがわかったので、それで実装しなおしてACできた。  </p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200329_acp.png"><img src="https://blog.watarinohibi.tokyo/images/20200329_acp.png" width="500"></a><br>
-うーん、あとで考えればあーこれで良いやなんだけど、これをさくっと思いつきたい。  </p>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/05/testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 05 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
+	<hr>
+<p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
+<h1>A</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_a">A - Walking Takahashi</a><br>
+現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い</p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11582231">提出</a><br>
+ちょっと冗長だった。absは不要だな。<br>
+以下でOK</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="n">S</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">R</span> <span class="o">&lt;</span> <span class="n">S</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">S</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>こっちのほうがシンプル。</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_b">B - Picking Balls</a><br>
+RとBの配列を持って置き、入力を受けてR/Bどちらかの配列に append して、入力を受け終わったらソートして R → B の順番に出力すればよい。  </p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11583370">提出</a>  </p>
+<h1>C</h1>
+<p>ちょっと挑んで、あ！これ深さ優先探索だ！ってとこまではわかったけど、家庭の事情によりここで終了。<br>
+制約が小さいので、全部列挙して出力させたほうが早いのかも。ｗ</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_c.jpg"><img src="https://blog.watarinohibi.tokyo/images/20200405_c.jpg" width="500"></a>  </p>
+<p>と思ったら、やってる人いた。<br>
+unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/JSUTC202004%E8%A7%A3%E8%AA%AC?src=hash&amp;ref_src=twsrc%5Etfw">#JSUTC202004解説</a><br>C問題です。 しっかり手を動かして10通り列挙しましょう。<br>これ以外の回答は認めません。 <a href="https://t.co/sGwr4vEy5V">pic.twitter.com/sGwr4vEy5V</a></p>&mdash; Reider (@Reider_AC) <a href="https://twitter.com/Reider_AC/status/1246786355666903040?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<hr>
+<p>次回のABCで、茶になるぞー</p>
+<p>改めてトライする。</p>
 </article>
 <hr />
 
@@ -163,6 +186,7 @@ A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming5.html">5</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming6.html">6</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming7.html">7</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming8.html">8</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/tag/programming4.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -188,7 +212,7 @@ A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (3)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 								</ul>
 							</div>

@@ -86,7 +86,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (3)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 
 						<li><label>Social</label></li>
@@ -132,45 +132,42 @@
 							</div>
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/05/testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></h3>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/05/abc161">AtCoder Beginner Contest 161</a></h3>
 	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 05 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
-	<hr>
-<p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
+	<p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
+問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
+<hr>
 <h1>A</h1>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_a">A - Walking Takahashi</a><br>
-現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い</p>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11582231">提出</a><br>
-ちょっと冗長だった。absは不要だな。<br>
-以下でOK</p>
-<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
-<span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="n">S</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
-<span class="k">if</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">L</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">R</span> <span class="o">&lt;</span> <span class="n">S</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
+swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
+<p>AC</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
+問題分の説明通り実装してあげればよい。<br>
+選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
+<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
+修正して無事AC</p>
+<h1>C</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
+数値を置き換える操作を繰り返す。<br>
+ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
+<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
+そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
+<p>入力例3が親切で</p>
+<div class="highlight"><pre><span></span><code><span class="err">1000000000000000000 1</span>
 </code></pre></div>
 
 
-<p>こっちのほうがシンプル。</p>
-<h1>B</h1>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_b">B - Picking Balls</a><br>
-RとBの配列を持って置き、入力を受けてR/Bどちらかの配列に append して、入力を受け終わったらソートして R → B の順番に出力すればよい。  </p>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11583370">提出</a>  </p>
-<h1>C</h1>
-<p>ちょっと挑んで、あ！これ深さ優先探索だ！ってとこまではわかったけど、家庭の事情によりここで終了。<br>
-制約が小さいので、全部列挙して出力させたほうが早いのかも。ｗ</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_c.jpg"><img src="https://blog.watarinohibi.tokyo/images/20200405_c.jpg" width="500"></a>  </p>
-<p>と思ったら、やってる人いた。<br>
-unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/JSUTC202004%E8%A7%A3%E8%AA%AC?src=hash&amp;ref_src=twsrc%5Etfw">#JSUTC202004解説</a><br>C問題です。 しっかり手を動かして10通り列挙しましょう。<br>これ以外の回答は認めません。 <a href="https://t.co/sGwr4vEy5V">pic.twitter.com/sGwr4vEy5V</a></p>&mdash; Reider (@Reider_AC) <a href="https://twitter.com/Reider_AC/status/1246786355666903040?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote>
-
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>これを愚直な実装にいれれば（ループ回すと）終わらないことを教えてくれる。</p>
+<p><a href="https://atcoder.jp/contests/abc161/submissions/11566201">提出</a></p>
+<p>さくっとできた！</p>
 <hr>
-<p>次回のABCで、茶になるぞー</p>
-<p>改めてトライする。</p>
+<p>上記3問はさくっと解けた。<br>
+diffはわからないけど、多分これ参加して解けてたら茶にあがれてたかなぁ。。<br>
+また次回！</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png"><img src="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png" width="500"></a>  </p>
 </article>
 <hr />
 
@@ -186,6 +183,7 @@ unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc5.html">5</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc6.html">6</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc7.html">7</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc8.html">8</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/tag/abc3.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -211,7 +209,7 @@ unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (3)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 								</ul>
 							</div>

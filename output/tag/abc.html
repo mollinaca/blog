@@ -86,7 +86,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (3)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 
 						<li><label>Social</label></li>
@@ -132,42 +132,99 @@
 							</div>
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/05/abc161">AtCoder Beginner Contest 161</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 05 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
-	<p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
-問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
-<hr>
-<h1>A</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
-swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
-<p>AC</p>
-<h1>B</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
-問題分の説明通り実装してあげればよい。<br>
-選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
-<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
-修正して無事AC</p>
-<h1>C</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
-数値を置き換える操作を繰り返す。<br>
-ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
-<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
-そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
-<p>入力例3が親切で</p>
-<div class="highlight"><pre><span></span><code><span class="err">1000000000000000000 1</span>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/12/abc162">AtCoder Beginner Contest 162</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 12 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
+	<p>できなかった。。 ＞＜</p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_a">A - Lucky 7</a><br>
+入力文字列に <code>7</code> が含まれてたら <code>Yes</code>, なければ <code>No</code>
+題意通り実装してAC</p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_b">B - FizzBuzz Sum</a><br>
+FizzBuzzの応用？<br>
+1からNまでループし、3か5の因数だったらpassして、それ以外を合計する<br>
+制約が <code>1&lt;=N&lt;=10**6</code> のため、普通に for ループで回して終わる。  </p>
+<h2>C</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_c">C - Sum of gcd of Tuples (Easy)</a></p>
+<p>できなかった。。<br>
+問題文を読んで、まずは愚直な実装。</p>
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </code></pre></div>
 
 
-<p>これを愚直な実装にいれれば（ループ回すと）終わらないことを教えてくれる。</p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566201">提出</a></p>
-<p>さくっとできた！</p>
+<p>gcd は3つ数字の gcd を取れるように、reduceを使って実装。<br>
+https://note.nkmk.me/python-gcd-lcm/<br>
+からの引用。前別の問題でgcd求めたついでに調べて知っていたのを思い出して再利用。<br>
+ただまぁ、愚直な3重ループはTLEだろうなと思ってやってみたが、案の定TLE。  </p>
+<p>ここからが、今の自分に足りてないところ。<br>
+上記の提出 <code>O(N**3)</code> でTLEなのは想像ついたので、アプローチとして  </p>
+<ul>
+<li>数学的に一般化できて、O(1)とかになる</li>
+<li>アルゴリズムに計算量を落とす余地があり <code>O(N**2)</code> 以下に減らせるとか</li>
+</ul>
+<p>を考える。<br>
+なんだか、一般化できそうな気がしたのでちょっと書き出し＆考えてみたがうまくいかず、タイムアップ。  </p>
+<p>計算量的に削減できそうなところでいえば、</p>
+<ul>
+<li>abcの中に一つでも1があれば1  </li>
+<li>
+<p>3つが互いに素なら1<br>
+とかでgcdの計算を省略したり、</p>
+</li>
+<li>
+<p>過去やった組み合わせはなんかうまいことスキップ<br>
+とかで計算回数そのものを減らしたり</p>
+</li>
+</ul>
+<p>を考えたけど、うまく効きそうな実装を思いつかず。。  </p>
+<p>あとで解説見て復習する。  </p>
+<h2>D</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_d">D - RGB Triplets</a></p>
+<p>実は今回Dも提出した。がこちらもTLE。<br>
+愚直な実装で題意は満たせるが、こちらもこんなループしてたら怒られるだろうなぁって感じ。</p>
+<div class="highlight"><pre><span></span><code><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span>
+<span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">input</span><span class="p">()</span><span class="w"></span>
+
+<span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">N</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">k</span><span class="o">-</span><span class="nl">j</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="n">pass</span><span class="w"></span>
+<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">                            </span><span class="n">c</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+<h2>自分の提出とは関係ない話</h2>
+<h3>言語アップデートとジャッジシステムのトラブル</h3>
+<p>開始5分以降？ぐらいで新ジャッジシステムのトラブルで、WJが進まず。<br>
+じつはこれが起きる前にCを初回提出してたので、通ったのか通らなかったのかわからなかった。<br>
+題意は満たせてるからいったん通ったつもりでD移行と思ってDも書いて提出したけど、その後も解決せずいったん離席。<br>
+unrated かなーと思って戻ってきたら問題解消してどっちもTLEとなってたのでそこからCに再トライ、敗北</p>
+<h3>PCが逝ってしまわれた...</h3>
+<p>普段つかってるデスクトップPCが死んだため、急遽会社のノートPCに環境構築して対応。<br>
+幸い docker か pipenv が動けば AtCoder 用 python 環境が動くようになってたため間に合ったけど、実は今回から3.8.2 へアップデートされていて、そこには対応しておらずあわてて事前準備。  </p>
+<p>なんとか間に合ったものの、なんだかこのノートPCでのWSLがめちゃめちゃもっさりしてて、普通のlsにも数秒かかるような状況で、実行したときに時間かかってるのがプログラムのせいなのかなんなのかわからない事態に。。  </p>
+<p>まぁ問題解けなかったたこととは関係ないんだけど。  </p>
 <hr>
-<p>上記3問はさくっと解けた。<br>
-diffはわからないけど、多分これ参加して解けてたら茶にあがれてたかなぁ。。<br>
-また次回！</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png"><img src="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png" width="500"></a>  </p>
+<p>2完なので、茶は無理だったろうな。。</p>
 </article>
 <hr />
 
@@ -183,6 +240,7 @@ diffはわからないけど、多分これ参加して解けてたら茶にあ�
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc5.html">5</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc6.html">6</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc7.html">7</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/abc8.html">8</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/tag/abc2.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -208,7 +266,7 @@ diffはわからないけど、多分これ参加して解けてたら茶にあ�
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (2)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (3)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 								</ul>
 							</div>

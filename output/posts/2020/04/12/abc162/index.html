@@ -183,6 +183,25 @@ https://note.nkmk.me/python-gcd-lcm/<br>
 </ul>
 <p>を考えたけど、うまく効きそうな実装を思いつかず。。  </p>
 <p>あとで解説見て復習する。  </p>
+<h3>C 追記 20200413 00:00</h3>
+<p>他の人のAC回答見てたら、これで通ってた。。。  </p>
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>えええ、計算量変わってない（むしろ一つの組み合わせに対して math.gcd() を2回やってるから計算量的には増えてる）けど、reduce 分削ったらこれで収まるのか。。<br>
+完全に余計なことしてただけなのが発覚、方向性は間違ってなかった。。orz<br>
+えーんこんなことでレート落とすとは。。orz  </p>
 <h2>D</h2>
 <p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_d">D - RGB Triplets</a></p>
 <p>実は今回Dも提出した。がこちらもTLE。<br>

@@ -86,7 +86,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (12)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (13)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 
 						<li><label>Social</label></li>
@@ -127,56 +127,79 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/11/general_20200411">雑記 20200411</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/general.html">General</a> on Sat, 11 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/general.html">general</a>, </h6>
-	<p>雑記を書きたくて。<br>
-今は寝ても冷めても covid-19 のことばかり。<br>
-情報絶ちしたいと思っても、刻一刻と迫る危機、局面が気になって、どうしてもTwitterや各種ニュースが気になってしまう。<br>
-せめて、ここにはなんか別にどうでもいい文章を書き残しておきたい。</p>
-<h2>自分のこと</h2>
-<p>都内某ゲーム系エンタメ会社勤務のITインフラエンジニア。<br>
-2014年新卒入社で気づけば6年目。そろそろ転職したい機運があり、ポートフォリオにならねーかなとこのブログを始めた（ならない）。<br>
-業務都合で自宅から業務ができるだけのアクセス権とノートPC/スマホを持っていたこともあり、3月半ばから完全在宅勤務。<br>
-インフラエンジニアで24/365で呼び出しの可能性があったことが今回は幸い。  </p>
-<p>趣味はゲームと読書と音楽。<br>
-最近ハマってるのは競プロ、AtCoderで灰から茶を目指しているところ。  </p>
-<p>31歳、既婚（もうすぐ結婚1年）。<br>
-妻が妊娠中、明日で16週。9月末出産予定。（それもあり、余計に病魔にビビっている  </p>
-<h2>ここ最近のこと</h2>
-<p>妻はつわりがまだ安定せず、本来なら安定してくるタイミングだしだいぶ良くはなったのでちょっと出社を試みたがまだきつい＆今の状況もあり会社から妊婦は休業指示（ほんとよかった。。）。<br>
-妻と二人でほとんど引きこもり生活。週１～２回にまとめて買い出し行くのと、２～３日にいっぺんぐらい近所を散歩する以外はほとんどずっと引きこもり。  </p>
-<h2>競プロのこと</h2>
-<p>もともと興味はあったんだけど、一つぐらいまとも扱えるプログラミング言語覚えておきたい＆転職のときの話のネタ程度に始めた。<br>
-けっこう楽しいが、大学＆大学院でちゃんと勉強してなかったことが悔やまれるというのと、高校ではそれなりに真面目に数学やってたんだけど、あれーーこれわかるなぁっていうのが全然わからなくて、高校数学からやり直しな気持ち。。<br>
-15年も前のことだもんなぁ、覚えてないもんだ。</p>
-<p>言語はpythonでやってる。<br>
-競プロ的には不利な言語だけど、競プロそのものが目的ではない（どっちかというとPythonの勉強が主目的）のでそれは別にOK<br>
-次回のABCで茶にあがれそう。また明日がんばろう。  </p>
-<h2>仕事のこと</h2>
-<p>オンラインゲーム系のサーバインフラエンジニア。<br>
-ゲームが好きというものあるけど、新卒で就活してたときに、</p>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/12/centos8_vm_1">Windows10 の VirtualBox に CentOS8 をインストールして使う (1)</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 12 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a>, <a href="https://blog.watarinohibi.tokyo/tag/centos8.html">centos8</a>, <a href="https://blog.watarinohibi.tokyo/tag/virtualbox.html">virtualbox</a>, </h6>
+	<h2>概要</h2>
 <ul>
-<li>なるべくでかいところに行こう</li>
-<li>好きなサービスを作ってるところへ行こう</li>
-<li>最初に内定くれたところに行こう</li>
+<li>Windows10にVirtualBoxを用意</li>
+<li>CentOS8の イメージDVD.iso を用意</li>
+<li>VirtualBox に Linux の VirtualMachine を用意</li>
+<li>用意した Virtualmachie に CentOS8 をインストールして起動</li>
 </ul>
-<p>で最初に内定くれたとこ。ぶっちゃけ運が良かったと思う。<br>
-情報系の大学院をでてはいるけど、あまり真面目な学生ではなかったので技術スキルはからっきしで入社してる。<br>
-おもえば丸5年、それなりにがんばったもんだ。最初はsshログインやgitも知らなかった。ちょっとLinuxコマンドがわかってviを知っててギリ使えるぐらいだった。 </p>
-<h2>転職したい</h2>
-<p>今の待遇はそんなに悪くないけど、以下のようなモチベーションで転職したい。</p>
+<h2>Windows10 に VirtualBox を用意</h2>
+<p><a href="https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html">Oracle VM VirtualBox</a><br>
+からダウンロード。
+20200412現在、latest は <code>6.1.4</code></p>
+<p>ダウンロードした exe を実行してインストールする。</p>
+<h2>CentOS8 のイメージを用意</h2>
+<p><a href="https://www.centos.org/download/">Download CentOS</a><br>
+から <code>CentOS Linux DVD ISO</code> をダウンロード。<br>
+20200412現在、latest は <code>8.1.1911</code>  </p>
+<p>ダウンロードした .iso をわかりやすいところへ置いておく。</p>
+<h2>VirtualBox に Linux の VirtualMachine を用意</h2>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm1.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm1.png" width="500"></a>    </p>
+<p>VirtualBox を起動して 仮想マシン → 新規 で新規作成する。<br>
+タイプ: Linux<br>
+バージョン: Red Hat (64-bit)
+メモリサイズはお好みだが、CentOS8は必須2GB以上、推奨4GB以上となっているので4GB以上を指定するのが良い。<br>
+ディスクは必要に応じて作成。OSは約6.6GBほどらしい。最低で12GB程度あれば良いが、使いたければ適当に大きめに用意する。  </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm2.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm2.png" width="500"></a>    </p>
+<p>合わせて、以下を実行できるようにネットワークの設定をしておく。  </p>
+<p>(1) ホストOS(Windows10)からゲストOS(CentOS8)への通信<br>
+(2) ゲストOS(CentOS8)からインターネットへの通信  </p>
+<p>(1) は VirtualBox のホストオンリーアダプタにて対応　　
+(2) は VirtualBox のNATアダプタで対応  </p>
+<p>参考: <a href="https://qiita.com/Yoshiki-Takahashi/items/7274dff15dbafee5b118">VirtualBox上ゲストOSにssh接続する＆ゲストOSからインターネット接続できるようにする。</a></p>
+<p>VirtualMachie ができたら、起動する。<br>
+初回起動時に仮想光学ドライブへのディスクを挿入するように要求されるので、ダウンロードしておいた iso を選択する。</p>
+<h2>CentOS8をインストールして起動する</h2>
+<p>無事インストーラが起動したら、インストール画面になる。<br>
+以下の順番で設定。  </p>
+<p><strong>インストール言語</strong>  </p>
 <ul>
-<li>組織がしんどい → そこそこ古い会社で情シスのインフラ部隊はもう20年ぐらいの組織。昔のやりかたが凝り固まっているのと組織論が弱すぎ＆不満が多すぎて居続けるのがしんどい。人はそこまで悪くないから「すぐやめる！」ってならずにだらだらい続けてしまったけど、そろそろここにいるのはいい加減良くないと感じてる。ある意味、ぬるま湯。</li>
-<li>新しい技術を習得できない、しにくい → チャレンジができないわけじゃないけど、ものすごく部分的なところでしかできない。大きな変化や意思決定が弱い。悪い意味でないすおーるどじゃぱにーず企業</li>
-<li>30代になった → いうて丸5年もいて、技術面でもビジネス面でもそれなりに成長できたと思ってる。大きくチャレンジしたい欲が高まっている。</li>
+<li>日本語を選択（キーボードを日本語マッピングにしておきたいため）</li>
 </ul>
-<p>というわけで、もっと（技術的、ビジネス的に）チャレンジできる環境を求めて転職を考えているところ。<br>
-ただし、妻と生まれてくる子供のこと、および住宅の購入を検討しているため、もろもろが片付いた１～２年後を目処に。</p>
-<hr>
-<p>なんか、こういう感じでそのときそのとき思ったことをちょっとずつ認めていきたい。<br>
-意味がなくてもいい。僕は文章を読むのも書くのも好きな人間だった。昔は2次小説とか書いてた。<br>
-もう一度、文章をがりがり書く習慣を取り戻したい。  </p>
-<p>小説書きたい。  </p>
+<p><strong>インストール概要</strong>  </p>
+<ul>
+<li>キーボード: 日本語</li>
+<li>言語サポート: 英語を追加（OSは英語で使う）</li>
+<li>日付と時刻: Asia/Tokyo</li>
+</ul>
+<p><strong>ソフトウェア</strong>  </p>
+<ul>
+<li>お好きなものを選択、今回の手順ではGUI使用を選んでいる</li>
+</ul>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm8.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm8.png" width="500"></a>   </p>
+<p><strong>ネットワークとホスト名</strong>  </p>
+<ul>
+<li>enp0s3 を有効化(NAT)</li>
+<li>enp0s8 を有効化(HostOnly)</li>
+</ul>
+<p>上記以外はそのままでOK、必要に応じて設定する → インストール開始</p>
+<p>ユーザの作成とrootのパスワード設定を要求されるので、rootのパスワードのみ設定</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm3.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm3.png" width="500"></a>    </p>
+<p>インストールが進行するのでしばらく放置。<br>
+完了したら再起動。再起動のときに、仮想光学ドライブからisoを抜いておくことを忘れないように。<br>
+入れっぱなしだと、またインストールが始まる。  </p>
+<h2>初回起動</h2>
+<p>初期設定が出るので、ライセンス条項に同意。なお GPLv2</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm4.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm4.png" width="500"></a>    </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm5.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm5.png" width="500"></a>    </p>
+<p>ウゴウゴ起動してくる。<br>
+デスクトップにて、謎のwelocme画面がでる。  </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm6.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm6.png" width="500"></a>    </p>
+<p>無事起動。</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm7.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm7.png" width="500"></a>    </p>
 </article>
 <hr />
 
@@ -213,6 +236,7 @@
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya26.html">26</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya27.html">27</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya28.html">28</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya29.html">29</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/author/shosoya5.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -238,7 +262,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (12)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (13)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 								</ul>
 							</div>

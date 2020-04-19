@@ -86,7 +86,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (4)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (5)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 
 						<li><label>Social</label></li>
@@ -132,34 +132,65 @@
 							</div>
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/14/practice_2020414">競プロ Practice 日記</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Tue, 14 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
-	<p>今日チャレンジした問題  </p>
-<p><a href="https://atcoder.jp/contests/agc007/tasks/agc007_a">A - Shik and Stone</a>  </p>
-<p>パッと見 dfs に見せかけて、じつはdfsだとちょっと難しくて、問題文をちゃんと正しく解釈すれば1行で解けたパターン。<br>
-パッと見であ！dfsだ！チャレンジで見たやつだ！となって意気揚々と実装してみたものの、例１、例２までは通したら例３で見事にハマった。ここで引っかかるところも含めての問題なんだなぁ。。  </p>
-<p>dfs に見せかけというのは、ようするに「右」と「下」の移動だけで左上から右下まで # を辿ってゴールにいけるか？という問題に見えたということ。<br>
-この条件で実装すると、例３は <code>Possible</code> だが出力例は <code>Impossible</code> でええ？となる。<br>
-例３は「右」と「下」の移動だけでゴールまでたどり着けるが、実はこれは題意を満たさない。  </p>
-<p>条件は <code>移動する過程で、駒が常に右または下に動いていた可能性があるか判定してください。</code> なので、<br>
-移動ルートの中で <em>左に移動することが可能であったならば</em>、答えは <code>Impossible</code> になる、ということ。<br>
-えー、それって答えが Possible/Impossible なのひっかけすぎない？とは思うけど。。  </p>
-<p>上記の条件なので、 dfs で解こうとした場合、ゴールにたどり着くルートを覚えておいて、途中経過で左や上にいくパターンがあったら <code>Impossible</code> としないといけないので、単純なdfsよりかなりしんどい、というか自分には実装できなかった。  </p>
-<p>で、どうやって解けばよいかというと、実は題意より、<br>
-「入力された <code>#</code> の数が、ゴールに辿り着く最短経路の数より多ければ <code>Impposible</code> で良い」となる。<br>
-つまり、右か下のみの移動であればかならず最短数でのゴールになるので、それ以上に <code>#</code> の数が多かったら <code>Impposible</code> でOKということ。はー、なるほど。  </p>
-<p>提出: <a href="https://atcoder.jp/contests/agc007/submissions/11925884">提出 #11925884</a></p>
-<div class="highlight"><pre><span></span><code><span class="n">H</span><span class="p">,</span><span class="n">W</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>
-<span class="k">c</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">H</span><span class="p">):</span>
-    <span class="k">c</span> <span class="o">+=</span> <span class="k">input</span><span class="p">().</span><span class="k">count</span><span class="p">(</span><span class="ss">&quot;#&quot;</span><span class="p">)</span>
-
-<span class="o">#</span> <span class="o">#</span><span class="err">の数が最低限必要な数より多いと</span><span class="n">Impossibleとなる</span>
-<span class="n">print</span> <span class="p">(</span><span class="ss">&quot;Impossible&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="k">c</span> <span class="o">&gt;</span> <span class="n">H</span><span class="o">+</span><span class="n">W</span><span class="o">-</span><span class="mi">1</span> <span class="k">else</span> <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;Possible&quot;</span><span class="p">)</span>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/19/abc163">AtCoder Beginner Contest 163</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 19 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
+	<p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
+円の半径が与えられるので円周を出力せよという問題<br>
+題意通りに実装すればOK  </p>
+<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 </code></pre></div>
 
 
-<p>元のマップを記憶する必要もなくて、入力中の <code>#</code> をカウントして題意を満たす解を出力するだけ。  </p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
+問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ <code>-1</code> を出力、それだけ</p>
+<div class="highlight"><pre><span></span><code><span class="err">n,m = map(int,input().split())</span>
+<span class="err">A = list(map(int,input().split()))</span>
+<span class="err">print (n-sum(A)) if n &gt;= sum(A) else print (&quot;-1&quot;)</span>
+</code></pre></div>
+
+
+<h2>C</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_c">C - management</a><br>
+1回TLEしたけど、2回目に無事ACした。よかった。<br>
+最近Cもなかなか解けなくてちょっとしょんぼりしてたけど、今日はちゃんとできた。  </p>
+<p>2行目に入力される数字の、要素ごとの要素数を出力すれば良い  </p>
+<h3>1回目、TLE</h3>
+<div class="highlight"><pre><span></span><code><span class="err">n = int(input())</span>
+<span class="err">A = list(map(int,input().split()))</span>
+<span class="err">for i in range(1,n+1):</span>
+<span class="err">    print (A.count(i))</span>
+</code></pre></div>
+
+
+<p>すべての要素に対して、毎回リストを全部精査(count)している。<br>
+そのため、len(A)の長さのリストをn回ループするので、O(n**2)) </p>
+<h3>2回目、AC</h3>
+<div class="highlight"><pre><span></span><code><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sorted</span><span class="p">(</span><span class="n">list</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="nc">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())))</span><span class="w"></span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">d</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">A</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">d</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="k">values</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>※制約から読み取れなかったので、念のため A を受け取り時にソートしてるが、たぶん不要<br>
+リストの精査は1回で、要素ごとの和をdictに格納する。
+これで、O(n)、AC</p>
+<hr>
+<p>今日は18分でCまで解けた。<br>
+また次回がんばろう。  </p>
 </article>
 <hr />
 
@@ -177,6 +208,7 @@
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming7.html">7</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming8.html">8</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming9.html">9</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/tag/programming10.html">10</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/tag/programming2.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -202,7 +234,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (4)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (5)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (5)</a></li>
 								</ul>
 							</div>

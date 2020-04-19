@@ -86,7 +86,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (6)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (7)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (7)</a></li>
 
 						<li><label>Social</label></li>
@@ -132,42 +132,79 @@
 							</div>
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/05/abc161">AtCoder Beginner Contest 161</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 05 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
-	<p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
-問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
-<hr>
-<h1>A</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
-swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
-<p>AC</p>
-<h1>B</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
-問題分の説明通り実装してあげればよい。<br>
-選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
-<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
-修正して無事AC</p>
-<h1>C</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
-数値を置き換える操作を繰り返す。<br>
-ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
-<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
-そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
-<p>入力例3が親切で</p>
-<div class="highlight"><pre><span></span><code><span class="err">1000000000000000000 1</span>
-</code></pre></div>
-
-
-<p>これを愚直な実装にいれれば（ループ回すと）終わらないことを教えてくれる。</p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566201">提出</a></p>
-<p>さくっとできた！</p>
-<hr>
-<p>上記3問はさくっと解けた。<br>
-diffはわからないけど、多分これ参加して解けてたら茶にあがれてたかなぁ。。<br>
-また次回！</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png"><img src="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png" width="500"></a>  </p>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/12/centos8_vm_1">Windows10 の VirtualBox に CentOS8 をインストールして使う (1)</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 12 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a>, <a href="https://blog.watarinohibi.tokyo/tag/centos8.html">centos8</a>, <a href="https://blog.watarinohibi.tokyo/tag/virtualbox.html">virtualbox</a>, </h6>
+	<h2>概要</h2>
+<ul>
+<li>Windows10にVirtualBoxを用意</li>
+<li>CentOS8の イメージDVD.iso を用意</li>
+<li>VirtualBox に Linux の VirtualMachine を用意</li>
+<li>用意した Virtualmachie に CentOS8 をインストールして起動</li>
+</ul>
+<h2>Windows10 に VirtualBox を用意</h2>
+<p><a href="https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html">Oracle VM VirtualBox</a><br>
+からダウンロード。
+20200412現在、latest は <code>6.1.4</code></p>
+<p>ダウンロードした exe を実行してインストールする。</p>
+<h2>CentOS8 のイメージを用意</h2>
+<p><a href="https://www.centos.org/download/">Download CentOS</a><br>
+から <code>CentOS Linux DVD ISO</code> をダウンロード。<br>
+20200412現在、latest は <code>8.1.1911</code>  </p>
+<p>ダウンロードした .iso をわかりやすいところへ置いておく。</p>
+<h2>VirtualBox に Linux の VirtualMachine を用意</h2>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm1.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm1.png" width="500"></a>    </p>
+<p>VirtualBox を起動して 仮想マシン → 新規 で新規作成する。<br>
+タイプ: Linux<br>
+バージョン: Red Hat (64-bit)
+メモリサイズはお好みだが、CentOS8は必須2GB以上、推奨4GB以上となっているので4GB以上を指定するのが良い。<br>
+ディスクは必要に応じて作成。OSは約6.6GBほどらしい。最低で12GB程度あれば良いが、使いたければ適当に大きめに用意する。  </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm2.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm2.png" width="500"></a>    </p>
+<p>合わせて、以下を実行できるようにネットワークの設定をしておく。  </p>
+<p>(1) ホストOS(Windows10)からゲストOS(CentOS8)への通信<br>
+(2) ゲストOS(CentOS8)からインターネットへの通信  </p>
+<p>(1) は VirtualBox のホストオンリーアダプタにて対応　　
+(2) は VirtualBox のNATアダプタで対応  </p>
+<p>参考: <a href="https://qiita.com/Yoshiki-Takahashi/items/7274dff15dbafee5b118">VirtualBox上ゲストOSにssh接続する＆ゲストOSからインターネット接続できるようにする。</a></p>
+<p>VirtualMachie ができたら、起動する。<br>
+初回起動時に仮想光学ドライブへのディスクを挿入するように要求されるので、ダウンロードしておいた iso を選択する。</p>
+<h2>CentOS8をインストールして起動する</h2>
+<p>無事インストーラが起動したら、インストール画面になる。<br>
+以下の順番で設定。  </p>
+<p><strong>インストール言語</strong>  </p>
+<ul>
+<li>日本語を選択（キーボードを日本語マッピングにしておきたいため）</li>
+</ul>
+<p><strong>インストール概要</strong>  </p>
+<ul>
+<li>キーボード: 日本語</li>
+<li>言語サポート: 英語を追加（OSは英語で使う）</li>
+<li>日付と時刻: Asia/Tokyo</li>
+</ul>
+<p><strong>ソフトウェア</strong>  </p>
+<ul>
+<li>お好きなものを選択、今回の手順ではGUI使用を選んでいる</li>
+</ul>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm8.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm8.png" width="500"></a>   </p>
+<p><strong>ネットワークとホスト名</strong>  </p>
+<ul>
+<li>enp0s3 を有効化(NAT)</li>
+<li>enp0s8 を有効化(HostOnly)</li>
+</ul>
+<p>上記以外はそのままでOK、必要に応じて設定する → インストール開始</p>
+<p>ユーザの作成とrootのパスワード設定を要求されるので、rootのパスワードのみ設定</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm3.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm3.png" width="500"></a>    </p>
+<p>インストールが進行するのでしばらく放置。<br>
+完了したら再起動。再起動のときに、仮想光学ドライブからisoを抜いておくことを忘れないように。<br>
+入れっぱなしだと、またインストールが始まる。  </p>
+<h2>初回起動</h2>
+<p>初期設定が出るので、ライセンス条項に同意。なお GPLv2</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm4.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm4.png" width="500"></a>    </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm5.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm5.png" width="500"></a>    </p>
+<p>ウゴウゴ起動してくる。<br>
+デスクトップにて、謎のwelocme画面がでる。  </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm6.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm6.png" width="500"></a>    </p>
+<p>無事起動。</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm7.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm7.png" width="500"></a>    </p>
 </article>
 <hr />
 
@@ -189,6 +226,7 @@ diffはわからないけど、多分これ参加して解けてたら茶にあ�
 				<li class=""><a href="https://blog.watarinohibi.tokyo/category/tech11.html">11</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/category/tech12.html">12</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/category/tech13.html">13</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/category/tech14.html">14</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/category/tech5.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -214,7 +252,7 @@ diffはわからないけど、多分これ参加して解けてたら茶にあ�
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (6)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (7)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (7)</a></li>
 								</ul>
 							</div>

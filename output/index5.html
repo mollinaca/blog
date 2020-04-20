@@ -60,6 +60,7 @@
 							<li ><a href="https://blog.watarinohibi.tokyo/category/misc.html">Misc</a></li>
 							<li ><a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a></li>
 							<li ><a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a></li>
+							<li ><a href="https://blog.watarinohibi.tokyo/category/thoughtexperiment.html">ThoughtExperiment</a></li>
 
 						<li><label>Links</label></li>
 
@@ -82,11 +83,12 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/social.html">social</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/tech.html">tech</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/test.html">test</a></li>
+							<li><a href="https://blog.watarinohibi.tokyo/tag/thoughtexperiment.html">thoughtexperiment</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/virtualbox.html">virtualbox</a></li>
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (14)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (15)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 
 						<li><label>Social</label></li>
@@ -109,6 +111,7 @@
 								<li ><a href="https://blog.watarinohibi.tokyo/category/misc.html">Misc</a></li>
 								<li ><a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a></li>
 								<li ><a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a></li>
+								<li ><a href="https://blog.watarinohibi.tokyo/category/thoughtexperiment.html">ThoughtExperiment</a></li>
 						</ul>
                         <ul class="right">                                                                                                                                           
                                                                                                           
@@ -127,79 +130,118 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/12/centos8_vm_1">Windows10 の VirtualBox に CentOS8 をインストールして使う (1)</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 12 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a>, <a href="https://blog.watarinohibi.tokyo/tag/centos8.html">centos8</a>, <a href="https://blog.watarinohibi.tokyo/tag/virtualbox.html">virtualbox</a>, </h6>
-	<h2>概要</h2>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/12/abc162">AtCoder Beginner Contest 162</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 12 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
+	<p>できなかった。。 ＞＜</p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_a">A - Lucky 7</a><br>
+入力文字列に <code>7</code> が含まれてたら <code>Yes</code>, なければ <code>No</code>
+題意通り実装してAC</p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_b">B - FizzBuzz Sum</a><br>
+FizzBuzzの応用？<br>
+1からNまでループし、3か5の因数だったらpassして、それ以外を合計する<br>
+制約が <code>1&lt;=N&lt;=10**6</code> のため、普通に for ループで回して終わる。  </p>
+<h2>C</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_c">C - Sum of gcd of Tuples (Easy)</a></p>
+<p>できなかった。。<br>
+問題文を読んで、まずは愚直な実装。</p>
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
+<span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>gcd は3つ数字の gcd を取れるように、reduceを使って実装。<br>
+https://note.nkmk.me/python-gcd-lcm/<br>
+からの引用。前別の問題でgcd求めたついでに調べて知っていたのを思い出して再利用。<br>
+ただまぁ、愚直な3重ループはTLEだろうなと思ってやってみたが、案の定TLE。  </p>
+<p>ここからが、今の自分に足りてないところ。<br>
+上記の提出 <code>O(N**3)</code> でTLEなのは想像ついたので、アプローチとして  </p>
 <ul>
-<li>Windows10にVirtualBoxを用意</li>
-<li>CentOS8の イメージDVD.iso を用意</li>
-<li>VirtualBox に Linux の VirtualMachine を用意</li>
-<li>用意した Virtualmachie に CentOS8 をインストールして起動</li>
+<li>数学的に一般化できて、O(1)とかになる</li>
+<li>アルゴリズムに計算量を落とす余地があり <code>O(N**2)</code> 以下に減らせるとか</li>
 </ul>
-<h2>Windows10 に VirtualBox を用意</h2>
-<p><a href="https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html">Oracle VM VirtualBox</a><br>
-からダウンロード。
-20200412現在、latest は <code>6.1.4</code></p>
-<p>ダウンロードした exe を実行してインストールする。</p>
-<h2>CentOS8 のイメージを用意</h2>
-<p><a href="https://www.centos.org/download/">Download CentOS</a><br>
-から <code>CentOS Linux DVD ISO</code> をダウンロード。<br>
-20200412現在、latest は <code>8.1.1911</code>  </p>
-<p>ダウンロードした .iso をわかりやすいところへ置いておく。</p>
-<h2>VirtualBox に Linux の VirtualMachine を用意</h2>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm1.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm1.png" width="500"></a>    </p>
-<p>VirtualBox を起動して 仮想マシン → 新規 で新規作成する。<br>
-タイプ: Linux<br>
-バージョン: Red Hat (64-bit)
-メモリサイズはお好みだが、CentOS8は必須2GB以上、推奨4GB以上となっているので4GB以上を指定するのが良い。<br>
-ディスクは必要に応じて作成。OSは約6.6GBほどらしい。最低で12GB程度あれば良いが、使いたければ適当に大きめに用意する。  </p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm2.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm2.png" width="500"></a>    </p>
-<p>合わせて、以下を実行できるようにネットワークの設定をしておく。  </p>
-<p>(1) ホストOS(Windows10)からゲストOS(CentOS8)への通信<br>
-(2) ゲストOS(CentOS8)からインターネットへの通信  </p>
-<p>(1) は VirtualBox のホストオンリーアダプタにて対応　　
-(2) は VirtualBox のNATアダプタで対応  </p>
-<p>参考: <a href="https://qiita.com/Yoshiki-Takahashi/items/7274dff15dbafee5b118">VirtualBox上ゲストOSにssh接続する＆ゲストOSからインターネット接続できるようにする。</a></p>
-<p>VirtualMachie ができたら、起動する。<br>
-初回起動時に仮想光学ドライブへのディスクを挿入するように要求されるので、ダウンロードしておいた iso を選択する。</p>
-<h2>CentOS8をインストールして起動する</h2>
-<p>無事インストーラが起動したら、インストール画面になる。<br>
-以下の順番で設定。  </p>
-<p><strong>インストール言語</strong>  </p>
+<p>を考える。<br>
+なんだか、一般化できそうな気がしたのでちょっと書き出し＆考えてみたがうまくいかず、タイムアップ。  </p>
+<p>計算量的に削減できそうなところでいえば、</p>
 <ul>
-<li>日本語を選択（キーボードを日本語マッピングにしておきたいため）</li>
+<li>abcの中に一つでも1があれば1  </li>
+<li>
+<p>3つが互いに素なら1<br>
+とかでgcdの計算を省略したり、</p>
+</li>
+<li>
+<p>過去やった組み合わせはなんかうまいことスキップ<br>
+とかで計算回数そのものを減らしたり</p>
+</li>
 </ul>
-<p><strong>インストール概要</strong>  </p>
-<ul>
-<li>キーボード: 日本語</li>
-<li>言語サポート: 英語を追加（OSは英語で使う）</li>
-<li>日付と時刻: Asia/Tokyo</li>
-</ul>
-<p><strong>ソフトウェア</strong>  </p>
-<ul>
-<li>お好きなものを選択、今回の手順ではGUI使用を選んでいる</li>
-</ul>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm8.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm8.png" width="500"></a>   </p>
-<p><strong>ネットワークとホスト名</strong>  </p>
-<ul>
-<li>enp0s3 を有効化(NAT)</li>
-<li>enp0s8 を有効化(HostOnly)</li>
-</ul>
-<p>上記以外はそのままでOK、必要に応じて設定する → インストール開始</p>
-<p>ユーザの作成とrootのパスワード設定を要求されるので、rootのパスワードのみ設定</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm3.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm3.png" width="500"></a>    </p>
-<p>インストールが進行するのでしばらく放置。<br>
-完了したら再起動。再起動のときに、仮想光学ドライブからisoを抜いておくことを忘れないように。<br>
-入れっぱなしだと、またインストールが始まる。  </p>
-<h2>初回起動</h2>
-<p>初期設定が出るので、ライセンス条項に同意。なお GPLv2</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm4.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm4.png" width="500"></a>    </p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm5.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm5.png" width="500"></a>    </p>
-<p>ウゴウゴ起動してくる。<br>
-デスクトップにて、謎のwelocme画面がでる。  </p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm6.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm6.png" width="500"></a>    </p>
-<p>無事起動。</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200412_vm7.png"><img src="https://blog.watarinohibi.tokyo/images/20200412_vm7.png" width="500"></a>    </p>
+<p>を考えたけど、うまく効きそうな実装を思いつかず。。  </p>
+<p>あとで解説見て復習する。  </p>
+<h3>C 追記 20200413 00:00</h3>
+<p>他の人のAC回答見てたら、これで通ってた。。。  </p>
+<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>えええ、計算量変わってない（むしろ一つの組み合わせに対して math.gcd() を2回やってるから計算量的には増えてる）けど、reduce 分削ったらこれで収まるのか。。<br>
+完全に余計なことしてただけなのが発覚、方向性は間違ってなかった。。orz<br>
+えーんこんなことでレート落とすとは。。orz  </p>
+<h2>D</h2>
+<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_d">D - RGB Triplets</a></p>
+<p>実は今回Dも提出した。がこちらもTLE。<br>
+愚直な実装で題意は満たせるが、こちらもこんなループしてたら怒られるだろうなぁって感じ。</p>
+<div class="highlight"><pre><span></span><code><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span>
+<span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">input</span><span class="p">()</span><span class="w"></span>
+
+<span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">N</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">k</span><span class="o">-</span><span class="nl">j</span><span class="p">:</span><span class="w"></span>
+<span class="w">                </span><span class="n">pass</span><span class="w"></span>
+<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
+<span class="w">                            </span><span class="n">c</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+<h2>自分の提出とは関係ない話</h2>
+<h3>言語アップデートとジャッジシステムのトラブル</h3>
+<p>開始5分以降？ぐらいで新ジャッジシステムのトラブルで、WJが進まず。<br>
+じつはこれが起きる前にCを初回提出してたので、通ったのか通らなかったのかわからなかった。<br>
+題意は満たせてるからいったん通ったつもりでD移行と思ってDも書いて提出したけど、その後も解決せずいったん離席。<br>
+unrated かなーと思って戻ってきたら問題解消してどっちもTLEとなってたのでそこからCに再トライ、敗北</p>
+<h3>PCが逝ってしまわれた...</h3>
+<p>普段つかってるデスクトップPCが死んだため、急遽会社のノートPCに環境構築して対応。<br>
+幸い docker か pipenv が動けば AtCoder 用 python 環境が動くようになってたため間に合ったけど、実は今回から3.8.2 へアップデートされていて、そこには対応しておらずあわてて事前準備。  </p>
+<p>なんとか間に合ったものの、なんだかこのノートPCでのWSLがめちゃめちゃもっさりしてて、普通のlsにも数秒かかるような状況で、実行したときに時間かかってるのがプログラムのせいなのかなんなのかわからない事態に。。  </p>
+<p>まぁ問題解けなかったたこととは関係ないんだけど。  </p>
+<hr>
+<p>2完なので、茶は無理だったろうな。。</p>
 </article>
 <hr />
 
@@ -238,6 +280,7 @@
 				<li class=""><a href="https://blog.watarinohibi.tokyo/index28.html">28</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/index29.html">29</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/index30.html">30</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/index31.html">31</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/index6.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -263,7 +306,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (14)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (15)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 								</ul>
 							</div>

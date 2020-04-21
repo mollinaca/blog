@@ -88,7 +88,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (15)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (16)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 
 						<li><label>Social</label></li>
@@ -130,65 +130,65 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/16/covid19-tokyo-20200416">COVID-19 in Tokyo 20200416</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a> on Thu, 16 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/social.html">social</a>, <a href="https://blog.watarinohibi.tokyo/tag/politics.html">politics</a>, <a href="https://blog.watarinohibi.tokyo/tag/news.html">news</a>, <a href="https://blog.watarinohibi.tokyo/tag/covid-19.html">covid-19</a>, </h6>
-	<p>4月7日に、7都道府県に緊急事態宣言が出されてから1週間とちょっと、間もなく2回目の週末を迎えようとしている。<br>
-そんな中、本日さらに緊急事態宣言の対象が拡大され、ついに日本全土が対象となった。  </p>
-<p><a href="https://jp.reuters.com/article/japan-covid-19-idJPKCN21Y0SZ">政府、緊急事態宣言の対象を全国に拡大へ　5月6日まで＝報道</a>  </p>
-<p>4月7日の緊急事態宣言後も、各自治体が独自に緊急事態宣言を出すなど、国の方針を待てない自治体は独自の動きを始めているところもあった。  </p>
-<p><a href="https://jp.sputniknews.com/covid-19/202004097347125/">愛知県、10日に独自の「緊急事態宣言」へ</a>  </p>
-<p>7都道府県に絞って発令された結果、市井に危機感が伝わり、対象の地域の人々が対象外の地域へ移動するなど、イタリアで起きたのと同じ最悪の動きもあったみたいだ。<br>
-中途半端な実施が、返って混乱を招いたんだろう。<br>
-戦力の逐次投入は悪手を地で行っている。  </p>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/19/abc163">AtCoder Beginner Contest 163</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 19 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
+	<p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
+円の半径が与えられるので円周を出力せよという問題<br>
+題意通りに実装すればOK  </p>
+<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
+問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ <code>-1</code> を出力、それだけ</p>
+<div class="highlight"><pre><span></span><code><span class="err">n,m = map(int,input().split())</span>
+<span class="err">A = list(map(int,input().split()))</span>
+<span class="err">print (n-sum(A)) if n &gt;= sum(A) else print (&quot;-1&quot;)</span>
+</code></pre></div>
+
+
+<h2>C</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_c">C - management</a><br>
+1回TLEしたけど、2回目に無事ACした。よかった。<br>
+最近Cもなかなか解けなくてちょっとしょんぼりしてたけど、今日はちゃんとできた。  </p>
+<p>2行目に入力される数字の、要素ごとの要素数を出力すれば良い  </p>
+<h3>1回目、TLE</h3>
+<div class="highlight"><pre><span></span><code><span class="err">n = int(input())</span>
+<span class="err">A = list(map(int,input().split()))</span>
+<span class="err">for i in range(1,n+1):</span>
+<span class="err">    print (A.count(i))</span>
+</code></pre></div>
+
+
+<p>すべての要素に対して、毎回リストを全部精査(count)している。<br>
+そのため、len(A)の長さのリストをn回ループするので、O(n**2)) </p>
+<h3>2回目、AC</h3>
+<div class="highlight"><pre><span></span><code><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sorted</span><span class="p">(</span><span class="n">list</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="nc">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())))</span><span class="w"></span>
+<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">d</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">A</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">d</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="k">values</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+
+<p>※制約から読み取れなかったので、念のため A を受け取り時にソートしてるが、たぶん不要<br>
+リストの精査は1回で、要素ごとの和をdictに格納する。
+これで、O(n)、AC</p>
 <hr>
-<p>東京都のデータ。<br>
-<a href="https://stopcovid19.metro.tokyo.lg.jp/">https://stopcovid19.metro.tokyo.lg.jp/</a>  より   </p>
-<p>とはいえ、新規陽性患者数は、そこまで爆発的に増えているわけではない、みたい。<br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo.png" width="500"></a>  <br>
-もちろんこれは、相談があり、検査を行い、結果陽性判定が出た数なので、実際に街中にどの程度感染者が潜んでいるのかは実際のところは不明だけど。</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo2.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo2.png" width="500"></a>  <br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo3.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo3.png" width="500"></a>    </p>
-<p>検査実施人数に至っては減少傾向。新規陽性患者数の母数になる検査件数が減ってるから、陽性数が少なくみえるのはそれはそうだろうという気はする。<br>
-検査人数、増やすのは難しくても減らしているのはなんでなんだろう。。検査機関が感染したとかそういう話でなければいいけど。  </p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo4.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo4.png" width="500"></a>    </p>
-<p>都営地下鉄の単純な利用者数は、かなり減っている模様。<br>
-このグラフだと、7割近く減っている。目標の8割までもう少しというところ。<br>
-とはいえ、これは都営地下鉄だけでJRとかは含まれないので、そちらのデータがないのはもどかしいところだけど。<br>
-渋谷や新宿のライブカメラ見てると、減ってるのはだいぶそうみたい。  </p>
-<hr>
-<h2>これからどうなるんだろう？</h2>
-<p>まずもって、感染拡大はGW開けの5/6まで落ち着かないと思う。<br>
-緊急事態宣言&amp;自粛要請が、一般市民の多くにそこそこ効いてると思う。<br>
-大規模な街中でのクラスター感染や、感染数の爆発的な増加というのはある程度脅威度が下がっていそう。  </p>
-<p>一方で、新規感染そのものの抑制はできない。<br>
-ある程度自粛しているだけでは結局じわじわ広がり続けるし、医療リソースはじわじわ食い続ける。<br>
-結果的に、病床もじわじわ食いつくされ、病院が受け入れられないケースや、救急が迎えに来れないケースが増えてくる。<br>
-じわじわと、医療崩壊が進み、徐々に犠牲者が増えていく。  </p>
-<p>じわじわというのがポイントで、大規模なクラスター感染や院内感染が起きないから、そこまで大きなニュースにはならないが、確実にリソースはひっ迫していき、医療が間に合わないケースが増えていく。<br>
-そして少しずつ、ぽろぽろと犠牲者が増えていく。  </p>
-<p>これはきっと1ヵ月では収まらない。<br>
-結局自粛 "要請" のみでは、これは防げない。<br>
-夏ぐらいまでは、この感じが進んで、いくつか院内感染やクラスターが発生しつつも、今の状態がずるずる続くんだろうな。  </p>
-<p>でもそれで済めば、たぶん御の字。ニューヨークやイタリアみたいな、（表面的な）大惨事にはきっとならない。  </p>
-<p>こういう感じで夏過ぎまで今の緊急事態宣言が続いて、そのあとぐらいから徐々に緩和しつつも、新規感染者は減らないか、むしろちょっと増えるぐらいの状況が続く。<br>
-でもそれ以上はみんな我慢できない。その時がきっと最悪の事態で、大きな第二波がきっとくる。  </p>
-<p>これでも、だいぶ楽観的な予想だと思う。  </p>
-<p>この感染状況で、中小企業の多くが経済的なダメージを受ける。<br>
-けっこうな数の倒産が発生し、職を失う、そちらを原因に命を落とす人が増える。<br>
-幸い（？）日本人なので、略奪や暴力行為といった治安の悪化（それも多少はあるだろうけど）よりも、単純に自殺者が増えそう。<br>
-covid19で命を落とす人を経済のひっ迫を苦にした自殺者が上回るとかそういう事態になって、止む無くずるずる経済活動を再開させていく流れになる。  </p>
-<hr>
-<p>自分にできること。<br>
-まず自分と家族（妻）、それに9末に生まれる予定の子どもを守る。<br>
-単純に、収入を失わない。幸い自分はリモートワークで完全に業務を継続、会社のほうも多少影響は受けているけど今のところ倒産といった直接的な危機には至っていない。<br>
-ある程度内部保留ちゃんと蓄えてる会社で（状況次第では「内部保留ありすぎだろ！って批判的な目にもなるけど。。」）良かったと、今は思ってる。  </p>
-<p>新型コロナウィルスに感染しない、感染させない。自粛は継続する。<br>
-ひきこもり体質でよかった。。ぜんぜん苦じゃない。  </p>
-<p>いざというときの備え、緊急セットはまた見直しておこう。防災セットも買ってあるが、改めて。
-そういうことを胸に、対策と日々を過ごしていく。まだしばらくは。  </p>
-<hr>
-<p><a href="https://note.stopcovid19.jp/n/n829d79220a18">全地域の皆さまへ　緊急事態宣言で変わること・変わらないこと（4/16更新版）</a><br>
-読んでおこう。</p>
+<p>今日は18分でCまで解けた。<br>
+また次回がんばろう。  </p>
 </article>
 <hr />
 
@@ -228,6 +228,7 @@ covid19で命を落とす人を経済のひっ迫を苦にした自殺者が上�
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya29.html">29</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya30.html">30</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya31.html">31</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya32.html">32</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/author/shosoya4.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -253,7 +254,7 @@ covid19で命を落とす人を経済のひっ迫を苦にした自殺者が上�
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (15)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (16)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 								</ul>
 							</div>

@@ -88,7 +88,7 @@
 							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
 
 						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (15)</a></li>
+									<li><a href="/posts/2020/04/index.html">April 2020 (16)</a></li>
 									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 
 						<li><label>Social</label></li>
@@ -130,65 +130,42 @@
 						<div class="medium-9 small-12 columns" role="content">
 
 <article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/19/abc163">AtCoder Beginner Contest 163</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a> on Sun, 19 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a>, <a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a>, <a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a>, </h6>
-	<p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
-円の半径が与えられるので円周を出力せよという問題<br>
-題意通りに実装すればOK  </p>
-<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
-<span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-</code></pre></div>
-
-
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
-問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ <code>-1</code> を出力、それだけ</p>
-<div class="highlight"><pre><span></span><code><span class="err">n,m = map(int,input().split())</span>
-<span class="err">A = list(map(int,input().split()))</span>
-<span class="err">print (n-sum(A)) if n &gt;= sum(A) else print (&quot;-1&quot;)</span>
-</code></pre></div>
-
-
-<h2>C</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_c">C - management</a><br>
-1回TLEしたけど、2回目に無事ACした。よかった。<br>
-最近Cもなかなか解けなくてちょっとしょんぼりしてたけど、今日はちゃんとできた。  </p>
-<p>2行目に入力される数字の、要素ごとの要素数を出力すれば良い  </p>
-<h3>1回目、TLE</h3>
-<div class="highlight"><pre><span></span><code><span class="err">n = int(input())</span>
-<span class="err">A = list(map(int,input().split()))</span>
-<span class="err">for i in range(1,n+1):</span>
-<span class="err">    print (A.count(i))</span>
-</code></pre></div>
-
-
-<p>すべての要素に対して、毎回リストを全部精査(count)している。<br>
-そのため、len(A)の長さのリストをn回ループするので、O(n**2)) </p>
-<h3>2回目、AC</h3>
-<div class="highlight"><pre><span></span><code><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span>
-<span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sorted</span><span class="p">(</span><span class="n">list</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="nc">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())))</span><span class="w"></span>
-<span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">d</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-
-<span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">A</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">d</span><span class="o">[</span><span class="n">v</span><span class="o">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-
-<span class="k">for</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="k">values</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
-
-
-<p>※制約から読み取れなかったので、念のため A を受け取り時にソートしてるが、たぶん不要<br>
-リストの精査は1回で、要素ごとの和をdictに格納する。
-これで、O(n)、AC</p>
-<hr>
-<p>今日は18分でCまで解けた。<br>
-また次回がんばろう。  </p>
+	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/04/20/aftercovid19">After covid-19 Thought experiment</a></h3>
+	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/thoughtexperiment.html">ThoughtExperiment</a> on Mon, 20 Apr 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/thoughtexperiment.html">thoughtexperiment</a>, <a href="https://blog.watarinohibi.tokyo/tag/covid-19.html">covid-19</a>, </h6>
+	<h1>covid-19 が落ち着いた世界はどうなっているんだろう？</h1>
+<p>今現在世界中で猛威を振るっている covid-19。<br>
+国や地域によってはピークはいったん過ぎつつあるところもあるけど、そのあと再度流行の第2波、第3波がくることも予想されている。<br>
+それでも、人類が絶滅しなければいつかはワクチンの開発や免疫の獲得によって今ほどの脅威ではなくなるはず。<br>
+その時、いまと何がどう変わっているんだろう。  </p>
+<h3>感染症の恐怖とこれまでなんでもなかった行動における「リスク」の高まり</h3>
+<p>最初に中国の特定の地域、場所で発生した（とされる）今回の covid-19 は、なにやら大変なことが始まったぞと見ているほんの数日～数週間の間に爆発的に世界に広がった。<br>
+今日、世界で人類にいけないところはほぼないぐらい地球上の全ての場所で人類の往来があるし、たくさんのトラフィックが流れている。<br>
+人の移動にくっついて感染者数を増やす感染症事態のリスクが100年前のスペイン風邪の時と比べて圧倒的に高まっているのは間違いない。  </p>
+<p>いまや、市井のどの人が感染症のキャリアかわからなくなった状態になっているわけで、この状態では圧倒的に人と会うリスクが高いと考えられるし今後もこの傾向は続くだろう。<br>
+これまで気軽にオフィスや会議室で集まっていワークしていたことのハードルが一層高くなった状態だ。<br>
+WFH、リモートワークの需要が高まったのではなく、集まることのリスクが高くなった。それが今は計測不能なため緊急事態宣言になっているが、状況が落ち着いてもこの「リスクが高くなった」ことには変わりない。  </p>
+<p>もともと世界にはWFHに価値を見出して最初からオフィスを持たない企業も存在する。<br>
+WFHには、新たなリスク回避のメリットが加わったことから今後意図的に「オフィスを持たない」選択をする企業はでてくるだろう。<br>
+とはいえ、オフィスや会議室に集まること、F2Fで会話することにはそれ自体に価値があるし、自宅に業務環境、集中するスペースを設けるのが難しい人もいる。<br>
+すべてがすべて WFH になるっていうことはないだろうし、バランスを取りながらオフィスを継続するところはするし、やめたり、最初からオフィスを持たない前提で企業する組織も現れるだろうとは思う。<br>
+あるいはサテライトオフィス。　　
+WeWork のような形ではなく、コワーキングスペースで衛生面により気を使った環境の提供が流行るかも。</p>
+<h3>デリバリーの需要拡大</h3>
+<p>感染症を避けるためには、なんといっても「人と会わない」ことが重要である。<br>
+そのために、不特定多数の人がいるスーパーマーケットや小売店に出かけて行って買い物をすることは、それ自体のリスクが高まった。  </p>
+<p>Amazonが世界に出現してからECでの決済額は上がり続けているけれども、今後その需要は一層拡大していく。<br>
+日用品の配達、とくにサブスクリプションと組み合わせた生鮮食品のデリバリーとかも需要が拡大していくだろう。<br>
+既にいまあるサービスも申し込みが殺到しているらしい。わざわざ外出して不特定多数の人と出会う機会や、不特定多数の人が触った食品を手に取るリスクを冒したくないと考える人がいるのも頷ける。  </p>
+<h3>学校や教育の現場でも</h3>
+<p>学校は不特定多数ではないけれども、やはり人と密集した環境で過ごすリスクファクターになった。<br>
+より一層オンラインでの対応、特に補習塾は、わざわざ塾にいかずとも、自宅でできる環境が必要になっていくだろう。</p>
+<h1>人と会うことがリスクになる時代</h1>
+<p>総じて、外出を避け、不特定多数の人と接触する機会を避けるように、社会はシフトしていくと思う。<br>
+そしてより一層オンラインが重要になる。<br>
+その時重要なのが、いかに自宅に仕事をしたり、学習をしたりする環境を整えられるか。<br>
+日本は、街中や各自宅へのインターネット普及率、またその性能は世界でもダントツで良いほうだと思うけど、一方で一般家庭へのPC普及率は諸外国と比べたら高くないし、ITリテラシーも高くないほうだと思っている。（ほんとかな？</p>
+<p>今後緩やかに、でも確実にオンライン化が求められる時代が進む際に、どの程度の人が社会から蹴り落されるか、そこで蹴り落されないようにどの程度のセーフティネットが設けられるか。<br>
+変革の時であることは間違いないけど、日本という国がどうやって変化に適応していくのか（あるいはできないのか）、重大な局面であると感じる。</p>
 </article>
 <hr />
 
@@ -228,6 +205,7 @@
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya29.html">29</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya30.html">30</a></li>
 				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya31.html">31</a></li>
+				<li class=""><a href="https://blog.watarinohibi.tokyo/author/shosoya32.html">32</a></li>
 				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/author/shosoya3.html">Next &rarr;</a></li>
 			</ul>
 		</div>
@@ -253,7 +231,7 @@
 							<div class="panel">
 								<h5>Monthly Archives</h5>
 								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (15)</a></li>
+											<li><a href="/posts/2020/04/index.html">April 2020 (16)</a></li>
 											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
 								</ul>
 							</div>

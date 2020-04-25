@@ -105,6 +105,63 @@
 <div class="row">
     <div class="span2">
         <div class="well small"><footer class="post-info">
+<abbr class="published" title="2020-04-25T00:00:00+09:00">
+    <i class="icon-calendar"></i>&nbsp;2020-04-25(Sat)
+</abbr>
+<br/><a href="../author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
+
+
+<br/>
+	&nbsp;&nbsp;<a href="../tag/tech.html" class="label"><i class="icon-tag"></i>&nbsp;tech</a>
+	&nbsp;&nbsp;<a href="../tag/postfix.html" class="label"><i class="icon-tag"></i>&nbsp;postfix</a>
+	&nbsp;&nbsp;<a href="../tag/linux.html" class="label"><i class="icon-tag"></i>&nbsp;linux</a>
+</footer><!-- /.post-info --></div>
+    </div>
+    <div class="span6">
+        <div class="article well">
+            <h1><a href="../posts/2020/04/25/mailserver">自前メールサーバの構築手順メモ</a></h1>
+            <div class="summary"><p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
+https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
+<hr>
+<h1>メールサーバ構築</h1>
+<h2>用途、前提</h2>
+<ul>
+<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
+<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
+</ul>
+</li>
+<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
+<li>なるべく AWS FreeTrial の範囲で<ul>
+<li>1年ごとの使い捨て</li>
+</ul>
+</li>
+</ul>
+<h2>EC2インスタンスを作成</h2>
+<ul>
+<li>AWSアカウントを作成<ul>
+<li>アカウント作成</li>
+<li>2FA設定</li>
+<li>ログイン・作業用IAM、API実行用IAM作成<ul>
+<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
+<li>作業用IAMでログイン</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>EC2インスタンス作成<ul>
+<li>AmazonLinux2</li>
+<li>SecurityGroup作成、アタッチ<ul>
+<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
+<li>outbound: ICMP …</li></ul></li></ul></li></ul>
+                <a class="btn btn-small" href="../posts/2020/04/25/mailserver">more ...</a>
+            </div>
+        </div>
+    </div>
+    <div class="span8">
+        <hr />
+    </div>
+    <div class="span2">
+        <div class="well small"><footer class="post-info">
 <abbr class="published" title="2020-04-19T00:00:00+09:00">
     <i class="icon-calendar"></i>&nbsp;2020-04-19(Sun)
 </abbr>
@@ -176,49 +233,6 @@
     <div class="span8">
         <hr />
     </div>
-    <div class="span2">
-        <div class="well small"><footer class="post-info">
-<abbr class="published" title="2020-04-12T00:00:00+09:00">
-    <i class="icon-calendar"></i>&nbsp;2020-04-12(Sun)
-</abbr>
-<br/><a href="../author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
-
-
-<br/>
-	&nbsp;&nbsp;<a href="../tag/atcoder.html" class="label"><i class="icon-tag"></i>&nbsp;atcoder</a>
-	&nbsp;&nbsp;<a href="../tag/abc.html" class="label"><i class="icon-tag"></i>&nbsp;abc</a>
-	&nbsp;&nbsp;<a href="../tag/programming.html" class="label"><i class="icon-tag"></i>&nbsp;programming</a>
-</footer><!-- /.post-info --></div>
-    </div>
-    <div class="span6">
-        <div class="article well">
-            <h1><a href="../posts/2020/04/12/abc162">AtCoder Beginner Contest 162</a></h1>
-            <div class="summary"><p>できなかった。。 ＞＜</p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_a">A - Lucky 7</a><br>
-入力文字列に <code>7</code> が含まれてたら <code>Yes</code>, なければ <code>No</code>
-題意通り実装してAC</p>
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_b">B - FizzBuzz Sum</a><br>
-FizzBuzzの応用？<br>
-1からNまでループし、3か5の因数だったらpassして、それ以外を合計する<br>
-制約が <code>1&lt;=N&lt;=10**6</code> のため、普通に for ループで回して終わる。  </p>
-<h2>C</h2>
-<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_c">C - Sum of gcd of Tuples (Easy)</a></p>
-<p>できなかった。。<br>
-問題文を読んで、まずは愚直な実装。</p>
-<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
-<span class="k">def …</span></code></pre></div>
-                <a class="btn btn-small" href="../posts/2020/04/12/abc162">more ...</a>
-            </div>
-        </div>
-    </div>
-    <div class="span8">
-        <hr />
-    </div>
 
 <div class="span6">
 <div class="pagination">
@@ -272,14 +286,19 @@ FizzBuzzの応用？<br>
 <li class="nav-header"><a href="../tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
 -->
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-    <li class="tag-4">
-        <a href="../tag/sns.html">
-            <i class="icon-tag icon-large"></i>sns
+    <li class="tag-1">
+        <a href="../tag/news.html">
+            <i class="icon-tag icon-large"></i>news
         </a>
     </li>
-    <li class="tag-3">
-        <a href="../tag/thoughtexperiment.html">
-            <i class="icon-tag icon-large"></i>thoughtexperiment
+    <li class="tag-4">
+        <a href="../tag/pelican.html">
+            <i class="icon-tag icon-large"></i>pelican
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/postfix.html">
+            <i class="icon-tag icon-large"></i>postfix
         </a>
     </li>
     <li class="tag-4">
@@ -288,8 +307,33 @@ FizzBuzzの応用？<br>
         </a>
     </li>
     <li class="tag-4">
-        <a href="../tag/general.html">
-            <i class="icon-tag icon-large"></i>general
+        <a href="../tag/sns.html">
+            <i class="icon-tag icon-large"></i>sns
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/social.html">
+            <i class="icon-tag icon-large"></i>social
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/covid-19.html">
+            <i class="icon-tag icon-large"></i>covid-19
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="../tag/thoughtexperiment.html">
+            <i class="icon-tag icon-large"></i>thoughtexperiment
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/abc.html">
+            <i class="icon-tag icon-large"></i>abc
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="../tag/misc.html">
+            <i class="icon-tag icon-large"></i>misc
         </a>
     </li>
     <li class="tag-1">
@@ -298,13 +342,43 @@ FizzBuzzの応用？<br>
         </a>
     </li>
     <li class="tag-4">
-        <a href="../tag/tech.html">
-            <i class="icon-tag icon-large"></i>tech
+        <a href="../tag/coinhive.html">
+            <i class="icon-tag icon-large"></i>coinhive
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/general.html">
+            <i class="icon-tag icon-large"></i>general
         </a>
     </li>
     <li class="tag-4">
         <a href="../tag/virtualbox.html">
             <i class="icon-tag icon-large"></i>virtualbox
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/politics.html">
+            <i class="icon-tag icon-large"></i>politics
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="../tag/python.html">
+            <i class="icon-tag icon-large"></i>python
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/vm.html">
+            <i class="icon-tag icon-large"></i>vm
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/linux.html">
+            <i class="icon-tag icon-large"></i>linux
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/game.html">
+            <i class="icon-tag icon-large"></i>game
         </a>
     </li>
     <li class="tag-4">
@@ -313,8 +387,8 @@ FizzBuzzの応用？<br>
         </a>
     </li>
     <li class="tag-4">
-        <a href="../tag/pelican.html">
-            <i class="icon-tag icon-large"></i>pelican
+        <a href="../tag/centos8.html">
+            <i class="icon-tag icon-large"></i>centos8
         </a>
     </li>
     <li class="tag-1">
@@ -322,59 +396,9 @@ FizzBuzzの応用？<br>
             <i class="icon-tag icon-large"></i>atcoder
         </a>
     </li>
-    <li class="tag-1">
-        <a href="../tag/abc.html">
-            <i class="icon-tag icon-large"></i>abc
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/coinhive.html">
-            <i class="icon-tag icon-large"></i>coinhive
-        </a>
-    </li>
     <li class="tag-3">
-        <a href="../tag/misc.html">
-            <i class="icon-tag icon-large"></i>misc
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/centos8.html">
-            <i class="icon-tag icon-large"></i>centos8
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/game.html">
-            <i class="icon-tag icon-large"></i>game
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/news.html">
-            <i class="icon-tag icon-large"></i>news
-        </a>
-    </li>
-    <li class="tag-3">
-        <a href="../tag/python.html">
-            <i class="icon-tag icon-large"></i>python
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/social.html">
-            <i class="icon-tag icon-large"></i>social
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/vm.html">
-            <i class="icon-tag icon-large"></i>vm
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/covid-19.html">
-            <i class="icon-tag icon-large"></i>covid-19
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/politics.html">
-            <i class="icon-tag icon-large"></i>politics
+        <a href="../tag/tech.html">
+            <i class="icon-tag icon-large"></i>tech
         </a>
     </li>
 

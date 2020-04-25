@@ -105,6 +105,63 @@
 <div class="row">
     <div class="span2">
         <div class="well small"><footer class="post-info">
+<abbr class="published" title="2020-04-25T00:00:00+09:00">
+    <i class="icon-calendar"></i>&nbsp;2020-04-25(Sat)
+</abbr>
+<br/><a href="../author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
+
+
+<br/>
+	&nbsp;&nbsp;<a href="../tag/tech.html" class="label"><i class="icon-tag"></i>&nbsp;tech</a>
+	&nbsp;&nbsp;<a href="../tag/postfix.html" class="label"><i class="icon-tag"></i>&nbsp;postfix</a>
+	&nbsp;&nbsp;<a href="../tag/linux.html" class="label"><i class="icon-tag"></i>&nbsp;linux</a>
+</footer><!-- /.post-info --></div>
+    </div>
+    <div class="span6">
+        <div class="article well">
+            <h1><a href="../posts/2020/04/25/mailserver">自前メールサーバの構築手順メモ</a></h1>
+            <div class="summary"><p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
+https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
+<hr>
+<h1>メールサーバ構築</h1>
+<h2>用途、前提</h2>
+<ul>
+<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
+<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
+</ul>
+</li>
+<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
+<li>なるべく AWS FreeTrial の範囲で<ul>
+<li>1年ごとの使い捨て</li>
+</ul>
+</li>
+</ul>
+<h2>EC2インスタンスを作成</h2>
+<ul>
+<li>AWSアカウントを作成<ul>
+<li>アカウント作成</li>
+<li>2FA設定</li>
+<li>ログイン・作業用IAM、API実行用IAM作成<ul>
+<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
+<li>作業用IAMでログイン</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>EC2インスタンス作成<ul>
+<li>AmazonLinux2</li>
+<li>SecurityGroup作成、アタッチ<ul>
+<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
+<li>outbound: ICMP …</li></ul></li></ul></li></ul>
+                <a class="btn btn-small" href="../posts/2020/04/25/mailserver">more ...</a>
+            </div>
+        </div>
+    </div>
+    <div class="span8">
+        <hr />
+    </div>
+    <div class="span2">
+        <div class="well small"><footer class="post-info">
 <abbr class="published" title="2020-04-21T00:00:00+09:00">
     <i class="icon-calendar"></i>&nbsp;2020-04-21(Tue)
 </abbr>
@@ -191,45 +248,6 @@ WFHには、新たなリスク回避のメリットが加わったことから�
     <div class="span8">
         <hr />
     </div>
-    <div class="span2">
-        <div class="well small"><footer class="post-info">
-<abbr class="published" title="2020-04-19T00:00:00+09:00">
-    <i class="icon-calendar"></i>&nbsp;2020-04-19(Sun)
-</abbr>
-<br/><a href="../author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
-
-
-<br/>
-	&nbsp;&nbsp;<a href="../tag/atcoder.html" class="label"><i class="icon-tag"></i>&nbsp;atcoder</a>
-	&nbsp;&nbsp;<a href="../tag/abc.html" class="label"><i class="icon-tag"></i>&nbsp;abc</a>
-	&nbsp;&nbsp;<a href="../tag/programming.html" class="label"><i class="icon-tag"></i>&nbsp;programming</a>
-</footer><!-- /.post-info --></div>
-    </div>
-    <div class="span6">
-        <div class="article well">
-            <h1><a href="../posts/2020/04/19/abc163">AtCoder Beginner Contest 163</a></h1>
-            <div class="summary"><p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
-円の半径が与えられるので円周を出力せよという問題<br>
-題意通りに実装すればOK  </p>
-<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
-<span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-</code></pre></div>
-
-
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
-問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ …</p>
-                <a class="btn btn-small" href="../posts/2020/04/19/abc163">more ...</a>
-            </div>
-        </div>
-    </div>
-    <div class="span8">
-        <hr />
-    </div>
 
 <div class="span6">
 <div class="pagination">
@@ -289,14 +307,19 @@ WFHには、新たなリスク回避のメリットが加わったことから�
 <li class="nav-header"><a href="../tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
 -->
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-    <li class="tag-4">
-        <a href="../tag/sns.html">
-            <i class="icon-tag icon-large"></i>sns
+    <li class="tag-1">
+        <a href="../tag/news.html">
+            <i class="icon-tag icon-large"></i>news
         </a>
     </li>
-    <li class="tag-3">
-        <a href="../tag/thoughtexperiment.html">
-            <i class="icon-tag icon-large"></i>thoughtexperiment
+    <li class="tag-4">
+        <a href="../tag/pelican.html">
+            <i class="icon-tag icon-large"></i>pelican
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/postfix.html">
+            <i class="icon-tag icon-large"></i>postfix
         </a>
     </li>
     <li class="tag-4">
@@ -305,8 +328,33 @@ WFHには、新たなリスク回避のメリットが加わったことから�
         </a>
     </li>
     <li class="tag-4">
-        <a href="../tag/general.html">
-            <i class="icon-tag icon-large"></i>general
+        <a href="../tag/sns.html">
+            <i class="icon-tag icon-large"></i>sns
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/social.html">
+            <i class="icon-tag icon-large"></i>social
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/covid-19.html">
+            <i class="icon-tag icon-large"></i>covid-19
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="../tag/thoughtexperiment.html">
+            <i class="icon-tag icon-large"></i>thoughtexperiment
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/abc.html">
+            <i class="icon-tag icon-large"></i>abc
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="../tag/misc.html">
+            <i class="icon-tag icon-large"></i>misc
         </a>
     </li>
     <li class="tag-1">
@@ -315,13 +363,43 @@ WFHには、新たなリスク回避のメリットが加わったことから�
         </a>
     </li>
     <li class="tag-4">
-        <a href="../tag/tech.html">
-            <i class="icon-tag icon-large"></i>tech
+        <a href="../tag/coinhive.html">
+            <i class="icon-tag icon-large"></i>coinhive
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/general.html">
+            <i class="icon-tag icon-large"></i>general
         </a>
     </li>
     <li class="tag-4">
         <a href="../tag/virtualbox.html">
             <i class="icon-tag icon-large"></i>virtualbox
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="../tag/politics.html">
+            <i class="icon-tag icon-large"></i>politics
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="../tag/python.html">
+            <i class="icon-tag icon-large"></i>python
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/vm.html">
+            <i class="icon-tag icon-large"></i>vm
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/linux.html">
+            <i class="icon-tag icon-large"></i>linux
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="../tag/game.html">
+            <i class="icon-tag icon-large"></i>game
         </a>
     </li>
     <li class="tag-4">
@@ -330,8 +408,8 @@ WFHには、新たなリスク回避のメリットが加わったことから�
         </a>
     </li>
     <li class="tag-4">
-        <a href="../tag/pelican.html">
-            <i class="icon-tag icon-large"></i>pelican
+        <a href="../tag/centos8.html">
+            <i class="icon-tag icon-large"></i>centos8
         </a>
     </li>
     <li class="tag-1">
@@ -339,59 +417,9 @@ WFHには、新たなリスク回避のメリットが加わったことから�
             <i class="icon-tag icon-large"></i>atcoder
         </a>
     </li>
-    <li class="tag-1">
-        <a href="../tag/abc.html">
-            <i class="icon-tag icon-large"></i>abc
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/coinhive.html">
-            <i class="icon-tag icon-large"></i>coinhive
-        </a>
-    </li>
     <li class="tag-3">
-        <a href="../tag/misc.html">
-            <i class="icon-tag icon-large"></i>misc
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/centos8.html">
-            <i class="icon-tag icon-large"></i>centos8
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/game.html">
-            <i class="icon-tag icon-large"></i>game
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/news.html">
-            <i class="icon-tag icon-large"></i>news
-        </a>
-    </li>
-    <li class="tag-3">
-        <a href="../tag/python.html">
-            <i class="icon-tag icon-large"></i>python
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/social.html">
-            <i class="icon-tag icon-large"></i>social
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../tag/vm.html">
-            <i class="icon-tag icon-large"></i>vm
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/covid-19.html">
-            <i class="icon-tag icon-large"></i>covid-19
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../tag/politics.html">
-            <i class="icon-tag icon-large"></i>politics
+        <a href="../tag/tech.html">
+            <i class="icon-tag icon-large"></i>tech
         </a>
     </li>
 

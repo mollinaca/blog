@@ -119,6 +119,53 @@
     </div>
     <div class="span6">
         <div class="article well">
+            <h1><a href="./posts/2020/04/05/abc161">AtCoder Beginner Contest 161</a></h1>
+            <div class="summary"><p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
+問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
+<hr>
+<h1>A</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
+swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
+<p>AC</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
+問題分の説明通り実装してあげればよい。<br>
+選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
+<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
+修正して無事AC</p>
+<h1>C</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
+数値を置き換える操作を繰り返す。<br>
+ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
+<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
+そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
+<p>入力例3が親切で</p>
+<div class="highlight"><pre><span></span><code><span class="err">1000000000000000000 1 …</span></code></pre></div>
+                <a class="btn btn-small" href="./posts/2020/04/05/abc161">more ...</a>
+            </div>
+        </div>
+    </div>
+    <div class="span8">
+        <hr />
+    </div>
+    <div class="span2">
+        <div class="well small"><footer class="post-info">
+<abbr class="published" title="2020-04-05T00:00:00+09:00">
+    <i class="icon-calendar"></i>&nbsp;2020-04-05(Sun)
+</abbr>
+<br/><a href="./author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
+
+
+<br/>
+	&nbsp;&nbsp;<a href="./tag/atcoder.html" class="label"><i class="icon-tag"></i>&nbsp;atcoder</a>
+	&nbsp;&nbsp;<a href="./tag/abc.html" class="label"><i class="icon-tag"></i>&nbsp;abc</a>
+	&nbsp;&nbsp;<a href="./tag/programming.html" class="label"><i class="icon-tag"></i>&nbsp;programming</a>
+</footer><!-- /.post-info --></div>
+    </div>
+    <div class="span6">
+        <div class="article well">
             <h1><a href="./posts/2020/04/05/testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></h1>
             <div class="summary"><hr>
 <p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
@@ -194,42 +241,6 @@ RとBの配列を持って置き …</p>
     <div class="span8">
         <hr />
     </div>
-    <div class="span2">
-        <div class="well small"><footer class="post-info">
-<abbr class="published" title="2020-04-04T00:00:00+09:00">
-    <i class="icon-calendar"></i>&nbsp;2020-04-04(Sat)
-</abbr>
-<br/><a href="./author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
-
-
-<br/>
-	&nbsp;&nbsp;<a href="./tag/python.html" class="label"><i class="icon-tag"></i>&nbsp;python</a>
-	&nbsp;&nbsp;<a href="./tag/pelican.html" class="label"><i class="icon-tag"></i>&nbsp;pelican</a>
-</footer><!-- /.post-info --></div>
-    </div>
-    <div class="span6">
-        <div class="article well">
-            <h1><a href="./posts/2020/04/04/pelican-theme">python-pelican に theme を導入する</a></h1>
-            <div class="summary"><p>ものは試しに。</p>
-<h1>やり方</h1>
-<p>pelican の theme は、以下の repo で管理されている。<br>
-ここはただのファイル置き場なので、別にこの repo に拘る必要はなさそうだけど。<br>
-<a href="https://github.com/getpelican/pelican-themes">pelican-themes</a>  </p>
-<p>いくつかの theme は、それぞれの作者の repo にあり、リンクになってる。<br>
-上記 repo を、pelican の project directory から辿れる場所へ clone する</p>
-<div class="highlight"><pre><span></span><code><span class="err"># git clone https://github.com/getpelican/pelican-themes</span>
-</code></pre></div>
-
-
-<p>clone した theme を、 pelicanconf.py 、 および publichconf.py に適用する<br>
-THEME変数に、ディレクトリへのパスを指定してあげればよいみたい …</p>
-                <a class="btn btn-small" href="./posts/2020/04/04/pelican-theme">more ...</a>
-            </div>
-        </div>
-    </div>
-    <div class="span8">
-        <hr />
-    </div>
 
 <div class="span6">
 <div class="pagination">
@@ -289,14 +300,19 @@ THEME変数に、ディレクトリへのパスを指定してあげればよい
 <li class="nav-header"><a href="./tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
 -->
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-    <li class="tag-4">
-        <a href="./tag/sns.html">
-            <i class="icon-tag icon-large"></i>sns
+    <li class="tag-1">
+        <a href="./tag/news.html">
+            <i class="icon-tag icon-large"></i>news
         </a>
     </li>
-    <li class="tag-3">
-        <a href="./tag/thoughtexperiment.html">
-            <i class="icon-tag icon-large"></i>thoughtexperiment
+    <li class="tag-4">
+        <a href="./tag/pelican.html">
+            <i class="icon-tag icon-large"></i>pelican
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="./tag/postfix.html">
+            <i class="icon-tag icon-large"></i>postfix
         </a>
     </li>
     <li class="tag-4">
@@ -305,8 +321,33 @@ THEME変数に、ディレクトリへのパスを指定してあげればよい
         </a>
     </li>
     <li class="tag-4">
-        <a href="./tag/general.html">
-            <i class="icon-tag icon-large"></i>general
+        <a href="./tag/sns.html">
+            <i class="icon-tag icon-large"></i>sns
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="./tag/social.html">
+            <i class="icon-tag icon-large"></i>social
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="./tag/covid-19.html">
+            <i class="icon-tag icon-large"></i>covid-19
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="./tag/thoughtexperiment.html">
+            <i class="icon-tag icon-large"></i>thoughtexperiment
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="./tag/abc.html">
+            <i class="icon-tag icon-large"></i>abc
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="./tag/misc.html">
+            <i class="icon-tag icon-large"></i>misc
         </a>
     </li>
     <li class="tag-1">
@@ -315,13 +356,43 @@ THEME変数に、ディレクトリへのパスを指定してあげればよい
         </a>
     </li>
     <li class="tag-4">
-        <a href="./tag/tech.html">
-            <i class="icon-tag icon-large"></i>tech
+        <a href="./tag/coinhive.html">
+            <i class="icon-tag icon-large"></i>coinhive
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="./tag/general.html">
+            <i class="icon-tag icon-large"></i>general
         </a>
     </li>
     <li class="tag-4">
         <a href="./tag/virtualbox.html">
             <i class="icon-tag icon-large"></i>virtualbox
+        </a>
+    </li>
+    <li class="tag-1">
+        <a href="./tag/politics.html">
+            <i class="icon-tag icon-large"></i>politics
+        </a>
+    </li>
+    <li class="tag-3">
+        <a href="./tag/python.html">
+            <i class="icon-tag icon-large"></i>python
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="./tag/vm.html">
+            <i class="icon-tag icon-large"></i>vm
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="./tag/linux.html">
+            <i class="icon-tag icon-large"></i>linux
+        </a>
+    </li>
+    <li class="tag-4">
+        <a href="./tag/game.html">
+            <i class="icon-tag icon-large"></i>game
         </a>
     </li>
     <li class="tag-4">
@@ -330,8 +401,8 @@ THEME変数に、ディレクトリへのパスを指定してあげればよい
         </a>
     </li>
     <li class="tag-4">
-        <a href="./tag/pelican.html">
-            <i class="icon-tag icon-large"></i>pelican
+        <a href="./tag/centos8.html">
+            <i class="icon-tag icon-large"></i>centos8
         </a>
     </li>
     <li class="tag-1">
@@ -339,59 +410,9 @@ THEME変数に、ディレクトリへのパスを指定してあげればよい
             <i class="icon-tag icon-large"></i>atcoder
         </a>
     </li>
-    <li class="tag-1">
-        <a href="./tag/abc.html">
-            <i class="icon-tag icon-large"></i>abc
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="./tag/coinhive.html">
-            <i class="icon-tag icon-large"></i>coinhive
-        </a>
-    </li>
     <li class="tag-3">
-        <a href="./tag/misc.html">
-            <i class="icon-tag icon-large"></i>misc
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="./tag/centos8.html">
-            <i class="icon-tag icon-large"></i>centos8
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="./tag/game.html">
-            <i class="icon-tag icon-large"></i>game
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="./tag/news.html">
-            <i class="icon-tag icon-large"></i>news
-        </a>
-    </li>
-    <li class="tag-3">
-        <a href="./tag/python.html">
-            <i class="icon-tag icon-large"></i>python
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="./tag/social.html">
-            <i class="icon-tag icon-large"></i>social
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="./tag/vm.html">
-            <i class="icon-tag icon-large"></i>vm
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="./tag/covid-19.html">
-            <i class="icon-tag icon-large"></i>covid-19
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="./tag/politics.html">
-            <i class="icon-tag icon-large"></i>politics
+        <a href="./tag/tech.html">
+            <i class="icon-tag icon-large"></i>tech
         </a>
     </li>
 

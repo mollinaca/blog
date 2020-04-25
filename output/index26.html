@@ -1,138 +1,127 @@
-<!doctype html>
-<html class="no-js" lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blog about Me and my Linux | 渡りの日々.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="s.hosoya" />
+    <meta name="kittycheck_rumble" content="true" />
+    <meta name="kittycheck_position" content="top=60,right=60" />
 
-		<title>渡りの日々.</title>
-		<meta name="description" content="">
-		<meta name="author" content="s.hosoya">
+    <!-- Le styles -->
+    <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="./theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="./theme/css/font-awesome.css" rel="stylesheet">
+    <link href="./theme/css/pygments.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="https://blog.watarinohibi.tokyo/theme/css/foundation.css" />
-		<link rel="stylesheet" href="https://blog.watarinohibi.tokyo/theme/css/pygment/monokai.css" />
-		<link rel="stylesheet" href="https://blog.watarinohibi.tokyo/theme/css/custom.css" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-		<!-- GOOGLE WEB FONTS -->
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="https://blog.watarinohibi.tokyo/theme/css/alt-fonts.css" />
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="./theme/img/favicon.ico">
+    <link rel="apple-touch-icon" href="./theme/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./theme/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./theme/img/apple-touch-icon-114x114.png">
 
-		<script src="https://blog.watarinohibi.tokyo/theme/js/modernizr.js"></script>
+    <link href="./" type="application/atom+xml" rel="alternate" title="渡りの日々. ATOM Feed" />
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">渡りの日々. </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                <li ><a href="./pages/about_this_blog.html">当ブログについて</a></li>
+                <li class="divider-vertical"></li>
+                <li >
+                  <a href="./category/general.html">
+						        <i class="icon-folder-open icon-large"></i>General
+					         </a>
+                </li>
+                <li >
+                  <a href="./category/misc.html">
+						        <i class="icon-folder-open icon-large"></i>Misc
+					         </a>
+                </li>
+                <li >
+                  <a href="./category/social.html">
+						        <i class="icon-folder-open icon-large"></i>Social
+					         </a>
+                </li>
+                <li >
+                  <a href="./category/tech.html">
+						        <i class="icon-folder-open icon-large"></i>Tech
+					         </a>
+                </li>
+                <li >
+                  <a href="./category/thoughtexperiment.html">
+						        <i class="icon-folder-open icon-large"></i>ThoughtExperiment
+					         </a>
+                </li>
+              <ul class="nav pull-right">
+                    <li><a href="./"><i class="icon-th-list"></i>Archives</a></li>
+              </ul>
 
-		<!-- Feeds -->
+            </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span8" id="content">
+<div class="row">
+    <div class="span2">
+        <div class="well small"><footer class="post-info">
+<abbr class="published" title="2020-03-22T00:00:00+09:00">
+    <i class="icon-calendar"></i>&nbsp;Sun, 22 Mar 2020
+</abbr>
+<br/><a href="./author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
 
 
-		<!-- mathjax config similar to math.stackexchange -->
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			jax: ["input/TeX", "output/HTML-CSS"],
-			tex2jax: {
-				inlineMath: [ ['$', '$'] ],
-				displayMath: [ ['$$', '$$']],
-				processEscapes: true,
-				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-			},
-			messageStyle: "none",
-			"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
-		});
-		</script>
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-	</head>
-	<body>
-		<div class="off-canvas-wrap">
-			<div class="inner-wrap">
-				<!-- mobile top bar to activate nav -->
-				<nav class="tab-bar show-for-small">
-					<section class="left-small">
-						<a class="left-off-canvas-toggle menu-icon" ><span></span></a>
-					</section>
-
-					<section class="middle tab-bar-section">
-						<h1 class="title">渡りの日々.</h1>
-					</section>
-				</nav>
-
-				<!-- mobile side bar nav -->
-				<aside class="left-off-canvas-menu">
-					<ul class="off-canvas-list">
-						<li><a href="https://blog.watarinohibi.tokyo">Home</a></li>
-						<li><label>Categories</label></li>
-							<li ><a href="https://blog.watarinohibi.tokyo/category/general.html">General</a></li>
-							<li ><a href="https://blog.watarinohibi.tokyo/category/misc.html">Misc</a></li>
-							<li ><a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a></li>
-							<li ><a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a></li>
-							<li ><a href="https://blog.watarinohibi.tokyo/category/thoughtexperiment.html">ThoughtExperiment</a></li>
-
-						<li><label>Links</label></li>
-
-						<li><label>Tags</label></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/abc.html">abc</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/atcoder.html">atcoder</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/centos8.html">centos8</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/coinhive.html">coinhive</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/contents.html">contents</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/covid-19.html">covid-19</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/game.html">game</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/general.html">general</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/misc.html">misc</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/news.html">news</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/pelican.html">pelican</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/politics.html">politics</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/programming.html">programming</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/python.html">python</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/sns.html">sns</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/social.html">social</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/tech.html">tech</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/test.html">test</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/thoughtexperiment.html">thoughtexperiment</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/virtualbox.html">virtualbox</a></li>
-							<li><a href="https://blog.watarinohibi.tokyo/tag/vm.html">vm</a></li>
-
-						<li><label>Monthly Archives</label></li>
-									<li><a href="/posts/2020/04/index.html">April 2020 (16)</a></li>
-									<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
-
-						<li><label>Social</label></li>
-							<li><a href="https://github.com/mollinaca">github</a></li>
-							<li><a href="https://twitter.com/syoutin">twitter</a></li>
-					</ul>	
-				</aside>
-
-				<!-- top bar nav -->
-				<nav class="top-bar hide-for-small-only" data-topbar>
-					<ul class="title-area">
-						<li class="name">
-							<h1><a href="https://blog.watarinohibi.tokyo/">渡りの日々.</a></h1>
-						</li>
-					</ul>
-
-					<section class="top-bar-section">
-						<ul class="left">
-								<li ><a href="https://blog.watarinohibi.tokyo/category/general.html">General</a></li>
-								<li ><a href="https://blog.watarinohibi.tokyo/category/misc.html">Misc</a></li>
-								<li ><a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a></li>
-								<li ><a href="https://blog.watarinohibi.tokyo/category/tech.html">Tech</a></li>
-								<li ><a href="https://blog.watarinohibi.tokyo/category/thoughtexperiment.html">ThoughtExperiment</a></li>
-						</ul>
-                        <ul class="right">                                                                                                                                           
-                                                                                                          
-····                                                                                                                                       
-                                     <li><a href="https://blog.watarinohibi.tokyo/pages/about_this_blog.html">当ブログについて</a></li>                                    
-                                                                                                                                          
-                                                                                                                                             
-                        </ul>  
-					</section>
-				</nav>
-
-				<!-- Main Page Content and Sidebar -->
-				<section class="main-section">
-					<div class="row">
-						<!-- Main Content -->
-						<div class="medium-9 small-12 columns" role="content">
-
-<article>
-	<h3><a href="https://blog.watarinohibi.tokyo/posts/2020/03/22/employment">新型コロナウィルス流行における日米の雇用に対する文化の違い</a></h3>
-	<h6>Written by <a href="https://blog.watarinohibi.tokyo/author/s.hosoya.html">s.hosoya</a> in <a href="https://blog.watarinohibi.tokyo/category/social.html">Social</a> on Sun, 22 Mar 2020. Tags: <a href="https://blog.watarinohibi.tokyo/tag/social.html">social</a>, <a href="https://blog.watarinohibi.tokyo/tag/politics.html">politics</a>, <a href="https://blog.watarinohibi.tokyo/tag/news.html">news</a>, <a href="https://blog.watarinohibi.tokyo/tag/covid-19.html">covid-19</a>, </h6>
-	<p><a href="https://www.nikkei.com/article/DGXMZO57043200Z10C20A3EA1000/">日本経済新聞 - 雇用・資金繰り重点　政府、緊急経済対策へヒアリング</a></p>
+<br/>
+	&nbsp;&nbsp;<a href="./tag/social.html" class="label"><i class="icon-tag"></i>&nbsp;social</a>
+	&nbsp;&nbsp;<a href="./tag/politics.html" class="label"><i class="icon-tag"></i>&nbsp;politics</a>
+	&nbsp;&nbsp;<a href="./tag/news.html" class="label"><i class="icon-tag"></i>&nbsp;news</a>
+	&nbsp;&nbsp;<a href="./tag/covid-19.html" class="label"><i class="icon-tag"></i>&nbsp;covid-19</a>
+</footer><!-- /.post-info --></div>
+    </div>
+    <div class="span6">
+        <div class="article well">
+            <h1><a href="./posts/2020/03/22/employment">新型コロナウィルス流行における日米の雇用に対する文化の違い</a></h1>
+            <div class="summary"><p><a href="https://www.nikkei.com/article/DGXMZO57043200Z10C20A3EA1000/">日本経済新聞 - 雇用・資金繰り重点　政府、緊急経済対策へヒアリング</a></p>
 <p><code>安倍晋三首相はヒアリングの冒頭で「何としても雇用は守りぬかなければならない。個人、あるいは中小・小規模事業者が事業を継続できる状況をつくっていく」と語った。</code></p>
 <p><a href="https://www.newsweekjapan.jp/stories/world/2020/03/1600-4.php">Newsweekjapan - 米コロナ失業1600％増の阿鼻叫喚、雇用統計に注目</a></p>
 <p><code>3月7日には400件だった失業保険の申請件数が、17日には6800件を上回った。10日間で1600％の増加だ。</code></p>
@@ -142,132 +131,104 @@
 <p>とても対照的だなと思い。  </p>
 <p>アメリカでは、レイオフは一般的に行われる。<br>
 市況や企業状況が悪化した場合には、ごく普通にレイオフが行われるため、逆に言うと人々はレイオフにもある意味で慣れているんだろうな。  </p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">アメリカの多くのセクターではレイオフが急速に拡大しており、失業保険の申請数が14日までに28万件/週、21日までに225万件/週という記録的な水準にまで激増するとゴールドマン・サックス。225万人。。 <a href="https://t.co/uO2t4OimS0">https://t.co/uO2t4OimS0</a></p>&mdash; Kenji Shiraishi (@Knjshiraishi) <a href="https://twitter.com/Knjshiraishi/status/1240823819469611008?ref_src=twsrc%5Etfw">March 20, 2020</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">アメリカの多くのセクターではレイオフが急速に拡大しており、失業保険の申請数が14日までに28万件/週、21日までに225万件/週という記録的な水準にまで激増するとゴールドマン・サックス。225万人 …</p></blockquote>
+                <a class="btn btn-small" href="./posts/2020/03/22/employment">more ...</a>
+            </div>
+        </div>
+    </div>
+    <div class="span8">
+        <hr />
+    </div>
 
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">個人的に好きなレイオフネタその1: レイオフされた社員がその週末の会社の飲み会に普通に参加して、レイオフした人と談笑してたこと。「うちの会社がさ、あ、ごめん君らの会社だった」ってジョークがすごく印象に残ってる</p>&mdash; Sho Shimauchi (@shiumachi) <a href="https://twitter.com/shiumachi/status/1240102491707944960?ref_src=twsrc%5Etfw">March 18, 2020</a></blockquote>
-
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-笑ったｗ</p>
-<p>日本は現在政府主導で</p>
+<div class="span6">
+<div class="pagination">
 <ul>
-<li>雇用を守る（レイオフはしない）</li>
-<li>（特に）中小企業を守る</li>
+        <li class="prev"><a href="./index25.html">&larr; Previous</a></li>
+        <li class=""><a href="./index.html">1</a></li>
+        <li class=""><a href="./index2.html">2</a></li>
+        <li class=""><a href="./index3.html">3</a></li>
+        <li class=""><a href="./index4.html">4</a></li>
+        <li class=""><a href="./index5.html">5</a></li>
+        <li class=""><a href="./index6.html">6</a></li>
+        <li class=""><a href="./index7.html">7</a></li>
+        <li class=""><a href="./index8.html">8</a></li>
+        <li class=""><a href="./index9.html">9</a></li>
+        <li class=""><a href="./index10.html">10</a></li>
+        <li class=""><a href="./index11.html">11</a></li>
+        <li class=""><a href="./index12.html">12</a></li>
+        <li class=""><a href="./index13.html">13</a></li>
+        <li class=""><a href="./index14.html">14</a></li>
+        <li class=""><a href="./index15.html">15</a></li>
+        <li class=""><a href="./index16.html">16</a></li>
+        <li class=""><a href="./index17.html">17</a></li>
+        <li class=""><a href="./index18.html">18</a></li>
+        <li class=""><a href="./index19.html">19</a></li>
+        <li class=""><a href="./index20.html">20</a></li>
+        <li class=""><a href="./index21.html">21</a></li>
+        <li class=""><a href="./index22.html">22</a></li>
+        <li class=""><a href="./index23.html">23</a></li>
+        <li class=""><a href="./index24.html">24</a></li>
+        <li class=""><a href="./index25.html">25</a></li>
+        <li class="active"><a href="./index26.html">26</a></li>
+        <li class=""><a href="./index27.html">27</a></li>
+        <li class=""><a href="./index28.html">28</a></li>
+        <li class=""><a href="./index29.html">29</a></li>
+        <li class=""><a href="./index30.html">30</a></li>
+        <li class=""><a href="./index31.html">31</a></li>
+        <li class=""><a href="./index32.html">32</a></li>
+        <li class="next"><a href="./index27.html">Next &rarr;</a></li>
 </ul>
-<p>という動きをしているが、アメリカでは、企業自らが自らを守るために容赦なく従業員を解雇している。<br>
-もちろん、これは単なる文化の違いでありどちらが良い悪いではない。<br>
-それぞれの国にそれぞれの動きがあって興味深いと思うけど、レイオフがある程度当たり前で、失業保険や再雇用、転職の動きが当たり前であれば、一定のスキルを持つ人はそこまで悲観はしていないんだろうなとは思う。当然、経済の悪化は好ましいものではないけれども。   </p>
-<p><br>
-<br></p>
-<h2>とはいえ、どっちのほうが良いのだろう？</h2>
-<p>どっちも良し悪しがある前提ではあるけども。<br>
-個人的には、新型ウィルスによる雇用への最大のリスクは、企業の倒産だと思う。<br>
-日本でも既に事例は出始めている。  </p>
-<p><a href="https://www.nikkei.com/article/DGXMZO56827510W0A310C2X12000/">日本経済新聞 - 新型コロナの関連倒産、多業種に拡大懸念</a></p>
-<p>このような形で雇用が失われてしまうと、日本の労働者はアメリカほど柔軟に対応できないし、行政支援もアメリカほど慣れていないのではないかなと思う。<br>
-転職や再就職なんてしたことない人もたくさんいるだろうし。<br>
-終身雇用が前提の日本社会のほうが、この状況になった場合のダメージは大きいだろうなぁと思う。  </p>
-<hr>
-<p>自分も人のこと言えない。<br>
-日本企業であればレイオフはまずないが、当然のことながら倒産の可能性はなくはないので、その時にオファーを受けられるだけのバリューを持っておかねばと感じる。  </p>
-</article>
-<hr />
-
-<div class="row" style="margin-bottom: -1.25em;">
-	<div class="small-12 columns text-center">
-		<div class="pagination-centered">
-			<ul class="pagination">
-				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/index25.html">&larr; Previous</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index.html">1</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index2.html">2</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index3.html">3</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index4.html">4</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index5.html">5</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index6.html">6</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index7.html">7</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index8.html">8</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index9.html">9</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index10.html">10</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index11.html">11</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index12.html">12</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index13.html">13</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index14.html">14</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index15.html">15</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index16.html">16</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index17.html">17</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index18.html">18</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index19.html">19</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index20.html">20</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index21.html">21</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index22.html">22</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index23.html">23</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index24.html">24</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index25.html">25</a></li>
-				<li class="current"><a href="https://blog.watarinohibi.tokyo/index26.html">26</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index27.html">27</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index28.html">28</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index29.html">29</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index30.html">30</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index31.html">31</a></li>
-				<li class=""><a href="https://blog.watarinohibi.tokyo/index32.html">32</a></li>
-				<li class="arrow"><a href="https://blog.watarinohibi.tokyo/index27.html">Next &rarr;</a></li>
-			</ul>
-		</div>
-	</div>
 </div>
+</div>
+</div>
+        </div><!--/span-->
+        <div class="span3 well sidebar-nav" id="sidebar">
+<ul class="nav nav-list">
+<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
+    <li><a href="https://twitter.com/syoutin"><i class="icon-twitter-sign icon-large"></i>twitter</a></li>
+    <li><a href="https://github.com/mollinaca"><i class="icon-github-sign icon-large"></i>github</a></li>
 
-						</div>
-						<!-- End Main Content -->
-						<!-- Sidebar -->
-						<aside class="medium-3 hide-for-small-only columns">
-							<div class="panel">
-								<h5>Links</h5>
-								<ul class="side-nav">
-								</ul>
-							</div>
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="./category/general.html">
+    <i class="icon-folder-open icon-large"></i>General
+</a>
+</li>
+<li>
+<a href="./category/misc.html">
+    <i class="icon-folder-open icon-large"></i>Misc
+</a>
+</li>
+<li>
+<a href="./category/social.html">
+    <i class="icon-folder-open icon-large"></i>Social
+</a>
+</li>
+<li>
+<a href="./category/tech.html">
+    <i class="icon-folder-open icon-large"></i>Tech
+</a>
+</li>
+<li>
+<a href="./category/thoughtexperiment.html">
+    <i class="icon-folder-open icon-large"></i>ThoughtExperiment
+</a>
+</li>
 
-							<div class="panel">
-								<h5>Tags</h5>
-								<ul class="tag-cloud">
-								</ul>
-							</div>
 
-							<div class="panel">
-								<h5>Monthly Archives</h5>
-								<ul class="side-nav">
-											<li><a href="/posts/2020/04/index.html">April 2020 (16)</a></li>
-											<li><a href="/posts/2020/03/index.html">March 2020 (16)</a></li>
-								</ul>
-							</div>
 
-							<div class="panel">
-								<h5>Social</h5>
-								<ul class="side-nav">
-									<li><a href="https://github.com/mollinaca">github</a></li>
-									<li><a href="https://twitter.com/syoutin">twitter</a></li>
-								</ul>
-							</div>
-						</aside>
-						<!-- End Sidebar -->
-					</div>
+</ul>        </div><!--/.well -->
 
-					<!-- Footer -->
-					<footer class="row">
-						<div class="medium-9 small-12">
-							<hr/>
-							<p class="text-center">Powered by <a href="http://getpelican.com">Pelican</a> and <a href="http://foundation.zurb.com/">Zurb Foundation</a>. Theme by <a href="http://hamaluik.com">Kenton Hamaluik</a>.</p>
-						</div>
-					</footer>
-					<!-- End Footer -->
-				</section>
-				<a class="exit-off-canvas"></a>
-			</div><!--off-canvas inner-->
-		</div><!--off-canvas wrap-->
+      </div><!--/row-->
 
-		<script src="https://blog.watarinohibi.tokyo/theme/js/jquery.js"></script>
-		<script src="https://blog.watarinohibi.tokyo/theme/js/foundation.min.js"></script>
-		<script>
-			$(document).foundation();
-		</script>
-	</body>
+      <hr>
+
+    </div><!--/.fluid-container-->
+
+
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./theme/js/jquery-1.7.2.min.js"></script>
+    <script src="./theme/js/bootstrap.min.js"></script>
+  </body>
 </html>

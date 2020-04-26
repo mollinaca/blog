@@ -7,7 +7,7 @@ from unidecode import unidecode
 # General Settings
 AUTHOR = 's.hosoya'
 SITENAME = "Days of migratory birds" 
-SITEURL = 'https://blog.watarinohibi.tokyo' # for production
+SITEURL = 'https://blog.watarinohibi.tokyo' # for Production
 PATH = 'content'
 ROBOTS = 'index, follow'
 COPYRIGHT_YEAR = datetime.now().year
@@ -71,12 +71,12 @@ PLUGINS = ['tag_cloud',
            'sitemap',
            'related_posts',
            'better_codeblock_line_numbering',
-           'code_include']
+           'tipue_search',]
 SITEMAP = {
     'format': 'xml'
 }
 RELATED_POSTS_MAX = 5
-TAG_JAPANESE = True
+DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
 # Tag Substitutions
 SLUG_REGEX_SUBSTITUTIONS = (

@@ -1,138 +1,130 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Days of migratory birds</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="s.hosoya" />
-    <meta name="kittycheck_rumble" content="true" />
-    <meta name="kittycheck_position" content="top=60,right=60" />
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
 
-    <!-- Le styles -->
-    <link rel="stylesheet" href="../../../../../theme/css/bootstrap.min.css" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-      .tag-1 {
-        font-size: 13pt;
-      }
-      .tag-2 {
-        font-size: 10pt;
-      }
-      .tag-2 {
-        font-size: 8pt;
-      }
-      .tag-4 {
-        font-size: 6pt;
-     }
-    </style>
-    <link href="../../../../../theme/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="../../../../../theme/css/font-awesome.css" rel="stylesheet">
-    <link href="../../../../../theme/css/pygments.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet/less" type="text/css" href="../../../../../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../../../../../theme/img/favicon.ico">
-    <link rel="apple-touch-icon" href="../../../../../theme/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../../../../../theme/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../../../../../theme/img/apple-touch-icon-114x114.png">
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../../../../../theme/stylesheet/dark-theme.min.css">
 
-    <link href="../../../../../" type="application/atom+xml" rel="alternate" title="Days of migratory birds ATOM Feed" />
-  </head>
-  <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="../../../../../index.html">Days of migratory birds </a>
-          <div class="nav-collapse">
-            <ul class="nav">
-                <li ><a href="../../../../../pages/about.html">About</a></li>
-                <li class="divider-vertical"></li>
-                <li >
-                  <a href="../../../../../category/general.html">
-						        <i class="icon-folder-open icon-large"></i>General
-					         </a>
-                </li>
-                <li >
-                  <a href="../../../../../category/misc.html">
-						        <i class="icon-folder-open icon-large"></i>Misc
-					         </a>
-                </li>
-                <li >
-                  <a href="../../../../../category/social.html">
-						        <i class="icon-folder-open icon-large"></i>Social
-					         </a>
-                </li>
-                <li class="active">
-                  <a href="../../../../../category/tech.html">
-						        <i class="icon-folder-open icon-large"></i>Tech
-					         </a>
-                </li>
-                <li >
-                  <a href="../../../../../category/thoughtexperiment.html">
-						        <i class="icon-folder-open icon-large"></i>ThoughtExperiment
-					         </a>
-                </li>
-              <ul class="nav pull-right">
-                    <li><a href="../../../../../"><i class="icon-th-list"></i>Archives</a></li>
-              </ul>
-
-            </ul>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-        <div class="span8" id="content">
-<div class="row">
-    <div class="span2">
-        <div class="well">
-<footer class="post-info">
-<abbr class="published" title="2020-04-12T00:00:00+09:00">
-    <i class="icon-calendar"></i>&nbsp;2020-04-12(Sun)
-</abbr>
-<br/><a href="../../../../../author/shosoya.html"><i class="icon-user"></i>&nbsp;s.hosoya</a>
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../../../../../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../../../../../theme/pygments/monokai.min.css">
 
 
-<br/>
-	&nbsp;&nbsp;<a href="../../../../../tag/atcoder.html" class="label"><i class="icon-tag"></i>&nbsp;atcoder</a>
-	&nbsp;&nbsp;<a href="../../../../../tag/abc.html" class="label"><i class="icon-tag"></i>&nbsp;abc</a>
-	&nbsp;&nbsp;<a href="../../../../../tag/programming.html" class="label"><i class="icon-tag"></i>&nbsp;programming</a>
-</footer><!-- /.post-info -->        </div>
-    </div>
-    <div class="span6">
-<section id="content" class="well">
-    <article>
-        <header>
-            <h1>
-                <a href=""
-                        rel="bookmark"
-                        title="Permalink to AtCoder Beginner Contest 162">
-                        AtCoder Beginner Contest 162
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="s.hosoya" />
+<meta name="description" content="できなかった。。 ＞＜ A A - Lucky 7 入力文字列に 7 が含まれてたら Yes, なければ No 題意通り実装してAC B B - FizzBuzz Sum FizzBuzzの応用？ 1からNまでループし、3か5の因数だったらpassして、それ以外を合計する 制約が 1&lt;=N&lt;=10**6 のため、普通に for ループで回して終わる。 C C - Sum of gcd of Tuples (Easy) できなかった。。 問題文を読んで、まずは愚直な実装。 k = int(input()) import math from functools import reduce def …" />
+<meta name="keywords" content="atcoder, abc, programming">
+
+
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:title" content="AtCoder Beginner Contest 162"/>
+<meta property="og:description" content="できなかった。。 ＞＜ A A - Lucky 7 入力文字列に 7 が含まれてたら Yes, なければ No 題意通り実装してAC B B - FizzBuzz Sum FizzBuzzの応用？ 1からNまでループし、3か5の因数だったらpassして、それ以外を合計する 制約が 1&lt;=N&lt;=10**6 のため、普通に for ループで回して終わる。 C C - Sum of gcd of Tuples (Easy) できなかった。。 問題文を読んで、まずは愚直な実装。 k = int(input()) import math from functools import reduce def …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../../../posts/2020/04/12/abc162"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-04-12 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../../../author/shosoya.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="atcoder"/>
+<meta property="article:tag" content="abc"/>
+<meta property="article:tag" content="programming"/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; AtCoder Beginner Contest 162</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="../../../../..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../../../../.."></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../../../../../pages/about.html#about">
+                  About this blog and me
                 </a>
-            </h1>
-        </header>
-        <div class="entry-content">
+              </li>
 
-        <p>できなかった。。 ＞＜</p>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="abc162">AtCoder Beginner Contest 162</h1>
+    <p>
+      Posted on 2020-04-12(Sun) in <a href="../../../../../category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>できなかった。。 ＞＜</p>
 <h2>A</h2>
 <p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_a">A - Lucky 7</a><br>
 入力文字列に <code>7</code> が含まれてたら <code>Yes</code>, なければ <code>No</code>
@@ -146,20 +138,20 @@ FizzBuzzの応用？<br>
 <p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_c">C - Sum of gcd of Tuples (Easy)</a></p>
 <p>できなかった。。<br>
 問題文を読んで、まずは愚直な実装。</p>
-<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span>
-<span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span>
-    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
-
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">total</span> <span class="o">+=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
-<span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">math</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="o">*</span><span class="n">numbers</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="nb">reduce</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">            <span class="n">total</span> <span class="o">+=</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
 
 
 <p>gcd は3つ数字の gcd を取れるように、reduceを使って実装。<br>
@@ -190,18 +182,18 @@ https://note.nkmk.me/python-gcd-lcm/<br>
 <p>あとで解説見て復習する。  </p>
 <h3>C 追記 20200413 00:00</h3>
 <p>他の人のAC回答見てたら、これで通ってた。。。  </p>
-<div class="highlight"><pre><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
-
-<span class="kn">import</span> <span class="nn">math</span>
-
-<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">tmp</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-            <span class="n">total</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
-<span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span>
-</code></pre></div>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">math</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">        <span class="n">tmp</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span></span>
+<span class="code-line">        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">            <span class="n">total</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span><span class="n">c</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">print</span> <span class="p">(</span><span class="n">total</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
 
 
 <p>えええ、計算量変わってない（むしろ一つの組み合わせに対して math.gcd() を2回やってるから計算量的には増えてる）けど、reduce 分削ったらこれで収まるのか。。<br>
@@ -211,22 +203,22 @@ https://note.nkmk.me/python-gcd-lcm/<br>
 <p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_d">D - RGB Triplets</a></p>
 <p>実は今回Dも提出した。がこちらもTLE。<br>
 愚直な実装で題意は満たせるが、こちらもこんなループしてたら怒られるだろうなぁって感じ。</p>
-<div class="highlight"><pre><span></span><code><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span>
-<span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">input</span><span class="p">()</span><span class="w"></span>
-
-<span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">N</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">k</span><span class="o">-</span><span class="nl">j</span><span class="p">:</span><span class="w"></span>
-<span class="w">                </span><span class="n">pass</span><span class="w"></span>
-<span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
-<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="err">:</span><span class="w"></span>
-<span class="w">                            </span><span class="n">c</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
-<span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"></span>
-</code></pre></div>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span></span>
+<span class="code-line"><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">input</span><span class="p">()</span><span class="w"></span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span></span>
+<span class="code-line"><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">N</span><span class="p">)</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">k</span><span class="o">-</span><span class="nl">j</span><span class="p">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">                </span><span class="n">pass</span><span class="w"></span></span>
+<span class="code-line"><span class="w">            </span><span class="k">else</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">S</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">                            </span><span class="n">c</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span></span>
+<span class="code-line"><span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"></span></span>
+<span class="code-line"></code></pre></div>
 
 
 <h2>自分の提出とは関係ない話</h2>
@@ -242,178 +234,73 @@ unrated かなーと思って戻ってきたら問題解消してどっちもTLE
 <p>まぁ問題解けなかったたこととは関係ないんだけど。  </p>
 <hr>
 <p>2完なので、茶は無理だったろうな。。</p>
-        </div><!-- /.entry-content -->
-    </article>
-</section>
-</div>
-</div>
-        </div><!--/span-->
-        <div class="span3 well sidebar-nav" id="sidebar">
-<ul class="nav nav-list">
-<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
-    <li><a href="https://twitter.com/syoutin"><i class="icon-twitter-sign icon-large"></i>twitter</a></li>
-    <li><a href="https://github.com/mollinaca"><i class="icon-github-sign icon-large"></i>github</a></li>
-
-<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
-<li>
-<a href="../../../../../category/general.html">
-    <i class="icon-folder-open icon-large"></i>General
-</a>
-</li>
-<li>
-<a href="../../../../../category/misc.html">
-    <i class="icon-folder-open icon-large"></i>Misc
-</a>
-</li>
-<li>
-<a href="../../../../../category/social.html">
-    <i class="icon-folder-open icon-large"></i>Social
-</a>
-</li>
-<li>
-<a href="../../../../../category/tech.html">
-    <i class="icon-folder-open icon-large"></i>Tech
-</a>
-</li>
-<li>
-<a href="../../../../../category/thoughtexperiment.html">
-    <i class="icon-folder-open icon-large"></i>ThoughtExperiment
-</a>
-</li>
-
-<!--
-<li class="nav-header"><a href="../../../../../tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
--->
-<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-    <li class="tag-1">
-        <a href="../../../../../tag/news.html">
-            <i class="icon-tag icon-large"></i>news
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/pelican.html">
-            <i class="icon-tag icon-large"></i>pelican
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/postfix.html">
-            <i class="icon-tag icon-large"></i>postfix
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/contents.html">
-            <i class="icon-tag icon-large"></i>contents
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/sns.html">
-            <i class="icon-tag icon-large"></i>sns
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../../../../../tag/social.html">
-            <i class="icon-tag icon-large"></i>social
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../../../../../tag/covid-19.html">
-            <i class="icon-tag icon-large"></i>covid-19
-        </a>
-    </li>
-    <li class="tag-3">
-        <a href="../../../../../tag/thoughtexperiment.html">
-            <i class="icon-tag icon-large"></i>thoughtexperiment
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../../../../../tag/abc.html">
-            <i class="icon-tag icon-large"></i>abc
-        </a>
-    </li>
-    <li class="tag-3">
-        <a href="../../../../../tag/misc.html">
-            <i class="icon-tag icon-large"></i>misc
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../../../../../tag/programming.html">
-            <i class="icon-tag icon-large"></i>programming
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/coinhive.html">
-            <i class="icon-tag icon-large"></i>coinhive
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/general.html">
-            <i class="icon-tag icon-large"></i>general
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/virtualbox.html">
-            <i class="icon-tag icon-large"></i>virtualbox
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../../../../../tag/politics.html">
-            <i class="icon-tag icon-large"></i>politics
-        </a>
-    </li>
-    <li class="tag-3">
-        <a href="../../../../../tag/python.html">
-            <i class="icon-tag icon-large"></i>python
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/vm.html">
-            <i class="icon-tag icon-large"></i>vm
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/linux.html">
-            <i class="icon-tag icon-large"></i>linux
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/game.html">
-            <i class="icon-tag icon-large"></i>game
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/test.html">
-            <i class="icon-tag icon-large"></i>test
-        </a>
-    </li>
-    <li class="tag-4">
-        <a href="../../../../../tag/centos8.html">
-            <i class="icon-tag icon-large"></i>centos8
-        </a>
-    </li>
-    <li class="tag-1">
-        <a href="../../../../../tag/atcoder.html">
-            <i class="icon-tag icon-large"></i>atcoder
-        </a>
-    </li>
-    <li class="tag-3">
-        <a href="../../../../../tag/tech.html">
-            <i class="icon-tag icon-large"></i>tech
-        </a>
-    </li>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../../../tag/atcoder.html">atcoder</a>
+      <a href="../../../../../tag/abc.html">abc</a>
+      <a href="../../../../../tag/programming.html">programming</a>
+    </p>
+  </div>
 
 
-</ul>        </div><!--/.well -->
 
-      </div><!--/row-->
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="../../../../../posts/2020/04/19/abc163">AtCoder Beginner Contest 163</a></li>
+      <li><a href="../../../../../posts/2020/04/14/practice_2020414">競プロ Practice 日記</a></li>
+      <li><a href="../../../../../posts/2020/04/05/abc161">AtCoder Beginner Contest 161</a></li>
+      <li><a href="../../../../../posts/2020/04/05/testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></li>
+      <li><a href="../../../../../posts/2020/03/29/practice_20200329">競プロ Practice 日記</a></li>
+    </ul>
+  </div>
 
-      <hr>
 
-    </div><!--/.fluid-container-->
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../../../../../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
 
 
-    <!-- Le javascript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../../../../theme/js/jquery-1.7.2.min.js"></script>
-    <script src="../../../../../theme/js/bootstrap.min.js"></script>
-  </body>
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "../../../../..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+
+</body>
 </html>

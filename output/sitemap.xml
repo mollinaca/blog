@@ -5,42 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://localhost:8000/</loc>
-<lastmod>2020-04-25T19:28:54-00:00</lastmod>
+<lastmod>2020-04-26T16:49:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://localhost:8000/tags.html</loc>
-<lastmod>2020-04-25T19:28:54-00:00</lastmod>
+<lastmod>2020-04-26T16:49:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://localhost:8000/categories.html</loc>
-<lastmod>2020-04-25T19:28:54-00:00</lastmod>
+<lastmod>2020-04-26T16:49:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://localhost:8000/authors.html</loc>
-<lastmod>2020-04-25T19:28:54-00:00</lastmod>
+<lastmod>2020-04-26T16:49:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://localhost:8000/archives.html</loc>
-<lastmod>2020-04-25T19:28:54-00:00</lastmod>
+<lastmod>2020-04-26T16:49:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/pages/about_this_blog.html</loc>
-<lastmod>2020-04-25T19:28:54-00:00</lastmod>
+<loc>http://localhost:8000/pages/about.html</loc>
+<lastmod>2020-04-26T16:49:05-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://localhost:8000/posts/2020/04/25/mailserver</loc>
+<lastmod>2020-04-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -235,13 +242,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://localhost:8000/posts/2020/03/20/test</loc>
-<lastmod>2020-03-20T00:00:00+09:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://localhost:8000/posts/2020/03/18/kagawa</loc>
 <lastmod>2020-03-18T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
@@ -270,6 +270,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://localhost:8000/posts/1970/01/01/test</loc>
+<lastmod>1970-01-01T00:00:00+09:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://localhost:8000/category/general.html</loc>
 <lastmod>2020-04-11T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
@@ -278,7 +285,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://localhost:8000/category/misc.html</loc>
-<lastmod>2020-03-20T00:00:00+09:19</lastmod>
+<lastmod>2020-03-16T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -292,7 +299,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://localhost:8000/category/tech.html</loc>
-<lastmod>2020-04-19T00:00:00+09:19</lastmod>
+<lastmod>2020-04-25T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -300,6 +307,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:8000/category/thoughtexperiment.html</loc>
 <lastmod>2020-04-21T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://localhost:8000/tag/tech.html</loc>
+<lastmod>2020-04-25T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://localhost:8000/tag/postfix.html</loc>
+<lastmod>2020-04-25T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://localhost:8000/tag/linux.html</loc>
+<lastmod>2020-04-25T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -424,22 +452,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/test.html</loc>
-<lastmod>2020-03-20T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://localhost:8000/tag/game.html</loc>
 <lastmod>2020-03-18T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>http://localhost:8000/tag/tech.html</loc>
-<lastmod>2020-03-17T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -452,8 +466,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>http://localhost:8000/tag/test.html</loc>
+<lastmod>1970-01-01T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://localhost:8000/author/shosoya.html</loc>
-<lastmod>2020-04-21T00:00:00+09:19</lastmod>
+<lastmod>2020-04-25T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

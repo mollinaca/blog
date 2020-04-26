@@ -37,7 +37,7 @@
 
 <meta name="author" content="s.hosoya" />
 <meta name="description" content="EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md メールサーバ構築 用途、前提 自前ドメインのメール受信用SMTPサーバの構築 自前ドメインで受けたメールを、専用のgmailへ転送する 上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する なるべく AWS FreeTrial の範囲で 1年ごとの使い捨て EC2インスタンスを作成 AWSアカウントを作成 アカウント作成 2FA設定 ログイン・作業用IAM、API実行用IAM作成 作業用IAM: EC2, S3, へのフルアクセス権限 作業用IAMでログイン EC2インスタンス作成 AmazonLinux2 SecurityGroup作成、アタッチ inbound: sshログイン用ポート, smtp/25 を解法 outbound: ICMP …" />
-<meta name="keywords" content="tech, postfix, linux">
+<meta name="keywords" content="Postfix, Linux, AWS, AmazonLinux">
 
 
 <meta property="og:site_name" content="Days of migratory birds"/>
@@ -48,11 +48,12 @@
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2020-04-25 00:00:00+09:00"/>
 <meta property="article:modified_time" content=""/>
-<meta property="article:author" content="../../../../../author/shosoya.html">
+<meta property="article:author" content="../../../../../author/s.hosoya.html">
 <meta property="article:section" content="Tech"/>
-<meta property="article:tag" content="tech"/>
-<meta property="article:tag" content="postfix"/>
-<meta property="article:tag" content="linux"/>
+<meta property="article:tag" content="Postfix"/>
+<meta property="article:tag" content="Linux"/>
+<meta property="article:tag" content="AWS"/>
+<meta property="article:tag" content="AmazonLinux"/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
   <title>Days of migratory birds &ndash; 自前メールサーバの構築手順メモ</title>
@@ -356,20 +357,15 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="../../../../../tag/tech.html">tech</a>
-      <a href="../../../../../tag/postfix.html">postfix</a>
-      <a href="../../../../../tag/linux.html">linux</a>
+      <a href="../../../../../tag/postfix.html">Postfix</a>
+      <a href="../../../../../tag/linux.html">Linux</a>
+      <a href="../../../../../tag/aws.html">AWS</a>
+      <a href="../../../../../tag/amazonlinux.html">AmazonLinux</a>
     </p>
   </div>
 
 
 
-  <div class="related-posts">
-    <h4>You might enjoy</h4>
-    <ul class="related-posts">
-      <li><a href="../../../../../posts/2020/03/17/about_this_blog">このサイトの技術スタックについて</a></li>
-    </ul>
-  </div>
 
 
 </article>

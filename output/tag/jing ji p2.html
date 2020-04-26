@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+    <meta name="author" content="s.hosoya" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Days of migratory birds"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=".."/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; Tag 競技プログラミング</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href=".."></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../pages/about.html#about">
+                  About this blog and me
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/05/abc161#abc161">AtCoder Beginner Contest 161</a></h2>
+    <p>
+      Posted on 2020-04-05(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
+問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
+<hr>
+<h1>A</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
+swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
+<p>AC</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
+問題分の説明通り実装してあげればよい。<br>
+選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
+<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
+修正して無事AC</p>
+<h1>C</h1>
+<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
+数値を置き換える操作を繰り返す。<br>
+ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
+<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
+そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
+<p>入力例3が親切で</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">1000000000000000000 1 …</span></code></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/05/abc161#abc161">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/05/testcontest_20200405#testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></h2>
+    <p>
+      Posted on 2020-04-05(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <hr>
+<p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
+<h1>A</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_a">A - Walking Takahashi</a><br>
+現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い</p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11582231">提出</a><br>
+ちょっと冗長だった。absは不要だな。<br>
+以下でOK</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"><span class="n">S</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="k">if</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">L</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">elif</span> <span class="n">R</span> <span class="o">&lt;</span> <span class="n">S</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">S</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>こっちのほうがシンプル。</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_b">B - Picking Balls</a><br>
+RとBの配列を持って置き …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/05/testcontest_20200405#testcontest_20200405">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../posts/2020/03/29/practice_20200329#practice_20200329">競プロ Practice 日記</a></h2>
+    <p>
+      Posted on 2020-03-29(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <h2>AOJ に挑戦した</h2>
+<p>競プロの基礎練習編として、AOJがお勧めされていたのでトライしてみた。  </p>
+<p><a href="http://judge.u-aizu.ac.jp/onlinejudge/">AIZU ONLINE JUDGE</a><br>
+<a href="http://judge.u-aizu.ac.jp/onlinejudge/user.jsp?id=hstn2#3">mystatus</a>  </p>
+<p>入門編である ITP1 について、ITP1_1からITP1_6 まで、24問を解いた。<br>
+ABCでA/Bは概ねできてるのでほとんど躓かずにできたけど、一部やったことないタイプの問題とかもあって面白かった。<br>
+ITP1は全部挑戦しようと思います。</p>
+<h2>AtCoder 本日の練習</h2>
+<p>ABC133のA～Cに挑戦。<br>
+A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
+最初見た時に、全探索すると計算量が間に合わないから計算量落とす工夫がいるなと思い、その過程で場合分け等々を考えて計算していたけど、そもそも答えがWAしてしまい導出ロジックがうまく組めず。。  </p>
+<p>結果的に難しく考えすぎてて、条件に収まる範囲での全探索であれば十分for文で行けることがわかったので、それで実装しなおしてACできた。  </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200329_acp.png"><img src="https://blog.watarinohibi.tokyo/images/20200329_acp.png" width="500"></a><br>
+うーん、あとで考えればあーこれで良いやなんだけど、これをさくっと思いつきたい。  </p>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn float-left" href="../tag/jing ji p3.html">
+      <i class="fa fa-angle-left"></i> Older Posts
+    </a>
+    <a class="btn float-right" href="../tag/jing ji p.html">
+      Newer Posts <i class="fa fa-angle-right"></i>
+    </a>
+  </div>
+
+
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>

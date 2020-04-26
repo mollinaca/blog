@@ -1,6 +1,6 @@
 Title: 最初の投稿
 Date: 2020-03-16
-Category: Misc
+Category: no category
 Tags: misc
 Slug: FirstPost
 Authors: s.hosoya

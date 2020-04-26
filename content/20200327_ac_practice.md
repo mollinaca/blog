@@ -1,7 +1,7 @@
 Title: AtCoder Practice 日記
 Date: 2020-03-27
 Category: Tech
-Tags: atcoder, abc, programming
+Tags: AtCoder, ABC, 競技プログラミング
 Slug: practice_20200327
 Authors: s.hosoya
 

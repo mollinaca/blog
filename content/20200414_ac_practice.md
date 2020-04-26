@@ -1,7 +1,7 @@
 Title: 競プロ Practice 日記
 Date: 2020-04-14
 Category: Tech
-Tags: atcoder, abc, programming
+Tags: AtCoder, ABC, 競技プログラミング
 Slug: practice_2020414
 Authors: s.hosoya
 

@@ -1,6 +1,6 @@
 Title: このサイトの目的
 Date: 2020-03-15
-Category: Misc
+Category: no category
 Tags: misc
 Slug: aboutthisblog
 Authors: s.hosoya

@@ -1,7 +1,7 @@
 Title: このサイトの技術スタックについて
 Date: 2020-03-17
 Category: Tech
-Tags: tech, python
+Tags: python, pelican, Github, Netlify
 Slug: about_this_blog
 Authors: s.hosoya
 

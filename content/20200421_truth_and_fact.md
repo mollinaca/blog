@@ -1,7 +1,7 @@
 Title: 真実と事実
 Date: 2020-04-21
-Category: ThoughtExperiment
-Tags: thoughtexperiment, covid-19
+Category: Social
+Tags: 思考実験, covid19
 Slug: truth_and_fact
 Authors: s.hosoya
 

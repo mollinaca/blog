@@ -1,7 +1,7 @@
 Title: COVID-19 in Tokyo 20200404
 Date: 2020-04-04
 Category: Social
-Tags: social, politics, news, covid-19
+Tags: 政治, ニュース, covid19
 Slug: covid19-tokyo-20200404
 Authors: s.hosoya
 

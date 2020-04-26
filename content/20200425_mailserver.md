@@ -1,7 +1,7 @@
 Title: 自前メールサーバの構築手順メモ
 Date: 2020-04-25 
 Category: Tech
-Tags: tech, postfix, linux
+Tags: Postfix, Linux, AWS, AmazonLinux
 Slug: mailserver
 Authors: s.hosoya
 

@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+    <meta name="author" content="s.hosoya" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Days of migratory birds"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=".."/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; Posts by s.hosoya:</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href=".."></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../pages/about.html#about">
+                  About this blog and me
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/19/abc163#abc163">AtCoder Beginner Contest 163</a></h2>
+    <p>
+      Posted on 2020-04-19(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
+円の半径が与えられるので円周を出力せよという問題<br>
+題意通りに実装すればOK  </p>
+<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="kn">import</span> <span class="nn">math</span></span>
+<span class="code-line"><span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
+問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/19/abc163#abc163">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/16/covid19-tokyo-20200416#covid19-tokyo-20200416">COVID-19 in Tokyo 20200416</a></h2>
+    <p>
+      Posted on 2020-04-16(Thu) in <a href="../category/social.html">Social</a>
+
+          &#8226; Tagged with
+              <a href="../tag/politics.html">政治</a>,              <a href="../tag/news.html">ニュース</a>,              <a href="../tag/covid19.html">covid19</a>
+    </p>
+  </header>
+  <div>
+      <p>4月7日に、7都道府県に緊急事態宣言が出されてから1週間とちょっと、間もなく2回目の週末を迎えようとしている。<br>
+そんな中、本日さらに緊急事態宣言の対象が拡大され、ついに日本全土が対象となった。  </p>
+<p><a href="https://jp.reuters.com/article/japan-covid-19-idJPKCN21Y0SZ">政府、緊急事態宣言の対象を全国に拡大へ　5月6日まで＝報道</a>  </p>
+<p>4月7日の緊急事態宣言後も、各自治体が独自に緊急事態宣言を出すなど、国の方針を待てない自治体は独自の動きを始めているところもあった。  </p>
+<p><a href="https://jp.sputniknews.com/covid-19/202004097347125/">愛知県、10日に独自の「緊急事態宣言」へ</a>  </p>
+<p>7都道府県に絞って発令された結果、市井に危機感が伝わり、対象の地域の人々が対象外の地域へ移動するなど、イタリアで起きたのと同じ最悪の動きもあったみたいだ。<br>
+中途半端な実施が、返って混乱を招いたんだろう。<br>
+戦力の逐次投入は悪手を地で行っている。  </p>
+<hr>
+<p>東京都のデータ。<br>
+<a href="https://stopcovid19.metro.tokyo.lg.jp/">https://stopcovid19.metro.tokyo.lg.jp/</a>  より   </p>
+<p>とはいえ、新規陽性患者数は、そこまで爆発的に増えているわけではない、みたい。<br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo.png" width="500"></a>  <br>
+もちろんこれは、相談があり、検査を行い、結果陽性判定が出た数なので、実際に街中にどの程度感染者が潜んでいるのかは実際のところは不明だけど。</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo2.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo2.png" width="500"></a>  <br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo3.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo3.png" width="500"></a>    </p>
+<p>検査実施人数に至っては減少傾向。新規陽性患者数の母数になる検査件数が減ってるから、陽性数が少なくみえるのはそれはそうだろうという気はする。<br>
+検査人数、増やすのは難しくても減らしているのはなんでなんだろう。。検査機関が感染したとかそういう話でなければいいけど。  </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo4.png"><img src="https://blog.watarinohibi.tokyo/images/20200416_covid19_tokyo4.png" width="500"></a>    </p>
+<p>都営地下鉄の単純な利用者数は、かなり減っている模様。<br>
+このグラフだと …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/16/covid19-tokyo-20200416#covid19-tokyo-20200416">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/14/practice_2020414#practice_2020414">競プロ Practice 日記</a></h2>
+    <p>
+      Posted on 2020-04-14(Tue) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日チャレンジした問題  </p>
+<p><a href="https://atcoder.jp/contests/agc007/tasks/agc007_a">A - Shik and Stone</a>  </p>
+<p>パッと見 dfs に見せかけて、じつはdfsだとちょっと難しくて、問題文をちゃんと正しく解釈すれば1行で解けたパターン。<br>
+パッと見であ！dfsだ！チャレンジで見たやつだ！となって意気揚々と実装してみたものの、例１、例２までは通したら例３で見事にハマった。ここで引っかかるところも含めての問題なんだなぁ。。  </p>
+<p>dfs に見せかけというのは、ようするに「右」と「下」の移動だけで左上から右下まで # を辿ってゴールにいけるか？という問題に見えたということ。<br>
+この条件で実装すると、例３は <code>Possible</code> だが出力例は <code>Impossible</code> でええ？となる。<br>
+例３は「右」と「下」の移動だけでゴールまでたどり着けるが、実はこれは題意を満たさない。  </p>
+<p>条件は <code>移動する過程で、駒が常に右または下に動いていた可能性があるか判定してください。</code> なので、<br>
+移動ルートの中で <em>左に移動することが可能であったならば</em>、答えは <code>Impossible</code> になる、ということ。<br>
+えー …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/14/practice_2020414#practice_2020414">
+          Continue reading
+        </a>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn float-left" href="../author/s.hosoya3.html">
+      <i class="fa fa-angle-left"></i> Older Posts
+    </a>
+    <a class="btn float-right" href="../author/s.hosoya.html">
+      Newer Posts <i class="fa fa-angle-right"></i>
+    </a>
+  </div>
+
+
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>

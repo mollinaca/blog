@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+    <meta name="author" content="s.hosoya" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Days of migratory birds"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=".."/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; Posts by s.hosoya:</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href=".."></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../pages/about.html#about">
+                  About this blog and me
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
+    <p>
+      Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/postfix.html">Postfix</a>,              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>
+    </p>
+  </header>
+  <div>
+      <p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
+https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
+<hr>
+<h1>メールサーバ構築</h1>
+<h2>用途、前提</h2>
+<ul>
+<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
+<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
+</ul>
+</li>
+<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
+<li>なるべく AWS FreeTrial の範囲で<ul>
+<li>1年ごとの使い捨て</li>
+</ul>
+</li>
+</ul>
+<h2>EC2インスタンスを作成</h2>
+<ul>
+<li>AWSアカウントを作成<ul>
+<li>アカウント作成</li>
+<li>2FA設定</li>
+<li>ログイン・作業用IAM、API実行用IAM作成<ul>
+<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
+<li>作業用IAMでログイン</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>EC2インスタンス作成<ul>
+<li>AmazonLinux2</li>
+<li>SecurityGroup作成、アタッチ<ul>
+<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
+<li>outbound: ICMP …</li></ul></li></ul></li></ul>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/25/mailserver#mailserver">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/21/truth_and_fact#truth_and_fact">真実と事実</a></h2>
+    <p>
+      Posted on 2020-04-21(Tue) in <a href="../category/social.html">Social</a>
+
+          &#8226; Tagged with
+              <a href="../tag/te.html">思考実験</a>,              <a href="../tag/covid19.html">covid19</a>
+    </p>
+  </header>
+  <div>
+      <p>FACTFULLNESS はとてもよい読書体験だった。<br>
+以下に自分の「なんとなく」の理解が事実と異なってるか、思い込みによる誤解が多いのかを知るきっかけになった。</p>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=watarinohibi-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4822289605&linkId=34a108d983d8b6a1591f775f799d8efd&bc1=FFFFFF&lt1=_top&fc1=333333&lc1=0066C0&bg1=FFFFFF&f=ifr">
+    </iframe>
+
+<p>世の中には、事実（FACT）とは異なる情報が多く流れる。フェイクニュースというやつだ。<br>
+フェイクニュースに騙されないようにするためには大きく</p>
+<ul>
+<li>情報を疑ってかかる（事実かどうかわからないものは、少なくとも出典や原典を当たる）</li>
+<li>正しい知識を持つ</li>
+</ul>
+<p>の二つが考えられると思う。<br>
+少なくとも、正しい知識があれば2択クイズでチンパンジーに負けることはそうそうなくなる、はず、と信じたい。  </p>
+<p>とはいえ、これはとても難しい。  </p>
+<h2>SNSに溢れる情報はだいたい断片的</h2>
+<p>なんとなくリツイートされる、シェアされる耳障りのよい情報は大抵断片的だ。<br>
+出典がなければ、誰が言ったのかも不明瞭だったりするし、それ自体がフェイクだったりもする。<br>
+もはや、出典が確実な情報でなければ迂闊にシェアもしないほうが良いとまで思っている。脊髄反射で拡散してはいけない。  </p>
+<p>また、情報が正しいかどうかもわからない。拡散している人も、正しいと思って拡散していることがほとんどだからだし、そもそも原典の時点でだって誤ってる可能性もある。  </p>
+<h2>でもこれはSNSだけの問題じゃない</h2>
+<p>上記のように考えながら注意深くSNSを観察しながら、テレビのニュースや新聞をほとんど読まなくなって10年近くった。<br>
+いまもテレビは持ってないのでテレビでニュースを見ることはないけど、昨今、Youtube等でニュース番組の配信はちょいちょい見てる。<br>
+すると、まるでフェイクのような情報の多いこと。<br>
+フェイクではなくても、切り抜きや印象操作のようなものも多い。<br>
+というようなことを感じている。  </p>
+<p>テレビで放映できる時間は決まってるから、大事なことを …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/21/truth_and_fact#truth_and_fact">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/20/aftercovid19#aftercovid19">After covid-19 Thought experiment</a></h2>
+    <p>
+      Posted on 2020-04-20(Mon) in <a href="../category/social.html">Social</a>
+
+          &#8226; Tagged with
+              <a href="../tag/te.html">思考実験</a>,              <a href="../tag/covid19.html">covid19</a>
+    </p>
+  </header>
+  <div>
+      <h1>covid-19 が落ち着いた世界はどうなっているんだろう？</h1>
+<p>今現在世界中で猛威を振るっている covid-19。<br>
+国や地域によってはピークはいったん過ぎつつあるところもあるけど、そのあと再度流行の第2波、第3波がくることも予想されている。<br>
+それでも、人類が絶滅しなければいつかはワクチンの開発や免疫の獲得によって今ほどの脅威ではなくなるはず。<br>
+その時、いまと何がどう変わっているんだろう。  </p>
+<h3>感染症の恐怖とこれまでなんでもなかった行動における「リスク」の高まり</h3>
+<p>最初に中国の特定の地域、場所で発生した（とされる）今回の covid-19 は、なにやら大変なことが始まったぞと見ているほんの数日～数週間の間に爆発的に世界に広がった。<br>
+今日、世界で人類にいけないところはほぼないぐらい地球上の全ての場所で人類の往来があるし、たくさんのトラフィックが流れている。<br>
+人の移動にくっついて感染者数を増やす感染症事態のリスクが100年前のスペイン風邪の時と比べて圧倒的に高まっているのは間違いない。  </p>
+<p>いまや、市井のどの人が感染症のキャリアかわからなくなった状態になっているわけで、この状態では圧倒的に人と会うリスクが高いと考えられるし今後もこの傾向は続くだろう。<br>
+これまで気軽にオフィスや会議室で集まっていワークしていたことのハードルが一層高くなった状態だ。<br>
+WFH、リモートワークの需要が高まったのではなく、集まることのリスクが高くなった。それが今は計測不能なため緊急事態宣言になっているが、状況が落ち着いてもこの「リスクが高くなった」ことには変わりない。  </p>
+<p>もともと世界にはWFHに価値を見出して最初からオフィスを持たない企業も存在する。<br>
+WFHには、新たなリスク回避のメリットが加わったことから今後意図的に「オフィスを持たない」選択をする企業はでてくるだろう。<br>
+とはいえ、オフィスや会議室に集まること、F2Fで会話することにはそれ自体に価値があるし、自宅に業務環境、集中するスペースを設けるのが難しい人もいる。<br>
+すべてがすべて WFH になるっていうことはないだろうし …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/20/aftercovid19#aftercovid19">
+          Continue reading
+        </a>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn float-left" href="../author/s.hosoya2.html">
+      <i class="fa fa-angle-left"></i> Older Posts
+    </a>
+  </div>
+
+
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>

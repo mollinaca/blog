@@ -1,7 +1,7 @@
 Title: COVID-19 in Tokyo 20200328
 Date: 2020-03-28
 Category: Social
-Tags: social, politics, news, covid-19
+Tags: 政治, ニュース, covid19
 Slug: gov_interview
 Authors: s.hosoya
 

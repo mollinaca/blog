@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+    <meta name="author" content="s.hosoya" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Days of migratory birds"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=".."/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; Tag AWS</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href=".."></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../pages/about.html#about">
+                  About this blog and me
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
+    <p>
+      Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/postfix.html">Postfix</a>,              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>
+    </p>
+  </header>
+  <div>
+      <p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
+https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
+<hr>
+<h1>メールサーバ構築</h1>
+<h2>用途、前提</h2>
+<ul>
+<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
+<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
+</ul>
+</li>
+<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
+<li>なるべく AWS FreeTrial の範囲で<ul>
+<li>1年ごとの使い捨て</li>
+</ul>
+</li>
+</ul>
+<h2>EC2インスタンスを作成</h2>
+<ul>
+<li>AWSアカウントを作成<ul>
+<li>アカウント作成</li>
+<li>2FA設定</li>
+<li>ログイン・作業用IAM、API実行用IAM作成<ul>
+<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
+<li>作業用IAMでログイン</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>EC2インスタンス作成<ul>
+<li>AmazonLinux2</li>
+<li>SecurityGroup作成、アタッチ<ul>
+<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
+<li>outbound: ICMP …</li></ul></li></ul></li></ul>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/25/mailserver#mailserver">
+          Continue reading
+        </a>
+  </div>
+</article>
+
+  <div class="pagination">
+  </div>
+
+
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>

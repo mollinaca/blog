@@ -106,6 +106,54 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">雑記 20200426</a></h2>
+    <p>
+      Posted on 2020-04-26(Sun) in <a href="./category/miscellaneous notes.html">miscellaneous notes</a>
+
+          &#8226; Tagged with
+              <a href="./tag/diary.html">雑記</a>
+    </p>
+  </header>
+  <div>
+      <p>このサイトのPelicanのテーマを変更したり、いろいろ調整したりなど。<br>
+タグに日本語を正しく指定できるようにして、theme や plugin をちゃんど submodule として取り込んでみたり。<br>
+そもそも git submodule という概念を知らなかったので調べて理解した。  </p>
+<p>このブログページに関するTodo:  </p>
+<ul>
+<li>サイドメニューをもう少し充実させる</li>
+<li>favicon 設置する</li>
+<li>コードブロックの表示において、1行目が特殊なブロックになってしまう</li>
+<li>コードブロックの表示において、非コードな文字列をいれると syntax error と判断されて、err の装飾がついてしまう
+ → これ自体は正しい挙動なんだけど、コードブロックで例えば実行するコマンドを書いた場合などに、気に食わない感じになる。のをどうにかする。</li>
+</ul>
+<p>&lt;正しくコードが表示される&gt; ※ただし1行目のインラインブロック？は気に食わない</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
+<span class="code-line">2</span>
+<span class="code-line">3</span>
+<span class="code-line">4</span>
+<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
+<span class="code-line"><span class="nb">set</span> -euC</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;Hello!&quot;</span></span>
+<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
+<p>スクショ:<br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png" width="500"></a> </p>
+<p>&lt;エラー表示になる&gt;</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># command1</span></span>
+<span class="code-line"><span class="err"># command2 …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="./posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
     <p>
       Posted on 2020-04-25(Sat) in <a href="./category/tech.html">Tech</a>
@@ -196,41 +244,6 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
         <br>
         <a class="btn"
            href="./posts/2020/04/21/truth_and_fact#truth_and_fact">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/04/20/aftercovid19#aftercovid19">After covid-19 Thought experiment</a></h2>
-    <p>
-      Posted on 2020-04-20(Mon) in <a href="./category/social.html">Social</a>
-
-          &#8226; Tagged with
-              <a href="./tag/te.html">思考実験</a>,              <a href="./tag/covid19.html">covid19</a>
-    </p>
-  </header>
-  <div>
-      <h1>covid-19 が落ち着いた世界はどうなっているんだろう？</h1>
-<p>今現在世界中で猛威を振るっている covid-19。<br>
-国や地域によってはピークはいったん過ぎつつあるところもあるけど、そのあと再度流行の第2波、第3波がくることも予想されている。<br>
-それでも、人類が絶滅しなければいつかはワクチンの開発や免疫の獲得によって今ほどの脅威ではなくなるはず。<br>
-その時、いまと何がどう変わっているんだろう。  </p>
-<h3>感染症の恐怖とこれまでなんでもなかった行動における「リスク」の高まり</h3>
-<p>最初に中国の特定の地域、場所で発生した（とされる）今回の covid-19 は、なにやら大変なことが始まったぞと見ているほんの数日～数週間の間に爆発的に世界に広がった。<br>
-今日、世界で人類にいけないところはほぼないぐらい地球上の全ての場所で人類の往来があるし、たくさんのトラフィックが流れている。<br>
-人の移動にくっついて感染者数を増やす感染症事態のリスクが100年前のスペイン風邪の時と比べて圧倒的に高まっているのは間違いない。  </p>
-<p>いまや、市井のどの人が感染症のキャリアかわからなくなった状態になっているわけで、この状態では圧倒的に人と会うリスクが高いと考えられるし今後もこの傾向は続くだろう。<br>
-これまで気軽にオフィスや会議室で集まっていワークしていたことのハードルが一層高くなった状態だ。<br>
-WFH、リモートワークの需要が高まったのではなく、集まることのリスクが高くなった。それが今は計測不能なため緊急事態宣言になっているが、状況が落ち着いてもこの「リスクが高くなった」ことには変わりない。  </p>
-<p>もともと世界にはWFHに価値を見出して最初からオフィスを持たない企業も存在する。<br>
-WFHには、新たなリスク回避のメリットが加わったことから今後意図的に「オフィスを持たない」選択をする企業はでてくるだろう。<br>
-とはいえ、オフィスや会議室に集まること、F2Fで会話することにはそれ自体に価値があるし、自宅に業務環境、集中するスペースを設けるのが難しい人もいる。<br>
-すべてがすべて WFH になるっていうことはないだろうし …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/04/20/aftercovid19#aftercovid19">
           Continue reading
         </a>
   </div>

@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../../../../../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../../../../../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../../../../../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../../../../../theme/pygments/monokai.min.css">
+
+    <script src="../../../../../theme/tipuesearch/jquery.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="../../../../../tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="../../../../../theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="s.hosoya" />
+<meta name="description" content="CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。 この記事では、pyenv を使って pipenv を用意する手順について記載する。 pipenv に拘らなければ、 pyenv だけでも良いと思う。 環境 OS NAME=&#34;Amazon Linux&#34; VERSION=&#34;2&#34; ID=&#34;amzn&#34; ID_LIKE=&#34;centos rhel fedora&#34; VERSION_ID=&#34;2&#34; PRETTY_NAME=&#34;Amazon Linux 2&#34; ANSI_COLOR=&#34;0;33&#34; CPE_NAME=&#34;cpe:2.3:o:amazon:amazon_linux:2 …" />
+<meta name="keywords" content="Linux, AmazonLinux, python, pyenv, pipenv">
+
+
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:title" content="AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする"/>
+<meta property="og:description" content="CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。 この記事では、pyenv を使って pipenv を用意する手順について記載する。 pipenv に拘らなければ、 pyenv だけでも良いと思う。 環境 OS NAME=&#34;Amazon Linux&#34; VERSION=&#34;2&#34; ID=&#34;amzn&#34; ID_LIKE=&#34;centos rhel fedora&#34; VERSION_ID=&#34;2&#34; PRETTY_NAME=&#34;Amazon Linux 2&#34; ANSI_COLOR=&#34;0;33&#34; CPE_NAME=&#34;cpe:2.3:o:amazon:amazon_linux:2 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../../../posts/2020/04/26/pipenv"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-04-26 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../../../author/s.hosoya.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="Linux"/>
+<meta property="article:tag" content="AmazonLinux"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="pyenv"/>
+<meta property="article:tag" content="pipenv"/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="../../../../..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../../../../.."></a>
+      </h1>
+
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../../../../../pages/about.html#about">
+                  About this blog and me
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+
+      <!-- my twitter timeline -->
+      <ul>
+        <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/syoutin?ref_src=twsrc%5Etfw">Tweets by syoutin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </ul>
+
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="pipenv">AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする</h1>
+    <p>
+      Posted on 2020-04-26(Sun) in <a href="../../../../../category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。</p>
+<p>この記事では、pyenv を使って pipenv を用意する手順について記載する。<br>
+pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
+<h1>環境</h1>
+<ul>
+<li>OS</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">NAME=&quot;Amazon Linux&quot;</span></span>
+<span class="code-line"><span class="err">VERSION=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">ID=&quot;amzn&quot;</span></span>
+<span class="code-line"><span class="err">ID_LIKE=&quot;centos rhel fedora&quot;</span></span>
+<span class="code-line"><span class="err">VERSION_ID=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span></span>
+<span class="code-line"><span class="err">ANSI_COLOR=&quot;0;33&quot;</span></span>
+<span class="code-line"><span class="err">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2&quot;</span></span>
+<span class="code-line"><span class="err">HOME_URL=&quot;https://amazonlinux.com/&quot;</span></span>
+<span class="code-line"><span class="err">Amazon Linux release 2 (Karoo)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<ul>
+<li>Kernel</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">Linux mailserver 4.14.173-137.229.amzn2.x86_64 #1 SMP Wed Apr 1 18:06:08 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<ul>
+<li>デフォルトの python</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">Python 2.7.16</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>AmazonLinux2 構築直後で、 python3, pip はインストールされてない状態。  </p>
+<h1>手順</h1>
+<ul>
+<li>依存パッケージを事前用意</li>
+<li>pyenv をインストール</li>
+<li>pyenv を使い、python3、pipを使えるようにする</li>
+<li>pip で pipenv をインストール</li>
+<li>pipenv を使い、使いたいpython3のenvを構築する</li>
+<li>確認</li>
+</ul>
+<h1>依存パッケージを事前用意</h1>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ sudo yum install gcc zlib-devel bzip2 bzip2-devel readline readline-devel sqlite sqlite-devel openssl openssl-devel git libffi-devel</span>
+<span class="code-line"></code></pre></div>
+
+
+<h1>pyenv をインストール, pip を使えるようにする</h1>
+<p><a href="https://github.com/pyenv/pyenv">pyenv</a></p>
+<h2>手順</h2>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ git clone https://github.com/pyenv/pyenv.git ~/.pyenv</span>
+<span class="code-line">$ <span class="nb">echo</span> <span class="s1">&#39;export PYENV_ROOT=&quot;$HOME/.pyenv&quot;&#39;</span> &gt;&gt; ~/.bash_profile</span>
+<span class="code-line">$ <span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile</span>
+<span class="code-line">$ <span class="nb">echo</span> -e <span class="s1">&#39;if command -v pyenv 1&gt;/dev/null 2&gt;&amp;1; then\n  eval &quot;$(pyenv init -)&quot;\nfi&#39;</span> &gt;&gt; ~/.bash_profile</span>
+<span class="code-line">$ <span class="nb">exec</span> <span class="s2">&quot;</span><span class="nv">$SHELL</span><span class="s2">&quot;</span></span>
+<span class="code-line"> → pyenv が使えるようになる</span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ pyenv install --list</span>
+<span class="code-line"> → インストール可能なpython一覧</span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ pyenv install <span class="m">3</span>.7.7</span>
+<span class="code-line"> → ユーザローカルで使う用の python <span class="m">3</span>.7.7 をインストール。ソースのDLとビルドでしばらくかかる。</span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ pyenv <span class="nb">local</span> <span class="m">3</span>.7.7</span>
+<span class="code-line">$ pyenv rehash</span>
+<span class="code-line">$ python --version</span>
+<span class="code-line"> → Python <span class="m">3</span>.7.7</span>
+<span class="code-line">$ which pip</span>
+<span class="code-line"> → <span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/.pyenv/shims/pip</span>
+<span class="code-line">$ pip install --upgrade pip</span>
+<span class="code-line">$ pip list</span>
+<span class="code-line"> → pip, setuptools のみになっていることを確認</span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>pip で pipenv をインストール</h2>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ pip install pipenv</span>
+<span class="code-line">$ pip list</span>
+<span class="code-line"> → pipenv と依存するモジュールがインストールされていることを確認</span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>pipenv を使い、使いたいpython3のenvを構築する</h2>
+<p><a href="https://github.com/pypa/pipenv">pypa/pipenv</a></p>
+<ul>
+<li>pipenvを使うディレクトリを作成</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ mkdir pipenv3.8.2</span>
+<span class="code-line">$ <span class="nb">cd</span> pipenv3.8.2</span>
+<span class="code-line"></code></pre></div>
+
+
+<ul>
+<li>pipenv で使いたいバージョンのPythonをインストール</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ pipenv --python <span class="m">3</span>.8.2</span>
+<span class="code-line"> → pyenvを使い、Python <span class="m">3</span>.8.2 のビルドが行われる</span>
+<span class="code-line"> → インストールが完了したら、 Pipfile が作成される</span>
+<span class="code-line"></code></pre></div>
+
+
+<ul>
+<li>pipenv に、pipモジュールをインストール</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ pipenv install numpy scipy</span>
+<span class="code-line"> → Pipfile.lock が作成される</span>
+<span class="code-line"></code></pre></div>
+
+
+<ul>
+<li>pipenv を使い、仮想環境へ入る</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ pipenv shell</span>
+<span class="code-line">Launching subshell in virtual environment…</span>
+<span class="code-line"> . /root/.local/share/virtualenvs/pipenv3.8.2-J6FbHgp9/bin/activate</span>
+<span class="code-line"></code></pre></div>
+
+
+<ul>
+<li>確認</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ which python</span>
+<span class="code-line">/root/.local/share/virtualenvs/pipenv3.8.2-J6FbHgp9/bin/python</span>
+<span class="code-line"></span>
+<span class="code-line">$ python --version</span>
+<span class="code-line">Python <span class="m">3</span>.8.2</span>
+<span class="code-line"></span>
+<span class="code-line">$ pip list</span>
+<span class="code-line">Package    Version</span>
+<span class="code-line">---------- -------</span>
+<span class="code-line">numpy      <span class="m">1</span>.18.3</span>
+<span class="code-line">pip        <span class="m">20</span>.0.2</span>
+<span class="code-line">scipy      <span class="m">1</span>.4.1</span>
+<span class="code-line">setuptools <span class="m">46</span>.1.3</span>
+<span class="code-line">wheel      <span class="m">0</span>.34.2</span>
+<span class="code-line"></code></pre></div>
+
+
+<ul>
+<li>仮想環境から脱出</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code>$ deactivate</span>
+<span class="code-line"> → 仮想環境からログアウトする</span>
+<span class="code-line"></code></pre></div>
+
+
+<hr>
+<p>以上で pyenv, pipenv を用いた python のビルド環境、仮想環境の構築ができた。<br>
+このpipenv環境は、Pipfile, Pipfile.lock を共有すればすぐに再現できるため、環境の再現にも便利に使える。  </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../../../tag/linux.html">Linux</a>
+      <a href="../../../../../tag/amazonlinux.html">AmazonLinux</a>
+      <a href="../../../../../tag/python.html">python</a>
+      <a href="../../../../../tag/pyenv.html">pyenv</a>
+      <a href="../../../../../tag/pipenv.html">pipenv</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="../../../../../posts/2020/04/25/mailserver">自前メールサーバの構築手順メモ</a></li>
+      <li><a href="../../../../../posts/2020/04/04/pelican-theme">python-pelican に theme を導入する</a></li>
+      <li><a href="../../../../../posts/2020/03/17/about_this_blog">このサイトの技術スタックについて</a></li>
+    </ul>
+  </div>
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../../../../../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "../../../../..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>

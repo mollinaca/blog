@@ -5,49 +5,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/</loc>
-<lastmod>2020-04-26T23:13:20-00:00</lastmod>
+<lastmod>2020-04-27T00:29:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/tags.html</loc>
-<lastmod>2020-04-26T23:13:20-00:00</lastmod>
+<lastmod>2020-04-27T00:29:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/categories.html</loc>
-<lastmod>2020-04-26T23:13:20-00:00</lastmod>
+<lastmod>2020-04-27T00:29:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/authors.html</loc>
-<lastmod>2020-04-26T23:13:20-00:00</lastmod>
+<lastmod>2020-04-27T00:29:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/archives.html</loc>
-<lastmod>2020-04-26T23:13:20-00:00</lastmod>
+<lastmod>2020-04-27T00:29:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/search.html</loc>
-<lastmod>2020-04-26T23:13:20-00:00</lastmod>
+<lastmod>2020-04-27T00:29:48-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/pages/about.html</loc>
-<lastmod>2020-04-26T23:13:20-00:00</lastmod>
+<lastmod>2020-04-27T00:29:48-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -61,6 +61,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/posts/2020/04/26/miscellaneous_notes_20200426</loc>
+<lastmod>2020-04-26T00:00:00+09:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.watarinohibi.tokyo/posts/2020/04/26/pipenv</loc>
 <lastmod>2020-04-26T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -354,6 +361,41 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://blog.watarinohibi.tokyo/tag/linux.html</loc>
+<lastmod>2020-04-26T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.watarinohibi.tokyo/tag/amazonlinux.html</loc>
+<lastmod>2020-04-26T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.watarinohibi.tokyo/tag/python.html</loc>
+<lastmod>2020-04-26T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.watarinohibi.tokyo/tag/pyenv.html</loc>
+<lastmod>2020-04-26T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.watarinohibi.tokyo/tag/pipenv.html</loc>
+<lastmod>2020-04-26T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://blog.watarinohibi.tokyo/tag/postfix.html</loc>
 <lastmod>2020-04-25T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
@@ -361,21 +403,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/linux.html</loc>
-<lastmod>2020-04-25T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://blog.watarinohibi.tokyo/tag/aws.html</loc>
-<lastmod>2020-04-25T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.watarinohibi.tokyo/tag/amazonlinux.html</loc>
 <lastmod>2020-04-25T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
@@ -426,13 +454,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://blog.watarinohibi.tokyo/tag/virtualbox.html</loc>
 <lastmod>2020-04-12T00:00:00+09:19</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://blog.watarinohibi.tokyo/tag/python.html</loc>
-<lastmod>2020-04-04T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

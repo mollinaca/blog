@@ -121,6 +121,41 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/04/27/atcoder_20200427#atcoder_20200427">AtCoder 茶色になりました</a></h2>
+    <p>
+      Posted on 2020-04-27(Mon) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/atcoder.html">AtCoder</a>,              <a href="./tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>というわけで改めて。<br>
+昨日の ABC164 で、ようやく灰から茶に上がれました。</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_ac_rate.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_ac_rate.png" width="500"></a> </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200427_contests.png"><img src="https://blog.watarinohibi.tokyo/images/20200427_contests.png" width="500"></a> </p>
+<p>発参加から約4ヶ月。unratedなどもあったけど、最初に考えたより時間かかってしまったが、ようやく。</p>
+<h2>改めて、自分のバックグラウンドなど</h2>
+<ul>
+<li>情報系の大学院卒、修士（この背景でこの程度のプログラミング能力、アルゴリズム能力なのがほんと悲しい）</li>
+<li>ITインフラエンジニアとして働きはじめて6年目</li>
+</ul>
+<p>学生時代はあんまり真面目じゃなくて、なんとなく流れで情報系には来たものの計算機工学も情報通信工学もあんまり興味なかった。<br>
+ただなんとなく選択して、なんとなく就職から逃げてMまでいったけど、そんなスタンスのDはほんと無理だろうな（というかDにいくモチベーションもないな）と思い、就職。<br>
+興味はたいしてないけど別に嫌いではなかったし、運よく好きなゲームの会社へ就職できたこともあり、入社してからITインフラの運用とかの勉強を始めて今に至る。</p>
+<p>あくまでインフラの設計や構築、運用がメインの業務なので、プログラミングやアルゴリズムはほとんど使わなくて、それよりも各種ツールの使い方やオンラインゲームやWEBサービス用のサーバの設計思想とかアーキテクチャ、プログラマとのコミュニケーション、あるいはそれを非技術者へ説明する能力が求められる環境で日々業務をしていく中でどんどん困っていったのが、 "プログラミングが分からない" ということ。  </p>
+<p>自分でいうのもなんだけど要領はいいほうなので、概念をざっくり理解してそれっぽく理解してる風に振る舞うことはできるんだけど、いい加減そういう姿勢で仕事をしてるのがつらい（ガチで詳しい人に当たったときになんも言えなくなる）自分に嫌気がさして、まともにプログラミング、アルゴリズム能力を身に着けようと思ったのが競技プログラミングを始めたきっかけ。  </p>
+<p>もともと、「何か一つまともに書ける言語を身に着けよう」で、インタプリタで綺麗に書けて動かしやすくて、かつ業務であるインフラ運用にも直結する python を選択したけど、勉強には続ける動機が必要で …</p>
+        <br>
+        <a class="btn"
+           href="./posts/2020/04/27/atcoder_20200427#atcoder_20200427">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/04/26/abc164#abc164">AtCoder Beginner Contest 164</a></h2>
     <p>
       Posted on 2020-04-26(Sun) in <a href="./category/tech.html">Tech</a>
@@ -201,40 +236,6 @@ Cまでぱぱっと解けたので、今日はDまでいけるのでは！と挑
         <br>
         <a class="btn"
            href="./posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/04/26/pipenv#pipenv">AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする</a></h2>
-    <p>
-      Posted on 2020-04-26(Sun) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/linux.html">Linux</a>,              <a href="./tag/amazonlinux.html">AmazonLinux</a>,              <a href="./tag/python.html">python</a>,              <a href="./tag/pyenv.html">pyenv</a>,              <a href="./tag/pipenv.html">pipenv</a>
-    </p>
-  </header>
-  <div>
-      <p>CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。</p>
-<p>この記事では、pyenv を使って pipenv を用意する手順について記載する。<br>
-pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
-<h1>環境</h1>
-<ul>
-<li>OS</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">NAME=&quot;Amazon Linux&quot;</span></span>
-<span class="code-line"><span class="err">VERSION=&quot;2&quot;</span></span>
-<span class="code-line"><span class="err">ID=&quot;amzn&quot;</span></span>
-<span class="code-line"><span class="err">ID_LIKE=&quot;centos rhel fedora&quot;</span></span>
-<span class="code-line"><span class="err">VERSION_ID=&quot;2&quot;</span></span>
-<span class="code-line"><span class="err">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span></span>
-<span class="code-line"><span class="err">ANSI_COLOR=&quot;0;33&quot;</span></span>
-<span class="code-line"><span class="err">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2 …</span></span></pre></div>
-        <br>
-        <a class="btn"
-           href="./posts/2020/04/26/pipenv#pipenv">
           Continue reading
         </a>
   </div>

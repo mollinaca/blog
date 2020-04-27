@@ -121,6 +121,41 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/27/atcoder_20200427#atcoder_20200427">AtCoder 茶色になりました</a></h2>
+    <p>
+      Posted on 2020-04-27(Mon) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>というわけで改めて。<br>
+昨日の ABC164 で、ようやく灰から茶に上がれました。</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_ac_rate.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_ac_rate.png" width="500"></a> </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200427_contests.png"><img src="https://blog.watarinohibi.tokyo/images/20200427_contests.png" width="500"></a> </p>
+<p>発参加から約4ヶ月。unratedなどもあったけど、最初に考えたより時間かかってしまったが、ようやく。</p>
+<h2>改めて、自分のバックグラウンドなど</h2>
+<ul>
+<li>情報系の大学院卒、修士（この背景でこの程度のプログラミング能力、アルゴリズム能力なのがほんと悲しい）</li>
+<li>ITインフラエンジニアとして働きはじめて6年目</li>
+</ul>
+<p>学生時代はあんまり真面目じゃなくて、なんとなく流れで情報系には来たものの計算機工学も情報通信工学もあんまり興味なかった。<br>
+ただなんとなく選択して、なんとなく就職から逃げてMまでいったけど、そんなスタンスのDはほんと無理だろうな（というかDにいくモチベーションもないな）と思い、就職。<br>
+興味はたいしてないけど別に嫌いではなかったし、運よく好きなゲームの会社へ就職できたこともあり、入社してからITインフラの運用とかの勉強を始めて今に至る。</p>
+<p>あくまでインフラの設計や構築、運用がメインの業務なので、プログラミングやアルゴリズムはほとんど使わなくて、それよりも各種ツールの使い方やオンラインゲームやWEBサービス用のサーバの設計思想とかアーキテクチャ、プログラマとのコミュニケーション、あるいはそれを非技術者へ説明する能力が求められる環境で日々業務をしていく中でどんどん困っていったのが、 "プログラミングが分からない" ということ。  </p>
+<p>自分でいうのもなんだけど要領はいいほうなので、概念をざっくり理解してそれっぽく理解してる風に振る舞うことはできるんだけど、いい加減そういう姿勢で仕事をしてるのがつらい（ガチで詳しい人に当たったときになんも言えなくなる）自分に嫌気がさして、まともにプログラミング、アルゴリズム能力を身に着けようと思ったのが競技プログラミングを始めたきっかけ。  </p>
+<p>もともと、「何か一つまともに書ける言語を身に着けよう」で、インタプリタで綺麗に書けて動かしやすくて、かつ業務であるインフラ運用にも直結する python を選択したけど、勉強には続ける動機が必要で …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/27/atcoder_20200427#atcoder_20200427">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/26/abc164#abc164">AtCoder Beginner Contest 164</a></h2>
     <p>
       Posted on 2020-04-26(Sun) in <a href="../category/tech.html">Tech</a>
@@ -187,58 +222,6 @@ pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
         <br>
         <a class="btn"
            href="../posts/2020/04/26/pipenv#pipenv">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
-    <p>
-      Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/postfix.html">Postfix</a>,              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>
-    </p>
-  </header>
-  <div>
-      <p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
-https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
-<hr>
-<h1>メールサーバ構築</h1>
-<h2>用途、前提</h2>
-<ul>
-<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
-<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
-</ul>
-</li>
-<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
-<li>なるべく AWS FreeTrial の範囲で<ul>
-<li>1年ごとの使い捨て</li>
-</ul>
-</li>
-</ul>
-<h2>EC2インスタンスを作成</h2>
-<ul>
-<li>AWSアカウントを作成<ul>
-<li>アカウント作成</li>
-<li>2FA設定</li>
-<li>ログイン・作業用IAM、API実行用IAM作成<ul>
-<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
-<li>作業用IAMでログイン</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>EC2インスタンス作成<ul>
-<li>AmazonLinux2</li>
-<li>SecurityGroup作成、アタッチ<ul>
-<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
-<li>outbound: ICMP …</li></ul></li></ul></li></ul>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/25/mailserver#mailserver">
           Continue reading
         </a>
   </div>

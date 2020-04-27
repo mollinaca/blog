@@ -121,6 +121,41 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/27/atcoder_20200427#atcoder_20200427">AtCoder 茶色になりました</a></h2>
+    <p>
+      Posted on 2020-04-27(Mon) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>というわけで改めて。<br>
+昨日の ABC164 で、ようやく灰から茶に上がれました。</p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_ac_rate.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_ac_rate.png" width="500"></a> </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200427_contests.png"><img src="https://blog.watarinohibi.tokyo/images/20200427_contests.png" width="500"></a> </p>
+<p>発参加から約4ヶ月。unratedなどもあったけど、最初に考えたより時間かかってしまったが、ようやく。</p>
+<h2>改めて、自分のバックグラウンドなど</h2>
+<ul>
+<li>情報系の大学院卒、修士（この背景でこの程度のプログラミング能力、アルゴリズム能力なのがほんと悲しい）</li>
+<li>ITインフラエンジニアとして働きはじめて6年目</li>
+</ul>
+<p>学生時代はあんまり真面目じゃなくて、なんとなく流れで情報系には来たものの計算機工学も情報通信工学もあんまり興味なかった。<br>
+ただなんとなく選択して、なんとなく就職から逃げてMまでいったけど、そんなスタンスのDはほんと無理だろうな（というかDにいくモチベーションもないな）と思い、就職。<br>
+興味はたいしてないけど別に嫌いではなかったし、運よく好きなゲームの会社へ就職できたこともあり、入社してからITインフラの運用とかの勉強を始めて今に至る。</p>
+<p>あくまでインフラの設計や構築、運用がメインの業務なので、プログラミングやアルゴリズムはほとんど使わなくて、それよりも各種ツールの使い方やオンラインゲームやWEBサービス用のサーバの設計思想とかアーキテクチャ、プログラマとのコミュニケーション、あるいはそれを非技術者へ説明する能力が求められる環境で日々業務をしていく中でどんどん困っていったのが、 "プログラミングが分からない" ということ。  </p>
+<p>自分でいうのもなんだけど要領はいいほうなので、概念をざっくり理解してそれっぽく理解してる風に振る舞うことはできるんだけど、いい加減そういう姿勢で仕事をしてるのがつらい（ガチで詳しい人に当たったときになんも言えなくなる）自分に嫌気がさして、まともにプログラミング、アルゴリズム能力を身に着けようと思ったのが競技プログラミングを始めたきっかけ。  </p>
+<p>もともと、「何か一つまともに書ける言語を身に着けよう」で、インタプリタで綺麗に書けて動かしやすくて、かつ業務であるインフラ運用にも直結する python を選択したけど、勉強には続ける動機が必要で …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/27/atcoder_20200427#atcoder_20200427">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/26/abc164#abc164">AtCoder Beginner Contest 164</a></h2>
     <p>
       Posted on 2020-04-26(Sun) in <a href="../category/tech.html">Tech</a>
@@ -187,35 +222,6 @@ Cまでぱぱっと解けたので、今日はDまでいけるのでは！と挑
         <br>
         <a class="btn"
            href="../posts/2020/04/19/abc163#abc163">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/14/practice_2020414#practice_2020414">競プロ Practice 日記</a></h2>
-    <p>
-      Posted on 2020-04-14(Tue) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日チャレンジした問題  </p>
-<p><a href="https://atcoder.jp/contests/agc007/tasks/agc007_a">A - Shik and Stone</a>  </p>
-<p>パッと見 dfs に見せかけて、じつはdfsだとちょっと難しくて、問題文をちゃんと正しく解釈すれば1行で解けたパターン。<br>
-パッと見であ！dfsだ！チャレンジで見たやつだ！となって意気揚々と実装してみたものの、例１、例２までは通したら例３で見事にハマった。ここで引っかかるところも含めての問題なんだなぁ。。  </p>
-<p>dfs に見せかけというのは、ようするに「右」と「下」の移動だけで左上から右下まで # を辿ってゴールにいけるか？という問題に見えたということ。<br>
-この条件で実装すると、例３は <code>Possible</code> だが出力例は <code>Impossible</code> でええ？となる。<br>
-例３は「右」と「下」の移動だけでゴールまでたどり着けるが、実はこれは題意を満たさない。  </p>
-<p>条件は <code>移動する過程で、駒が常に右または下に動いていた可能性があるか判定してください。</code> なので、<br>
-移動ルートの中で <em>左に移動することが可能であったならば</em>、答えは <code>Impossible</code> になる、ということ。<br>
-えー …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/14/practice_2020414#practice_2020414">
           Continue reading
         </a>
   </div>

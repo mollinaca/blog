@@ -4,581 +4,602 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/</loc>
-<lastmod>2020-04-29T22:59:52-00:00</lastmod>
+<loc>http://localhost:8000/</loc>
+<lastmod>2020-04-30T23:15:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tags.html</loc>
-<lastmod>2020-04-29T22:59:52-00:00</lastmod>
+<loc>http://localhost:8000/tags.html</loc>
+<lastmod>2020-04-30T23:15:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/categories.html</loc>
-<lastmod>2020-04-29T22:59:52-00:00</lastmod>
+<loc>http://localhost:8000/categories.html</loc>
+<lastmod>2020-04-30T23:15:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/authors.html</loc>
-<lastmod>2020-04-29T22:59:52-00:00</lastmod>
+<loc>http://localhost:8000/authors.html</loc>
+<lastmod>2020-04-30T23:15:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/archives.html</loc>
-<lastmod>2020-04-29T22:59:52-00:00</lastmod>
+<loc>http://localhost:8000/archives.html</loc>
+<lastmod>2020-04-30T23:15:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/search.html</loc>
-<lastmod>2020-04-29T22:59:52-00:00</lastmod>
+<loc>http://localhost:8000/search.html</loc>
+<lastmod>2020-04-30T23:15:45-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/pages/about.html</loc>
-<lastmod>2020-04-29T22:59:52-00:00</lastmod>
+<loc>http://localhost:8000/pages/about.html</loc>
+<lastmod>2020-04-30T23:15:45-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/29/moyamoya</loc>
+<loc>http://localhost:8000/posts/2020/04/29/bookreading</loc>
 <lastmod>2020-04-29T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/28/covid19_20200428</loc>
+<loc>http://localhost:8000/posts/2020/04/29/moyamoya</loc>
+<lastmod>2020-04-29T00:00:00+09:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://localhost:8000/posts/2020/04/28/covid19_20200428</loc>
 <lastmod>2020-04-28T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/27/atcoder_20200427</loc>
+<loc>http://localhost:8000/posts/2020/04/27/atcoder_20200427</loc>
 <lastmod>2020-04-27T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/27/install_golang</loc>
+<loc>http://localhost:8000/posts/2020/04/27/install_golang</loc>
 <lastmod>2020-04-27T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/26/abc164</loc>
+<loc>http://localhost:8000/posts/2020/04/26/abc164</loc>
 <lastmod>2020-04-26T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/26/miscellaneous_notes_20200426</loc>
+<loc>http://localhost:8000/posts/2020/04/26/miscellaneous_notes_20200426</loc>
 <lastmod>2020-04-26T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/26/pipenv</loc>
+<loc>http://localhost:8000/posts/2020/04/26/pipenv</loc>
 <lastmod>2020-04-26T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/25/mailserver</loc>
+<loc>http://localhost:8000/posts/2020/04/25/mailserver</loc>
 <lastmod>2020-04-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/21/truth_and_fact</loc>
+<loc>http://localhost:8000/posts/2020/04/21/truth_and_fact</loc>
 <lastmod>2020-04-21T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/20/aftercovid19</loc>
+<loc>http://localhost:8000/posts/2020/04/20/aftercovid19</loc>
 <lastmod>2020-04-20T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/19/abc163</loc>
+<loc>http://localhost:8000/posts/2020/04/19/abc163</loc>
 <lastmod>2020-04-19T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/16/covid19-tokyo-20200416</loc>
+<loc>http://localhost:8000/posts/2020/04/16/covid19-tokyo-20200416</loc>
 <lastmod>2020-04-16T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/14/practice_2020414</loc>
+<loc>http://localhost:8000/posts/2020/04/14/practice_2020414</loc>
 <lastmod>2020-04-14T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/12/abc162</loc>
+<loc>http://localhost:8000/posts/2020/04/12/abc162</loc>
 <lastmod>2020-04-12T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/12/centos8_vm_1</loc>
+<loc>http://localhost:8000/posts/2020/04/12/centos8_vm_1</loc>
 <lastmod>2020-04-12T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/11/miscellaneous_notes_20200411</loc>
+<loc>http://localhost:8000/posts/2020/04/11/miscellaneous_notes_20200411</loc>
 <lastmod>2020-04-11T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/09/media-20200409</loc>
+<loc>http://localhost:8000/posts/2020/04/09/media-20200409</loc>
 <lastmod>2020-04-09T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/08/covid19-tokyo-20200408</loc>
+<loc>http://localhost:8000/posts/2020/04/08/covid19-tokyo-20200408</loc>
 <lastmod>2020-04-08T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/07/covid19-tokyo-20200407</loc>
+<loc>http://localhost:8000/posts/2020/04/07/covid19-tokyo-20200407</loc>
 <lastmod>2020-04-07T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/05/abc161</loc>
+<loc>http://localhost:8000/posts/2020/04/05/abc161</loc>
 <lastmod>2020-04-05T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/05/testcontest_20200405</loc>
+<loc>http://localhost:8000/posts/2020/04/05/testcontest_20200405</loc>
 <lastmod>2020-04-05T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/04/covid19-tokyo-20200404</loc>
+<loc>http://localhost:8000/posts/2020/04/04/covid19-tokyo-20200404</loc>
 <lastmod>2020-04-04T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/04/pelican-theme</loc>
+<loc>http://localhost:8000/posts/2020/04/04/pelican-theme</loc>
 <lastmod>2020-04-04T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/04/01/covid19-tokyo-20200401</loc>
+<loc>http://localhost:8000/posts/2020/04/01/covid19-tokyo-20200401</loc>
 <lastmod>2020-04-01T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/31/coinhiveopinion</loc>
+<loc>http://localhost:8000/posts/2020/03/31/coinhiveopinion</loc>
 <lastmod>2020-03-31T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/29/covid19-tokyo-20200329</loc>
+<loc>http://localhost:8000/posts/2020/03/29/covid19-tokyo-20200329</loc>
 <lastmod>2020-03-29T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/29/practice_20200329</loc>
+<loc>http://localhost:8000/posts/2020/03/29/practice_20200329</loc>
 <lastmod>2020-03-29T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/28/abc160</loc>
+<loc>http://localhost:8000/posts/2020/03/28/abc160</loc>
 <lastmod>2020-03-28T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/28/gov_interview</loc>
+<loc>http://localhost:8000/posts/2020/03/28/gov_interview</loc>
 <lastmod>2020-03-28T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/27/practice_20200327</loc>
+<loc>http://localhost:8000/posts/2020/03/27/practice_20200327</loc>
 <lastmod>2020-03-27T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/25/covid19-tokyo</loc>
+<loc>http://localhost:8000/posts/2020/03/25/covid19-tokyo</loc>
 <lastmod>2020-03-25T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/24/practice_0324</loc>
+<loc>http://localhost:8000/posts/2020/03/24/practice_0324</loc>
 <lastmod>2020-03-24T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/22/abc159</loc>
+<loc>http://localhost:8000/posts/2020/03/22/abc159</loc>
 <lastmod>2020-03-22T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/22/employment</loc>
+<loc>http://localhost:8000/posts/2020/03/22/employment</loc>
 <lastmod>2020-03-22T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/21/wani</loc>
+<loc>http://localhost:8000/posts/2020/03/21/wani</loc>
 <lastmod>2020-03-21T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/18/kagawa</loc>
+<loc>http://localhost:8000/posts/2020/03/18/kagawa</loc>
 <lastmod>2020-03-18T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/17/about_this_blog</loc>
+<loc>http://localhost:8000/posts/2020/03/17/about_this_blog</loc>
 <lastmod>2020-03-17T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/16/FirstPost</loc>
+<loc>http://localhost:8000/posts/2020/03/16/FirstPost</loc>
 <lastmod>2020-03-16T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/2020/03/15/aboutthisblog</loc>
+<loc>http://localhost:8000/posts/2020/03/15/aboutthisblog</loc>
 <lastmod>2020-03-15T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/posts/1970/01/01/test</loc>
+<loc>http://localhost:8000/posts/1970/01/01/test</loc>
 <lastmod>1970-01-01T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/category/misc.html</loc>
+<loc>http://localhost:8000/category/book.html</loc>
 <lastmod>2020-04-29T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/category/miscellaneous notes.html</loc>
+<loc>http://localhost:8000/category/misc.html</loc>
+<lastmod>2020-04-29T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://localhost:8000/category/miscellaneous notes.html</loc>
 <lastmod>2020-04-26T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/category/no category.html</loc>
+<loc>http://localhost:8000/category/no category.html</loc>
 <lastmod>2020-03-16T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/category/social.html</loc>
+<loc>http://localhost:8000/category/social.html</loc>
 <lastmod>2020-04-28T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/category/tech.html</loc>
+<loc>http://localhost:8000/category/tech.html</loc>
 <lastmod>2020-04-27T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/politics.html</loc>
+<loc>http://localhost:8000/tag/shu ping.html</loc>
+<lastmod>2020-04-29T00:00:00+09:19</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://localhost:8000/tag/politics.html</loc>
 <lastmod>2020-04-28T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/news.html</loc>
+<loc>http://localhost:8000/tag/news.html</loc>
 <lastmod>2020-04-28T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/covid19.html</loc>
+<loc>http://localhost:8000/tag/covid19.html</loc>
 <lastmod>2020-04-28T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/atcoder.html</loc>
+<loc>http://localhost:8000/tag/atcoder.html</loc>
 <lastmod>2020-04-27T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/jing ji p.html</loc>
+<loc>http://localhost:8000/tag/jing ji p.html</loc>
 <lastmod>2020-04-27T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/linux.html</loc>
+<loc>http://localhost:8000/tag/linux.html</loc>
 <lastmod>2020-04-27T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/amazonlinux.html</loc>
+<loc>http://localhost:8000/tag/amazonlinux.html</loc>
 <lastmod>2020-04-27T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/golang.html</loc>
+<loc>http://localhost:8000/tag/golang.html</loc>
 <lastmod>2020-04-27T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/abc.html</loc>
+<loc>http://localhost:8000/tag/abc.html</loc>
 <lastmod>2020-04-26T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/diary.html</loc>
+<loc>http://localhost:8000/tag/diary.html</loc>
 <lastmod>2020-04-26T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/python.html</loc>
+<loc>http://localhost:8000/tag/python.html</loc>
 <lastmod>2020-04-26T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/pyenv.html</loc>
+<loc>http://localhost:8000/tag/pyenv.html</loc>
 <lastmod>2020-04-26T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/pipenv.html</loc>
+<loc>http://localhost:8000/tag/pipenv.html</loc>
 <lastmod>2020-04-26T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/postfix.html</loc>
+<loc>http://localhost:8000/tag/postfix.html</loc>
 <lastmod>2020-04-25T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/aws.html</loc>
+<loc>http://localhost:8000/tag/aws.html</loc>
 <lastmod>2020-04-25T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/te.html</loc>
+<loc>http://localhost:8000/tag/te.html</loc>
 <lastmod>2020-04-21T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/vm.html</loc>
+<loc>http://localhost:8000/tag/vm.html</loc>
 <lastmod>2020-04-12T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/centos8.html</loc>
+<loc>http://localhost:8000/tag/centos8.html</loc>
 <lastmod>2020-04-12T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/virtualbox.html</loc>
+<loc>http://localhost:8000/tag/virtualbox.html</loc>
 <lastmod>2020-04-12T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/pelican.html</loc>
+<loc>http://localhost:8000/tag/pelican.html</loc>
 <lastmod>2020-04-04T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/social.html</loc>
+<loc>http://localhost:8000/tag/social.html</loc>
 <lastmod>2020-03-31T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/coinhive.html</loc>
+<loc>http://localhost:8000/tag/coinhive.html</loc>
 <lastmod>2020-03-31T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/current_news.html</loc>
+<loc>http://localhost:8000/tag/current_news.html</loc>
 <lastmod>2020-03-21T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/sns.html</loc>
+<loc>http://localhost:8000/tag/sns.html</loc>
 <lastmod>2020-03-21T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/game.html</loc>
+<loc>http://localhost:8000/tag/game.html</loc>
 <lastmod>2020-03-18T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/github.html</loc>
+<loc>http://localhost:8000/tag/github.html</loc>
 <lastmod>2020-03-17T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/netlify.html</loc>
+<loc>http://localhost:8000/tag/netlify.html</loc>
 <lastmod>2020-03-17T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/misc.html</loc>
+<loc>http://localhost:8000/tag/misc.html</loc>
 <lastmod>2020-03-16T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/test.html</loc>
+<loc>http://localhost:8000/tag/test.html</loc>
 <lastmod>1970-01-01T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/tag/tag_test.html</loc>
+<loc>http://localhost:8000/tag/tag_test.html</loc>
 <lastmod>1970-01-01T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://blog.watarinohibi.tokyo/author/s.hosoya.html</loc>
+<loc>http://localhost:8000/author/s.hosoya.html</loc>
 <lastmod>2020-04-29T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>

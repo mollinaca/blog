@@ -121,6 +121,54 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">雑記 20200426</a></h2>
+    <p>
+      Posted on 2020-04-26(Sun) in <a href="./category/miscellaneous notes.html">miscellaneous notes</a>
+
+          &#8226; Tagged with
+              <a href="./tag/diary.html">雑記</a>
+    </p>
+  </header>
+  <div>
+      <p>このサイトのPelicanのテーマを変更したり、いろいろ調整したりなど。<br>
+タグに日本語を正しく指定できるようにして、theme や plugin をちゃんど submodule として取り込んでみたり。<br>
+そもそも git submodule という概念を知らなかったので調べて理解した。  </p>
+<p>このブログページに関するTodo:  </p>
+<ul>
+<li>サイドメニューをもう少し充実させる</li>
+<li>favicon 設置する</li>
+<li>コードブロックの表示において、1行目が特殊なブロックになってしまう</li>
+<li>コードブロックの表示において、非コードな文字列をいれると syntax error と判断されて、err の装飾がついてしまう
+ → これ自体は正しい挙動なんだけど、コードブロックで例えば実行するコマンドを書いた場合などに、気に食わない感じになる。のをどうにかする。</li>
+</ul>
+<p>&lt;正しくコードが表示される&gt; ※ただし1行目のインラインブロック？は気に食わない</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
+<span class="code-line">2</span>
+<span class="code-line">3</span>
+<span class="code-line">4</span>
+<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
+<span class="code-line"><span class="nb">set</span> -euC</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;Hello!&quot;</span></span>
+<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
+<p>スクショ:<br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png" width="500"></a> </p>
+<p>&lt;エラー表示になる&gt;</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># command1</span></span>
+<span class="code-line"><span class="err"># command2 …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="./posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/04/26/pipenv#pipenv">AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする</a></h2>
     <p>
       Posted on 2020-04-26(Sun) in <a href="./category/tech.html">Tech</a>
@@ -200,51 +248,6 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
         <br>
         <a class="btn"
            href="./posts/2020/04/25/mailserver#mailserver">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/04/21/truth_and_fact#truth_and_fact">真実と事実</a></h2>
-    <p>
-      Posted on 2020-04-21(Tue) in <a href="./category/social.html">Social</a>
-
-          &#8226; Tagged with
-              <a href="./tag/te.html">思考実験</a>,              <a href="./tag/covid19.html">covid19</a>
-    </p>
-  </header>
-  <div>
-      <p>FACTFULLNESS はとてもよい読書体験だった。<br>
-以下に自分の「なんとなく」の理解が事実と異なってるか、思い込みによる誤解が多いのかを知るきっかけになった。</p>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=watarinohibi-22&m=amazon&o=9&p=8&l=as1&IS1=1&detail=1&asins=4822289605&linkId=34a108d983d8b6a1591f775f799d8efd&bc1=FFFFFF&lt1=_top&fc1=333333&lc1=0066C0&bg1=FFFFFF&f=ifr">
-    </iframe>
-
-<p>世の中には、事実（FACT）とは異なる情報が多く流れる。フェイクニュースというやつだ。<br>
-フェイクニュースに騙されないようにするためには大きく</p>
-<ul>
-<li>情報を疑ってかかる（事実かどうかわからないものは、少なくとも出典や原典を当たる）</li>
-<li>正しい知識を持つ</li>
-</ul>
-<p>の二つが考えられると思う。<br>
-少なくとも、正しい知識があれば2択クイズでチンパンジーに負けることはそうそうなくなる、はず、と信じたい。  </p>
-<p>とはいえ、これはとても難しい。  </p>
-<h2>SNSに溢れる情報はだいたい断片的</h2>
-<p>なんとなくリツイートされる、シェアされる耳障りのよい情報は大抵断片的だ。<br>
-出典がなければ、誰が言ったのかも不明瞭だったりするし、それ自体がフェイクだったりもする。<br>
-もはや、出典が確実な情報でなければ迂闊にシェアもしないほうが良いとまで思っている。脊髄反射で拡散してはいけない。  </p>
-<p>また、情報が正しいかどうかもわからない。拡散している人も、正しいと思って拡散していることがほとんどだからだし、そもそも原典の時点でだって誤ってる可能性もある。  </p>
-<h2>でもこれはSNSだけの問題じゃない</h2>
-<p>上記のように考えながら注意深くSNSを観察しながら、テレビのニュースや新聞をほとんど読まなくなって10年近くった。<br>
-いまもテレビは持ってないのでテレビでニュースを見ることはないけど、昨今、Youtube等でニュース番組の配信はちょいちょい見てる。<br>
-すると、まるでフェイクのような情報の多いこと。<br>
-フェイクではなくても、切り抜きや印象操作のようなものも多い。<br>
-というようなことを感じている。  </p>
-<p>テレビで放映できる時間は決まってるから、大事なことを …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/04/21/truth_and_fact#truth_and_fact">
           Continue reading
         </a>
   </div>

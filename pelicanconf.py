@@ -98,3 +98,8 @@ PYGMENTS_STYLE = 'monokai'
 THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
 THEME_COLOR_ENABLE_USER_OVERRIDE = True
 USE_LESS = True
+
+## MD Extensions
+#MARKDOWN = ['codehilite(css_class=highlight)']
+#MARKDOWN = ['codehilite(css_class=highlight)', 'extra']
+#MARKDOWN = ['mdx_linkify']

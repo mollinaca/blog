@@ -121,6 +121,83 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/02/wp#wp">CentOS8 に WordPress をインストールする</a></h2>
+    <p>
+      Posted on 2020-05-02(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/centos8.html">CentOS8</a>,              <a href="../tag/wordpress.html">WordPress</a>,              <a href="../tag/php.html">php</a>,              <a href="../tag/apache.html">apache</a>,              <a href="../tag/mysql.html">mysql</a>
+    </p>
+  </header>
+  <div>
+      <h2>環境</h2>
+<ul>
+<li>ローカルVM  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>モノ</th>
+<th>情報</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPアドレス</td>
+<td>192.168.56.101</td>
+</tr>
+<tr>
+<td>/etc/redhat-release</td>
+<td>CentOS Linux release 8.1.1911 (Core)</td>
+</tr>
+<tr>
+<td>uname -r</td>
+<td>4.18.0-147.8.1.el8_1.x86_64</td>
+</tr>
+</tbody>
+</table>
+<h2>インストールするもの</h2>
+<table>
+<thead>
+<tr>
+<th>モノ</th>
+<th>バージョン</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apache</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>php</td>
+<td>7.4</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>8.0.17-3</td>
+</tr>
+<tr>
+<td>WordPress</td>
+<td>5.4.1</td>
+</tr>
+</tbody>
+</table>
+<h3>apache</h3>
+<ul>
+<li>インストール</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># dnf -y install httpd …</span></code></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/02/wp#wp">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/27/install_golang#install_golang">AmazonLinux2 に GO をインストールする</a></h2>
     <p>
       Posted on 2020-04-27(Mon) in <a href="../category/tech.html">Tech</a>
@@ -191,61 +268,12 @@ pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
           Continue reading
         </a>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
-    <p>
-      Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/postfix.html">Postfix</a>,              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>
-    </p>
-  </header>
-  <div>
-      <p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
-https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
-<hr>
-<h1>メールサーバ構築</h1>
-<h2>用途、前提</h2>
-<ul>
-<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
-<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
-</ul>
-</li>
-<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
-<li>なるべく AWS FreeTrial の範囲で<ul>
-<li>1年ごとの使い捨て</li>
-</ul>
-</li>
-</ul>
-<h2>EC2インスタンスを作成</h2>
-<ul>
-<li>AWSアカウントを作成<ul>
-<li>アカウント作成</li>
-<li>2FA設定</li>
-<li>ログイン・作業用IAM、API実行用IAM作成<ul>
-<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
-<li>作業用IAMでログイン</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>EC2インスタンス作成<ul>
-<li>AmazonLinux2</li>
-<li>SecurityGroup作成、アタッチ<ul>
-<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
-<li>outbound: ICMP …</li></ul></li></ul></li></ul>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/25/mailserver#mailserver">
-          Continue reading
-        </a>
-  </div>
 </article>
 
   <div class="pagination">
+    <a class="btn float-left" href="../tag/linux2.html">
+      <i class="fa fa-angle-left"></i> Older Posts
+    </a>
   </div>
 
 

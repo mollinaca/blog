@@ -51,7 +51,7 @@
 <meta property="og:url" content=".."/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; Category Tech</title>
+  <title>Days of migratory birds &ndash; Tag mysql</title>
 
 </head>
 <body >
@@ -121,70 +121,82 @@
 
 <article>
   <header>
-    <h2><a href="../posts/2020/03/22/abc159#abc159">AtCoder Beginner Contest 159</a></h2>
+    <h2><a href="../posts/2020/05/02/wp#wp">CentOS8 に WordPress をインストールする</a></h2>
     <p>
-      Posted on 2020-03-22(Sun) in <a href="../category/tech.html">Tech</a>
+      Posted on 2020-05-02(Sat) in <a href="../category/tech.html">Tech</a>
 
           &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/centos8.html">CentOS8</a>,              <a href="../tag/wordpress.html">WordPress</a>,              <a href="../tag/php.html">php</a>,              <a href="../tag/apache.html">apache</a>,              <a href="../tag/mysql.html">mysql</a>
     </p>
   </header>
   <div>
-      <p>去年の暮れから python の勉強を始めるとともに、競技プログラミングを始めてみました。  </p>
-<p>競技プログラミングをやろう！というよりも、pythonの勉強の一環でプログラムを書く理由のためにという意味合いが強かったですが、やり始めるとけっこう面白い。<br>
-面白いというか、そういえば自分はこういうのを楽しいと思って情報系に進んだんだっけなぁというのを薄ぼんやり思い出すような。。<br>
-これでも一応情報系の大学院を出ているので、授業でアルゴリズムやデータ構造をやってたはずですが、あまり真面目な学生ではなかったので、イチから出発です。  </p>
-<p>現在はまだレートは灰で、そろそろ茶にはあがれそうかな、どうかなというところ。<br>
-緑には完全に実力不足なので、もうちょっと勉強がんばって緑まではあがりたいなという所です。<br>
-しばらく続けるつもり。</p>
-<p>今の目標は、A問題B問題はなるべく早く終えて、C問題をクリアしてできればD問題に挑んで回答の提出までといったところです。とはいえC問題でもまだまだ詰まるので、3完安定がいまの目標かな。</p>
-<p><br>
-<br></p>
-<h2>ABC159</h2>
-<p>本日のABC159は諸事情で30分ほど遅刻して開始しました。
-A、Bはさくっと消化して、今回はCも無事回答することができました。<br>
-とはいえ、今回のCは大分簡単だった気がします。それほど確証はなかったけど、こうかな？でやってみたらACしてしまった感じ。<br>
-Dにも挑戦して、要求された解を得る実装はできたけど、処理効率がよくなくTLE。<br>
-これは、見た目でも自分の実装が効率悪いのは見えていたので、回答・解説がでたら改めて実装しなおしてみようと思います。</p>
-<p><br>
-<br></p>
-<h2>自分の提出</h2>
-<h3>A</h3>
-<p><a href="https://atcoder.jp/contests/abc159/submissions/11109386">https://atcoder.jp/contests/abc159/submissions …</a></p>
+      <h2>環境</h2>
+<ul>
+<li>ローカルVM  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>モノ</th>
+<th>情報</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPアドレス</td>
+<td>192.168.56.101</td>
+</tr>
+<tr>
+<td>/etc/redhat-release</td>
+<td>CentOS Linux release 8.1.1911 (Core)</td>
+</tr>
+<tr>
+<td>uname -r</td>
+<td>4.18.0-147.8.1.el8_1.x86_64</td>
+</tr>
+</tbody>
+</table>
+<h2>インストールするもの</h2>
+<table>
+<thead>
+<tr>
+<th>モノ</th>
+<th>バージョン</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apache</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>php</td>
+<td>7.4</td>
+</tr>
+<tr>
+<td>MySQL</td>
+<td>8.0.17-3</td>
+</tr>
+<tr>
+<td>WordPress</td>
+<td>5.4.1</td>
+</tr>
+</tbody>
+</table>
+<h3>apache</h3>
+<ul>
+<li>インストール</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># dnf -y install httpd …</span></code></span></pre></div>
         <br>
         <a class="btn"
-           href="../posts/2020/03/22/abc159#abc159">
+           href="../posts/2020/05/02/wp#wp">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/03/17/about_this_blog#about_this_blog">このサイトの技術スタックについて</a></h2>
-    <p>
-      Posted on 2020-03-17(Tue) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/python.html">python</a>,              <a href="../tag/pelican.html">pelican</a>,              <a href="../tag/github.html">Github</a>,              <a href="../tag/netlify.html">Netlify</a>
-    </p>
-  </header>
-  <div>
-      <ul>
-<li>python pelican による静的ページ生成</li>
-<li>github のリポジトリにコミット</li>
-<li>Netlify がコミットをフックしてビルド</li>
-<li>Netlify の Snippet Injection にて、GoogleAnalytics の js を注入</li>
-<li>ビルドが無事通ったらそのまま Netlify で公開される</li>
-</ul>
-<p>※画を書く</p>
   </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-right" href="../category/tech6.html">
-      Newer Posts <i class="fa fa-angle-right"></i>
-    </a>
   </div>
 
 

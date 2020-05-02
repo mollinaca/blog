@@ -42,17 +42,17 @@
 
 
 <meta name="author" content="s.hosoya" />
-<meta name="description" content="開催告知見落としていて、すっぽかしてしまった＞＜ 問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。 A A - ABC Swap swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。 提出 AC B B - Popular Vote 問題分の説明通り実装してあげればよい。 選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。 提出 最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。 修正して無事AC C C - Replacing Integer 数値を置き換える操作を繰り返す。 ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。 実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。 そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。 入力例3が親切で 1000000000000000000 1 …" />
+<meta name="description" content="GW週末、ABC二夜連続ナイトの1日目。 今日のCは難しすぎた。。もうちょっと早くDに挑んでればDはできたかもだったけど、Cに時間かけすぎてしかもできなかった。。orz C難しい難しい言われてるから茶パフォ的には落としてもしゃーないかもって感じだけど、代わりにDがとれてればなぁというところ。 A A - We Love Golf k の倍数が A から B の間にあるかどうか。 O(1)で解けそうな気がしたけど、考えるよりも先に素直にループ回したほうがいいなと思い、 AからBの間の i で i%k == 0 となるやつがあれば &#34;OK&#34; として終了 提出 B B - 1% 複利の計算。複利の計算て、普通に算数の問題として難しい。 今回は制約から、小数切り落としなのでB向けにマイルドにはなってるけど、まず複利ってうい概念自体がちょっと難しいよね。 制約通りに実装してAC。 提出 C C - Many Requirements まず、問題文から難解 …" />
 <meta name="keywords" content="AtCoder, ABC, 競技プログラミング">
 
 
 <meta property="og:site_name" content="Days of migratory birds"/>
-<meta property="og:title" content="AtCoder Beginner Contest 161"/>
-<meta property="og:description" content="開催告知見落としていて、すっぽかしてしまった＞＜ 問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。 A A - ABC Swap swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。 提出 AC B B - Popular Vote 問題分の説明通り実装してあげればよい。 選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。 提出 最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。 修正して無事AC C C - Replacing Integer 数値を置き換える操作を繰り返す。 ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。 実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。 そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。 入力例3が親切で 1000000000000000000 1 …"/>
+<meta property="og:title" content="AtCoder Beginner Contest 165"/>
+<meta property="og:description" content="GW週末、ABC二夜連続ナイトの1日目。 今日のCは難しすぎた。。もうちょっと早くDに挑んでればDはできたかもだったけど、Cに時間かけすぎてしかもできなかった。。orz C難しい難しい言われてるから茶パフォ的には落としてもしゃーないかもって感じだけど、代わりにDがとれてればなぁというところ。 A A - We Love Golf k の倍数が A から B の間にあるかどうか。 O(1)で解けそうな気がしたけど、考えるよりも先に素直にループ回したほうがいいなと思い、 AからBの間の i で i%k == 0 となるやつがあれば &#34;OK&#34; として終了 提出 B B - 1% 複利の計算。複利の計算て、普通に算数の問題として難しい。 今回は制約から、小数切り落としなのでB向けにマイルドにはなってるけど、まず複利ってうい概念自体がちょっと難しいよね。 制約通りに実装してAC。 提出 C C - Many Requirements まず、問題文から難解 …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="../../../../../posts/2020/04/05/abc161"/>
+<meta property="og:url" content="../../../../../posts/2020/05/02/abc165"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2020-04-05 00:00:00+09:00"/>
+<meta property="article:published_time" content="2020-05-02 00:00:00+09:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="../../../../../author/s.hosoya.html">
 <meta property="article:section" content="Tech"/>
@@ -61,7 +61,7 @@
 <meta property="article:tag" content="競技プログラミング"/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; AtCoder Beginner Contest 161</title>
+  <title>Days of migratory birds &ndash; AtCoder Beginner Contest 165</title>
 
 </head>
 <body >
@@ -130,49 +130,52 @@
 <article class="single">
   <header>
       
-    <h1 id="abc161">AtCoder Beginner Contest 161</h1>
+    <h1 id="abc165">AtCoder Beginner Contest 165</h1>
     <p>
-      Posted on 2020-04-05(Sun) in <a href="../../../../../category/tech.html">Tech</a>
+      Posted on 2020-05-02(Sat) in <a href="../../../../../category/tech.html">Tech</a>
 
     </p>
   </header>
 
 
   <div>
-    <p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
-問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
+    <p>GW週末、ABC二夜連続ナイトの1日目。  </p>
+<p>今日のCは難しすぎた。。もうちょっと早くDに挑んでればDはできたかもだったけど、Cに時間かけすぎてしかもできなかった。。orz <br>
+C難しい難しい言われてるから茶パフォ的には落としてもしゃーないかもって感じだけど、代わりにDがとれてればなぁというところ。  </p>
+<h3>A</h3>
+<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_a">A - We Love Golf</a>  </p>
+<p>k の倍数が A から B の間にあるかどうか。<br>
+O(1)で解けそうな気がしたけど、考えるよりも先に素直にループ回したほうがいいなと思い、<br>
+AからBの間の i で i%k == 0 となるやつがあれば "OK" として終了</p>
+<p><a href="https://atcoder.jp/contests/abc165/submissions/12587573">提出</a></p>
+<h3>B</h3>
+<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_b">B - 1%</a>  </p>
+<p>複利の計算。複利の計算て、普通に算数の問題として難しい。 <br>
+今回は制約から、小数切り落としなのでB向けにマイルドにはなってるけど、まず複利ってうい概念自体がちょっと難しいよね。<br>
+制約通りに実装してAC。  </p>
+<p><a href="https://atcoder.jp/contests/abc165/submissions/12601120">提出</a></p>
+<h3>C</h3>
+<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_c">C - Many Requirements</a>  </p>
+<p>まず、問題文から難解。。
+意図はなんとか理解できたけど、実装を考えつかずパス。<br>
+Twitter 見てると、10重ループ書いて無理やり通したみたいなのがちらほら、、まじか。。</p>
+<p>解説みてもやっぱりわからんし、なんだろうこれは。。  </p>
+<h3>D</h3>
+<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_d">D - Floor Function</a>  </p>
+<p>これはもうちょい時間あれば解けたー。。無念。<br>
+floorが紛らわしいけど、分解してみれば単調増加関数のため、基本は x=n のときが最大になるハズ、はすぐにわかった。<br>
+その上で例外条件として、 floor の分岐で後ろの項を小さくできそうだなと思い、そこを探しているところでタイムアップ。<br>
+ぎりぎりに提出したけど、ちょいっとミスがあり 9/10 の1WAでACならず。。</p>
+<p><a href="https://atcoder.jp/contests/abc165/submissions/12649188">提出</a></p>
+<p>マジで実装がギリギリ。ｗ  </p>
+<p>これは解説を読んで理解。<br>
+あー、確かにという感じで、再度書き直して以下でAC。</p>
+<p><a href="https://atcoder.jp/contests/abc165/submissions/12651588">提出</a></p>
+<p>Cよりよっぽど簡単だったのでは。。<br>
+数学的考察が必要なだけで、実装の難易度はB以下な感じの問題だったので、CとDが逆だったのでは疑惑すらあるABC165でした。</p>
 <hr>
-<h1>A</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
-swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
-<p>AC</p>
-<h1>B</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
-問題分の説明通り実装してあげればよい。<br>
-選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
-<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
-修正して無事AC</p>
-<h1>C</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
-数値を置き換える操作を繰り返す。<br>
-ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
-<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
-そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
-<p>入力例3が親切で</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">1000000000000000000 1</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<p>これを愚直な実装にいれれば（ループ回すと）終わらないことを教えてくれる。</p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566201">提出</a></p>
-<p>さくっとできた！</p>
-<hr>
-<p>上記3問はさくっと解けた。<br>
-diffはわからないけど、多分これ参加して解けてたら茶にあがれてたかなぁ。。<br>
-また次回！</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png"><img src="https://blog.watarinohibi.tokyo/images/20200405_abc_rate.png" width="500"></a>  </p>
+<p>えーん、灰に逆戻り(´；ω；｀)    </p>
+<p><img alt="ac_rate" src="https://blog.watarinohibi.tokyo/images/20200502_ac_rate.png" title="ac_rate">  </p>
   </div>
   <div class="tag-cloud">
     <p>
@@ -187,11 +190,11 @@ diffはわからないけど、多分これ参加して解けてたら茶にあ�
   <div class="related-posts">
     <h4>You might enjoy</h4>
     <ul class="related-posts">
-      <li><a href="../../../../../posts/2020/05/02/abc165">AtCoder Beginner Contest 165</a></li>
       <li><a href="../../../../../posts/2020/04/26/abc164">AtCoder Beginner Contest 164</a></li>
       <li><a href="../../../../../posts/2020/04/19/abc163">AtCoder Beginner Contest 163</a></li>
       <li><a href="../../../../../posts/2020/04/14/practice_2020414">競プロ Practice 日記</a></li>
       <li><a href="../../../../../posts/2020/04/12/abc162">AtCoder Beginner Contest 162</a></li>
+      <li><a href="../../../../../posts/2020/04/05/abc161">AtCoder Beginner Contest 161</a></li>
     </ul>
   </div>
 

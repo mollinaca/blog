@@ -121,6 +121,40 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/04/26/pipenv#pipenv">AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする</a></h2>
+    <p>
+      Posted on 2020-04-26(Sun) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/linux.html">Linux</a>,              <a href="./tag/amazonlinux.html">AmazonLinux</a>,              <a href="./tag/python.html">python</a>,              <a href="./tag/pyenv.html">pyenv</a>,              <a href="./tag/pipenv.html">pipenv</a>
+    </p>
+  </header>
+  <div>
+      <p>CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。</p>
+<p>この記事では、pyenv を使って pipenv を用意する手順について記載する。<br>
+pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
+<h1>環境</h1>
+<ul>
+<li>OS</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">NAME=&quot;Amazon Linux&quot;</span></span>
+<span class="code-line"><span class="err">VERSION=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">ID=&quot;amzn&quot;</span></span>
+<span class="code-line"><span class="err">ID_LIKE=&quot;centos rhel fedora&quot;</span></span>
+<span class="code-line"><span class="err">VERSION_ID=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span></span>
+<span class="code-line"><span class="err">ANSI_COLOR=&quot;0;33&quot;</span></span>
+<span class="code-line"><span class="err">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2 …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="./posts/2020/04/26/pipenv#pipenv">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
     <p>
       Posted on 2020-04-25(Sat) in <a href="./category/tech.html">Tech</a>
@@ -211,41 +245,6 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
         <br>
         <a class="btn"
            href="./posts/2020/04/21/truth_and_fact#truth_and_fact">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/04/20/aftercovid19#aftercovid19">After covid-19 Thought experiment</a></h2>
-    <p>
-      Posted on 2020-04-20(Mon) in <a href="./category/social.html">Social</a>
-
-          &#8226; Tagged with
-              <a href="./tag/te.html">思考実験</a>,              <a href="./tag/covid19.html">covid19</a>
-    </p>
-  </header>
-  <div>
-      <h1>covid-19 が落ち着いた世界はどうなっているんだろう？</h1>
-<p>今現在世界中で猛威を振るっている covid-19。<br>
-国や地域によってはピークはいったん過ぎつつあるところもあるけど、そのあと再度流行の第2波、第3波がくることも予想されている。<br>
-それでも、人類が絶滅しなければいつかはワクチンの開発や免疫の獲得によって今ほどの脅威ではなくなるはず。<br>
-その時、いまと何がどう変わっているんだろう。  </p>
-<h3>感染症の恐怖とこれまでなんでもなかった行動における「リスク」の高まり</h3>
-<p>最初に中国の特定の地域、場所で発生した（とされる）今回の covid-19 は、なにやら大変なことが始まったぞと見ているほんの数日～数週間の間に爆発的に世界に広がった。<br>
-今日、世界で人類にいけないところはほぼないぐらい地球上の全ての場所で人類の往来があるし、たくさんのトラフィックが流れている。<br>
-人の移動にくっついて感染者数を増やす感染症事態のリスクが100年前のスペイン風邪の時と比べて圧倒的に高まっているのは間違いない。  </p>
-<p>いまや、市井のどの人が感染症のキャリアかわからなくなった状態になっているわけで、この状態では圧倒的に人と会うリスクが高いと考えられるし今後もこの傾向は続くだろう。<br>
-これまで気軽にオフィスや会議室で集まっていワークしていたことのハードルが一層高くなった状態だ。<br>
-WFH、リモートワークの需要が高まったのではなく、集まることのリスクが高くなった。それが今は計測不能なため緊急事態宣言になっているが、状況が落ち着いてもこの「リスクが高くなった」ことには変わりない。  </p>
-<p>もともと世界にはWFHに価値を見出して最初からオフィスを持たない企業も存在する。<br>
-WFHには、新たなリスク回避のメリットが加わったことから今後意図的に「オフィスを持たない」選択をする企業はでてくるだろう。<br>
-とはいえ、オフィスや会議室に集まること、F2Fで会話することにはそれ自体に価値があるし、自宅に業務環境、集中するスペースを設けるのが難しい人もいる。<br>
-すべてがすべて WFH になるっていうことはないだろうし …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/04/20/aftercovid19#aftercovid19">
           Continue reading
         </a>
   </div>

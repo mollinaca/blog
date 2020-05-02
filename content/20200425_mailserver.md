@@ -112,6 +112,13 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
  → ログインして反映を確認
 ```
 
+* modify TZ
+```
+# timedatectl set-timezone Asia/Tokyo
+# reboot
+ → ログインして反映を確認
+```
+
 * modify prompt for operation user and root
 ```
 # su - hstn

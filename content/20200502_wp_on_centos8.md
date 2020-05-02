@@ -66,7 +66,7 @@ phpinfo();
 ```
 http://192.168.56.101/phpinfo.php へアクセスし、 phpinfo が表示されることを確認  
 
-![phpinfo](./images/20200502_phpinfo.png "phpinfo")
+![phpinfo](https://blog.watarinohibi.tokyo/images/20200502_phpinfo.png "phpinfo")
 
 ### MySQL
 
@@ -145,9 +145,9 @@ define( 'DB_HOST', 'localhost:/var/lib/mysql/mysql.sock' );
 
 以上まで完了したら、ブラウザで http://192.168.56.101/wordpress へアクセスして、WordPress の初期設定画面が表示されることを確認  
 
-![wp_install](./images/20200502_wp_install.png "wp_install")
+![wp_install](https://blog.watarinohibi.tokyo/images/20200502_wp_install.png "wp_install")
 
 
 上記項目をいれて、無事インストールが完了されば構築完了。  
 
-![wp_hello](./images/20200502_wp_hello.png "wp_hello")
+![wp_hello](https://blog.watarinohibi.tokyo/images/20200502_wp_hello.png "wp_hello")

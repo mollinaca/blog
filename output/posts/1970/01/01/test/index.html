@@ -157,100 +157,51 @@ testtest</p>
 ~test~<br>
 <code>test</code>  </p>
 <hr>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
-<span class="code-line">2</span>
-<span class="code-line">3</span>
-<span class="code-line">4</span>
-<span class="code-line">5</span>
-<span class="code-line">6</span>
-<span class="code-line">7</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
-<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
-<span class="code-line"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></span>
-<span class="code-line">  <span class="n">main</span><span class="p">()</span></span>
-<span class="code-line"></code></pre></div>
-</td></tr></table>
-
+<h2>コードブロックを使うサンプル</h2>
+<h3>python</h3>
 <div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
-<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"></span>
 <span class="code-line"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hello1&quot;</span><span class="p">)</span></span>
 <span class="code-line"></span>
 <span class="code-line"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></span>
 <span class="code-line">  <span class="n">main</span><span class="p">()</span></span>
 <span class="code-line"></code></pre></div>
 
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
-<span class="code-line">2</span>
-<span class="code-line">3</span>
-<span class="code-line">4</span>
-<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
+<h3>shell script</h3>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
 <span class="code-line"><span class="nb">set</span> -euC</span>
+<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;Hello!&quot;</span></span>
 <span class="code-line"></span>
-<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;heelo!&quot;</span></span>
+<span class="code-line"><span class="nv">A</span><span class="o">=</span><span class="m">1</span></span>
+<span class="code-line">print <span class="k">$((</span>A+2<span class="k">))</span></span>
 <span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
 <span class="code-line"></code></pre></div>
-</td></tr></table>
 
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
-<span class="code-line">2</span>
-<span class="code-line">3</span>
-<span class="code-line">4</span>
-<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
-<span class="code-line"><span class="nb">set</span> -euC</span>
-<span class="code-line"></span>
-<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;heelo!&quot;</span></span>
-<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
-<span class="code-line"></code></pre></div>
-</td></tr></table>
 
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="k">set</span> <span class="o">-</span><span class="n">euC</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">echo</span> <span class="ss">&quot;hello!&quot;</span></span>
-<span class="code-line"><span class="n">exit</span> <span class="mi">0</span></span>
+<h3>bash commands</h3>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1"># bash commands</span></span>
+<span class="code-line">$ <span class="nb">cd</span> /dir</span>
+<span class="code-line">$ <span class="nv">FILE</span><span class="o">=</span><span class="nb">test</span></span>
+<span class="code-line">$ touch <span class="s2">&quot;</span><span class="si">${</span><span class="nv">FILE</span><span class="si">}</span><span class="s2">&quot;</span></span>
+<span class="code-line">$ <span class="nb">echo</span> <span class="s2">&quot;test&quot;</span> &gt;&gt;<span class="s2">&quot;</span><span class="si">${</span><span class="nv">FILE</span><span class="si">}</span><span class="s2">&quot;</span></span>
+<span class="code-line">$ rm <span class="s2">&quot;</span><span class="si">${</span><span class="nv">FILE</span><span class="si">}</span><span class="s2">&quot;</span></span>
+<span class="code-line">$ <span class="nb">exit</span></span>
+<span class="code-line"> → ログアウト</span>
 <span class="code-line"></code></pre></div>
 
 
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="k">set</span> <span class="o">-</span><span class="n">euC</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">echo</span> <span class="ss">&quot;hello!&quot;</span></span>
-<span class="code-line"><span class="n">exit</span> <span class="mi">0</span></span>
+<h3>text</h3>
+<div class="highlight"><pre><span class="code-line"><span></span><code># cat test.txt</span>
+<span class="code-line">text1</span>
+<span class="code-line">text2</span>
+<span class="code-line">text3</span>
+<span class="code-line">aaaa</span>
 <span class="code-line"></code></pre></div>
 
 
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># bash command</span></span>
-<span class="code-line"><span class="err"># bash command</span></span>
-<span class="code-line"><span class="err"># echo &quot;hello!&quot;</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># bash command</span></span>
-<span class="code-line"><span class="err"># bash command</span></span>
-<span class="code-line"><span class="err"># echo &quot;hello!&quot;</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1"># bash command</span></span>
-<span class="code-line"><span class="c1"># bash command</span></span>
-<span class="code-line"><span class="c1"># echo &quot;hello!&quot;</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">text</span></span>
-<span class="code-line"><span class="err">text</span></span>
-<span class="code-line"><span class="err">text</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">text</span></span>
-<span class="code-line"><span class="err">text</span></span>
-<span class="code-line"><span class="err">text</span></span>
-<span class="code-line"></code></pre></div>
-
-
+<h2>テーブル</h2>
 <table>
 <thead>
 <tr>
@@ -269,9 +220,242 @@ testtest</p>
 </tr>
 </tbody>
 </table>
+<h2>リンク</h2>
 <p><a href="https://www.google.com/">google</a>  <br>
 <img alt="prof" src="https://pbs.twimg.com/profile_images/876642881733238784/9AZsiFwT_400x400.jpg" title="prof"><br>
 <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.ja"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/88x31.png" title="CC0"></a>  </p>
+<h2>HTML</h2>
+<p><b>b</b>
+</br>
+<i>i<i>
+</br>
+<div style="text-align:center">センターマン</div></p>
+<h2>js</h2>
+<p id="RealtimeClockArea">※ここに時計が表示されます。</p>
+
+<script>
+function showClock1() {
+   var nowTime = new Date();
+   var nowHour = nowTime.getHours();
+   var nowMin  = nowTime.getMinutes();
+   var nowSec  = nowTime.getSeconds();
+   var msg = "現在時刻は、" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
+   document.getElementById("RealtimeClockArea").innerHTML = msg;
+}
+setInterval('showClock1()',1000);
+</script>
+
+<p><input type="button" value="button" onclick="document.getElementById('output').innerHTML='button';" /><br />
+<br />
+<div id="output"></div></p>
+<hr>
+<p>※以下、残骸</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
+<span class="code-line">2</span>
+<span class="code-line">3</span>
+<span class="code-line">4</span>
+<span class="code-line">5</span>
+<span class="code-line">6</span>
+<span class="code-line">7</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hello1&quot;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></span>
+<span class="code-line">  <span class="n">main</span><span class="p">()</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hello2&quot;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></span>
+<span class="code-line">  <span class="n">main</span><span class="p">()</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hello3&quot;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></span>
+<span class="code-line">  <span class="n">main</span><span class="p">()</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<hr>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hello4&quot;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></span>
+<span class="code-line">  <span class="n">main</span><span class="p">()</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<hr>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
+<span class="code-line">2</span>
+<span class="code-line">3</span>
+<span class="code-line">4</span>
+<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
+<span class="code-line"><span class="nb">set</span> -euC</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;heelo!&quot;</span></span>
+<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
+<span class="code-line">2</span>
+<span class="code-line">3</span>
+<span class="code-line">4</span>
+<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
+<span class="code-line"><span class="nb">set</span> -euC</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;heelo!&quot;</span></span>
+<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="k">set</span> <span class="o">-</span><span class="n">euC</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">echo</span> <span class="ss">&quot;hello!&quot;</span></span>
+<span class="code-line"><span class="n">exit</span> <span class="mi">0</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="k">set</span> <span class="o">-</span><span class="n">euC</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">echo</span> <span class="ss">&quot;hello!&quot;</span></span>
+<span class="code-line"><span class="n">exit</span> <span class="mi">0</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># bash command</span></span>
+<span class="code-line"><span class="err"># bash command</span></span>
+<span class="code-line"><span class="err"># echo &quot;hello!&quot;</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># bash command</span></span>
+<span class="code-line"><span class="err"># bash command</span></span>
+<span class="code-line"><span class="err"># echo &quot;hello!&quot;</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1"># bash commands</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># bash command</span></span>
+<span class="code-line"><span class="c1"># echo &quot;hello!&quot;</span></span>
+<span class="code-line"><span class="c1"># A=1</span></span>
+<span class="code-line"><span class="c1"># echo $((A+2))</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code># bash commands</span>
+<span class="code-line"></span>
+<span class="code-line">$ bash command</span>
+<span class="code-line">$ echo hello</span>
+<span class="code-line">$ A=1</span>
+<span class="code-line">$ echo $((A+2))</span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">text</span></span>
+<span class="code-line"><span class="err">text</span></span>
+<span class="code-line"><span class="err">text</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">text</span></span>
+<span class="code-line"><span class="err">text</span></span>
+<span class="code-line"><span class="err">text</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">NAME=&quot;Amazon Linux&quot;</span></span>
+<span class="code-line"><span class="err">VERSION=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">ID=&quot;amzn&quot;</span></span>
+<span class="code-line"><span class="err">ID_LIKE=&quot;centos rhel fedora&quot;</span></span>
+<span class="code-line"><span class="err">VERSION_ID=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span></span>
+<span class="code-line"><span class="err">ANSI_COLOR=&quot;0;33&quot;</span></span>
+<span class="code-line"><span class="err">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2&quot;</span></span>
+<span class="code-line"><span class="err">HOME_URL=&quot;https://amazonlinux.com/&quot;</span></span>
+<span class="code-line"><span class="err">Amazon Linux release 2 (Karoo)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code>NAME=&quot;Amazon Linux&quot;</span>
+<span class="code-line">VERSION=&quot;2&quot;</span>
+<span class="code-line">ID=&quot;amzn&quot;</span>
+<span class="code-line">ID_LIKE=&quot;centos rhel fedora&quot;</span>
+<span class="code-line">VERSION_ID=&quot;2&quot;</span>
+<span class="code-line">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span>
+<span class="code-line">ANSI_COLOR=&quot;0;33&quot;</span>
+<span class="code-line">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2&quot;</span>
+<span class="code-line">HOME_URL=&quot;https://amazonlinux.com/&quot;</span>
+<span class="code-line">Amazon Linux release 2 (Karoo)</span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">NAME=&quot;Amazon Linux&quot;</span></span>
+<span class="code-line"><span class="err">VERSION=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">ID=&quot;amzn&quot;</span></span>
+<span class="code-line"><span class="err">ID_LIKE=&quot;centos rhel fedora&quot;</span></span>
+<span class="code-line"><span class="err">VERSION_ID=&quot;2&quot;</span></span>
+<span class="code-line"><span class="err">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span></span>
+<span class="code-line"><span class="err">ANSI_COLOR=&quot;0;33&quot;</span></span>
+<span class="code-line"><span class="err">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2&quot;</span></span>
+<span class="code-line"><span class="err">HOME_URL=&quot;https://amazonlinux.com/&quot;</span></span>
+<span class="code-line"><span class="err">Amazon Linux release 2 (Karoo)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code># cat /etc/redhat-release</span>
+<span class="code-line">NAME=&quot;Amazon Linux&quot;</span>
+<span class="code-line">VERSION=&quot;2&quot;</span>
+<span class="code-line">ID=&quot;amzn&quot;</span>
+<span class="code-line">ID_LIKE=&quot;centos rhel fedora&quot;</span>
+<span class="code-line">VERSION_ID=&quot;2&quot;</span>
+<span class="code-line">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span>
+<span class="code-line">ANSI_COLOR=&quot;0;33&quot;</span>
+<span class="code-line">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2&quot;</span>
+<span class="code-line">HOME_URL=&quot;https://amazonlinux.com/&quot;</span>
+<span class="code-line">Amazon Linux release 2 (Karoo)</span>
+<span class="code-line"></code></pre></div>
+
+
+<div class="highlight"><pre><span class="code-line"><span></span><code># cat /etc/redhat-release</span>
+<span class="code-line">NAME=&quot;Amazon Linux&quot;</span>
+<span class="code-line">VERSION=&quot;2&quot;</span>
+<span class="code-line">ID=&quot;amzn&quot;</span>
+<span class="code-line">ID_LIKE=&quot;centos rhel fedora&quot;</span>
+<span class="code-line">VERSION_ID=&quot;2&quot;</span>
+<span class="code-line">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span>
+<span class="code-line">ANSI_COLOR=&quot;0;33&quot;</span>
+<span class="code-line">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2&quot;</span>
+<span class="code-line">HOME_URL=&quot;https://amazonlinux.com/&quot;</span>
+<span class="code-line">Amazon Linux release 2 (Karoo)</span>
+<span class="code-line"></code></pre></div>
+
+
+<hr>
+<p>.. code-block:: python</p>
+<p>print("Pelican is a static site generator.")</p>
+<p>There are two ways to specify the identifier:</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The triple-colon syntax will *not* show line numbers.&quot;</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>To display line numbers, use a path-less shebang instead of colons:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The path-less shebang syntax *will* show line numbers.&quot;</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
 <hr>
 <p>test 記事の更新テスト<br>
 test<br>

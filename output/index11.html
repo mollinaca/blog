@@ -121,6 +121,34 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/03/29/practice_20200329#practice_20200329">競プロ Practice 日記</a></h2>
+    <p>
+      Posted on 2020-03-29(Sun) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/atcoder.html">AtCoder</a>,              <a href="./tag/abc.html">ABC</a>,              <a href="./tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <h2>AOJ に挑戦した</h2>
+<p>競プロの基礎練習編として、AOJがお勧めされていたのでトライしてみた。  </p>
+<p><a href="http://judge.u-aizu.ac.jp/onlinejudge/">AIZU ONLINE JUDGE</a><br>
+<a href="http://judge.u-aizu.ac.jp/onlinejudge/user.jsp?id=hstn2#3">mystatus</a>  </p>
+<p>入門編である ITP1 について、ITP1_1からITP1_6 まで、24問を解いた。<br>
+ABCでA/Bは概ねできてるのでほとんど躓かずにできたけど、一部やったことないタイプの問題とかもあって面白かった。<br>
+ITP1は全部挑戦しようと思います。</p>
+<h2>AtCoder 本日の練習</h2>
+<p>ABC133のA～Cに挑戦。<br>
+A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
+最初見た時に、全探索すると計算量が間に合わないから計算量落とす工夫がいるなと思い、その過程で場合分け等々を考えて計算していたけど、そもそも答えがWAしてしまい導出ロジックがうまく組めず。。  </p>
+<p>結果的に難しく考えすぎてて、条件に収まる範囲での全探索であれば十分for文で行けることがわかったので、それで実装しなおしてACできた。  </p>
+<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200329_acp.png"><img src="https://blog.watarinohibi.tokyo/images/20200329_acp.png" width="500"></a><br>
+うーん、あとで考えればあーこれで良いやなんだけど、これをさくっと思いつきたい。  </p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/03/28/abc160#abc160">AtCoder Beginner Contest 160</a></h2>
     <p>
       Posted on 2020-03-28(Sat) in <a href="./category/tech.html">Tech</a>
@@ -189,46 +217,6 @@
         <br>
         <a class="btn"
            href="./posts/2020/03/28/gov_interview#gov_interview">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/03/27/practice_20200327#practice_20200327">AtCoder Practice 日記</a></h2>
-    <p>
-      Posted on 2020-03-27(Fri) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/atcoder.html">AtCoder</a>,              <a href="./tag/abc.html">ABC</a>,              <a href="./tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <h2>今日はできなかった</h2>
-<p>本日挑戦してた問題はこちら。<br>
-<a href="https://atcoder.jp/contests/agc016/tasks/agc016_a">AGC016 - A - Shrinking</a>  </p>
-<p>結果的にACはしてるけど、今回は解説を見ても題意をロジックに落とし込めず、カンニング回答なので実質できてません。。orz
-問題文が意味する操作の実装が実現できず、回答みても「シミュレーションすればよい」となっているので、これは数学以前に単純な国語の能力の問題なのか。。  </p>
-<p>ACしてる他の人の回答を見ても、問題文で与えられる操作を実際に実装しているのではなく、条件成立で題意を満たすか判定しているので、<br>
-実際に問題文に書いてある操作をそのまま実現して全探索するのではないというのは理解できるが、実際の実装が何を意図してこういう動作をさせているかがつかみきれない。。  </p>
-<hr>
-<h2>問題文の操作の内容</h2>
-<ul>
-<li>長さNの文字列tが与えらえる</li>
-<li>1回の操作につき任意の1文字を消去（長さが N-1 になる）して、各i番目の文字t'i を ti もしくは t(i+1) に置き換える</li>
-</ul>
-<p>入力例1だと、入力は <code>serval</code> であり、例えばこの文字列は</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">例えば、serval → srvvl → svvv → vvv と変えればよいです。</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<p>とすればよいらしい。ここでこの操作は</p>
-<p>0) serval  </p>
-<p>eを消去して …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/03/27/practice_20200327#practice_20200327">
           Continue reading
         </a>
   </div>

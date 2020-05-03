@@ -182,164 +182,104 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
 </ul>
 <h2>EC2での作業</h2>
 <h3>インスタンス初期設定</h3>
-<ul>
-<li>switch to root</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># sudo su -</span></span>
-<span class="code-line"><span class="err"># passwd root</span></span>
-<span class="code-line"><span class="err"> =&gt; rootのパスワード変更</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>package update</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># yum update</span></span>
-<span class="code-line"><span class="err"># yum upgrade</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>disable SELinux</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># getenforce</span></span>
-<span class="code-line"><span class="err"> =&gt; Disabled ならOK</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>modify sshd config</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># cd /etc/ssh</span></span>
-<span class="code-line"><span class="err"># cp -pi sshd_config sshd_config.org</span></span>
-<span class="code-line"><span class="err"># vi sshd_config</span></span>
-<span class="code-line"><span class="err">※内容 → https://github.com/mollinaca/dotfiles/blob/master/sshd/sshd_config_ec2</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>create login user</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># groupadd hstn</span></span>
-<span class="code-line"><span class="err"># useradd -m -s /bin/bash -g hstn hstn</span></span>
-<span class="code-line"><span class="err"># passwd hstn</span></span>
-<span class="code-line"><span class="err"> → passwd 設定</span></span>
-<span class="code-line"><span class="err"># visudo</span></span>
-<span class="code-line"><span class="err"> → hstn に sudo 権限を付与</span></span>
-<span class="code-line"><span class="err"> ---</span></span>
-<span class="code-line"><span class="err"> hstn            ALL=(ALL)       NOPASSWD: ALL</span></span>
-<span class="code-line"><span class="err"> ---</span></span>
-<span class="code-line"><span class="err"> → hstn で sudo できることを確認</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>login user setting</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># su - hstn</span></span>
-<span class="code-line"><span class="err"># mkdir .ssh</span></span>
-<span class="code-line"><span class="err"># chmod 755 .ssh</span></span>
-<span class="code-line"><span class="err"># cd .ssh</span></span>
-<span class="code-line"><span class="err">※ログイン用公開鍵を設定</span></span>
-<span class="code-line"><span class="err">※ログイン確認</span></span>
-<span class="code-line"><span class="err"># exit</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>login as operation user</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">#</span><span class="w"> </span><span class="n">ssh</span><span class="w"> </span><span class="n">hstn</span><span class="err">@</span><span class="o">[</span><span class="n">host</span><span class="o">]</span><span class="w"></span></span>
-<span class="code-line"><span class="err">#</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">su</span><span class="w"> </span><span class="o">-</span><span class="w"></span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>delete eu2-user</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># userdel -r ec2-user</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<h3>その他設定</h3>
-<ul>
-<li>change hostname</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># hostnamectl set-hostname mailserver</span></span>
-<span class="code-line"><span class="err"># reboot</span></span>
-<span class="code-line"><span class="err"> → ログインして反映を確認</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>modify TZ</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># timedatectl set-timezone Asia/Tokyo</span></span>
-<span class="code-line"><span class="err"># reboot</span></span>
-<span class="code-line"><span class="err"> → ログインして反映を確認</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>modify prompt for operation user and root</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># su - hstn</span></span>
-<span class="code-line"><span class="err"># </span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>install tools</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># yum install git screen net-utils jwhois</span></span>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1">## bash commands</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># Login &amp; passwd change</span></span>
+<span class="code-line">$ sudo su -</span>
+<span class="code-line">$ passwd root</span>
+<span class="code-line"> → rootのパスワード変更</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># Package update</span></span>
+<span class="code-line">$ yum update</span>
+<span class="code-line">$ yum upgrade</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># Disable SELinux</span></span>
+<span class="code-line">$ getenforce</span>
+<span class="code-line"> → Disabled ならOK</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># modify sshd config</span></span>
+<span class="code-line">$ <span class="nb">cd</span> /etc/ssh</span>
+<span class="code-line">$ cp -pi sshd_config sshd_config.org</span>
+<span class="code-line">$ vi sshd_config</span>
+<span class="code-line">  ※内容 → https://github.com/mollinaca/dotfiles/blob/master/sshd/sshd_config_ec2</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># create login user</span></span>
+<span class="code-line">$ groupadd hstn</span>
+<span class="code-line">$ passwd hstn</span>
+<span class="code-line"> → passwd 設定</span>
+<span class="code-line">$ visudo</span>
+<span class="code-line"> → hstn に sudo 権限を付与</span>
+<span class="code-line">---</span>
+<span class="code-line">hstn            <span class="nv">ALL</span><span class="o">=(</span>ALL<span class="o">)</span>       NOPASSWD: ALL</span>
+<span class="code-line">---</span>
+<span class="code-line"> → hstn で sudo できることを確認</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># login user setting</span></span>
+<span class="code-line"></span>
+<span class="code-line">$ su - hstn</span>
+<span class="code-line">$ mkdir .ssh</span>
+<span class="code-line">$ chmod <span class="m">755</span> .ssh</span>
+<span class="code-line">$ <span class="nb">cd</span> .ssh</span>
+<span class="code-line">  ※ログイン用公開鍵を設定</span>
+<span class="code-line">  ※ログイン確認</span>
+<span class="code-line">$ <span class="nb">exit</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># login as operation user</span></span>
+<span class="code-line">$ ssh hstn@<span class="o">[</span>host<span class="o">]</span></span>
+<span class="code-line">$ sudo su -</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># delete eu2-user</span></span>
+<span class="code-line">$ userdel -r ec2-user</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">## other settings</span></span>
+<span class="code-line"><span class="c1"># change hostname</span></span>
+<span class="code-line">$ hostnamectl set-hostname mailserver</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># modify TZ</span></span>
+<span class="code-line">$ timedatectl set-timezone Asia/Tokyo</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># reboot</span></span>
+<span class="code-line">$ reboot</span>
+<span class="code-line"> → ログインして反映を確認</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># modify prompt for operation user and root</span></span>
+<span class="code-line">$ su - hstn</span>
+<span class="code-line">  ※よしなに変更 </span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># install tools</span></span>
+<span class="code-line">$ yum install git ※ほかに必要なものがあればインストール</span>
 <span class="code-line"></code></pre></div>
 
 
 <h3>メールサーバ設定</h3>
-<ul>
-<li>modify /etc/hosts</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># vi /etc/hosts</span></span>
-<span class="code-line"><span class="err"> → 127.0.0.1 の行に mail.watarinohibi.tokyo を追加</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>install sasl</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">yum -y install cyrus-sasl-plain cyrus-sasl-md5</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>modify postfix and sasl conf</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="o">#</span> <span class="n">cd</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">postfix</span></span>
-<span class="code-line"><span class="o">#</span> <span class="n">mv</span> <span class="n">main</span><span class="p">.</span><span class="n">cf</span> <span class="n">main</span><span class="p">.</span><span class="n">cf</span><span class="p">.</span><span class="n">org</span></span>
-<span class="code-line"><span class="o">#</span> <span class="n">vi</span> <span class="n">main</span><span class="p">.</span><span class="n">cf</span></span>
-<span class="code-line"><span class="err">※内容は</span> <span class="err">→</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">mollinaca</span><span class="o">/</span><span class="n">dotfiles</span><span class="o">/</span><span class="nb">blob</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="k">postfix</span><span class="o">/</span><span class="n">main</span><span class="p">.</span><span class="n">cf</span></span>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1">## bash commands</span></span>
 <span class="code-line"></span>
-<span class="code-line"><span class="o">#</span> <span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">postfix</span><span class="o">/</span><span class="n">smtp</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">passwd</span></span>
-<span class="code-line"><span class="err">※内容は</span> <span class="err">→</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">mollinaca</span><span class="o">/</span><span class="n">dotfiles</span><span class="o">/</span><span class="nb">blob</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="k">postfix</span><span class="o">/</span><span class="n">smtp</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">passwd</span></span>
+<span class="code-line"><span class="c1"># modify /etc/hosts</span></span>
+<span class="code-line">$ vi /etc/hosts</span>
+<span class="code-line"> → <span class="m">127</span>.0.0.1 の行に mail.watarinohibi.tokyo を追加</span>
 <span class="code-line"></span>
-<span class="code-line"><span class="o">#</span> <span class="n">postmap</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">postfix</span><span class="o">/</span><span class="n">smtp</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">passwd</span></span>
-<span class="code-line"><span class="o">#</span> <span class="n">rm</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">postfix</span><span class="o">/</span><span class="n">smtp</span><span class="o">-</span><span class="n">auth</span><span class="o">-</span><span class="n">passwd</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>postfix alias settings</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># vi aliases</span></span>
-<span class="code-line"><span class="err">※内容は → https://github.com/mollinaca/dotfiles/blob/master/postfix/aliases</span></span>
-<span class="code-line"><span class="err"># newaliases</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>restart postfix</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># systemctl restart postfix</span></span>
+<span class="code-line"><span class="c1"># install sasl</span></span>
+<span class="code-line">$ yum -y install cyrus-sasl-plain cyrus-sasl-md5</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># modify postfix and sasl conf</span></span>
+<span class="code-line">$ <span class="nb">cd</span> /etc/postfix</span>
+<span class="code-line">$ mv main.cf main.cf.org</span>
+<span class="code-line">$ vi main.cf</span>
+<span class="code-line">  ※内容は → https://github.com/mollinaca/dotfiles/blob/master/postfix/main.cf</span>
+<span class="code-line"></span>
+<span class="code-line">$ vi /etc/postfix/smtp-auth-passwd</span>
+<span class="code-line">  ※内容は → https://github.com/mollinaca/dotfiles/blob/master/postfix/smtp-auth-passwd</span>
+<span class="code-line"></span>
+<span class="code-line">$ postmap /etc/postfix/smtp-auth-passwd</span>
+<span class="code-line">$ rm -f /etc/postfix/smtp-auth-passwd</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># postfix alias settings</span></span>
+<span class="code-line">$ vi aliases</span>
+<span class="code-line">  ※内容は → https://github.com/mollinaca/dotfiles/blob/master/postfix/aliases</span>
+<span class="code-line">$ newaliases</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># restart postfix</span></span>
+<span class="code-line">$ systemctl restart postfix</span>
 <span class="code-line"></code></pre></div>
 
 
@@ -347,33 +287,36 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
 <ul>
 <li>zoneに以下のレコードを登録</li>
 </ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">mail</span><span class="p">.</span><span class="n">watarinohibi</span><span class="p">.</span><span class="n">tokyo</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">[</span><span class="n">EIP</span><span class="o">]</span><span class="w"></span></span>
-<span class="code-line"><span class="n">mail</span><span class="p">.</span><span class="n">watarinohibi</span><span class="p">.</span><span class="n">tokyo</span><span class="w"> </span><span class="ow">IN</span><span class="w"> </span><span class="n">MX</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="n">mail</span><span class="p">.</span><span class="n">watarinohibi</span><span class="p">.</span><span class="n">tokyo</span><span class="w"></span></span>
+<div class="highlight"><pre><span class="code-line"><span></span><code># add below records to my DNS ZONE</span>
+<span class="code-line">mail.watarinohibi.tokyo IN A [EIP]</span>
+<span class="code-line">mail.watarinohibi.tokyo IN MX 10 mail.watarinohibi.tokyo</span>
 <span class="code-line"></code></pre></div>
 
 
-<h1>メール受診</h1>
-<ul>
-<li>ローカルから送信  </li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># sendmail test@mail.watarinohibi.tokyo</span></span>
-<span class="code-line"><span class="c">From:root@mailserver</span></span>
-<span class="code-line"><span class="c">To:test@mail.watarinohibi.tokyo</span></span>
-<span class="code-line"><span class="c">Subject:test mail sending</span></span>
-<span class="code-line"><span class="err">test</span></span>
-<span class="code-line"><span class="err">.</span></span>
+<h1>メール送受信テスト</h1>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1">## bash commands</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># ローカルから送信  </span></span>
+<span class="code-line">$ sendmail test@mail.watarinohibi.tokyo</span>
+<span class="code-line">From:root@mailserver</span>
+<span class="code-line">To:test@mail.watarinohibi.tokyo</span>
+<span class="code-line">Subject:test mail sending</span>
+<span class="code-line"><span class="nb">test</span></span>
+<span class="code-line">.</span>
+<span class="code-line">  → メールが届くこと、メールログを確認</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1"># 外部から送信  </span></span>
+<span class="code-line">  → メールが届くこと、メールログを確認</span>
 <span class="code-line"></code></pre></div>
 
 
-<p>→ メールが届くこと、メールログを確認</p>
-<ul>
-<li>外部から送信<br>
-→ メールが届くこと、メールログを確認</li>
-</ul>
 <h2>監視設定</h2>
 <h3>CloudWatch</h3>
+<p>TBD</p>
 <h3>maillog</h3>
+<p>TBD</p>
 <h3>securelog</h3>
+<p>TBD</p>
 <h2>その他</h2>
 <ul>
 <li>NACLの上限緩和申請</li>

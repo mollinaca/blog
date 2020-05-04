@@ -181,18 +181,19 @@
       <p>CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。</p>
 <p>この記事では、pyenv を使って pipenv を用意する手順について記載する。<br>
 pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
-<h1>環境</h1>
+<h2>環境</h2>
 <ul>
 <li>OS</li>
 </ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">NAME=&quot;Amazon Linux&quot;</span></span>
-<span class="code-line"><span class="err">VERSION=&quot;2&quot;</span></span>
-<span class="code-line"><span class="err">ID=&quot;amzn&quot;</span></span>
-<span class="code-line"><span class="err">ID_LIKE=&quot;centos rhel fedora&quot;</span></span>
-<span class="code-line"><span class="err">VERSION_ID=&quot;2&quot;</span></span>
-<span class="code-line"><span class="err">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span></span>
-<span class="code-line"><span class="err">ANSI_COLOR=&quot;0;33&quot;</span></span>
-<span class="code-line"><span class="err">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2 …</span></span></pre></div>
+<div class="highlight"><pre><span class="code-line"><span></span><code># cat /etc/redhat-release</span>
+<span class="code-line">NAME=&quot;Amazon Linux&quot;</span>
+<span class="code-line">VERSION=&quot;2&quot;</span>
+<span class="code-line">ID=&quot;amzn&quot;</span>
+<span class="code-line">ID_LIKE=&quot;centos rhel fedora&quot;</span>
+<span class="code-line">VERSION_ID=&quot;2&quot;</span>
+<span class="code-line">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span>
+<span class="code-line">ANSI_COLOR=&quot;0;33&quot;</span>
+<span class="code-line">CPE_NAME=&quot;cpe:2.3:o …</span></pre></div>
         <br>
         <a class="btn"
            href="../posts/2020/04/26/pipenv#pipenv">

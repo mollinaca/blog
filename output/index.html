@@ -154,6 +154,45 @@
 </article>
 <article>
   <header>
+    <h2><a href="./posts/2020/05/04/router_latency#router_latency">ルータのレイテンシ測定記録</a></h2>
+    <p>
+      Posted on 2020-05-04(Mon) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/network.html">Network</a>,              <a href="./tag/latency.html">Latency</a>,              <a href="./tag/zi zhai pchuan jing.html">自宅PC環境</a>
+    </p>
+  </header>
+  <div>
+      <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">もともとつかってたルータが急に調子悪くなってしまい、急遽眠ってた控えのルータを稼働させているがなかなか調子よくて助かった。<br>しかし、稼働中の PC - ルータ 間の smokeping を見てるんだけど、この latency の差はなにで生まれてるのか悩ましい。。単純に使ってる時間のほうが短くなるのかしら <a href="https://t.co/Mw0qrH2sX0">pic.twitter.com/Mw0qrH2sX0</a></p>&mdash; mollinaca (@syoutin) <a href="https://twitter.com/syoutin/status/1257193137325240320?ref_src=twsrc%5Etfw">May 4, 2020</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>5年ぐらい使ってたASUSのルータが調子悪くなってきて、とつぜんインターネットとの接続が消れるようになった。。<br>
+なんどか再起動したりしてもダメだったので、暫定で控えにいた使っていないルータ（妻が以前使っていたもの）にバトンタッチして様子見中。  </p>
+<p>いわゆるNECの普通の家庭用ルータだけど、機能的にはまぁ問題ないやつだったのでよかった。  </p>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=watarinohibi-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B0037TSAM6&linkId=1cc3b8650d89ad27b5bc0986b85975c9&bc1=ffffff&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+    </iframe>
+
+<p>これの何年か前の機種。Atermってよく見るやつだね。  </p>
+<p>こいつを使ってインターネット接続後、しばらく PC - ルータ 間の latency を見ていたんだけど、</p>
+<p><img alt="router_latency" src="https://blog.watarinohibi.tokyo/images/20200504_router_latency.png" title="router_latency">  </p>
+<p>という感じで、latencyが低いときと高い時があることに気づいた。  </p>
+<p>それぞれ何をしていたのかというと、</p>
+<p><img alt="router_latency2" src="https://blog.watarinohibi.tokyo/images/20200504_router_latency2.png" title="router_latency2">    </p>
+<p>みたいな感じ。</p>
+<ul>
+<li>使われていない idletime の時は一定をキープ</li>
+<li>ゲームで使われており、ステートフルなセッションが張られていると低い値で推移</li>
+<li>使われている状態で、普通にインターネット …</li></ul>
+        <br>
+        <a class="btn"
+           href="./posts/2020/05/04/router_latency#router_latency">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/05/03/abc166#abc166">AtCoder Beginner Contest 166</a></h2>
     <p>
       Posted on 2020-05-03(Sun) in <a href="./category/tech.html">Tech</a>
@@ -187,43 +226,6 @@ Dも1WAしたけど、単純なポカミスをやらかしてしまいなので�
         <br>
         <a class="btn"
            href="./posts/2020/05/03/abc166#abc166">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/05/02/abc165#abc165">AtCoder Beginner Contest 165</a></h2>
-    <p>
-      Posted on 2020-05-02(Sat) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/atcoder.html">AtCoder</a>,              <a href="./tag/abc.html">ABC</a>,              <a href="./tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>GW週末、ABC二夜連続ナイトの1日目。  </p>
-<p>今日のCは難しすぎた。。もうちょっと早くDに挑んでればDはできたかもだったけど、Cに時間かけすぎてしかもできなかった。。orz <br>
-C難しい難しい言われてるから茶パフォ的には落としてもしゃーないかもって感じだけど、代わりにDがとれてればなぁというところ。  </p>
-<h3>A</h3>
-<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_a">A - We Love Golf</a>  </p>
-<p>k の倍数が A から B の間にあるかどうか。<br>
-O(1)で解けそうな気がしたけど、考えるよりも先に素直にループ回したほうがいいなと思い、<br>
-AからBの間の i で i%k == 0 となるやつがあれば "OK" として終了</p>
-<p><a href="https://atcoder.jp/contests/abc165/submissions/12587573">提出</a></p>
-<h3>B</h3>
-<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_b">B - 1%</a>  </p>
-<p>複利の計算。複利の計算て、普通に算数の問題として難しい。 <br>
-今回は制約から、小数切り落としなのでB向けにマイルドにはなってるけど、まず複利ってうい概念自体がちょっと難しいよね。<br>
-制約通りに実装してAC。  </p>
-<p><a href="https://atcoder.jp/contests/abc165/submissions/12601120">提出</a></p>
-<h3>C</h3>
-<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_c">C - Many Requirements</a>  </p>
-<p>まず、問題文から難解 …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/05/02/abc165#abc165">
           Continue reading
         </a>
   </div>

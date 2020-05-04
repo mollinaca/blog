@@ -121,6 +121,39 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/04/cron_pyenv_pipenv#cron_pyenv_pipenv">pyenv の Python にインストールされた pipenv の仮想環境にインストールされた Python を cron で動かす</a></h2>
+    <p>
+      Posted on 2020-05-04(Mon) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/python.html">Python</a>,              <a href="../tag/pyenv.html">pyenv</a>,              <a href="../tag/pipenv.html">pipenv</a>,              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/cron.html">cron</a>
+    </p>
+  </header>
+  <div>
+      <h3>Python 実行環境</h3>
+<p>OSのPythonは触らずに、pyenv を使いユーザローカルに Python をインストールする。<br>
+その Python の pip に pipenv をインストールし、その pipenv を使って Python の仮想環境を構築する。<br>
+ここで実行された仮想環境上の Python を、OSの cron から実行する。　  </p>
+<h3>cron サンプル</h3>
+<div class="highlight"><pre><span class="code-line"><span></span><code># cat /etc/cron.d/p</span>
+<span class="code-line"></span>
+<span class="code-line"># init pyenv</span>
+<span class="code-line">export PYENV_ROOT=&quot;$HOME/.pyenv&quot;</span>
+<span class="code-line">export PATH=&quot;$PYENV_ROOT/bin:$PATH&quot;</span>
+<span class="code-line">eval &quot;$(pyenv init -)&quot;</span>
+<span class="code-line"></span>
+<span class="code-line"># cron job</span>
+<span class="code-line">SCRIPT_DIR=/root …</span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/04/cron_pyenv_pipenv#cron_pyenv_pipenv">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/03/abc166#abc166">AtCoder Beginner Contest 166</a></h2>
     <p>
       Posted on 2020-05-03(Sun) in <a href="../category/tech.html">Tech</a>
@@ -191,83 +224,6 @@ AからBの間の i で i%k == 0 となるやつがあれば "OK" として終�
         <br>
         <a class="btn"
            href="../posts/2020/05/02/abc165#abc165">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/02/wp#wp">CentOS8 に WordPress をインストールする</a></h2>
-    <p>
-      Posted on 2020-05-02(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/centos8.html">CentOS8</a>,              <a href="../tag/wordpress.html">WordPress</a>,              <a href="../tag/php.html">php</a>,              <a href="../tag/apache.html">apache</a>,              <a href="../tag/mysql.html">mysql</a>
-    </p>
-  </header>
-  <div>
-      <h2>環境</h2>
-<ul>
-<li>ローカルVM  </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>モノ</th>
-<th>情報</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IPアドレス</td>
-<td>192.168.56.101</td>
-</tr>
-<tr>
-<td>/etc/redhat-release</td>
-<td>CentOS Linux release 8.1.1911 (Core)</td>
-</tr>
-<tr>
-<td>uname -r</td>
-<td>4.18.0-147.8.1.el8_1.x86_64</td>
-</tr>
-</tbody>
-</table>
-<h2>インストールするもの</h2>
-<table>
-<thead>
-<tr>
-<th>モノ</th>
-<th>バージョン</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>apache</td>
-<td>2.4</td>
-</tr>
-<tr>
-<td>php</td>
-<td>7.4</td>
-</tr>
-<tr>
-<td>MySQL</td>
-<td>8.0.17-3</td>
-</tr>
-<tr>
-<td>WordPress</td>
-<td>5.4.1</td>
-</tr>
-</tbody>
-</table>
-<h3>apache</h3>
-<ul>
-<li>インストール</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># dnf -y install httpd …</span></code></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/02/wp#wp">
           Continue reading
         </a>
   </div>

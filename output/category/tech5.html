@@ -121,6 +121,35 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/14/practice_2020414#practice_2020414">競プロ Practice 日記</a></h2>
+    <p>
+      Posted on 2020-04-14(Tue) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日チャレンジした問題  </p>
+<p><a href="https://atcoder.jp/contests/agc007/tasks/agc007_a">A - Shik and Stone</a>  </p>
+<p>パッと見 dfs に見せかけて、じつはdfsだとちょっと難しくて、問題文をちゃんと正しく解釈すれば1行で解けたパターン。<br>
+パッと見であ！dfsだ！チャレンジで見たやつだ！となって意気揚々と実装してみたものの、例１、例２までは通したら例３で見事にハマった。ここで引っかかるところも含めての問題なんだなぁ。。  </p>
+<p>dfs に見せかけというのは、ようするに「右」と「下」の移動だけで左上から右下まで # を辿ってゴールにいけるか？という問題に見えたということ。<br>
+この条件で実装すると、例３は <code>Possible</code> だが出力例は <code>Impossible</code> でええ？となる。<br>
+例３は「右」と「下」の移動だけでゴールまでたどり着けるが、実はこれは題意を満たさない。  </p>
+<p>条件は <code>移動する過程で、駒が常に右または下に動いていた可能性があるか判定してください。</code> なので、<br>
+移動ルートの中で <em>左に移動することが可能であったならば</em>、答えは <code>Impossible</code> になる、ということ。<br>
+えー …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/14/practice_2020414#practice_2020414">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/12/abc162#abc162">AtCoder Beginner Contest 162</a></h2>
     <p>
       Posted on 2020-04-12(Sun) in <a href="../category/tech.html">Tech</a>
@@ -187,48 +216,6 @@ FizzBuzzの応用？<br>
         <br>
         <a class="btn"
            href="../posts/2020/04/12/centos8_vm_1#centos8_vm_1">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/05/abc161#abc161">AtCoder Beginner Contest 161</a></h2>
-    <p>
-      Posted on 2020-04-05(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
-問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
-<hr>
-<h1>A</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
-swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
-<p>AC</p>
-<h1>B</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
-問題分の説明通り実装してあげればよい。<br>
-選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
-<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
-修正して無事AC</p>
-<h1>C</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
-数値を置き換える操作を繰り返す。<br>
-ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
-<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
-そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
-<p>入力例3が親切で</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">1000000000000000000 1 …</span></code></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/05/abc161#abc161">
           Continue reading
         </a>
   </div>

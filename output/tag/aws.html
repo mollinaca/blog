@@ -121,6 +121,51 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/05/pot#pot">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）</a></h2>
+    <p>
+      Posted on 2020-05-05(Tue) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/ec2.html">EC2</a>,              <a href="../tag/githubpages.html">GitHubPages</a>,              <a href="../tag/python.html">Python</a>,              <a href="../tag/hanipotsuto.html">ハニーポット</a>
+    </p>
+  </header>
+  <div>
+      <p>GW の自由工作的な。  </p>
+<h2>成果物（作成中）</h2>
+<p><a href="https://mollinaca.github.io/pot/" target=_blank>hstn-pot</a><br>
+いまはまだ、アクセスすると最新の集計ログの json が表示されるだけだけど。。   </p>
+<h2>Architecture</h2>
+<p><img alt="pot_architecture" src="https://blog.watarinohibi.tokyo/images/20200505_pot.png" title="pot_architecture">   </p>
+<ul>
+<li>SecurityGroup で EC2 の ssh/22 を解放し、外部からのアクセスを受け付ける  <ul>
+<li>22番を解放しているためアクセスは来るが、実際にアクセスができるのは鍵認証ができる特定ユーザのみ  </li>
+</ul>
+</li>
+<li>1時間に1回アクセスログを集計し、以下の二つで記録されたものを抽出してjsonに整形して repo へ push  <ul>
+<li>Invalid user  </li>
+<li>Conncection closed<br>
+現在のスクリプト: <a href="https://github.com/mollinaca/pot/blob/master/script/secure.py" target=_blank>secure.py</a>  </li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">re</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">json</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">datetime</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">pathlib</span></span>
+<span class="code-line"><span class="kn">import …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/05/pot#pot">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
     <p>
       Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>

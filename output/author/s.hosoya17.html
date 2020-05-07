@@ -121,111 +121,26 @@
 
 <article>
   <header>
-    <h2><a href="../posts/2020/04/14/practice_2020414#practice_2020414">競プロ Practice 日記</a></h2>
+    <h2><a href="../posts/1970/01/01/test#test">投稿テスト用POST</a></h2>
     <p>
-      Posted on 2020-04-14(Tue) in <a href="../category/tech.html">Tech</a>
+      Posted on 1970-01-01(Thu) in <a href="../category/no category.html">no category</a>
 
           &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+              <a href="../tag/test.html">test</a>,              <a href="../tag/tag_test.html">タグテスト</a>
     </p>
   </header>
   <div>
-      <p>今日チャレンジした問題  </p>
-<p><a href="https://atcoder.jp/contests/agc007/tasks/agc007_a">A - Shik and Stone</a>  </p>
-<p>パッと見 dfs に見せかけて、じつはdfsだとちょっと難しくて、問題文をちゃんと正しく解釈すれば1行で解けたパターン。<br>
-パッと見であ！dfsだ！チャレンジで見たやつだ！となって意気揚々と実装してみたものの、例１、例２までは通したら例３で見事にハマった。ここで引っかかるところも含めての問題なんだなぁ。。  </p>
-<p>dfs に見せかけというのは、ようするに「右」と「下」の移動だけで左上から右下まで # を辿ってゴールにいけるか？という問題に見えたということ。<br>
-この条件で実装すると、例３は <code>Possible</code> だが出力例は <code>Impossible</code> でええ？となる。<br>
-例３は「右」と「下」の移動だけでゴールまでたどり着けるが、実はこれは題意を満たさない。  </p>
-<p>条件は <code>移動する過程で、駒が常に右または下に動いていた可能性があるか判定してください。</code> なので、<br>
-移動ルートの中で <em>左に移動することが可能であったならば</em>、答えは <code>Impossible</code> になる、ということ。<br>
-えー …</p>
+      <p>テスト用記事</p>
         <br>
         <a class="btn"
-           href="../posts/2020/04/14/practice_2020414#practice_2020414">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/12/abc162#abc162">AtCoder Beginner Contest 162</a></h2>
-    <p>
-      Posted on 2020-04-12(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>できなかった。。 ＞＜</p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_a">A - Lucky 7</a><br>
-入力文字列に <code>7</code> が含まれてたら <code>Yes</code>, なければ <code>No</code>
-題意通り実装してAC</p>
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_b">B - FizzBuzz Sum</a><br>
-FizzBuzzの応用？<br>
-1からNまでループし、3か5の因数だったらpassして、それ以外を合計する<br>
-制約が <code>1&lt;=N&lt;=10**6</code> のため、普通に for ループで回して終わる。  </p>
-<h2>C</h2>
-<p><a href="https://atcoder.jp/contests/abc162/tasks/abc162_c">C - Sum of gcd of Tuples (Easy)</a></p>
-<p>できなかった。。<br>
-問題文を読んで、まずは愚直な実装。</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="kn">import</span> <span class="nn">math</span></span>
-<span class="code-line"><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="nb">reduce</span></span>
-<span class="code-line"><span class="k">def …</span></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/12/abc162#abc162">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/12/centos8_vm_1#centos8_vm_1">Windows10 の VirtualBox に CentOS8 をインストールして使う (1)</a></h2>
-    <p>
-      Posted on 2020-04-12(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/vm.html">VM</a>,              <a href="../tag/centos8.html">CentOS8</a>,              <a href="../tag/virtualbox.html">virtualBox</a>
-    </p>
-  </header>
-  <div>
-      <h2>概要</h2>
-<ul>
-<li>Windows10にVirtualBoxを用意</li>
-<li>CentOS8の イメージDVD.iso を用意</li>
-<li>VirtualBox に Linux の VirtualMachine を用意</li>
-<li>用意した Virtualmachie に CentOS8 をインストールして起動</li>
-</ul>
-<h2>Windows10 に VirtualBox を用意</h2>
-<p><a href="https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html">Oracle VM VirtualBox</a><br>
-からダウンロード。
-20200412現在、latest は <code>6.1.4</code></p>
-<p>ダウンロードした exe を実行してインストールする。</p>
-<h2>CentOS8 のイメージを用意</h2>
-<p><a href="https://www.centos.org/download/">Download CentOS</a><br>
-から <code>CentOS Linux DVD ISO</code> をダウンロード。<br>
-20200412現在、latest は <code>8.1.1911 …</code></p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/12/centos8_vm_1#centos8_vm_1">
+           href="../posts/1970/01/01/test#test">
           Continue reading
         </a>
   </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-left" href="../author/s.hosoya9.html">
-      <i class="fa fa-angle-left"></i> Older Posts
-    </a>
-    <a class="btn float-right" href="../author/s.hosoya7.html">
+    <a class="btn float-right" href="../author/s.hosoya16.html">
       Newer Posts <i class="fa fa-angle-right"></i>
     </a>
   </div>

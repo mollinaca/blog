@@ -121,6 +121,50 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/07/pot3#pot3">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(3)</a></h2>
+    <p>
+      Posted on 2020-05-07(Thu) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/ec2.html">EC2</a>,              <a href="../tag/githubpages.html">GitHubPages</a>,              <a href="../tag/python.html">Python</a>,              <a href="../tag/hanipotsuto.html">ハニーポット</a>
+    </p>
+  </header>
+  <div>
+      <p><a href="https://blog.watarinohibi.tokyo/posts/2020/05/06/pot/#pot">昨日</a>の続き。</p>
+<h2>bugfix</h2>
+<p>ログ取得スクリプトにバグがあり対応。<br>
+23時台のログだけ日付が間違っている（翌日の日付が入ってしまっている）ことがあったのに気付き修正。  <br>
+原因はシンプルで、ログに挿入する日付を生成するときに、  </p>
+<ul>
+<li>現在時刻を取得  </li>
+<li>取得した現在時刻から日付を生成  </li>
+</ul>
+<p>としていたため、24時を回った0時台に前日23時台のログを取得した場合に、ログから見たら「翌日」の日付となってしまっていた。<br>
+<a href="https://github.com/mollinaca/pot/issues/3">Issue</a>  </p>
+<h2>機能追加</h2>
+<h3>国コードの取得と表示</h3>
+<p>ログ生成の際に、アクセス元IPアドレスからカントリーコードを取得してログに挿入するようにした。<br>
+また、IPアドレス表示の際にあわせてカントリーコードを表示するようにしてみた。  </p>
+<p><img alt="current_index" src="https://blog.watarinohibi.tokyo/images/20200507_pot_current_index.png" title="current_index">   </p>
+<p>見てると、NL（オランダ）が結構多い模様？以外。<br>
+経験上、この手のアクセスは大抵ホスティングベンダからなので、そういうことをさせちゃってるベンダがあるんだろうな。そこまで調べてないけど。<br>
+カントリーコードはWhois引けばほぼ確実にとれるからいいけど、事業者情報とれたりとれなかったりするので、そこまでパースするのはマンドクセーからいいや。  </p>
+<h3>24時間分のログを作成</h3>
+<p>0時を回ったタイミングで、前日1日分の24時間のログを集計した24時間分ログを作成するようにした。<br>
+ただしこれを表示する機能がまだないので、表示はできていない。<br>
+いずれ、ページで「1時間単位」or「1日単位」で選択できるようにして、日付と時刻から該当のログを引っ張れるようにしたい。そんな難しくないはず。  </p>
+<h2>やってみたけどやめた</h2>
+<p>ログや各種情報が表示されるまでに …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/07/pot3#pot3">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/06/pot2#pot2">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(2)</a></h2>
     <p>
       Posted on 2020-05-06(Wed) in <a href="../category/tech.html">Tech</a>
@@ -207,61 +251,12 @@ JSのソースは <a href="https://github.com/mollinaca/pot/blob/master/docs/src
           Continue reading
         </a>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
-    <p>
-      Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/postfix.html">Postfix</a>,              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>
-    </p>
-  </header>
-  <div>
-      <p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
-https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
-<hr>
-<h1>メールサーバ構築</h1>
-<h2>用途、前提</h2>
-<ul>
-<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
-<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
-</ul>
-</li>
-<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
-<li>なるべく AWS FreeTrial の範囲で<ul>
-<li>1年ごとの使い捨て</li>
-</ul>
-</li>
-</ul>
-<h2>EC2インスタンスを作成</h2>
-<ul>
-<li>AWSアカウントを作成<ul>
-<li>アカウント作成</li>
-<li>2FA設定</li>
-<li>ログイン・作業用IAM、API実行用IAM作成<ul>
-<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
-<li>作業用IAMでログイン</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>EC2インスタンス作成<ul>
-<li>AmazonLinux2</li>
-<li>SecurityGroup作成、アタッチ<ul>
-<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
-<li>outbound: ICMP …</li></ul></li></ul></li></ul>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/25/mailserver#mailserver">
-          Continue reading
-        </a>
-  </div>
 </article>
 
   <div class="pagination">
+    <a class="btn float-left" href="../tag/aws2.html">
+      <i class="fa fa-angle-left"></i> Older Posts
+    </a>
   </div>
 
 

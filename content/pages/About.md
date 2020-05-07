@@ -1,4 +1,4 @@
-Title: About this blog and me
+Title: About
 slug: about
 
 ---

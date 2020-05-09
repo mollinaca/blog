@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../../../../../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../../../../../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../../../../../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../../../../../theme/pygments/monokai.min.css">
+
+    <script src="../../../../../theme/tipuesearch/jquery.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="../../../../../tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="../../../../../theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="s.hosoya" />
+<meta name="description" content="update daily/hourly の選択 任意の時刻の入力 表示ボタン が実装されて、任意のデータを取得できるようになった。 とりあえず機能ができただけで、バリデーションもないしエラーハンドリングもないから、APIとして存在しないファイル名の入力もできるし、その場合は単純にデータが表示できなくなる。 バリデーションについては、「数字のみ」を受け取るようにするが、データとして適切な数字かどうかのチェックは js ではできない（jsが正解の一覧を持つことができない、そういう情報がない）ので、 数字の入力は受け付けて、その情報をもとにリクエスト用のURLを組み立て、取得できれば表示するし、できなければ(404)なら適切なエラーハンドリング、という感じでい引き続き実装する。 こんな感じ。とりあえず感がすごいｗ その他修正や追加など けっこういろいろ直した。。 ipwhois で取れなかった場合のエラー処理 韓国の krnic に問い合わせたら 404 返されてた。。 これに限らず、HTTPリクエストは失敗の可能性があるので適切なエラーハンドリングが必要。 今回は python の try-catch を使い、失敗したらその旨をそのまま国コードの文字列に入れることにした。 ついでに機能を（複数個所で同じ実装使ってたので）関数に切り出した …" />
+<meta name="keywords" content="AWS, EC2, GitHubPages, Python, ハニーポット">
+
+<link rel="alternate" href="../../../../../posts/2020/05/09/pot3" hreflang="ja" />
+<link rel="alternate" href="../../../../../posts/2020/05/07/pot3" hreflang="ja" />
+
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:title" content="AWS EC2 と GitHub Pages で作る 無料ハニーポット&amp;公開ページ（作成中）(4)"/>
+<meta property="og:description" content="update daily/hourly の選択 任意の時刻の入力 表示ボタン が実装されて、任意のデータを取得できるようになった。 とりあえず機能ができただけで、バリデーションもないしエラーハンドリングもないから、APIとして存在しないファイル名の入力もできるし、その場合は単純にデータが表示できなくなる。 バリデーションについては、「数字のみ」を受け取るようにするが、データとして適切な数字かどうかのチェックは js ではできない（jsが正解の一覧を持つことができない、そういう情報がない）ので、 数字の入力は受け付けて、その情報をもとにリクエスト用のURLを組み立て、取得できれば表示するし、できなければ(404)なら適切なエラーハンドリング、という感じでい引き続き実装する。 こんな感じ。とりあえず感がすごいｗ その他修正や追加など けっこういろいろ直した。。 ipwhois で取れなかった場合のエラー処理 韓国の krnic に問い合わせたら 404 返されてた。。 これに限らず、HTTPリクエストは失敗の可能性があるので適切なエラーハンドリングが必要。 今回は python の try-catch を使い、失敗したらその旨をそのまま国コードの文字列に入れることにした。 ついでに機能を（複数個所で同じ実装使ってたので）関数に切り出した …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../../../posts/2020/05/09/pot3"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-05-09 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../../../author/s.hosoya.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="AWS"/>
+<meta property="article:tag" content="EC2"/>
+<meta property="article:tag" content="GitHubPages"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="ハニーポット"/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; AWS EC2 と GitHub Pages で作る 無料ハニーポット&amp;公開ページ（作成中）(4)</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="../../../../..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../../../../.."></a>
+      </h1>
+
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../../../../../pages/about.html#about">
+                  About
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+
+      <!-- my twitter timeline -->
+      <ul>
+        <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/syoutin?ref_src=twsrc%5Etfw">Tweets by syoutin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </ul>
+
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+          <div class="translations">
+    <a class="active" href="../../../../../posts/2020/05/09/pot3">ja</a>
+        <a href="../../../../../posts/2020/05/07/pot3">ja</a>
+    </div>
+
+    <h1 id="pot3">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(4)</h1>
+    <p>
+      Posted on 2020-05-09(Sat) in <a href="../../../../../category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h2>update</h2>
+<ul>
+<li>daily/hourly の選択  </li>
+<li>任意の時刻の入力  </li>
+<li>表示ボタン  </li>
+</ul>
+<p>が実装されて、任意のデータを取得できるようになった。<br>
+とりあえず機能ができただけで、バリデーションもないしエラーハンドリングもないから、APIとして存在しないファイル名の入力もできるし、その場合は単純にデータが表示できなくなる。<br>
+バリデーションについては、「数字のみ」を受け取るようにするが、データとして適切な数字かどうかのチェックは js ではできない（jsが正解の一覧を持つことができない、そういう情報がない）ので、
+数字の入力は受け付けて、その情報をもとにリクエスト用のURLを組み立て、取得できれば表示するし、できなければ(404)なら適切なエラーハンドリング、という感じでい引き続き実装する。  </p>
+<p>こんな感じ。とりあえず感がすごいｗ<br>
+<img alt="current_index" src="https://blog.watarinohibi.tokyo/images/20200509_pot_current_index.png" title="current_index">   </p>
+<h2>その他修正や追加など</h2>
+<p>けっこういろいろ直した。。  </p>
+<h3>ipwhois で取れなかった場合のエラー処理</h3>
+<p>韓国の krnic に問い合わせたら 404 返されてた。。<br>
+これに限らず、HTTPリクエストは失敗の可能性があるので適切なエラーハンドリングが必要。<br>
+今回は python の try-catch を使い、失敗したらその旨をそのまま国コードの文字列に入れることにした。<br>
+ついでに機能を（複数個所で同じ実装使ってたので）関数に切り出した。  </p>
+<p><a href="https://github.com/mollinaca/pot/commit/11ac3202fdf2a87db73fb2ce183383c77a7cc6b5#diff-a43638052b7bbe06afc55a60bed5a9af">修正</a></p>
+<h3>テーブル表示において、「アクセス試行回数が多い順」ソートで表示できてなかった</h3>
+<p>これはそもそもjsのお勉強。<br>
+jsでは連想配列というものは存在しておらず、いわゆる連想配列は "オブジェクト" と呼ばれるもので、これは連想配列みたいな見た目をしているが連想配列ではないらしい。<br>
+なので、連想配列に通常期待されるような機能もない。<br>
+連想配列の value でソートしたい場合のテクニックを以下から拝借して実装した。<br>
+意図は理解できたので、たぶん正しく実装されているはず。  </p>
+<p><a href="https://qiita.com/yunkikki/items/6278c9215e6f46c4e55f">【JavaScript】連想配列の値(value)で並び替え</a>  </p>
+<p>しかし、こんな基本的な機能が標準でサポートされてないのかjs...</p>
+<p><a href="https://github.com/mollinaca/pot/commit/5672e98a44ba2eff8908ace479d7138ea6edeafb">修正</a></p>
+<h3>secureログから、"Did not receive identification string" のパターンを追加</h3>
+<p>実際secureログってよくわかってなくて、どういうパターンを取得すればいいの？は適当。<br>
+というか正解は、「全部を取る」か、「セッションID単位で全部取る」、なんだろうけど。<br>
+ここは今回こだわるポイントではないのでよしなにやってるところ。  </p>
+<p><a href="https://github.com/mollinaca/pot/commit/3b57cfc2baf8b5dfa011f5eb6676fc4cb9fcd96e">実装</a>  </p>
+<p>ただ、テーブル表示のほうへは反映されてないのでデータとしては現れていない。<br>
+別途追加する。  </p>
+<h3>ログを手動で取り直したい場合用のスクリプト</h3>
+<p>再実行用。<br>
+コマンド引数に任意の値を入れると、その時間だけ前の時間のログを取得する。<br>
+もちろん /var/log/secure に残っていれば、だけど。  </p>
+<p><a href="https://github.com/mollinaca/pot/blob/master/script/secure_manual.py">実装</a>  </p>
+<p>このスクリプトはあくまで手動実行、リカバリ用なので、自動で git へ push はしない。<br>
+再取得した内容を確認して、問題なければ手動で push すること。  </p>
+<h3>引き続きやること</h3>
+<ul>
+<li>フロントエンドのいいカンジ化、APIを使って json のデータはなんとかとれたので、これを集計してチャートにしてみたい    <ul>
+<li>テーブルはだせたので、チャートやグラフとか。なんかそういうライブラリあると思うので調べる<br>
+→ google のグラフ描画のやつが良さそう。地理情報からも出せるっぽい。デベロッパキーがいるみたいだけどまた調べてみよう  </li>
+</ul>
+</li>
+<li>別の日時を指定してデータを表示とか  <ul>
+<li>日時、時刻を指定して、そのタイミングで情報を更新する昨日  </li>
+<li>いまは1時間単位のデータなので、1日単位とか、一定期間とか？<br>
+→ 1日単位はログ作った
+→ とりあえずの機能はできた :clap:</li>
+</ul>
+</li>
+<li>エラー処理（Gitへのコミット失敗（GitHubたまに落ちてるしね）を検知して通知、再実行とか）  <br>
+    → pythonのスクリプトにおいて whoisが失敗するパターンのエラーハンドリングができた</li>
+<li>他のログの追加  <ul>
+<li>ページをタブ化して、デフォルトでssh（secure）ログを選択しつつ、タブ切り替えでほかのログを同じように表示するとか  </li>
+</ul>
+</li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../../../tag/aws.html">AWS</a>
+      <a href="../../../../../tag/ec2.html">EC2</a>
+      <a href="../../../../../tag/githubpages.html">GitHubPages</a>
+      <a href="../../../../../tag/python.html">Python</a>
+      <a href="../../../../../tag/hanipotsuto.html">ハニーポット</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="../../../../../posts/2020/05/07/pot3">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(3)</a></li>
+      <li><a href="../../../../../posts/2020/05/06/pot2">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(2)</a></li>
+      <li><a href="../../../../../posts/2020/05/05/pot">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）</a></li>
+      <li><a href="../../../../../posts/2020/04/25/mailserver">自前メールサーバの構築手順メモ</a></li>
+      <li><a href="../../../../../posts/2020/05/04/cron_pyenv_pipenv">pyenv の Python にインストールされた pipenv の仮想環境にインストールされた Python を cron で動かす</a></li>
+    </ul>
+  </div>
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../../../../../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "../../../../..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>

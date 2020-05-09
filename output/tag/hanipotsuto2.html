@@ -51,7 +51,7 @@
 <meta property="og:url" content=".."/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; Tag AWS</title>
+  <title>Days of migratory birds &ndash; Tag ハニーポット</title>
 
 </head>
 <body >
@@ -162,62 +162,10 @@
           Continue reading
         </a>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
-    <p>
-      Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/postfix.html">Postfix</a>,              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>
-    </p>
-  </header>
-  <div>
-      <p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
-https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
-<hr>
-<h1>メールサーバ構築</h1>
-<h2>用途、前提</h2>
-<ul>
-<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
-<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
-</ul>
-</li>
-<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
-<li>なるべく AWS FreeTrial の範囲で<ul>
-<li>1年ごとの使い捨て</li>
-</ul>
-</li>
-</ul>
-<h2>EC2インスタンスを作成</h2>
-<ul>
-<li>AWSアカウントを作成<ul>
-<li>アカウント作成</li>
-<li>2FA設定</li>
-<li>ログイン・作業用IAM、API実行用IAM作成<ul>
-<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
-<li>作業用IAMでログイン</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>EC2インスタンス作成<ul>
-<li>AmazonLinux2</li>
-<li>SecurityGroup作成、アタッチ<ul>
-<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
-<li>outbound: ICMP …</li></ul></li></ul></li></ul>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/25/mailserver#mailserver">
-          Continue reading
-        </a>
-  </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-right" href="../tag/aws.html">
+    <a class="btn float-right" href="../tag/hanipotsuto.html">
       Newer Posts <i class="fa fa-angle-right"></i>
     </a>
   </div>

@@ -42,17 +42,17 @@
 
 
 <meta name="author" content="s.hosoya" />
-<meta name="description" content="GW週末、ABC二夜連続ナイトの1日目。 今日のCは難しすぎた。。もうちょっと早くDに挑んでればDはできたかもだったけど、Cに時間かけすぎてしかもできなかった。。orz C難しい難しい言われてるから茶パフォ的には落としてもしゃーないかもって感じだけど、代わりにDがとれてればなぁというところ。 A A - We Love Golf k の倍数が A から B の間にあるかどうか。 O(1)で解けそうな気がしたけど、考えるよりも先に素直にループ回したほうがいいなと思い、 AからBの間の i で i%k == 0 となるやつがあれば &#34;OK&#34; として終了 提出 B B - 1% 複利の計算。複利の計算て、普通に算数の問題として難しい。 今回は制約から、小数切り落としなのでB向けにマイルドにはなってるけど、まず複利ってうい概念自体がちょっと難しいよね。 制約通りに実装してAC。 提出 C C - Many Requirements まず、問題文から難解 …" />
+<meta name="description" content="今日は2問だけ。。 復習しよう。 A A - Registration Tから一文字削ったものがSと一致すればよい 提出 B B - Easy Linear Programming ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パターンで場合分けして求めればよい。 提出 条件書き間違えて1WA... Cをちょっと眺めたけど、今日は事情ありここで離脱。 たぶんCもできなかっただろうなこれ。。 別途復習しておこう。" />
 <meta name="keywords" content="AtCoder, ABC, 競技プログラミング">
 
 
 <meta property="og:site_name" content="Days of migratory birds"/>
-<meta property="og:title" content="AtCoder Beginner Contest 165"/>
-<meta property="og:description" content="GW週末、ABC二夜連続ナイトの1日目。 今日のCは難しすぎた。。もうちょっと早くDに挑んでればDはできたかもだったけど、Cに時間かけすぎてしかもできなかった。。orz C難しい難しい言われてるから茶パフォ的には落としてもしゃーないかもって感じだけど、代わりにDがとれてればなぁというところ。 A A - We Love Golf k の倍数が A から B の間にあるかどうか。 O(1)で解けそうな気がしたけど、考えるよりも先に素直にループ回したほうがいいなと思い、 AからBの間の i で i%k == 0 となるやつがあれば &#34;OK&#34; として終了 提出 B B - 1% 複利の計算。複利の計算て、普通に算数の問題として難しい。 今回は制約から、小数切り落としなのでB向けにマイルドにはなってるけど、まず複利ってうい概念自体がちょっと難しいよね。 制約通りに実装してAC。 提出 C C - Many Requirements まず、問題文から難解 …"/>
+<meta property="og:title" content="AtCoder Beginner Contest 167"/>
+<meta property="og:description" content="今日は2問だけ。。 復習しよう。 A A - Registration Tから一文字削ったものがSと一致すればよい 提出 B B - Easy Linear Programming ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パターンで場合分けして求めればよい。 提出 条件書き間違えて1WA... Cをちょっと眺めたけど、今日は事情ありここで離脱。 たぶんCもできなかっただろうなこれ。。 別途復習しておこう。"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="../../../../../posts/2020/05/02/abc165"/>
+<meta property="og:url" content="../../../../../posts/2020/05/10/abc167"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2020-05-02 00:00:00+09:00"/>
+<meta property="article:published_time" content="2020-05-10 00:00:00+09:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="../../../../../author/s.hosoya.html">
 <meta property="article:section" content="Tech"/>
@@ -61,7 +61,7 @@
 <meta property="article:tag" content="競技プログラミング"/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; AtCoder Beginner Contest 165</title>
+  <title>Days of migratory birds &ndash; AtCoder Beginner Contest 167</title>
 
 </head>
 <body >
@@ -130,58 +130,31 @@
 <article class="single">
   <header>
       
-    <h1 id="abc165">AtCoder Beginner Contest 165</h1>
+    <h1 id="abc167">AtCoder Beginner Contest 167</h1>
     <p>
-      Posted on 2020-05-02(Sat) in <a href="../../../../../category/tech.html">Tech</a>
+      Posted on 2020-05-10(Sun) in <a href="../../../../../category/tech.html">Tech</a>
 
     </p>
   </header>
 
 
   <div>
-    <p>GW週末、ABC二夜連続ナイトの1日目。  </p>
-<p>今日のCは難しすぎた。。もうちょっと早くDに挑んでればDはできたかもだったけど、Cに時間かけすぎてしかもできなかった。。orz <br>
-C難しい難しい言われてるから茶パフォ的には落としてもしゃーないかもって感じだけど、代わりにDがとれてればなぁというところ。  </p>
-<h3>A</h3>
-<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_a">A - We Love Golf</a>  </p>
-<p>k の倍数が A から B の間にあるかどうか。<br>
-O(1)で解けそうな気がしたけど、考えるよりも先に素直にループ回したほうがいいなと思い、<br>
-AからBの間の i で i%k == 0 となるやつがあれば "OK" として終了</p>
-<p><a href="https://atcoder.jp/contests/abc165/submissions/12587573">提出</a></p>
-<h3>B</h3>
-<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_b">B - 1%</a>  </p>
-<p>複利の計算。複利の計算て、普通に算数の問題として難しい。 <br>
-今回は制約から、小数切り落としなのでB向けにマイルドにはなってるけど、まず複利ってうい概念自体がちょっと難しいよね。<br>
-制約通りに実装してAC。  </p>
-<p><a href="https://atcoder.jp/contests/abc165/submissions/12601120">提出</a></p>
-<h3>C</h3>
-<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_c">C - Many Requirements</a>  </p>
-<p>まず、問題文から難解。。
-意図はなんとか理解できたけど、実装を考えつかずパス。<br>
-Twitter 見てると、10重ループ書いて無理やり通したみたいなのがちらほら、、まじか。。</p>
-<p>解説みてもやっぱりわからんし、なんだろうこれは。。  </p>
-<h3>D</h3>
-<p><a href="https://atcoder.jp/contests/abc165/tasks/abc165_d">D - Floor Function</a>  </p>
-<p>これはもうちょい時間あれば解けたー。。無念。<br>
-floorが紛らわしいけど、分解してみれば単調増加関数のため、基本は x=n のときが最大になるハズ、はすぐにわかった。<br>
-その上で例外条件として、 floor の分岐で後ろの項を小さくできそうだなと思い、そこを探しているところでタイムアップ。<br>
-ぎりぎりに提出したけど、ちょいっとミスがあり 9/10 の1WAでACならず。。</p>
-<p><a href="https://atcoder.jp/contests/abc165/submissions/12649188">提出</a></p>
-<p>マジで実装がギリギリ。ｗ  </p>
-<p>これは解説を読んで理解。<br>
-あー、確かにという感じで、再度書き直して以下でAC。</p>
-<p><a href="https://atcoder.jp/contests/abc165/submissions/12651588">提出</a></p>
-<p>Cよりよっぽど簡単だったのでは。。<br>
-数学的考察が必要なだけで、実装の難易度はB以下な感じの問題だったので、CとDが逆だったのでは疑惑すらあるABC165でした。</p>
+    <p>今日は2問だけ。。<br>
+復習しよう。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc167/tasks/abc167_a">A - Registration</a><br>
+Tから一文字削ったものがSと一致すればよい  </p>
+<p><a href="https://atcoder.jp/contests/abc167/submissions/13021806">提出</a></p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc167/tasks/abc167_b">B - Easy Linear Programming</a><br>
+ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パターンで場合分けして求めればよい。  </p>
+<p><img alt="b" src="https://blog.watarinohibi.tokyo/images/20200510_abc167_b.png" title="b">    </p>
+<p><a href="https://atcoder.jp/contests/abc167/submissions/13041585">提出</a>  </p>
+<p>条件書き間違えて1WA...  </p>
 <hr>
-<p>えーん、灰に逆戻り(´；ω；｀)    </p>
-<p><img alt="ac_rate" src="https://blog.watarinohibi.tokyo/images/20200502_ac_rate.png" title="ac_rate">  </p>
-<hr>
-<p>と思ったら、 unrated かもとのこと？<br>
-まぁ灰/茶なんて小さな差だからどっちでもいいっちゃいんだけど。。  </p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ABC165】E問題において、問題文に書かれている制約と、実際に異なる入力が与えられていたことが発覚しました。現在対応を協議中です。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1256583866812297216?ref_src=twsrc%5Etfw">May 2, 2020</a></blockquote>
-
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<p>Cをちょっと眺めたけど、今日は事情ありここで離脱。<br>
+たぶんCもできなかっただろうなこれ。。<br>
+別途復習しておこう。</p>
   </div>
   <div class="tag-cloud">
     <p>
@@ -196,8 +169,8 @@ floorが紛らわしいけど、分解してみれば単調増加関数のため
   <div class="related-posts">
     <h4>You might enjoy</h4>
     <ul class="related-posts">
-      <li><a href="../../../../../posts/2020/05/10/abc167">AtCoder Beginner Contest 167</a></li>
       <li><a href="../../../../../posts/2020/05/03/abc166">AtCoder Beginner Contest 166</a></li>
+      <li><a href="../../../../../posts/2020/05/02/abc165">AtCoder Beginner Contest 165</a></li>
       <li><a href="../../../../../posts/2020/04/26/abc164">AtCoder Beginner Contest 164</a></li>
       <li><a href="../../../../../posts/2020/04/19/abc163">AtCoder Beginner Contest 163</a></li>
       <li><a href="../../../../../posts/2020/04/14/practice_2020414">競プロ Practice 日記</a></li>

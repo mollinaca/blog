@@ -51,7 +51,7 @@
 <meta property="og:url" content=".."/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; Posts by s.hosoya:</title>
+  <title>Days of migratory birds &ndash; Tag アルゴリズム</title>
 
 </head>
 <body >
@@ -121,92 +121,49 @@
 
 <article>
   <header>
-    <h2><a href="../posts/2020/03/18/kagawa#kagawa">香川県の「ネット・ゲーム依存症対策条例」について</a></h2>
+    <h2><a href="../posts/2020/05/11/bit-fullsearch#bit-fullsearch">bit全探索</a></h2>
     <p>
-      Posted on 2020-03-18(Wed) in <a href="../category/social.html">Social</a>
+      Posted on 2020-05-11(Mon) in <a href="../category/tech.html">Tech</a>
 
           &#8226; Tagged with
-              <a href="../tag/current_news.html">時事</a>,              <a href="../tag/game.html">ゲーム</a>
+              <a href="../tag/jing ji p.html">競技プログラミング</a>,              <a href="../tag/arugorizumu.html">アルゴリズム</a>
     </p>
   </header>
   <div>
-      <p><a href="https://nlab.itmedia.co.jp/nl/articles/2003/18/news081.html">ねとらぼ - 香川県の「ネット・ゲーム依存症対策条例」が可決</a>  </p>
-<p>以前から気になっていたこの話題、昨日パブリックコメントに対する回答が提示されており、その内容も首を傾げるというか、なんだこれというような感じのものだったが、そのまま本日条例として可決、採択されたらしい。<br>
-<a href="https://nlab.itmedia.co.jp/nl/articles/2003/17/news122.html">ねとらぼ - 香川県「ゲーム規制条例」パブコメ回答まとめ</a>  </p>
-<p>個人的に思うのは  </p>
-<ul>
-<li>民主主義的な進め方としてどうなのか？</li>
-<li>「良くないものは規制しよう」という短絡的な思考はどうなのか？</li>
-</ul>
-<p>の2点。  </p>
-<h2>民主主義な進め方としてどうなのか？</h2>
-<p>このタイトルはちょっと微妙かも。<br>
-要するに、地方自治体だろうが議会政治なわけで、少数の議員が暴走したとしても、建前上はそれを抑止する仕組みがあるはず。<br>
-今回の例でいえば、まるで科学的根拠のない思い込みが発端となっていながら、その理論がまるでまかり通っているように見受けられた。<br>
-自分の観測範囲では「ありえない」なことであっても、これが通ってしまう世の中の仕組みが怖い。  </p>
-<h2>「良くないものは規制しよう」という思考</h2>
-<p>もう一つ。<br>
-昨今、多様性、ダイバーシティ、LGBTといった個々人のあり方、価値観についての議論は多いにあるところだと思う。<br>
-個人的には、多様性は大事なもので、個々の違いをお互いに認めあい、受け入れるないしは適度な距離を保って生活することが大事だと思う。<br>
-そして、「自分が良くないと思うものを規制しよう」というのはこの考え方に真っ向から反対するような思考だと感じる。  </p>
-<p>例えば、思想や信仰の自由は憲法で保証されている …</p>
+      <p>昨日の ABC167 - C は、bit全探索というアルゴリズムを使った問題だったらしい。知らなかったので学んだ。  </p>
+<p><a href="https://qiita.com/hareku/items/3d08511eab56a481c7db">bit全探索について簡単にまとめる</a> <br>
+<a href="https://qiita.com/gogotealove/items/11f9e83218926211083a">Python de アルゴリズム（bit全探索）</a> <br>
+<a href="https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361">ビット演算 (bit 演算) の使い方を総特集！</a>   </p>
+<h2>どういう手法か</h2>
+<p>二つの状態を持つ特定の要素群に対して全組み合わせを列挙するのに使う。<br>
+状態を "0" or "1" の二進数で定義し、例えば要素が三つなら</p>
+<blockquote>
+<p>000<br>
+001<br>
+010<br>
+011<br>
+100<br>
+101<br>
+110<br>
+111  </p>
+</blockquote>
+<p>の8パターンで全てを表現できる、ということ。なるほどと思った。  </p>
+<h3>例題</h3>
+<blockquote>
+<p>みかん（100円）りんご（200円）ぶどう（300円）がそれぞれ1つずつ果物屋さんにありました。
+財布の中には300円ありますが、考え得るすべての買い物パターンを列挙しなさい。</p>
+</blockquote>
+<p>三つの果物について、買うor買わないを全パターン列挙し、それぞれの値段が条件に収まるか、というもの。</p>
+<p><a href="https://github.com/mollinaca/ac/blob/master/code/test/bit%E5%85%A8%E6%8E%A2%E7%B4%A2/1.py">1.py …</a></p>
         <br>
         <a class="btn"
-           href="../posts/2020/03/18/kagawa#kagawa">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/03/17/about_this_blog#about_this_blog">このサイトの技術スタックについて</a></h2>
-    <p>
-      Posted on 2020-03-17(Tue) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/python.html">python</a>,              <a href="../tag/pelican.html">pelican</a>,              <a href="../tag/github.html">Github</a>,              <a href="../tag/netlify.html">Netlify</a>
-    </p>
-  </header>
-  <div>
-      <ul>
-<li>python pelican による静的ページ生成</li>
-<li>github のリポジトリにコミット</li>
-<li>Netlify がコミットをフックしてビルド</li>
-<li>Netlify の Snippet Injection にて、GoogleAnalytics の js を注入</li>
-<li>ビルドが無事通ったらそのまま Netlify で公開される</li>
-</ul>
-<p>※画を書く</p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/03/16/FirstPost#FirstPost">最初の投稿</a></h2>
-    <p>
-      Posted on 2020-03-16(Mon) in <a href="../category/no category.html">no category</a>
-
-          &#8226; Tagged with
-              <a href="../tag/misc.html">misc</a>
-    </p>
-  </header>
-  <div>
-      <p>pelican test</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/03/16/FirstPost#FirstPost">
+           href="../posts/2020/05/11/bit-fullsearch#bit-fullsearch">
           Continue reading
         </a>
   </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-left" href="../author/s.hosoya18.html">
-      <i class="fa fa-angle-left"></i> Older Posts
-    </a>
-    <a class="btn float-right" href="../author/s.hosoya16.html">
-      Newer Posts <i class="fa fa-angle-right"></i>
-    </a>
   </div>
 
 

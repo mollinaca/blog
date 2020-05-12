@@ -121,6 +121,41 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/12/binsearch#binsearch">二分探索</a></h2>
+    <p>
+      Posted on 2020-05-12(Tue) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/jing ji p.html">競技プログラミング</a>,              <a href="../tag/arugorizumu.html">アルゴリズム</a>
+    </p>
+  </header>
+  <div>
+      <p>今日たまたまやった練習問題  </p>
+<p><a href="https://atcoder.jp/contests/abc146/tasks/abc146_c">C - Buy an Integer</a><br>
+が、二分探索の問題だった。  </p>
+<p>最初読んでどうやればいいかわからず（計算量的にNの全探索ではないことはすぐわかったが、どうやって減らす？）、<br>
+数学的に、累乗の指数から答え付近を探して、そこから探していけばいいのかな～とか考えていたけどうまくいかず解説を読んだら二分探索だった。  </p>
+<p>あー、二分探索はわかるぞということでがんばって実装した。  </p>
+<p><a href="https://atcoder.jp/contests/abc146/submissions/13154541">提出</a>  </p>
+<p>最終的に出力する <code>ans</code> をしたから、上限を <code>over</code> として一番上に設定し、二つの平均を求め、<br>
+平均が制約の上限より上なら <code>over</code> を平均へ入れ替え、下なら <code>ans</code> を平均といれかえる、というのを繰り返し、<br>
+<code>ans</code>と<code>over</code>の差が1以下になったら終了という感じ。  </p>
+<p>これはちょっと考えたけど、にぶたんということがわかったらなんとなく実装できた！</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0 …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/12/binsearch#binsearch">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/11/bit-fullsearch#bit-fullsearch">bit全探索</a></h2>
     <p>
       Posted on 2020-05-11(Mon) in <a href="../category/tech.html">Tech</a>

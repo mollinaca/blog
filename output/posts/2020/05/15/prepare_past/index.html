@@ -42,17 +42,17 @@
 
 
 <meta name="author" content="s.hosoya" />
-<meta name="description" content="今日たまたまやった練習問題 C - Buy an Integer が、二分探索の問題だった。 最初読んでどうやればいいかわからず（計算量的にNの全探索ではないことはすぐわかったが、どうやって減らす？）、 数学的に、累乗の指数から答え付近を探して、そこから探していけばいいのかな～とか考えていたけどうまくいかず解説を読んだら二分探索だった。 あー、二分探索はわかるぞということでがんばって実装した。 提出 最終的に出力する ans をしたから、上限を over として一番上に設定し、二つの平均を求め、 平均が制約の上限より上なら over を平均へ入れ替え、下なら ans を平均といれかえる、というのを繰り返し、 ansとoverの差が1以下になったら終了という感じ。 これはちょっと考えたけど、にぶたんということがわかったらなんとなく実装できた！ #!/usr/bin/env python3 a,b,x = map(int,input().split()) ans = 0 …" />
+<meta name="description" content="来週 5/23(土) のPASTに申し込みました。今回は無料です。 https://past.atcoder.jp/ せっかくなので、がんばってエントリーぐらいは取りたいなぁ。 直近勉強してるのも含めて、以下の項目について改めてアルゴリズム部分の復習＆練習をしておこうと思う。 参考ページ レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【初級編：競プロを始めよう】 全探索 1-6-4. 全探索に慣れる！ 二分探索 【AtCoder】二分探索の問題を解く AtCoder灰・茶・緑色の方必見！二分探索を絶対にバグらせないで書く方法 DFS&amp;BFS 競プロ覚書：深さ優先探索，幅優先探索 まとめ A - 深さ優先探索 C - 幅優先探索 bit全探索 ビット演算 (bit 演算) の使い方を総特集！ 〜 マスクビットから bit DP まで …" />
 <meta name="keywords" content="競技プログラミング, アルゴリズム">
 
 
 <meta property="og:site_name" content="Days of migratory birds"/>
-<meta property="og:title" content="二分探索"/>
-<meta property="og:description" content="今日たまたまやった練習問題 C - Buy an Integer が、二分探索の問題だった。 最初読んでどうやればいいかわからず（計算量的にNの全探索ではないことはすぐわかったが、どうやって減らす？）、 数学的に、累乗の指数から答え付近を探して、そこから探していけばいいのかな～とか考えていたけどうまくいかず解説を読んだら二分探索だった。 あー、二分探索はわかるぞということでがんばって実装した。 提出 最終的に出力する ans をしたから、上限を over として一番上に設定し、二つの平均を求め、 平均が制約の上限より上なら over を平均へ入れ替え、下なら ans を平均といれかえる、というのを繰り返し、 ansとoverの差が1以下になったら終了という感じ。 これはちょっと考えたけど、にぶたんということがわかったらなんとなく実装できた！ #!/usr/bin/env python3 a,b,x = map(int,input().split()) ans = 0 …"/>
+<meta property="og:title" content="来週のPASTに向けて"/>
+<meta property="og:description" content="来週 5/23(土) のPASTに申し込みました。今回は無料です。 https://past.atcoder.jp/ せっかくなので、がんばってエントリーぐらいは取りたいなぁ。 直近勉強してるのも含めて、以下の項目について改めてアルゴリズム部分の復習＆練習をしておこうと思う。 参考ページ レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【初級編：競プロを始めよう】 全探索 1-6-4. 全探索に慣れる！ 二分探索 【AtCoder】二分探索の問題を解く AtCoder灰・茶・緑色の方必見！二分探索を絶対にバグらせないで書く方法 DFS&amp;BFS 競プロ覚書：深さ優先探索，幅優先探索 まとめ A - 深さ優先探索 C - 幅優先探索 bit全探索 ビット演算 (bit 演算) の使い方を総特集！ 〜 マスクビットから bit DP まで …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="../../../../../posts/2020/05/12/binsearch"/>
+<meta property="og:url" content="../../../../../posts/2020/05/15/prepare_past"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2020-05-12 00:00:00+09:00"/>
+<meta property="article:published_time" content="2020-05-15 00:00:00+09:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="../../../../../author/s.hosoya.html">
 <meta property="article:section" content="Tech"/>
@@ -60,7 +60,7 @@
 <meta property="article:tag" content="アルゴリズム"/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; 二分探索</title>
+  <title>Days of migratory birds &ndash; 来週のPASTに向けて</title>
 
 </head>
 <body >
@@ -129,42 +129,42 @@
 <article class="single">
   <header>
       
-    <h1 id="binsearch">二分探索</h1>
+    <h1 id="prepare_past">来週のPASTに向けて</h1>
     <p>
-      Posted on 2020-05-12(Tue) in <a href="../../../../../category/tech.html">Tech</a>
+      Posted on 2020-05-15(Fri) in <a href="../../../../../category/tech.html">Tech</a>
 
     </p>
   </header>
 
 
   <div>
-    <p>今日たまたまやった練習問題  </p>
-<p><a href="https://atcoder.jp/contests/abc146/tasks/abc146_c">C - Buy an Integer</a><br>
-が、二分探索の問題だった。  </p>
-<p>最初読んでどうやればいいかわからず（計算量的にNの全探索ではないことはすぐわかったが、どうやって減らす？）、<br>
-数学的に、累乗の指数から答え付近を探して、そこから探していけばいいのかな～とか考えていたけどうまくいかず解説を読んだら二分探索だった。  </p>
-<p>あー、二分探索はわかるぞということでがんばって実装した。  </p>
-<p><a href="https://atcoder.jp/contests/abc146/submissions/13154541">提出</a>  </p>
-<p>最終的に出力する <code>ans</code> をしたから、上限を <code>over</code> として一番上に設定し、二つの平均を求め、<br>
-平均が制約の上限より上なら <code>over</code> を平均へ入れ替え、下なら <code>ans</code> を平均といれかえる、というのを繰り返し、<br>
-<code>ans</code>と<code>over</code>の差が1以下になったら終了という感じ。  </p>
-<p>これはちょっと考えたけど、にぶたんということがわかったらなんとなく実装できた！</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span></span>
-<span class="code-line"><span class="n">over</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">while</span> <span class="n">over</span> <span class="o">-</span> <span class="n">ans</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span></span>
-<span class="code-line">    <span class="n">avg</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">ans</span><span class="o">+</span><span class="n">over</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span></span>
-<span class="code-line">    <span class="k">if</span> <span class="n">a</span><span class="o">*</span><span class="n">avg</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">avg</span><span class="p">))</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">:</span></span>
-<span class="code-line">        <span class="n">ans</span> <span class="o">=</span> <span class="n">avg</span></span>
-<span class="code-line">    <span class="k">else</span><span class="p">:</span></span>
-<span class="code-line">        <span class="n">over</span> <span class="o">=</span> <span class="n">avg</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="n">ans</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
+    <p>来週 5/23(土) のPASTに申し込みました。今回は無料です。<br>
+<a href="https://past.atcoder.jp/">https://past.atcoder.jp/</a>  </p>
+<p>せっかくなので、がんばってエントリーぐらいは取りたいなぁ。<br>
+直近勉強してるのも含めて、以下の項目について改めてアルゴリズム部分の復習＆練習をしておこうと思う。  </p>
+<h2>参考ページ</h2>
+<p><a href="https://qiita.com/e869120/items/f1c6f98364d1443148b3">レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【初級編：競プロを始めよう】</a>  </p>
+<h2>全探索</h2>
+<p><a href="https://qiita.com/e869120/items/f1c6f98364d1443148b3#1-6-4-%E5%85%A8%E6%8E%A2%E7%B4%A2%E3%81%AB%E6%85%A3%E3%82%8C%E3%82%8B">1-6-4. 全探索に慣れる！</a>  </p>
+<h2>二分探索</h2>
+<p><a href="https://qiita.com/gh_takumi/items/a0b2f38e7ea53e73c1d5">【AtCoder】二分探索の問題を解く</a><br>
+<a href="https://www.forcia.com/blog/001434.html">AtCoder灰・茶・緑色の方必見！二分探索を絶対にバグらせないで書く方法</a>  </p>
+<h2>DFS&amp;BFS</h2>
+<p><a href="https://pyteyon.hatenablog.com/entry/2019/03/01/211133">競プロ覚書：深さ優先探索，幅優先探索 まとめ</a><br>
+<a href="https://atcoder.jp/contests/atc001/tasks/dfs_a?lang=ja">A - 深さ優先探索</a><br>
+<a href="https://atcoder.jp/contests/abc007/tasks/abc007_3">C - 幅優先探索</a>  </p>
+<h2>bit全探索</h2>
+<p><a href="https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361">ビット演算 (bit 演算) の使い方を総特集！ 〜 マスクビットから bit DP まで 〜</a><br>
+<a href="https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361#6-bit-%E5%85%A8%E6%8E%A2%E7%B4%A2">6. bit 全探索</a><br>
+<a href="https://drken1215.hatenablog.com/entry/2019/02/24/224100">2019-02-24 AtCoder ABC 119 C - Synthetic Kadomatsu (300 点)</a><br>
+<a href="https://atcoder.jp/contests/abc119/tasks/abc119_c">C - Synthetic Kadomatsu</a>  </p>
+<h2>Python の標準ライブラリ</h2>
+<p><a href="https://qiita.com/Kentaro_okumura/items/5b95b767a2e691cd5482">Pythonで競技プログラミング -ライブラリ編-</a><br>
+<a href="https://qiita.com/__ynyn__/items/9e75cc37c4b4541a8dd2">競プロで使える！Python標準ライブラリ</a>  </p>
+<h2>ABS</h2>
+<p><a href="https://atcoder.jp/contests/abs">AtCoder Beginners Selection</a></p>
+<hr>
+<p>がんばんべ</p>
   </div>
   <div class="tag-cloud">
     <p>
@@ -178,7 +178,7 @@
   <div class="related-posts">
     <h4>You might enjoy</h4>
     <ul class="related-posts">
-      <li><a href="../../../../../posts/2020/05/15/prepare_past">来週のPASTに向けて</a></li>
+      <li><a href="../../../../../posts/2020/05/12/binsearch">二分探索</a></li>
       <li><a href="../../../../../posts/2020/05/11/bit-fullsearch">bit全探索</a></li>
       <li><a href="../../../../../posts/2020/05/10/abc167">AtCoder Beginner Contest 167</a></li>
       <li><a href="../../../../../posts/2020/05/03/abc166">AtCoder Beginner Contest 166</a></li>

@@ -5,49 +5,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/</loc>
-<lastmod>2020-05-12T23:17:35-00:00</lastmod>
+<lastmod>2020-05-15T21:49:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/tags.html</loc>
-<lastmod>2020-05-12T23:17:35-00:00</lastmod>
+<lastmod>2020-05-15T21:49:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/categories.html</loc>
-<lastmod>2020-05-12T23:17:35-00:00</lastmod>
+<lastmod>2020-05-15T21:49:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/authors.html</loc>
-<lastmod>2020-05-12T23:17:35-00:00</lastmod>
+<lastmod>2020-05-15T21:49:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/archives.html</loc>
-<lastmod>2020-05-12T23:17:35-00:00</lastmod>
+<lastmod>2020-05-15T21:49:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/search.html</loc>
-<lastmod>2020-05-12T23:17:35-00:00</lastmod>
+<lastmod>2020-05-15T21:49:19-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/pages/about.html</loc>
-<lastmod>2020-05-12T23:17:35-00:00</lastmod>
+<lastmod>2020-05-15T21:49:19-00:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://blog.watarinohibi.tokyo/posts/2020/05/15/prepare_past</loc>
+<lastmod>2020-05-15T00:00:00+09:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -467,21 +474,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/category/tech.html</loc>
-<lastmod>2020-05-12T00:00:00+09:19</lastmod>
+<lastmod>2020-05-15T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/tag/jing ji p.html</loc>
-<lastmod>2020-05-12T00:00:00+09:19</lastmod>
+<lastmod>2020-05-15T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/tag/arugorizumu.html</loc>
-<lastmod>2020-05-12T00:00:00+09:19</lastmod>
+<lastmod>2020-05-15T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -775,7 +782,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://blog.watarinohibi.tokyo/author/s.hosoya.html</loc>
-<lastmod>2020-05-12T00:00:00+09:19</lastmod>
+<lastmod>2020-05-15T00:00:00+09:19</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

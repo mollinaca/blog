@@ -121,6 +121,50 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/11/bit-fullsearch#bit-fullsearch">bit全探索</a></h2>
+    <p>
+      Posted on 2020-05-11(Mon) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/jing ji p.html">競技プログラミング</a>,              <a href="../tag/arugorizumu.html">アルゴリズム</a>
+    </p>
+  </header>
+  <div>
+      <p>昨日の ABC167 - C は、bit全探索というアルゴリズムを使った問題だったらしい。知らなかったので学んだ。  </p>
+<p><a href="https://qiita.com/hareku/items/3d08511eab56a481c7db">bit全探索について簡単にまとめる</a> <br>
+<a href="https://qiita.com/gogotealove/items/11f9e83218926211083a">Python de アルゴリズム（bit全探索）</a> <br>
+<a href="https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361">ビット演算 (bit 演算) の使い方を総特集！</a>   </p>
+<h2>どういう手法か</h2>
+<p>二つの状態を持つ特定の要素群に対して全組み合わせを列挙するのに使う。<br>
+状態を "0" or "1" の二進数で定義し、例えば要素が三つなら</p>
+<blockquote>
+<p>000<br>
+001<br>
+010<br>
+011<br>
+100<br>
+101<br>
+110<br>
+111  </p>
+</blockquote>
+<p>の8パターンで全てを表現できる、ということ。なるほどと思った。  </p>
+<h3>例題</h3>
+<blockquote>
+<p>みかん（100円）りんご（200円）ぶどう（300円）がそれぞれ1つずつ果物屋さんにありました。
+財布の中には300円ありますが、考え得るすべての買い物パターンを列挙しなさい。</p>
+</blockquote>
+<p>三つの果物について、買うor買わないを全パターン列挙し、それぞれの値段が条件に収まるか、というもの。</p>
+<p><a href="https://github.com/mollinaca/ac/blob/master/code/test/bit%E5%85%A8%E6%8E%A2%E7%B4%A2/1.py">1.py …</a></p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/11/bit-fullsearch#bit-fullsearch">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/10/abc167#abc167">AtCoder Beginner Contest 167</a></h2>
     <p>
       Posted on 2020-05-10(Sun) in <a href="../category/tech.html">Tech</a>
@@ -182,50 +226,6 @@ ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パタ�
         <br>
         <a class="btn"
            href="../posts/2020/05/09/pot4#pot4">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/07/pot3#pot3">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(3)</a></h2>
-    <p>
-      Posted on 2020-05-07(Thu) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/ec2.html">EC2</a>,              <a href="../tag/githubpages.html">GitHubPages</a>,              <a href="../tag/python.html">Python</a>,              <a href="../tag/hanipotsuto.html">ハニーポット</a>
-    </p>
-  </header>
-  <div>
-      <p><a href="https://blog.watarinohibi.tokyo/posts/2020/05/06/pot/#pot">昨日</a>の続き。</p>
-<h2>bugfix</h2>
-<p>ログ取得スクリプトにバグがあり対応。<br>
-23時台のログだけ日付が間違っている（翌日の日付が入ってしまっている）ことがあったのに気付き修正。  <br>
-原因はシンプルで、ログに挿入する日付を生成するときに、  </p>
-<ul>
-<li>現在時刻を取得  </li>
-<li>取得した現在時刻から日付を生成  </li>
-</ul>
-<p>としていたため、24時を回った0時台に前日23時台のログを取得した場合に、ログから見たら「翌日」の日付となってしまっていた。<br>
-<a href="https://github.com/mollinaca/pot/issues/3">Issue</a>  </p>
-<h2>機能追加</h2>
-<h3>国コードの取得と表示</h3>
-<p>ログ生成の際に、アクセス元IPアドレスからカントリーコードを取得してログに挿入するようにした。<br>
-また、IPアドレス表示の際にあわせてカントリーコードを表示するようにしてみた。  </p>
-<p><img alt="current_index" src="https://blog.watarinohibi.tokyo/images/20200507_pot_current_index.png" title="current_index">   </p>
-<p>見てると、NL（オランダ）が結構多い模様？以外。<br>
-経験上、この手のアクセスは大抵ホスティングベンダからなので、そういうことをさせちゃってるベンダがあるんだろうな。そこまで調べてないけど。<br>
-カントリーコードはWhois引けばほぼ確実にとれるからいいけど、事業者情報とれたりとれなかったりするので、そこまでパースするのはマンドクセーからいいや。  </p>
-<h3>24時間分のログを作成</h3>
-<p>0時を回ったタイミングで、前日1日分の24時間のログを集計した24時間分ログを作成するようにした。<br>
-ただしこれを表示する機能がまだないので、表示はできていない。<br>
-いずれ、ページで「1時間単位」or「1日単位」で選択できるようにして、日付と時刻から該当のログを引っ張れるようにしたい。そんな難しくないはず。  </p>
-<h2>やってみたけどやめた</h2>
-<p>ログや各種情報が表示されるまでに …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/07/pot3#pot3">
           Continue reading
         </a>
   </div>

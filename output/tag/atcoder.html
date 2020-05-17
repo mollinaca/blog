@@ -121,6 +121,47 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/17/abc168#abc168">AtCoder Beginner Contest 168</a></h2>
+    <p>
+      Posted on 2020-05-17(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日は無事(?)3完。<br>
+Dはチャレンジしたけどまだ勝てないやつだった、無念ナリ。  </p>
+<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_a">A - ∴ (Therefore)</a><br>
+入力された数字の1桁目の値による条件分岐。<br>
+1桁目の値をとるやり方はいくつかあると思うけど、今回はパッと思いついた文字列スライスの末尾から取得した。<br>
+桁和とかだったら10の余剰とかいろいろあるけど、今回はこれで十分。  </p>
+<p><a href="https://atcoder.jp/contests/abc168/submissions/13293727">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc168_a</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
+<span class="code-line"><span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;pon&quot;</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;bon&quot;</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hon&quot;</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_b">B - ... (Triple Dots)</a><br>
+KとSの長さを比較して、Kのほうが長ければSをそのまま、Sのほうが長ければK分だけ出力して末尾に ... を足す、という処理 …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/17/abc168#abc168">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/16/practice_2020516#practice_2020516">競プロ Practice 日記</a></h2>
     <p>
       Posted on 2020-05-16(Sat) in <a href="../category/tech.html">Tech</a>
@@ -191,46 +232,6 @@ ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パタ�
 <p>Cをちょっと眺めたけど、今日は事情ありここで離脱。<br>
 たぶんCもできなかっただろうなこれ。。<br>
 別途復習しておこう。</p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/03/abc166#abc166">AtCoder Beginner Contest 166</a></h2>
-    <p>
-      Posted on 2020-05-03(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日はDまでできた！よかったー。<br>
-Dも1WAしたけど、単純なポカミスをやらかしてしまいなので、ロジック的には1発で通せた。<br>
-今回は運がよかったというのも大分あるけど、久々の4完でちょっと嬉しい＾＾  </p>
-<hr>
-<h3>A</h3>
-<p><a href="https://atcoder.jp/contests/abc166/tasks/abc166_a">A - A?C</a>  </p>
-<p>入力が "ABC" なら "ARC" を出力、 "ARC" なら "ABC" を出力するというもの。<br>
-言われた通りに実装して終わり。</p>
-<p><a href="https://atcoder.jp/contests/abc166/submissions/12706363">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
-<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ABC&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;ARC&quot;</span> <span class="k">else</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ARC&quot;</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<h3>B</h3>
-<p><a href="https://atcoder.jp/contests/abc166/tasks/abc166_b">B - Trick or Treat</a>  </p>
-<p>お菓子を持っていないすぬけ君の人数を出力すればよい。<br>
-最初に 1~N のリストを作り、お菓子を配られた番号は抜いていき、最後に残った要素数を出力した。</p>
-<p><a href="https://atcoder.jp/contests/abc166/submissions/12726298">提出</a></p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr …</span></code></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/03/abc166#abc166">
-          Continue reading
-        </a>
   </div>
 </article>
 

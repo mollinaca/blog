@@ -51,7 +51,7 @@
 <meta property="og:url" content=".."/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; Posts by s.hosoya:</title>
+  <title>Days of migratory birds &ndash; Category miscellaneousNotes</title>
 
 </head>
 <body >
@@ -162,47 +162,6 @@ WFHのおかげで自分も家にいるので、分担しつついいカンジ�
 </article>
 <article>
   <header>
-    <h2><a href="../posts/2020/05/17/abc168#abc168">AtCoder Beginner Contest 168</a></h2>
-    <p>
-      Posted on 2020-05-17(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日は無事(?)3完。<br>
-Dはチャレンジしたけどまだ勝てないやつだった、無念ナリ。  </p>
-<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_a">A - ∴ (Therefore)</a><br>
-入力された数字の1桁目の値による条件分岐。<br>
-1桁目の値をとるやり方はいくつかあると思うけど、今回はパッと思いついた文字列スライスの末尾から取得した。<br>
-桁和とかだったら10の余剰とかいろいろあるけど、今回はこれで十分。  </p>
-<p><a href="https://atcoder.jp/contests/abc168/submissions/13293727">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc168_a</span><span class="o">.</span><span class="n">py</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
-<span class="code-line"><span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;pon&quot;</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;bon&quot;</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hon&quot;</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_b">B - ... (Triple Dots)</a><br>
-KとSの長さを比較して、Kのほうが長ければSをそのまま、Sのほうが長ければK分だけ出力して末尾に ... を足す、という処理 …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/17/abc168#abc168">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="../posts/2020/05/17/miscellaneous_notes_20200517#miscellaneous_notes_20200517">雑記 20200517</a></h2>
     <p>
       Posted on 2020-05-17(Sun) in <a href="../category/miscellaneousnotes.html">miscellaneousNotes</a>
@@ -233,10 +192,58 @@ KとSの長さを比較して、Kのほうが長ければSをそのまま、Sの
           Continue reading
         </a>
   </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">雑記 20200426</a></h2>
+    <p>
+      Posted on 2020-04-26(Sun) in <a href="../category/miscellaneousnotes.html">miscellaneousNotes</a>
+
+          &#8226; Tagged with
+              <a href="../tag/diary.html">雑記</a>
+    </p>
+  </header>
+  <div>
+      <p>このサイトのPelicanのテーマを変更したり、いろいろ調整したりなど。<br>
+タグに日本語を正しく指定できるようにして、theme や plugin をちゃんど submodule として取り込んでみたり。<br>
+そもそも git submodule という概念を知らなかったので調べて理解した。  </p>
+<p>このブログページに関するTodo:  </p>
+<ul>
+<li>サイドメニューをもう少し充実させる</li>
+<li>favicon 設置する</li>
+<li>コードブロックの表示において、1行目が特殊なブロックになってしまう</li>
+<li>コードブロックの表示において、非コードな文字列をいれると syntax error と判断されて、err の装飾がついてしまう
+ → これ自体は正しい挙動なんだけど、コードブロックで例えば実行するコマンドを書いた場合などに、気に食わない感じになる。のをどうにかする。</li>
+</ul>
+<p>&lt;正しくコードが表示される&gt; ※ただし1行目のインラインブロック？は気に食わない</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
+<span class="code-line">2</span>
+<span class="code-line">3</span>
+<span class="code-line">4</span>
+<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
+<span class="code-line"><span class="nb">set</span> -euC</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;Hello!&quot;</span></span>
+<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
+<p>スクショ:<br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png" width="500"></a> </p>
+<p>&lt;エラー表示になる&gt;</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># command1</span></span>
+<span class="code-line"><span class="err"># command2 …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">
+          Continue reading
+        </a>
+  </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-left" href="../author/s.hosoya2.html">
+    <a class="btn float-left" href="../category/miscellaneousnotes2.html">
       <i class="fa fa-angle-left"></i> Older Posts
     </a>
   </div>

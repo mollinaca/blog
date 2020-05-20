@@ -121,6 +121,37 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/20/xfs#xfs">CentOS8 に xsf でフォーマットしたディスクをマウントする</a></h2>
+    <p>
+      Posted on 2020-05-20(Wed) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/centos8.html">CentOS8</a>,              <a href="../tag/xfs.html">xfs</a>
+    </p>
+  </header>
+  <div>
+      <p>CentOS8に追加ディスクを xfs でフォーマットしてマウントする手順メモ。<br>
+長いこと ext4 でしかフォーマットしてなかったから、何気 xfs はよくわかってない。。  </p>
+<p><a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs">XFS ファイルシステム</a><br>
+<a href="https://qiita.com/sion_cojp/items/bef955bba3dbf9d603f8">EXT4 vs XFS vs Btrfs vs ZFSをfioでベンチマークを取ってみました。</a>  </p>
+<h2>手順</h2>
+<div class="highlight"><pre><span class="code-line"><span></span><code>OSがディスクを認識していることを確認</span>
+<span class="code-line"></span>
+<span class="code-line"># fdisk -l</span>
+<span class="code-line">Disk /dev/sda: 20 GiB, 21474836480 bytes, 41943040 sectors</span>
+<span class="code-line">Units: sectors of 1 * 512 = 512 bytes</span>
+<span class="code-line">Sector size (logical/physical): 512 bytes / 4096 bytes</span>
+<span class="code-line">I/O size (minimum …</span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/20/xfs#xfs">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/04/cron_pyenv_pipenv#cron_pyenv_pipenv">pyenv の Python にインストールされた pipenv の仮想環境にインストールされた Python を cron で動かす</a></h2>
     <p>
       Posted on 2020-05-04(Mon) in <a href="../category/tech.html">Tech</a>
@@ -224,46 +255,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/05/02/wp#wp">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/27/install_golang#install_golang">AmazonLinux2 に GO をインストールする</a></h2>
-    <p>
-      Posted on 2020-04-27(Mon) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>,              <a href="../tag/golang.html">golang</a>
-    </p>
-  </header>
-  <div>
-      <h1>環境</h1>
-<ul>
-<li>OS</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">NAME=&quot;Amazon Linux&quot;</span></span>
-<span class="code-line"><span class="err">VERSION=&quot;2&quot;</span></span>
-<span class="code-line"><span class="err">ID=&quot;amzn&quot;</span></span>
-<span class="code-line"><span class="err">ID_LIKE=&quot;centos rhel fedora&quot;</span></span>
-<span class="code-line"><span class="err">VERSION_ID=&quot;2&quot;</span></span>
-<span class="code-line"><span class="err">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span></span>
-<span class="code-line"><span class="err">ANSI_COLOR=&quot;0;33&quot;</span></span>
-<span class="code-line"><span class="err">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2&quot;</span></span>
-<span class="code-line"><span class="err">HOME_URL=&quot;https://amazonlinux.com/&quot;</span></span>
-<span class="code-line"><span class="err">Amazon Linux release 2 (Karoo)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<ul>
-<li>Kernel</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">Linux mailserver 4.14.173-137.229.amzn2.x86_64 #1 SMP …</span></code></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/27/install_golang#install_golang">
           Continue reading
         </a>
   </div>

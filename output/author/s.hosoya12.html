@@ -121,6 +121,35 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/14/practice_2020414#practice_2020414">競プロ Practice 日記</a></h2>
+    <p>
+      Posted on 2020-04-14(Tue) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日チャレンジした問題  </p>
+<p><a href="https://atcoder.jp/contests/agc007/tasks/agc007_a">A - Shik and Stone</a>  </p>
+<p>パッと見 dfs に見せかけて、じつはdfsだとちょっと難しくて、問題文をちゃんと正しく解釈すれば1行で解けたパターン。<br>
+パッと見であ！dfsだ！チャレンジで見たやつだ！となって意気揚々と実装してみたものの、例１、例２までは通したら例３で見事にハマった。ここで引っかかるところも含めての問題なんだなぁ。。  </p>
+<p>dfs に見せかけというのは、ようするに「右」と「下」の移動だけで左上から右下まで # を辿ってゴールにいけるか？という問題に見えたということ。<br>
+この条件で実装すると、例３は <code>Possible</code> だが出力例は <code>Impossible</code> でええ？となる。<br>
+例３は「右」と「下」の移動だけでゴールまでたどり着けるが、実はこれは題意を満たさない。  </p>
+<p>条件は <code>移動する過程で、駒が常に右または下に動いていた可能性があるか判定してください。</code> なので、<br>
+移動ルートの中で <em>左に移動することが可能であったならば</em>、答えは <code>Impossible</code> になる、ということ。<br>
+えー …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/14/practice_2020414#practice_2020414">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/12/abc162#abc162">AtCoder Beginner Contest 162</a></h2>
     <p>
       Posted on 2020-04-12(Sun) in <a href="../category/tech.html">Tech</a>
@@ -187,44 +216,6 @@ FizzBuzzの応用？<br>
         <br>
         <a class="btn"
            href="../posts/2020/04/12/centos8_vm_1#centos8_vm_1">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/11/miscellaneous_notes_20200411#miscellaneous_notes_20200411">雑記 20200411</a></h2>
-    <p>
-      Posted on 2020-04-11(Sat) in <a href="../category/miscellaneousnotes.html">miscellaneousNotes</a>
-
-          &#8226; Tagged with
-              <a href="../tag/diary.html">雑記</a>
-    </p>
-  </header>
-  <div>
-      <p>雑記を書きたくて。<br>
-今は寝ても冷めても covid-19 のことばかり。<br>
-情報絶ちしたいと思っても、刻一刻と迫る危機、局面が気になって、どうしてもTwitterや各種ニュースが気になってしまう。<br>
-せめて、ここにはなんか別にどうでもいい文章を書き残しておきたい。</p>
-<h2>自分のこと</h2>
-<p>都内某ゲーム系エンタメ会社勤務のITインフラエンジニア。<br>
-2014年新卒入社で気づけば6年目。そろそろ転職したい機運があり、ポートフォリオにならねーかなとこのブログを始めた（ならない）。<br>
-業務都合で自宅から業務ができるだけのアクセス権とノートPC/スマホを持っていたこともあり、3月半ばから完全在宅勤務。<br>
-インフラエンジニアで24/365で呼び出しの可能性があったことが今回は幸い。  </p>
-<p>趣味はゲームと読書と音楽。<br>
-最近ハマってるのは競プロ、AtCoderで灰から茶を目指しているところ。  </p>
-<p>31歳、既婚（もうすぐ結婚1年）。<br>
-妻が妊娠中、明日で16週。9月末出産予定。（それもあり、余計に病魔にビビっている  </p>
-<h2>ここ最近のこと</h2>
-<p>妻はつわりがまだ安定せず、本来なら安定してくるタイミングだしだいぶ良くはなったのでちょっと出社を試みたがまだきつい＆今の状況もあり会社から妊婦は休業指示（ほんとよかった。。）。<br>
-妻と二人でほとんど引きこもり生活。週１～２回にまとめて買い出し行くのと、２～３日にいっぺんぐらい近所を散歩する以外はほとんどずっと引きこもり。  </p>
-<h2>競プロのこと</h2>
-<p>もともと興味はあったんだけど、一つぐらいまとも扱えるプログラミング言語覚えておきたい＆転職のときの話のネタ程度に始めた。<br>
-けっこう楽しいが、大学＆大学院でちゃんと勉強してなかったことが悔やまれるというのと、高校ではそれなりに真面目に数学やってたんだけど …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/11/miscellaneous_notes_20200411#miscellaneous_notes_20200411">
           Continue reading
         </a>
   </div>

@@ -121,6 +121,50 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/05/11/bit-fullsearch#bit-fullsearch">bit全探索</a></h2>
+    <p>
+      Posted on 2020-05-11(Mon) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/jing ji p.html">競技プログラミング</a>,              <a href="./tag/arugorizumu.html">アルゴリズム</a>
+    </p>
+  </header>
+  <div>
+      <p>昨日の ABC167 - C は、bit全探索というアルゴリズムを使った問題だったらしい。知らなかったので学んだ。  </p>
+<p><a href="https://qiita.com/hareku/items/3d08511eab56a481c7db">bit全探索について簡単にまとめる</a> <br>
+<a href="https://qiita.com/gogotealove/items/11f9e83218926211083a">Python de アルゴリズム（bit全探索）</a> <br>
+<a href="https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361">ビット演算 (bit 演算) の使い方を総特集！</a>   </p>
+<h2>どういう手法か</h2>
+<p>二つの状態を持つ特定の要素群に対して全組み合わせを列挙するのに使う。<br>
+状態を "0" or "1" の二進数で定義し、例えば要素が三つなら</p>
+<blockquote>
+<p>000<br>
+001<br>
+010<br>
+011<br>
+100<br>
+101<br>
+110<br>
+111  </p>
+</blockquote>
+<p>の8パターンで全てを表現できる、ということ。なるほどと思った。  </p>
+<h3>例題</h3>
+<blockquote>
+<p>みかん（100円）りんご（200円）ぶどう（300円）がそれぞれ1つずつ果物屋さんにありました。
+財布の中には300円ありますが、考え得るすべての買い物パターンを列挙しなさい。</p>
+</blockquote>
+<p>三つの果物について、買うor買わないを全パターン列挙し、それぞれの値段が条件に収まるか、というもの。</p>
+<p><a href="https://github.com/mollinaca/ac/blob/master/code/test/bit%E5%85%A8%E6%8E%A2%E7%B4%A2/1.py">1.py …</a></p>
+        <br>
+        <a class="btn"
+           href="./posts/2020/05/11/bit-fullsearch#bit-fullsearch">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/05/10/abc167#abc167">AtCoder Beginner Contest 167</a></h2>
     <p>
       Posted on 2020-05-10(Sun) in <a href="./category/tech.html">Tech</a>
@@ -184,44 +228,6 @@ ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パタ�
         <br>
         <a class="btn"
            href="./posts/2020/05/10/social_20200510#social_20200510">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/05/09/pot4#pot4">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(4)</a></h2>
-    <p>
-      Posted on 2020-05-09(Sat) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/aws.html">AWS</a>,              <a href="./tag/ec2.html">EC2</a>,              <a href="./tag/githubpages.html">GitHubPages</a>,              <a href="./tag/python.html">Python</a>,              <a href="./tag/hanipotsuto.html">ハニーポット</a>
-    </p>
-  </header>
-  <div>
-      <h2>update</h2>
-<ul>
-<li>daily/hourly の選択  </li>
-<li>任意の時刻の入力  </li>
-<li>表示ボタン  </li>
-</ul>
-<p>が実装されて、任意のデータを取得できるようになった。<br>
-とりあえず機能ができただけで、バリデーションもないしエラーハンドリングもないから、APIとして存在しないファイル名の入力もできるし、その場合は単純にデータが表示できなくなる。<br>
-バリデーションについては、「数字のみ」を受け取るようにするが、データとして適切な数字かどうかのチェックは js ではできない（jsが正解の一覧を持つことができない、そういう情報がない）ので、
-数字の入力は受け付けて、その情報をもとにリクエスト用のURLを組み立て、取得できれば表示するし、できなければ(404)なら適切なエラーハンドリング、という感じでい引き続き実装する。  </p>
-<p>こんな感じ。とりあえず感がすごいｗ<br>
-<img alt="current_index" src="https://blog.watarinohibi.tokyo/images/20200509_pot_current_index.png" title="current_index">   </p>
-<h2>その他修正や追加など</h2>
-<p>けっこういろいろ直した。。  </p>
-<h3>ipwhois で取れなかった場合のエラー処理</h3>
-<p>韓国の krnic に問い合わせたら 404 返されてた。。<br>
-これに限らず、HTTPリクエストは失敗の可能性があるので適切なエラーハンドリングが必要。<br>
-今回は python の try-catch を使い、失敗したらその旨をそのまま国コードの文字列に入れることにした。<br>
-ついでに機能を（複数個所で同じ実装使ってたので）関数に切り出した …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/05/09/pot4#pot4">
           Continue reading
         </a>
   </div>

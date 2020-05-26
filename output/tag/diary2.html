@@ -121,6 +121,54 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">雑記 20200426</a></h2>
+    <p>
+      Posted on 2020-04-26(Sun) in <a href="../category/miscellaneousnotes.html">miscellaneousNotes</a>
+
+          &#8226; Tagged with
+              <a href="../tag/diary.html">雑記</a>
+    </p>
+  </header>
+  <div>
+      <p>このサイトのPelicanのテーマを変更したり、いろいろ調整したりなど。<br>
+タグに日本語を正しく指定できるようにして、theme や plugin をちゃんど submodule として取り込んでみたり。<br>
+そもそも git submodule という概念を知らなかったので調べて理解した。  </p>
+<p>このブログページに関するTodo:  </p>
+<ul>
+<li>サイドメニューをもう少し充実させる</li>
+<li>favicon 設置する</li>
+<li>コードブロックの表示において、1行目が特殊なブロックになってしまう</li>
+<li>コードブロックの表示において、非コードな文字列をいれると syntax error と判断されて、err の装飾がついてしまう
+ → これ自体は正しい挙動なんだけど、コードブロックで例えば実行するコマンドを書いた場合などに、気に食わない感じになる。のをどうにかする。</li>
+</ul>
+<p>&lt;正しくコードが表示される&gt; ※ただし1行目のインラインブロック？は気に食わない</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
+<span class="code-line">2</span>
+<span class="code-line">3</span>
+<span class="code-line">4</span>
+<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
+<span class="code-line"><span class="nb">set</span> -euC</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;Hello!&quot;</span></span>
+<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
+<span class="code-line"></code></pre></div>
+</td></tr></table>
+
+<p>スクショ:<br>
+<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png" width="500"></a> </p>
+<p>&lt;エラー表示になる&gt;</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># command1</span></span>
+<span class="code-line"><span class="err"># command2 …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/26/miscellaneous_notes_20200426#miscellaneous_notes_20200426">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/11/miscellaneous_notes_20200411#miscellaneous_notes_20200411">雑記 20200411</a></h2>
     <p>
       Posted on 2020-04-11(Sat) in <a href="../category/miscellaneousnotes.html">miscellaneousNotes</a>

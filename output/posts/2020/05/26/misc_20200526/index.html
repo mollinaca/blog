@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../../../../../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../../../../../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../../../../../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../../../../../theme/pygments/monokai.min.css">
+
+    <script src="../../../../../theme/tipuesearch/jquery.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="../../../../../tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="../../../../../theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="s.hosoya" />
+<meta name="description" content="今日は聊か体調不良でお休み。 朝起きたときからなんかモヤっとしてたけど、起き抜けでPCの設定変更して、いくらかパフォーマンス寄りへの変更を試していたら一気に気分が悪くなってしまった。車酔いのような間隔でディスプレイを見るのがつらく。 Windows10の、画面を滑らかに表示するアニメーション関連のオプションを落としまくってたら急に気持ち悪くなってきた（とくに画面スクロールががくがくなのがしんどい）と感じたので、ここらへん削るべきじゃないんだなーと。 緊急事態宣言の解除に伴い、出社が必要な人に対して出社を認める方針にはなりつつあるけど、それよりも大きな方針として全社的に在宅・リモートワークの制度と環境を整える方針のようで、自分はもうずっとリモートになりそう。出社するの嫌いなのでこれはほんとありがたい流れになった。 ただその一方で、今業務で使ってるのが貸与ノートPC（Let&#39;s Note/4CPU/8GB/256GB SSD）一台でほぼ全部やってるが、いよいよスペックが追い付かなくなってきたので上記のような設定変更を試していたんだけど、このザマだ。状況落ち着いて、かつリモート継続が完全に決定した段階で、貸与されてるデスクトップPCのほうを持ち帰ろうと思う。 物件を探してる話 もともと今の住まいは結婚してからの一時的な賃貸で、状況に合わせて物件の購入、引越しを検討していた。 去年末ぐらいからぼちぼち考え始めてて、最初は通勤にある程度便利な都内のマンションを考えていたんだけど、今回のコロナ禍、リモート推奨の流れをうけて、もっと値段落として郊外の戸建てを買おうか案が浮上してる。 通勤しなくていいならそっちのほうが嬉しいので、これは有りな流れ。 いまは値段も落ちてる（逆にこのあと回復してきたら、今ほど落ちないみたい）状況なので、いくつか検討している中からそろそろ買いそうだなーの雰囲気がある。 ただ、妻の出産も近づいているので、引越しのタイミングはそのあとになるけど、うまいこと住宅ローン減税の適用期間に滑り込めるように調整したい …" />
+<meta name="keywords" content="雑記">
+
+
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:title" content="雑記 20200526"/>
+<meta property="og:description" content="今日は聊か体調不良でお休み。 朝起きたときからなんかモヤっとしてたけど、起き抜けでPCの設定変更して、いくらかパフォーマンス寄りへの変更を試していたら一気に気分が悪くなってしまった。車酔いのような間隔でディスプレイを見るのがつらく。 Windows10の、画面を滑らかに表示するアニメーション関連のオプションを落としまくってたら急に気持ち悪くなってきた（とくに画面スクロールががくがくなのがしんどい）と感じたので、ここらへん削るべきじゃないんだなーと。 緊急事態宣言の解除に伴い、出社が必要な人に対して出社を認める方針にはなりつつあるけど、それよりも大きな方針として全社的に在宅・リモートワークの制度と環境を整える方針のようで、自分はもうずっとリモートになりそう。出社するの嫌いなのでこれはほんとありがたい流れになった。 ただその一方で、今業務で使ってるのが貸与ノートPC（Let&#39;s Note/4CPU/8GB/256GB SSD）一台でほぼ全部やってるが、いよいよスペックが追い付かなくなってきたので上記のような設定変更を試していたんだけど、このザマだ。状況落ち着いて、かつリモート継続が完全に決定した段階で、貸与されてるデスクトップPCのほうを持ち帰ろうと思う。 物件を探してる話 もともと今の住まいは結婚してからの一時的な賃貸で、状況に合わせて物件の購入、引越しを検討していた。 去年末ぐらいからぼちぼち考え始めてて、最初は通勤にある程度便利な都内のマンションを考えていたんだけど、今回のコロナ禍、リモート推奨の流れをうけて、もっと値段落として郊外の戸建てを買おうか案が浮上してる。 通勤しなくていいならそっちのほうが嬉しいので、これは有りな流れ。 いまは値段も落ちてる（逆にこのあと回復してきたら、今ほど落ちないみたい）状況なので、いくつか検討している中からそろそろ買いそうだなーの雰囲気がある。 ただ、妻の出産も近づいているので、引越しのタイミングはそのあとになるけど、うまいこと住宅ローン減税の適用期間に滑り込めるように調整したい …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../../../posts/2020/05/26/misc_20200526"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-05-26 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../../../author/s.hosoya.html">
+<meta property="article:section" content="雑記"/>
+<meta property="article:tag" content="雑記"/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; 雑記 20200526</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="../../../../..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../../../../.."></a>
+      </h1>
+
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../../../../../pages/about.html#about">
+                  About
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+
+      <!-- my twitter timeline -->
+      <ul>
+        <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/syoutin?ref_src=twsrc%5Etfw">Tweets by syoutin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </ul>
+
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="misc_20200526">雑記 20200526</h1>
+    <p>
+      Posted on 2020-05-26(Tue) in <a href="../../../../../category/diary.html">雑記</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>今日は聊か体調不良でお休み。<br>
+朝起きたときからなんかモヤっとしてたけど、起き抜けでPCの設定変更して、いくらかパフォーマンス寄りへの変更を試していたら一気に気分が悪くなってしまった。車酔いのような間隔でディスプレイを見るのがつらく。</p>
+<p>Windows10の、画面を滑らかに表示するアニメーション関連のオプションを落としまくってたら急に気持ち悪くなってきた（とくに画面スクロールががくがくなのがしんどい）と感じたので、ここらへん削るべきじゃないんだなーと。  </p>
+<p>緊急事態宣言の解除に伴い、出社が必要な人に対して出社を認める方針にはなりつつあるけど、それよりも大きな方針として全社的に在宅・リモートワークの制度と環境を整える方針のようで、自分はもうずっとリモートになりそう。出社するの嫌いなのでこれはほんとありがたい流れになった。<br>
+ただその一方で、今業務で使ってるのが貸与ノートPC（Let's Note/4CPU/8GB/256GB SSD）一台でほぼ全部やってるが、いよいよスペックが追い付かなくなってきたので上記のような設定変更を試していたんだけど、このザマだ。状況落ち着いて、かつリモート継続が完全に決定した段階で、貸与されてるデスクトップPCのほうを持ち帰ろうと思う。  </p>
+<h2>物件を探してる話</h2>
+<p>もともと今の住まいは結婚してからの一時的な賃貸で、状況に合わせて物件の購入、引越しを検討していた。<br>
+去年末ぐらいからぼちぼち考え始めてて、最初は通勤にある程度便利な都内のマンションを考えていたんだけど、今回のコロナ禍、リモート推奨の流れをうけて、もっと値段落として郊外の戸建てを買おうか案が浮上してる。<br>
+通勤しなくていいならそっちのほうが嬉しいので、これは有りな流れ。<br>
+いまは値段も落ちてる（逆にこのあと回復してきたら、今ほど落ちないみたい）状況なので、いくつか検討している中からそろそろ買いそうだなーの雰囲気がある。  </p>
+<p>ただ、妻の出産も近づいているので、引越しのタイミングはそのあとになるけど、うまいこと住宅ローン減税の適用期間に滑り込めるように調整したい。  </p>
+<p><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1213.htm">No.1213 住宅を新築又は新築住宅を取得した場合（住宅借入金等特別控除）</a></p>
+<h2>Civ6やってる</h2>
+<p><a href="https://japanese.engadget.com/civ6-033501323.html">今週の無料ゲームは『シヴィライゼーションVI』。Epic Gamesストアでメガセール実施中</a>  </p>
+<p>Civilization、たしか4とかをそこそこやってた記憶があるんだけど、なんと6がEpicGameStoreで無料配布とのこと。やるしかねぇってことでDLしてやってる。<br>
+ちょっとやったことあるけど、そこまでがっつりやりこんでたわけでもないので、チュートリアルからゆっくりやってるけど、まー時間泥棒。辞め時がない。  </p>
+<p>いい機会なので、それなりにやり込んだって言えるぐらいまではがんばってプレイしよう。めっちゃ楽しい。</p>
+<h2>Twitterで騒がれてたアレ</h2>
+<p>なんというか、こういうところに対する思いを文字にとどめておきたい、というのがこのブログの目的でもあるんだよな。あんまり書きたくないんだけど。</p>
+<p>5/10 に書いたエントリ: <a href="https://blog.watarinohibi.tokyo/posts/2020/05/10/social_20200510/#social_20200510">"#検察庁法改正案に抗議します" について</a></p>
+<p>結局その後、</p>
+<ul>
+<li>渦中の人物は辞任</li>
+<li>賭けマージャンをやってたという理由で懲戒のような雰囲気</li>
+<li>きゃりーぱみゅぱみゅは発言を引っ込めた</li>
+</ul>
+<p>とかとか。  </p>
+<p>自分がこの状況を見て思うのは、誰か彼が邪魔な黒幕がいて、芸能人を使って扇動を行い、それに乗せられた世論が渦中の人物を追い込んだ、追い込む雰囲気を作ったんじゃないかなーということ。<br>
+この、「黒幕」が結局出てこないのがクサすぎる。。  </p>
+<p>これが、形の上でも先導してるリーダーがいればまた印象ちがったんだろうけど。<br>
+なんとなく、裏でこの状況を操ってる黒幕がいるんだろうなぁと思うと素直にYESともNOとも言えないなぁという感想を抱いた。<br>
+目の前のわかりやすい情報に飛びついて思い込むこと、判断を下すことがいかに愚かなことかは、FACTFULNESSが僕たちに教えてくれたこと。  </p>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=tf_til&t=watarinohibi-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=4822289605&linkId=72a78b94f5862bdc926e138ac56d8c69&bc1=ffffff&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
+</iframe>
+
+<hr>
+<p>何が正しくて何が悪いかなんて、この世の中には存在しないはずなのに。  </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J-QhmFMb6kM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../../../tag/diary.html">雑記</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="../../../../../posts/2020/05/19/miscellaneous_notes_20200519">雑記 20200519</a></li>
+      <li><a href="../../../../../posts/2020/05/17/miscellaneous_notes_20200517">雑記 20200517</a></li>
+      <li><a href="../../../../../posts/2020/04/26/miscellaneous_notes_20200426">雑記 20200426</a></li>
+      <li><a href="../../../../../posts/2020/04/11/miscellaneous_notes_20200411">雑記 20200411</a></li>
+    </ul>
+  </div>
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../../../../../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "../../../../..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>

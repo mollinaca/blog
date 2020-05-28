@@ -121,6 +121,44 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/28/prom_20200528#prom_20200528">promethes久々に動かした</a></h2>
+    <p>
+      Posted on 2020-05-28(Thu) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/docker.html">docker</a>,              <a href="../tag/prometheus.html">prometheus</a>
+    </p>
+  </header>
+  <div>
+      <h1>Prometheus Meetup Tokyo #3 に参加した</h1>
+<p><a href="https://prometheus.connpass.com/event/175547/">Prometheus Meetup Tokyo #4</a><br>
+オンラインで開催していたので参加。<br>
+オンラインは人数制限なくて参加しやすいのがほんといいね。会場いかなくていいし。  </p>
+<p>1年ちょっと前ぐらいに、チームの監視ツールを munin &amp; zabbix から一新したくて、Prometheus と AlertManager に置き換えられないかなぁといろいろやって、<br>
+担当案件のリソース監視に勝手に突っ込んだりしてたけどうまく通せず、それっきりになってた。<br>
+その後チームの異動があったりでしばらく遠ざかってたけど、久々に監視ツール系でいい話が色々聞けた。  </p>
+<p>クラウドネイティブ、k8sの監視が前提なので、今更「オンプレなんですが。。。」とは言いにくいんだけど、<br>
+とはいえこの手のモダンな監視ツールは追っかけておきたい分野でもあるので、定期的にアップデートしておこう。</p>
+<p>ただ今日の話ははっきりいってほとんどついていけなかった。。(´；ω；｀)  </p>
+<h1>以前自分でつくったmonitoringツール用のrepo</h1>
+<p><a href="https://github.com/mollinaca/monitor">mollinaca/monitor</a><br>
+これも5ヶ月ぐらい前か。。あっという間。  </p>
+<p>ホストに、PrometheusとcAdvisorとnode_exporterとgrafanaのdockerイメージをpullしてきて、連携したgrafanaをすぐに立てられる。<br>
+久々にローカルVMに引っ張ってきて立ててみたら、なんかPrometheusのコンテナだけコケて、あれあれと思ってたけど、dockerコンテナにaddするvolumeの権限周りだったっぽい。<br>
+ファイルとディレクトリをえーいで777にしたら動いた。いいのかこれで。</p>
+<h1>やりたいことって何だったんだっけ</h1>
+<ul>
+<li>インフラの運用 …</li></ul>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/28/prom_20200528#prom_20200528">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/26/misc_20200526#misc_20200526">雑記 20200526</a></h2>
     <p>
       Posted on 2020-05-26(Tue) in <a href="../category/diary.html">雑記</a>
@@ -177,31 +215,6 @@
            href="../posts/2020/05/25/bookreading_20200525#bookreading_20200525">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/23/past3#past3">PAST3 受験しました</a></h2>
-    <p>
-      Posted on 2020-05-23(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/past.html">PAST</a>
-    </p>
-  </header>
-  <div>
-      <p>PAST3 リアルタイム受験しました。<br>
-目標だった初級がとれたのでとりあえずヨシ。  </p>
-<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_certificate.png" title="PAST3 Certificate">   </p>
-<blockquote>
-<p>検定の問題については、2020/6/6 18:00 JSTまで、口外することを禁止しております。口外した場合は、損害賠償などを請求する場合がありますので、ご注意ください。</p>
-</blockquote>
-<p>なので、この記事では問題には触れませんが、茶レベルで要求される基本的なプログラミング能力、データ構造と操作については、始めた当初よりだいぶできるようになったなを実感した。<br>
-A～Fまでで、だいたい3時間ほどかけてAC。次のG問題については、たぶん時間かけて（まだ2時間残ってたし）やれば十分できそうだなと感じたけど、今回はいったんここで切り上げ。<br>
-過去問として公開されたら、改めて挑戦しようと思う。</p>
-<p>引き続き、茶上位目指してがんばろう。  </p>
-<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_rate.png" title="AtCoder Rate">   </p>
   </div>
 </article>
 

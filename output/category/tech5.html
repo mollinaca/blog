@@ -121,6 +121,51 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/05/pot#pot">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）</a></h2>
+    <p>
+      Posted on 2020-05-05(Tue) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/ec2.html">EC2</a>,              <a href="../tag/githubpages.html">GitHubPages</a>,              <a href="../tag/python.html">Python</a>,              <a href="../tag/hanipotsuto.html">ハニーポット</a>
+    </p>
+  </header>
+  <div>
+      <p>GW の自由工作的な。  </p>
+<h2>成果物（作成中）</h2>
+<p><a href="https://mollinaca.github.io/pot/" target=_blank>hstn-pot</a><br>
+いまはまだ、アクセスすると最新の集計ログの json が表示されるだけだけど。。   </p>
+<h2>Architecture</h2>
+<p><img alt="pot_architecture" src="https://blog.watarinohibi.tokyo/images/20200505_pot.png" title="pot_architecture">   </p>
+<ul>
+<li>SecurityGroup で EC2 の ssh/22 を解放し、外部からのアクセスを受け付ける  <ul>
+<li>22番を解放しているためアクセスは来るが、実際にアクセスができるのは鍵認証ができる特定ユーザのみ  </li>
+</ul>
+</li>
+<li>1時間に1回アクセスログを集計し、以下の二つで記録されたものを抽出してjsonに整形して repo へ push  <ul>
+<li>Invalid user  </li>
+<li>Conncection closed<br>
+現在のスクリプト: <a href="https://github.com/mollinaca/pot/blob/master/script/secure.py" target=_blank>secure.py</a>  </li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">re</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">json</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">datetime</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">pathlib</span></span>
+<span class="code-line"><span class="kn">import …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/05/pot#pot">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/04/cron_pyenv_pipenv#cron_pyenv_pipenv">pyenv の Python にインストールされた pipenv の仮想環境にインストールされた Python を cron で動かす</a></h2>
     <p>
       Posted on 2020-05-04(Mon) in <a href="../category/tech.html">Tech</a>
@@ -186,46 +231,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/05/04/router_latency#router_latency">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/03/abc166#abc166">AtCoder Beginner Contest 166</a></h2>
-    <p>
-      Posted on 2020-05-03(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日はDまでできた！よかったー。<br>
-Dも1WAしたけど、単純なポカミスをやらかしてしまいなので、ロジック的には1発で通せた。<br>
-今回は運がよかったというのも大分あるけど、久々の4完でちょっと嬉しい＾＾  </p>
-<hr>
-<h3>A</h3>
-<p><a href="https://atcoder.jp/contests/abc166/tasks/abc166_a">A - A?C</a>  </p>
-<p>入力が "ABC" なら "ARC" を出力、 "ARC" なら "ABC" を出力するというもの。<br>
-言われた通りに実装して終わり。</p>
-<p><a href="https://atcoder.jp/contests/abc166/submissions/12706363">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
-<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ABC&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;ARC&quot;</span> <span class="k">else</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ARC&quot;</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<h3>B</h3>
-<p><a href="https://atcoder.jp/contests/abc166/tasks/abc166_b">B - Trick or Treat</a>  </p>
-<p>お菓子を持っていないすぬけ君の人数を出力すればよい。<br>
-最初に 1~N のリストを作り、お菓子を配られた番号は抜いていき、最後に残った要素数を出力した。</p>
-<p><a href="https://atcoder.jp/contests/abc166/submissions/12726298">提出</a></p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr …</span></code></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/03/abc166#abc166">
           Continue reading
         </a>
   </div>

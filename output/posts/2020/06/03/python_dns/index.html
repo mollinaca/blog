@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../../../../../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../../../../../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../../../../../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../../../../../theme/pygments/monokai.min.css">
+
+    <script src="../../../../../theme/tipuesearch/jquery.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="../../../../../tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="../../../../../theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="s.hosoya" />
+<meta name="description" content="そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。 いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。 実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。 参考 検索すると上位に出てくるサイトなど。 Pythonでnslookup(ドメインの正引きと逆引き)する 個人ブログ。 socket.gethostbyname, socket.gethostbyaddr による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。 そもそも socket は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。 Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】 テックアカデミーの記事。 これも名前解決のやり方で、NSの指定まではフォローしていない。 socket.gethostbyaddr と dnspython について触れている。名前解決だけならこれでもまぁ十分。 dnspython のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは …" />
+<meta name="keywords" content="Python, DNS">
+
+
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:title" content="python でネームサーバを指定して dig/nslookup をしたい(memo)"/>
+<meta property="og:description" content="そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。 いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。 実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。 参考 検索すると上位に出てくるサイトなど。 Pythonでnslookup(ドメインの正引きと逆引き)する 個人ブログ。 socket.gethostbyname, socket.gethostbyaddr による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。 そもそも socket は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。 Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】 テックアカデミーの記事。 これも名前解決のやり方で、NSの指定まではフォローしていない。 socket.gethostbyaddr と dnspython について触れている。名前解決だけならこれでもまぁ十分。 dnspython のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../../../posts/2020/06/03/python_dns"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-06-03 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../../../author/s.hosoya.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="Python"/>
+<meta property="article:tag" content="DNS"/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; python でネームサーバを指定して dig/nslookup をしたい(memo)</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="../../../../..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../../../../.."></a>
+      </h1>
+
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../../../../../pages/about.html#about">
+                  About
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+
+      <!-- my twitter timeline -->
+      <ul>
+        <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/syoutin?ref_src=twsrc%5Etfw">Tweets by syoutin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </ul>
+
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="python_dns">python でネームサーバを指定して dig/nslookup をしたい(memo)</h1>
+    <p>
+      Posted on 2020-06-03(Wed) in <a href="../../../../../category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。<br>
+いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。  </p>
+<p>実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。</p>
+<hr>
+<h2>参考</h2>
+<p>検索すると上位に出てくるサイトなど。</p>
+<p><a href="http://sonickun.hatenablog.com/entry/2014/10/30/183541">Pythonでnslookup(ドメインの正引きと逆引き)する</a><br>
+個人ブログ。<br>
+<code>socket.gethostbyname</code>, <code>socket.gethostbyaddr</code> による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。<br>
+そもそも <code>socket</code> は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。  </p>
+<p><a href="https://techacademy.jp/magazine/20868">Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】</a><br>
+テックアカデミーの記事。<br>
+これも名前解決のやり方で、NSの指定まではフォローしていない。  </p>
+<p><code>socket.gethostbyaddr</code> と <code>dnspython</code> について触れている。名前解決だけならこれでもまぁ十分。<br>
+<code>dnspython</code> のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは？<br>
+たぶんこれをそのままコピペしたっぽい。まぁ公式から正しいコードを引用してるだけマシか。  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">rthalley</span><span class="o">/</span><span class="n">dnspython</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">mx</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"><span class="c1">#!/usr/bin/env python3</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">dns.resolver</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">answers</span> <span class="o">=</span> <span class="n">dns</span><span class="o">.</span><span class="n">resolver</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;nominum.com&#39;</span><span class="p">,</span> <span class="s1">&#39;MX&#39;</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">rdata</span> <span class="ow">in</span> <span class="n">answers</span><span class="p">:</span></span>
+<span class="code-line">    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Host&#39;</span><span class="p">,</span> <span class="n">rdata</span><span class="o">.</span><span class="n">exchange</span><span class="p">,</span> <span class="s1">&#39;has preference&#39;</span><span class="p">,</span> <span class="n">rdata</span><span class="o">.</span><span class="n">preference</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>調べたこと</h2>
+<p>ライブラリとしては、 <code>socket</code>, <code>dnspython</code>, <code>nslookup</code>, <code>pydig</code> あたりが使えそう。<br>
+それぞれの開発状況と使い方をあわせてまとめよう。  </p>
+<h3>dnspython</h3>
+<p>https://pypi.org/project/dnspython/<br>
+http://www.dnspython.org/<br>
+https://github.com/rthalley/dnspython  </p>
+<h2>nslookup</h2>
+<p>https://pypi.org/project/nslookup/<br>
+https://github.com/wesinator/pynslookup  </p>
+<h3>PyDig</h3>
+<p>https://pypi.org/project/pydig/<br>
+https://github.com/leonsmith/pydig  </p>
+<p>pydigが一番開発されてそう。nslookupは新しめ。<br>
+dnspythonはわりとオワコン臭がしている、開発続いてるみたいだけど。  </p>
+<p>まとまったら記事かこ。  </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../../../tag/python.html">Python</a>
+      <a href="../../../../../tag/dns.html">DNS</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="../../../../../posts/2020/05/09/pot4">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(4)</a></li>
+      <li><a href="../../../../../posts/2020/05/07/pot3">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(3)</a></li>
+      <li><a href="../../../../../posts/2020/05/06/pot2">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(2)</a></li>
+      <li><a href="../../../../../posts/2020/05/05/pot">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）</a></li>
+      <li><a href="../../../../../posts/2020/05/04/cron_pyenv_pipenv">pyenv の Python にインストールされた pipenv の仮想環境にインストールされた Python を cron で動かす</a></li>
+    </ul>
+  </div>
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../../../../../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "../../../../..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>

@@ -121,6 +121,51 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/06/pot2#pot2">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(2)</a></h2>
+    <p>
+      Posted on 2020-05-06(Wed) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/ec2.html">EC2</a>,              <a href="../tag/githubpages.html">GitHubPages</a>,              <a href="../tag/python.html">Python</a>,              <a href="../tag/hanipotsuto.html">ハニーポット</a>
+    </p>
+  </header>
+  <div>
+      <p><a href="https://blog.watarinohibi.tokyo/posts/2020/05/05/pot/#pot">昨日</a>の続き。  </p>
+<h2>現在のページ</h2>
+<p><img alt="current_index" src="https://blog.watarinohibi.tokyo/images/20200506_pot_current_index.png" title="current_index">   </p>
+<p>JSをがりがり書いて、ログを集計してテーブルで表示できるようになった。<br>
+この表示処理は、ページを onload したタイミングで実行される JavaScript で実行される。<br>
+JSのソースは <a href="https://github.com/mollinaca/pot/blob/master/docs/src/js/index.js">こちら</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1">// index.js</span></span>
+<span class="code-line"><span class="c1">// called at last of index.html &lt;/body&gt;</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">//------------------------</span></span>
+<span class="code-line"><span class="c1">// Global Variables</span></span>
+<span class="code-line"><span class="c1">//------------------------</span></span>
+<span class="code-line"><span class="kr">const</span> <span class="nx">API_ENDPOINT</span> <span class="o">=</span> <span class="s1">&#39;https://mollinaca.github.io/pot/api/&#39;</span></span>
+<span class="code-line"><span class="c1">//latestFilename = undefined;</span></span>
+<span class="code-line"><span class="c1">//let latest_log = undefined;</span></span>
+<span class="code-line"></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">//------------------------</span></span>
+<span class="code-line"><span class="c1">// Functions</span></span>
+<span class="code-line"><span class="c1">//------------------------</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">// window.onload initialize</span></span>
+<span class="code-line"><span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span></span>
+<span class="code-line"><span class="c1">//    console.log (&quot;init()&quot;)</span></span>
+<span class="code-line"></span>
+<span class="code-line">    <span class="kd">let</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/06/pot2#pot2">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/05/pot#pot">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）</a></h2>
     <p>
       Posted on 2020-05-05(Tue) in <a href="../category/tech.html">Tech</a>
@@ -192,41 +237,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/05/04/cron_pyenv_pipenv#cron_pyenv_pipenv">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/26/pipenv#pipenv">AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする</a></h2>
-    <p>
-      Posted on 2020-04-26(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>,              <a href="../tag/python.html">python</a>,              <a href="../tag/pyenv.html">pyenv</a>,              <a href="../tag/pipenv.html">pipenv</a>
-    </p>
-  </header>
-  <div>
-      <p>CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。</p>
-<p>この記事では、pyenv を使って pipenv を用意する手順について記載する。<br>
-pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
-<h2>環境</h2>
-<ul>
-<li>OS</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code># cat /etc/redhat-release</span>
-<span class="code-line">NAME=&quot;Amazon Linux&quot;</span>
-<span class="code-line">VERSION=&quot;2&quot;</span>
-<span class="code-line">ID=&quot;amzn&quot;</span>
-<span class="code-line">ID_LIKE=&quot;centos rhel fedora&quot;</span>
-<span class="code-line">VERSION_ID=&quot;2&quot;</span>
-<span class="code-line">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span>
-<span class="code-line">ANSI_COLOR=&quot;0;33&quot;</span>
-<span class="code-line">CPE_NAME=&quot;cpe:2.3:o …</span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/26/pipenv#pipenv">
           Continue reading
         </a>
   </div>

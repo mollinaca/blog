@@ -121,6 +121,40 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/06/03/python_dns#python_dns">python でネームサーバを指定して dig/nslookup をしたい(memo)</a></h2>
+    <p>
+      Posted on 2020-06-03(Wed) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/python.html">Python</a>,              <a href="../tag/dns.html">DNS</a>
+    </p>
+  </header>
+  <div>
+      <p>そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。<br>
+いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。  </p>
+<p>実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。</p>
+<hr>
+<h2>参考</h2>
+<p>検索すると上位に出てくるサイトなど。</p>
+<p><a href="http://sonickun.hatenablog.com/entry/2014/10/30/183541">Pythonでnslookup(ドメインの正引きと逆引き)する</a><br>
+個人ブログ。<br>
+<code>socket.gethostbyname</code>, <code>socket.gethostbyaddr</code> による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。<br>
+そもそも <code>socket</code> は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。  </p>
+<p><a href="https://techacademy.jp/magazine/20868">Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】</a><br>
+テックアカデミーの記事。<br>
+これも名前解決のやり方で、NSの指定まではフォローしていない。  </p>
+<p><code>socket.gethostbyaddr</code> と <code>dnspython</code> について触れている。名前解決だけならこれでもまぁ十分。<br>
+<code>dnspython</code> のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/06/03/python_dns#python_dns">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/09/pot4#pot4">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(4)</a></h2>
     <p>
       Posted on 2020-05-09(Sat) in <a href="../category/tech.html">Tech</a>
@@ -196,51 +230,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/05/07/pot3#pot3">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/06/pot2#pot2">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(2)</a></h2>
-    <p>
-      Posted on 2020-05-06(Wed) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/ec2.html">EC2</a>,              <a href="../tag/githubpages.html">GitHubPages</a>,              <a href="../tag/python.html">Python</a>,              <a href="../tag/hanipotsuto.html">ハニーポット</a>
-    </p>
-  </header>
-  <div>
-      <p><a href="https://blog.watarinohibi.tokyo/posts/2020/05/05/pot/#pot">昨日</a>の続き。  </p>
-<h2>現在のページ</h2>
-<p><img alt="current_index" src="https://blog.watarinohibi.tokyo/images/20200506_pot_current_index.png" title="current_index">   </p>
-<p>JSをがりがり書いて、ログを集計してテーブルで表示できるようになった。<br>
-この表示処理は、ページを onload したタイミングで実行される JavaScript で実行される。<br>
-JSのソースは <a href="https://github.com/mollinaca/pot/blob/master/docs/src/js/index.js">こちら</a></p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1">// index.js</span></span>
-<span class="code-line"><span class="c1">// called at last of index.html &lt;/body&gt;</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"><span class="c1">// Global Variables</span></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"><span class="kr">const</span> <span class="nx">API_ENDPOINT</span> <span class="o">=</span> <span class="s1">&#39;https://mollinaca.github.io/pot/api/&#39;</span></span>
-<span class="code-line"><span class="c1">//latestFilename = undefined;</span></span>
-<span class="code-line"><span class="c1">//let latest_log = undefined;</span></span>
-<span class="code-line"></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"><span class="c1">// Functions</span></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c1">// window.onload initialize</span></span>
-<span class="code-line"><span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span></span>
-<span class="code-line"><span class="c1">//    console.log (&quot;init()&quot;)</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="kd">let</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest …</span></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/06/pot2#pot2">
           Continue reading
         </a>
   </div>

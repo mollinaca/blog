@@ -121,6 +121,41 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/12/binsearch#binsearch">二分探索</a></h2>
+    <p>
+      Posted on 2020-05-12(Tue) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/jing ji p.html">競技プログラミング</a>,              <a href="../tag/arugorizumu.html">アルゴリズム</a>
+    </p>
+  </header>
+  <div>
+      <p>今日たまたまやった練習問題  </p>
+<p><a href="https://atcoder.jp/contests/abc146/tasks/abc146_c">C - Buy an Integer</a><br>
+が、二分探索の問題だった。  </p>
+<p>最初読んでどうやればいいかわからず（計算量的にNの全探索ではないことはすぐわかったが、どうやって減らす？）、<br>
+数学的に、累乗の指数から答え付近を探して、そこから探していけばいいのかな～とか考えていたけどうまくいかず解説を読んだら二分探索だった。  </p>
+<p>あー、二分探索はわかるぞということでがんばって実装した。  </p>
+<p><a href="https://atcoder.jp/contests/abc146/submissions/13154541">提出</a>  </p>
+<p>最終的に出力する <code>ans</code> をしたから、上限を <code>over</code> として一番上に設定し、二つの平均を求め、<br>
+平均が制約の上限より上なら <code>over</code> を平均へ入れ替え、下なら <code>ans</code> を平均といれかえる、というのを繰り返し、<br>
+<code>ans</code>と<code>over</code>の差が1以下になったら終了という感じ。  </p>
+<p>これはちょっと考えたけど、にぶたんということがわかったらなんとなく実装できた！</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0 …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/12/binsearch#binsearch">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/11/bit-fullsearch#bit-fullsearch">bit全探索</a></h2>
     <p>
       Posted on 2020-05-11(Mon) in <a href="../category/tech.html">Tech</a>
@@ -190,46 +225,6 @@ ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パタ�
 <p>Cをちょっと眺めたけど、今日は事情ありここで離脱。<br>
 たぶんCもできなかっただろうなこれ。。<br>
 別途復習しておこう。</p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/10/social_20200510#social_20200510">"#検察庁法改正案に抗議します" について</a></h2>
-    <p>
-      Posted on 2020-05-10(Sun) in <a href="../category/social.html">Social</a>
-
-          &#8226; Tagged with
-              <a href="../tag/politics.html">政治</a>,              <a href="../tag/news.html">ニュース</a>
-    </p>
-  </header>
-  <div>
-      <p>本日の Twitter のトレンドで "#検察庁法改正案に抗議します" というのが急浮上して話題になっていた。  </p>
-<p><a href="https://www3.nhk.or.jp/news/html/20200510/k10012424081000.html">「＃検察庁法改正案に抗議します」投稿広がる 380万超に</a><br>
-<a href="https://www.asahi.com/articles/ASN5B34BYN5BUTIL005.html">検察庁法改正に抗議、ツイッターで470万超　著名人も</a><br>
-<a href="https://news.nicovideo.jp/watch/nw7229563">「 #検察庁法改正案に抗議します 」ハッシュタグに470万件の声、なぜここまでの炎上が起こるのか</a><br>
-<a href="https://www.t-benren.org/statement/298">東京高検黒川弘務検事長の定年延長を行った閣議決定を直ちに撤回することを求める会長声明</a>   </p>
-<p>ほんとに、ジャンルを問わずに著名な方々が賛同を表明している。<br>
-近年、政治の話題でここまで一致団結するようなことがあっただろうかと思う。  </p>
-<blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://twitter.com/hashtag/%E6%A4%9C%E5%AF%9F%E5%BA%81%E6%B3%95%E6%94%B9%E6%AD%A3%E6%A1%88%E3%81%AB%E6%8A%97%E8%AD%B0%E3%81%97%E3%81%BE%E3%81%99?src=hash&amp;ref_src=twsrc%5Etfw">#検察庁法改正案に抗議します</a> <a href="https://t.co/QeVYWObxTc">pic.twitter.com/QeVYWObxTc</a></p>&mdash; きゃりーぱみゅぱみゅ (@pamyurin) <a href="https://twitter.com/pamyurin/status/1259302786597941249?ref_src=twsrc%5Etfw">May 10, 2020</a></blockquote>
-
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  </p>
-<p>さすがにこのカジュアルな図ほどシンプルな話ではないのではと思うんだけど。。。 <br>
-とはいえ、抗議に賛同を表明されている方々は、具体的な問題点の指摘がなくて正直よくわからん。   </p>
-<h2>一連の法案の経緯？</h2>
-<p>正確かどうか、真実かどうかはさておき。。。 <br>
-ある程度理解できる日本語で説明されている方がおられたので転載。   </p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">いやまあ理由はいろいろあったんだけど従来は定年が一般公務員60歳に対して検察官63歳だったところ前者を65歳に伸ばすんだから後者もそれなりに引き上げないとまずいだろ常識的に考えて（頭痛）。</p>&mdash; Takehiro OHYA (@takehiroohya) <a href="https://twitter.com/takehiroohya/status/1259311161045946368?ref_src=twsrc%5Etfw">May 10, 2020</a></blockquote>
-
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>また、こちらにも。<br>
-<a href="https://note.com/tonfi/n/n95a2265c6273">いったい検察庁法改正案の何に抗議しているのか</a><br>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E6%A4%9C%E5%AF%9F%E5%BA%81%E6%B3%95%E6%94%B9%E6%AD%A3%E6%A1%88%E3%81%AB%E6%8A%97%E8%AD%B0%E3%81%97%E3%81%BE%E3%81%99?src=hash&amp;ref_src=twsrc%5Etfw">#検察庁法改正案に抗議します</a> がトレンドにあるのを受け …</p></blockquote></p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/10/social_20200510#social_20200510">
-          Continue reading
-        </a>
   </div>
 </article>
 

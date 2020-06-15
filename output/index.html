@@ -121,6 +121,44 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/06/15/misc_20200615#misc_20200615">雑記 20200615</a></h2>
+    <p>
+      Posted on 2020-06-15(Mon) in <a href="./category/diary.html">雑記</a>
+
+          &#8226; Tagged with
+              <a href="./tag/diary.html">雑記</a>
+    </p>
+  </header>
+  <div>
+      <h1>物件！</h1>
+<p>概ね決まった。契約に向けて進行中。<br>
+結局去年の年末から探し始めて、マンションをいろいろ見て、あーでもないこーでもないしてるうちにコロナが始まって、<br>
+しばらくおとなしくしてたらリモートワークが始まって、そのまま恒久リモートワークに移行して、なら郊外でよくない？になって。  </p>
+<p>最終的に会社のそばではなく妻の実家のそば、さらに妻が職場異動しても通いやすくて駅から遠いけどバスの便が良い（そもそも自分はほとんど電車乗る外出しなくなる）場所で、<br>
+駅が遠いせいでたいへんお値打ちな新築を発見。そこに決めてしまいました。  </p>
+<p>建売の新築だけどいろいろ交渉したら追加工事で壁内のLANケーブルの配線もやってくれるそうで、その他追加工事もお願いしていろいろいろいろやってくれそう。<br>
+広め3LDKで、子育て&amp;家でPC作業もできそうで大変良い感じで今から楽しみです。<br>
+工事やらなんやらと妻の出産予定が間に挟まるので引き渡しは11月予定、引越しは早くても12月かな。<br>
+9月末に出産予定なのでそこから3ヶ月後ぐらいを見て引越ししようと思います。  </p>
+<p>新宿、いい街だった。ありがとう。<br>
+ただいま埼玉。  </p>
+<h1>昨日のABC170</h1>
+<p>そんなこんなで最近は平日も週末も忙しくしておりあまり日記も更新できずにいたところで、昨日のABC170も欠席。<br>
+さきほど改めて問題といて、A,B,Cの3問はさくっとできたのでよかった。まぁCで2WAしたけど。。本番でなくてよかった。  </p>
+<p>昨日寝る前にTL見てたらだいぶ荒れててCの解説が煽ってる？みたいな雰囲気だったみたい。  </p>
+<p><a href="https://img.atcoder.jp/abc170/editorial.pdf">editorial.pdf</a>  </p>
+<p>うーん、これはたしかに、捉えようによっては、という感じ。<br>
+このCが解けなかった人にこれはちょっと足りないんじゃない（A,Bが丁寧なだけに、余計に）と感じるし …</p>
+        <br>
+        <a class="btn"
+           href="./posts/2020/06/15/misc_20200615#misc_20200615">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/06/09/bookreading_20200609#bookreading_20200609">小川一水 天冥の標Ⅲ</a></h2>
     <p>
       Posted on 2020-06-09(Tue) in <a href="./category/book.html">Book</a>
@@ -176,40 +214,6 @@
         <br>
         <a class="btn"
            href="./posts/2020/06/07/misc_20200607#misc_20200607">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/06/03/python_dns#python_dns">python でネームサーバを指定して dig/nslookup をしたい(memo)</a></h2>
-    <p>
-      Posted on 2020-06-03(Wed) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/python.html">Python</a>,              <a href="./tag/dns.html">DNS</a>
-    </p>
-  </header>
-  <div>
-      <p>そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。<br>
-いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。  </p>
-<p>実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。</p>
-<hr>
-<h2>参考</h2>
-<p>検索すると上位に出てくるサイトなど。</p>
-<p><a href="http://sonickun.hatenablog.com/entry/2014/10/30/183541">Pythonでnslookup(ドメインの正引きと逆引き)する</a><br>
-個人ブログ。<br>
-<code>socket.gethostbyname</code>, <code>socket.gethostbyaddr</code> による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。<br>
-そもそも <code>socket</code> は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。  </p>
-<p><a href="https://techacademy.jp/magazine/20868">Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】</a><br>
-テックアカデミーの記事。<br>
-これも名前解決のやり方で、NSの指定まではフォローしていない。  </p>
-<p><code>socket.gethostbyaddr</code> と <code>dnspython</code> について触れている。名前解決だけならこれでもまぁ十分。<br>
-<code>dnspython</code> のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/06/03/python_dns#python_dns">
           Continue reading
         </a>
   </div>

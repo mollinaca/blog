@@ -121,6 +121,44 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/28/prom_20200528#prom_20200528">promethes久々に動かした</a></h2>
+    <p>
+      Posted on 2020-05-28(Thu) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/docker.html">docker</a>,              <a href="../tag/prometheus.html">prometheus</a>
+    </p>
+  </header>
+  <div>
+      <h1>Prometheus Meetup Tokyo #3 に参加した</h1>
+<p><a href="https://prometheus.connpass.com/event/175547/">Prometheus Meetup Tokyo #4</a><br>
+オンラインで開催していたので参加。<br>
+オンラインは人数制限なくて参加しやすいのがほんといいね。会場いかなくていいし。  </p>
+<p>1年ちょっと前ぐらいに、チームの監視ツールを munin &amp; zabbix から一新したくて、Prometheus と AlertManager に置き換えられないかなぁといろいろやって、<br>
+担当案件のリソース監視に勝手に突っ込んだりしてたけどうまく通せず、それっきりになってた。<br>
+その後チームの異動があったりでしばらく遠ざかってたけど、久々に監視ツール系でいい話が色々聞けた。  </p>
+<p>クラウドネイティブ、k8sの監視が前提なので、今更「オンプレなんですが。。。」とは言いにくいんだけど、<br>
+とはいえこの手のモダンな監視ツールは追っかけておきたい分野でもあるので、定期的にアップデートしておこう。</p>
+<p>ただ今日の話ははっきりいってほとんどついていけなかった。。(´；ω；｀)  </p>
+<h1>以前自分でつくったmonitoringツール用のrepo</h1>
+<p><a href="https://github.com/mollinaca/monitor">mollinaca/monitor</a><br>
+これも5ヶ月ぐらい前か。。あっという間。  </p>
+<p>ホストに、PrometheusとcAdvisorとnode_exporterとgrafanaのdockerイメージをpullしてきて、連携したgrafanaをすぐに立てられる。<br>
+久々にローカルVMに引っ張ってきて立ててみたら、なんかPrometheusのコンテナだけコケて、あれあれと思ってたけど、dockerコンテナにaddするvolumeの権限周りだったっぽい。<br>
+ファイルとディレクトリをえーいで777にしたら動いた。いいのかこれで。</p>
+<h1>やりたいことって何だったんだっけ</h1>
+<ul>
+<li>インフラの運用 …</li></ul>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/28/prom_20200528#prom_20200528">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/23/past3#past3">PAST3 受験しました</a></h2>
     <p>
       Posted on 2020-05-23(Sat) in <a href="../category/tech.html">Tech</a>
@@ -170,47 +208,6 @@ A～Fまでで、だいたい3時間ほどかけてAC。次のG問題につい�
         <br>
         <a class="btn"
            href="../posts/2020/05/20/xfs#xfs">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/17/abc168#abc168">AtCoder Beginner Contest 168</a></h2>
-    <p>
-      Posted on 2020-05-17(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日は無事(?)3完。<br>
-Dはチャレンジしたけどまだ勝てないやつだった、無念ナリ。  </p>
-<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_a">A - ∴ (Therefore)</a><br>
-入力された数字の1桁目の値による条件分岐。<br>
-1桁目の値をとるやり方はいくつかあると思うけど、今回はパッと思いついた文字列スライスの末尾から取得した。<br>
-桁和とかだったら10の余剰とかいろいろあるけど、今回はこれで十分。  </p>
-<p><a href="https://atcoder.jp/contests/abc168/submissions/13293727">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc168_a</span><span class="o">.</span><span class="n">py</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
-<span class="code-line"><span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;pon&quot;</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;bon&quot;</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hon&quot;</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_b">B - ... (Triple Dots)</a><br>
-KとSの長さを比較して、Kのほうが長ければSをそのまま、Sのほうが長ければK分だけ出力して末尾に ... を足す、という処理 …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/17/abc168#abc168">
           Continue reading
         </a>
   </div>

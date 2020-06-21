@@ -121,6 +121,41 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/26/pipenv#pipenv">AmazonLinux2 に pipenv/pyenv をインストールして python3.8を使えるようにする</a></h2>
+    <p>
+      Posted on 2020-04-26(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/amazonlinux.html">AmazonLinux</a>,              <a href="../tag/python.html">python</a>,              <a href="../tag/pyenv.html">pyenv</a>,              <a href="../tag/pipenv.html">pipenv</a>
+    </p>
+  </header>
+  <div>
+      <p>CentOSやCentOSのfork(?)のAmazonLinuxでは、OSのパッケージ管理に使ってる yum/dnf コマンドが OSインストールの python を使っている都合上、気軽にOS上のpythonを変更できない。そのためOSのpythonとは別に隔離環境でpythonの実行環境を用意する必要がある。</p>
+<p>この記事では、pyenv を使って pipenv を用意する手順について記載する。<br>
+pipenv に拘らなければ、 pyenv だけでも良いと思う。  </p>
+<h2>環境</h2>
+<ul>
+<li>OS</li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code># cat /etc/redhat-release</span>
+<span class="code-line">NAME=&quot;Amazon Linux&quot;</span>
+<span class="code-line">VERSION=&quot;2&quot;</span>
+<span class="code-line">ID=&quot;amzn&quot;</span>
+<span class="code-line">ID_LIKE=&quot;centos rhel fedora&quot;</span>
+<span class="code-line">VERSION_ID=&quot;2&quot;</span>
+<span class="code-line">PRETTY_NAME=&quot;Amazon Linux 2&quot;</span>
+<span class="code-line">ANSI_COLOR=&quot;0;33&quot;</span>
+<span class="code-line">CPE_NAME=&quot;cpe:2.3:o …</span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/26/pipenv#pipenv">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
     <p>
       Posted on 2020-04-25(Sat) in <a href="../category/tech.html">Tech</a>
@@ -200,35 +235,6 @@ https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構�
         <br>
         <a class="btn"
            href="../posts/2020/04/19/abc163#abc163">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/14/practice_2020414#practice_2020414">競プロ Practice 日記</a></h2>
-    <p>
-      Posted on 2020-04-14(Tue) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日チャレンジした問題  </p>
-<p><a href="https://atcoder.jp/contests/agc007/tasks/agc007_a">A - Shik and Stone</a>  </p>
-<p>パッと見 dfs に見せかけて、じつはdfsだとちょっと難しくて、問題文をちゃんと正しく解釈すれば1行で解けたパターン。<br>
-パッと見であ！dfsだ！チャレンジで見たやつだ！となって意気揚々と実装してみたものの、例１、例２までは通したら例３で見事にハマった。ここで引っかかるところも含めての問題なんだなぁ。。  </p>
-<p>dfs に見せかけというのは、ようするに「右」と「下」の移動だけで左上から右下まで # を辿ってゴールにいけるか？という問題に見えたということ。<br>
-この条件で実装すると、例３は <code>Possible</code> だが出力例は <code>Impossible</code> でええ？となる。<br>
-例３は「右」と「下」の移動だけでゴールまでたどり着けるが、実はこれは題意を満たさない。  </p>
-<p>条件は <code>移動する過程で、駒が常に右または下に動いていた可能性があるか判定してください。</code> なので、<br>
-移動ルートの中で <em>左に移動することが可能であったならば</em>、答えは <code>Impossible</code> になる、ということ。<br>
-えー …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/14/practice_2020414#practice_2020414">
           Continue reading
         </a>
   </div>

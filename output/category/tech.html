@@ -121,6 +121,53 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/06/21/abc171#abc171">AtCoder Beginner Contest 171</a></h2>
+    <p>
+      Posted on 2020-06-21(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>前回 170 は参加できなかったので、久々ABC。<br>
+今回はなんとかDまで解いて4完だったけど、ちょっとあぶなかったし凡ミスWAがあったので反省。。  </p>
+<hr>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_a">A - αlphabet</a></p>
+<p>入力が小文字なら <code>a</code> を、大文字なら <code>A</code> を出力せよ、という問題。<br>
+最初問題を読み間違えていて、小文字が入力されたらそれを大文字で、大文字が入力されたらそれを小文字で出力せよと読み間違えて、1WA。<br>
+落ち着こう。</p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_a</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="k">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">isupper</span><span class="p">():</span></span>
+<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;A&quot;</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;a&quot;</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>※三項演算子でもっと短く書けるね  </p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_b">B - Mix Juice</a>  </p>
+<p>ソートして先頭からK個の和を出力するだけ。  </p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_b</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="n">l …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/06/21/abc171#abc171">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/06/03/python_dns#python_dns">python でネームサーバを指定して dig/nslookup をしたい(memo)</a></h2>
     <p>
       Posted on 2020-06-03(Wed) in <a href="../category/tech.html">Tech</a>
@@ -187,44 +234,6 @@ Aの範囲が 0 から 10^18 …</p>
         <br>
         <a class="btn"
            href="../posts/2020/05/31/abc169#abc169">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/28/prom_20200528#prom_20200528">promethes久々に動かした</a></h2>
-    <p>
-      Posted on 2020-05-28(Thu) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/docker.html">docker</a>,              <a href="../tag/prometheus.html">prometheus</a>
-    </p>
-  </header>
-  <div>
-      <h1>Prometheus Meetup Tokyo #3 に参加した</h1>
-<p><a href="https://prometheus.connpass.com/event/175547/">Prometheus Meetup Tokyo #4</a><br>
-オンラインで開催していたので参加。<br>
-オンラインは人数制限なくて参加しやすいのがほんといいね。会場いかなくていいし。  </p>
-<p>1年ちょっと前ぐらいに、チームの監視ツールを munin &amp; zabbix から一新したくて、Prometheus と AlertManager に置き換えられないかなぁといろいろやって、<br>
-担当案件のリソース監視に勝手に突っ込んだりしてたけどうまく通せず、それっきりになってた。<br>
-その後チームの異動があったりでしばらく遠ざかってたけど、久々に監視ツール系でいい話が色々聞けた。  </p>
-<p>クラウドネイティブ、k8sの監視が前提なので、今更「オンプレなんですが。。。」とは言いにくいんだけど、<br>
-とはいえこの手のモダンな監視ツールは追っかけておきたい分野でもあるので、定期的にアップデートしておこう。</p>
-<p>ただ今日の話ははっきりいってほとんどついていけなかった。。(´；ω；｀)  </p>
-<h1>以前自分でつくったmonitoringツール用のrepo</h1>
-<p><a href="https://github.com/mollinaca/monitor">mollinaca/monitor</a><br>
-これも5ヶ月ぐらい前か。。あっという間。  </p>
-<p>ホストに、PrometheusとcAdvisorとnode_exporterとgrafanaのdockerイメージをpullしてきて、連携したgrafanaをすぐに立てられる。<br>
-久々にローカルVMに引っ張ってきて立ててみたら、なんかPrometheusのコンテナだけコケて、あれあれと思ってたけど、dockerコンテナにaddするvolumeの権限周りだったっぽい。<br>
-ファイルとディレクトリをえーいで777にしたら動いた。いいのかこれで。</p>
-<h1>やりたいことって何だったんだっけ</h1>
-<ul>
-<li>インフラの運用 …</li></ul>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/28/prom_20200528#prom_20200528">
           Continue reading
         </a>
   </div>

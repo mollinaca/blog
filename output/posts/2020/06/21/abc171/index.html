@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="../../../../../theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+    <link id="dark-theme-style" rel="stylesheet" type="text/css"
+          media="(prefers-color-scheme: dark)"
+    href="../../../../../theme/stylesheet/dark-theme.min.css">
+
+    <link id="pygments-dark-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: dark)"
+          href="../../../../../theme/pygments/monokai.min.css">
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+              media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
+          href="../../../../../theme/pygments/monokai.min.css">
+
+    <script src="../../../../../theme/tipuesearch/jquery.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch.min.js"></script>
+    <script src="../../../../../theme/tipuesearch/tipuesearch_set.min.js"></script>
+    <script src="../../../../../tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="../../../../../theme/tipuesearch/tipuesearch.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../../../../../theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="s.hosoya" />
+<meta name="description" content="前回 170 は参加できなかったので、久々ABC。 今回はなんとかDまで解いて4完だったけど、ちょっとあぶなかったし凡ミスWAがあったので反省。。 A A - αlphabet 入力が小文字なら a を、大文字なら A を出力せよ、という問題。 最初問題を読み間違えていて、小文字が入力されたらそれを大文字で、大文字が入力されたらそれを小文字で出力せよと読み間違えて、1WA。 落ち着こう。 提出 abc171_a.py s = input() if s.isupper(): print (&#34;A&#34;) else: print (&#34;a&#34;) ※三項演算子でもっと短く書けるね B B - Mix Juice ソートして先頭からK個の和を出力するだけ。 提出 abc171_b.py n,m = map(int,input().split()) l …" />
+<meta name="keywords" content="AtCoder, ABC, 競技プログラミング">
+
+
+<meta property="og:site_name" content="Days of migratory birds"/>
+<meta property="og:title" content="AtCoder Beginner Contest 171"/>
+<meta property="og:description" content="前回 170 は参加できなかったので、久々ABC。 今回はなんとかDまで解いて4完だったけど、ちょっとあぶなかったし凡ミスWAがあったので反省。。 A A - αlphabet 入力が小文字なら a を、大文字なら A を出力せよ、という問題。 最初問題を読み間違えていて、小文字が入力されたらそれを大文字で、大文字が入力されたらそれを小文字で出力せよと読み間違えて、1WA。 落ち着こう。 提出 abc171_a.py s = input() if s.isupper(): print (&#34;A&#34;) else: print (&#34;a&#34;) ※三項演算子でもっと短く書けるね B B - Mix Juice ソートして先頭からK個の和を出力するだけ。 提出 abc171_b.py n,m = map(int,input().split()) l …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../../../../posts/2020/06/21/abc171"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-06-21 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../../../../author/s.hosoya.html">
+<meta property="article:section" content="Tech"/>
+<meta property="article:tag" content="AtCoder"/>
+<meta property="article:tag" content="ABC"/>
+<meta property="article:tag" content="競技プログラミング"/>
+<meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
+
+  <title>Days of migratory birds &ndash; AtCoder Beginner Contest 171</title>
+
+</head>
+<body >
+  <aside>
+    <div>
+      <a href="../../../../..">
+        <img src="https://blog.watarinohibi.tokyo/images/static/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../../../../.."></a>
+      </h1>
+
+
+        <form class="navbar-search" action="/search.html" role="search">
+          <input type="text" name="q" id="tipue_search_input" placeholder="Search...">
+        </form>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="../../../../../pages/about.html#about">
+                  About
+                </a>
+              </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/syoutin" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-github" href="https://github.com/mollinaca" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+      </ul>
+
+      <!-- my twitter timeline -->
+      <ul>
+        <a class="twitter-timeline" data-width="300" data-height="400" data-theme="dark" href="https://twitter.com/syoutin?ref_src=twsrc%5Etfw">Tweets by syoutin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </ul>
+
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../../../../..">Home</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="abc171">AtCoder Beginner Contest 171</h1>
+    <p>
+      Posted on 2020-06-21(Sun) in <a href="../../../../../category/tech.html">Tech</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>前回 170 は参加できなかったので、久々ABC。<br>
+今回はなんとかDまで解いて4完だったけど、ちょっとあぶなかったし凡ミスWAがあったので反省。。  </p>
+<hr>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_a">A - αlphabet</a></p>
+<p>入力が小文字なら <code>a</code> を、大文字なら <code>A</code> を出力せよ、という問題。<br>
+最初問題を読み間違えていて、小文字が入力されたらそれを大文字で、大文字が入力されたらそれを小文字で出力せよと読み間違えて、1WA。<br>
+落ち着こう。</p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_a</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="k">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">isupper</span><span class="p">():</span></span>
+<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;A&quot;</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;a&quot;</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>※三項演算子でもっと短く書けるね  </p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_b">B - Mix Juice</a>  </p>
+<p>ソートして先頭からK個の和を出力するだけ。  </p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_b</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="n">l</span> <span class="o">=</span> <span class="n">sorted</span><span class="p">(</span><span class="n">list</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())))</span></span>
+<span class="code-line"><span class="n">print</span> <span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">m</span><span class="p">]))</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>C</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_c">C - One Quadrillion and One Dalmatians</a>  </p>
+<p>入力された数字を26進数で表現してそれをアルファベット小文字に直せばよい。<br>
+気付いたらシンプルだけど、なかなかこれに気付けず15分ほど考えてしまった。<br>
+26で割ってあまりをどうこうしてけばいいのはすぐにわかったけど、どう表現すればいいかにちょっと手間取ってノート2ページぐらい書いてようやく気付いた感じ。<br>
+ただ、気づいたあとも、26進数へうまいこと変換する方法が実装できず（ここらへんが基礎的な実装力の問題なんだなぁ）、結局ググって解決した。<br>
+まぁこれはライブラリ力ということで。</p>
+<p>そのものズバリな実装が見つかったので、結局これを流用してACしたけど、これにたどり着くまでに自分でいろいろ頑張った結果無駄WAしてしまった。。  </p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14571139">提出</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_c</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">def</span> <span class="n">num2alpha</span><span class="p">(</span><span class="n">num</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">if</span> <span class="n">num</span><span class="o">&lt;=</span><span class="mi">26</span><span class="p">:</span></span>
+<span class="code-line">        <span class="k">return</span> <span class="n">chr</span><span class="p">(</span><span class="mi">64</span><span class="o">+</span><span class="n">num</span><span class="p">)</span></span>
+<span class="code-line">    <span class="n">elif</span> <span class="n">num</span><span class="o">%</span><span class="mi">26</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span></span>
+<span class="code-line">        <span class="k">return</span> <span class="n">num2alpha</span><span class="p">(</span><span class="n">num</span><span class="o">//</span><span class="mi">26</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">chr</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">        <span class="k">return</span> <span class="n">num2alpha</span><span class="p">(</span><span class="n">num</span><span class="o">//</span><span class="mi">26</span><span class="p">)</span><span class="o">+</span><span class="n">chr</span><span class="p">(</span><span class="mi">64</span><span class="o">+</span><span class="n">num</span><span class="o">%</span><span class="mi">26</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">print</span> <span class="p">(</span><span class="n">num2alpha</span><span class="p">(</span><span class="n">n</span><span class="p">).</span><span class="k">lower</span><span class="p">())</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>参考: https://tanuhack.com/num2alpha-alpha2num/  </p>
+<p>以下のページも参照したけど、結局使わなかった。↑がズバリだったので。<br>
+http://iatlex.com/python/base_change  </p>
+<h2>D</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_d">D - Replacing</a>  </p>
+<p>これ茶diffだろうなぁ。解けてよかったけど3WA（TLE）してしまった。<br>
+やることは問題文の説明通りで、リストの状態を保持しながらQ回のリプレイスと和の計算なんだけど、<br>
+全ての数の最大が &lt;= 10**5 のため、素直にやるとTLE。  </p>
+<p>と思いつつ、一回試しに提出したのがこれ。</p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14572903">提出(TLE)</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_d1</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span></span>
+<span class="code-line"><span class="n">A</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span></span>
+<span class="code-line"><span class="n">Q</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">Q</span><span class="p">):</span></span>
+<span class="code-line">    <span class="n">B</span><span class="p">,</span><span class="k">C</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line">    <span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="k">C</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">B</span> <span class="k">else</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">A</span><span class="p">]</span></span>
+<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="k">sum</span><span class="p">(</span><span class="n">A</span><span class="p">))</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>バカ正直にリストで実装＆毎回状態シミュレーション&amp;和の計算。まぁこれは当然TLE。<br>
+リプレイス処理で毎回O(n)かかり、和の計算でO(n)かかるので、1ループがO(2n)でQループするので、O(2n*Q)、かな</p>
+<p>ACはこちら。  </p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14580841">提出</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_d2</span><span class="p">.</span><span class="n">py</span><span class="w"></span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span></span>
+<span class="code-line"><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{}</span><span class="w"></span></span>
+<span class="code-line"><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list</span><span class="p">(</span><span class="k">map</span><span class="p">(</span><span class="nc">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span><span class="w"></span></span>
+<span class="code-line"><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">a</span><span class="p">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">A</span><span class="p">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">        </span><span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span></span>
+<span class="code-line"><span class="w">    </span><span class="k">else</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">        </span><span class="n">A</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span></span>
+<span class="code-line"><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">items</span><span class="p">()</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">k</span><span class="o">*</span><span class="n">v</span><span class="w"></span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">Q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span></span>
+<span class="code-line"><span class="k">for</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="k">range</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">    </span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">map</span><span class="p">(</span><span class="nc">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span><span class="w"></span></span>
+<span class="code-line"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">A</span><span class="p">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">        </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="o">-</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="n">A</span><span class="o">[</span><span class="n">b</span><span class="o">]</span><span class="w"></span></span>
+<span class="code-line"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nl">A</span><span class="p">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">            </span><span class="n">A</span><span class="o">[</span><span class="n">c</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">A</span><span class="o">[</span><span class="n">b</span><span class="o">]</span><span class="w"></span></span>
+<span class="code-line"><span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span></span>
+<span class="code-line"><span class="w">            </span><span class="n">A</span><span class="o">[</span><span class="n">c</span><span class="o">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">A</span><span class="o">[</span><span class="n">b</span><span class="o">]</span><span class="w"></span></span>
+<span class="code-line"><span class="w">        </span><span class="n">A</span><span class="o">[</span><span class="n">b</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"></span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>リストではなく、要素の個数をvalueとしたdictで管理し、和の計算は前回の和から差分を引くという処理に置き換え。<br>
+これにより、リプレイス処理、計算処理のどちらもO(1)になったので、計算量をO(Q)にできる。<br>
+Q &lt;= 10**5 なので、これで間に合った。</p>
+<hr>
+<p>ずっと連続で出場したところに1回空いての久々ABCだったけど、練習自体は継続できてて茶diffは確保できてる。<br>
+ただ今日はちょっと集中力足りなかったな。。  </p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="../../../../../tag/atcoder.html">AtCoder</a>
+      <a href="../../../../../tag/abc.html">ABC</a>
+      <a href="../../../../../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </div>
+
+
+
+  <div class="related-posts">
+    <h4>You might enjoy</h4>
+    <ul class="related-posts">
+      <li><a href="../../../../../posts/2020/05/31/abc169">AtCoder Beginner Contest 169</a></li>
+      <li><a href="../../../../../posts/2020/05/17/abc168">AtCoder Beginner Contest 168</a></li>
+      <li><a href="../../../../../posts/2020/05/10/abc167">AtCoder Beginner Contest 167</a></li>
+      <li><a href="../../../../../posts/2020/05/03/abc166">AtCoder Beginner Contest 166</a></li>
+      <li><a href="../../../../../posts/2020/05/02/abc165">AtCoder Beginner Contest 165</a></li>
+    </ul>
+  </div>
+
+
+</article>
+
+    <footer>
+<p>
+  &copy;  2020 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+  <span class="footer-separator">|</span>
+  Switch to the <a href="javascript:void(0)" onclick="theme.switch(`dark`)">dark</a> | <a href="javascript:void(0)" onclick="theme.switch(`light`)">light</a> | <a href="javascript:void(0)" onclick="theme.switch(`browser`)">browser</a> theme
+  <script id="dark-theme-script"
+          src="../../../../../theme/dark-theme/dark-theme.min.js"
+          data-enable-auto-detect-theme="True"
+          data-default-theme="light"
+          type="text/javascript">
+  </script>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Days of migratory birds ",
+  "url" : "../../../../..",
+  "image": "https://blog.watarinohibi.tokyo/images/static/profile.png",
+  "description": ""
+}
+</script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tipue_search_input').tipuesearch();
+      });
+    </script>
+
+</body>
+</html>

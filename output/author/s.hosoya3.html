@@ -121,6 +121,45 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/31/abc169#abc169">AtCoder Beginner Contest 169</a></h2>
+    <p>
+      Posted on 2020-05-31(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>本日は ABC169 でした。今回は数学、整数問題祭り。結果的にはDまで解けたのでよかった。<br>
+C問題にかなり手こずってしまったし、これは競技プログラミングとしてはどうなんだ、、？という印象。。<br>
+Dはいくつか考えたけど、結局現実的な時間で終えられる方法を最後のほうで思いつけたのでよかった。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc169/tasks/abc169_a">A - Multiplication 1</a>  </p>
+<p>問題文の指示通り、積を出力するだけ。</p>
+<p><a href="https://atcoder.jp/contests/abc169/submissions/13774716">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc169_a</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="n">print</span> <span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">m</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc169/tasks/abc169_b">B - Multiplication 2</a>  </p>
+<p>N個の整数の積を求める。<br>
+ポイントとして、桁が10**18を超えたら <code>-1</code> を出力するというところ。  </p>
+<p>単純に先頭から値を掛けていき、都度判定で10^18を超えたら <code>-1</code> を出力でいいかなと思ったら、ご丁寧に例3でWAになることを教えてくれている。<br>
+Aの範囲が 0 から 10^18 …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/31/abc169#abc169">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/30/bookreading_20200530#bookreading_20200530">小川一水 天冥の標Ⅱ</a></h2>
     <p>
       Posted on 2020-05-30(Sat) in <a href="../category/book.html">Book</a>
@@ -189,36 +228,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/05/28/prom_20200528#prom_20200528">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/26/misc_20200526#misc_20200526">雑記 20200526</a></h2>
-    <p>
-      Posted on 2020-05-26(Tue) in <a href="../category/diary.html">雑記</a>
-
-          &#8226; Tagged with
-              <a href="../tag/diary.html">雑記</a>
-    </p>
-  </header>
-  <div>
-      <p>今日は聊か体調不良でお休み。<br>
-朝起きたときからなんかモヤっとしてたけど、起き抜けでPCの設定変更して、いくらかパフォーマンス寄りへの変更を試していたら一気に気分が悪くなってしまった。車酔いのような間隔でディスプレイを見るのがつらく。</p>
-<p>Windows10の、画面を滑らかに表示するアニメーション関連のオプションを落としまくってたら急に気持ち悪くなってきた（とくに画面スクロールががくがくなのがしんどい）と感じたので、ここらへん削るべきじゃないんだなーと。  </p>
-<p>緊急事態宣言の解除に伴い、出社が必要な人に対して出社を認める方針にはなりつつあるけど、それよりも大きな方針として全社的に在宅・リモートワークの制度と環境を整える方針のようで、自分はもうずっとリモートになりそう。出社するの嫌いなのでこれはほんとありがたい流れになった。<br>
-ただその一方で、今業務で使ってるのが貸与ノートPC（Let's Note/4CPU/8GB/256GB SSD）一台でほぼ全部やってるが、いよいよスペックが追い付かなくなってきたので上記のような設定変更を試していたんだけど、このザマだ。状況落ち着いて、かつリモート継続が完全に決定した段階で、貸与されてるデスクトップPCのほうを持ち帰ろうと思う。  </p>
-<h2>物件を探してる話</h2>
-<p>もともと今の住まいは結婚してからの一時的な賃貸で、状況に合わせて物件の購入、引越しを検討していた。<br>
-去年末ぐらいからぼちぼち考え始めてて、最初は通勤にある程度便利な都内のマンションを考えていたんだけど、今回のコロナ禍、リモート推奨の流れをうけて、もっと値段落として郊外の戸建てを買おうか案が浮上してる。<br>
-通勤しなくていいならそっちのほうが嬉しいので、これは有りな流れ。<br>
-いまは値段も落ちてる（逆にこのあと回復してきたら、今ほど落ちないみたい）状況なので、いくつか検討している中からそろそろ買いそうだなーの雰囲気がある。  </p>
-<p>ただ、妻の出産も近づいているので、引越しのタイミングはそのあとになるけど、うまいこと住宅ローン減税の適用期間に滑り込めるように調整したい …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/26/misc_20200526#misc_20200526">
           Continue reading
         </a>
   </div>

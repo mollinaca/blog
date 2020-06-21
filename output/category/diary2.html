@@ -121,6 +121,36 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/26/misc_20200526#misc_20200526">雑記 20200526</a></h2>
+    <p>
+      Posted on 2020-05-26(Tue) in <a href="../category/diary.html">雑記</a>
+
+          &#8226; Tagged with
+              <a href="../tag/diary.html">雑記</a>
+    </p>
+  </header>
+  <div>
+      <p>今日は聊か体調不良でお休み。<br>
+朝起きたときからなんかモヤっとしてたけど、起き抜けでPCの設定変更して、いくらかパフォーマンス寄りへの変更を試していたら一気に気分が悪くなってしまった。車酔いのような間隔でディスプレイを見るのがつらく。</p>
+<p>Windows10の、画面を滑らかに表示するアニメーション関連のオプションを落としまくってたら急に気持ち悪くなってきた（とくに画面スクロールががくがくなのがしんどい）と感じたので、ここらへん削るべきじゃないんだなーと。  </p>
+<p>緊急事態宣言の解除に伴い、出社が必要な人に対して出社を認める方針にはなりつつあるけど、それよりも大きな方針として全社的に在宅・リモートワークの制度と環境を整える方針のようで、自分はもうずっとリモートになりそう。出社するの嫌いなのでこれはほんとありがたい流れになった。<br>
+ただその一方で、今業務で使ってるのが貸与ノートPC（Let's Note/4CPU/8GB/256GB SSD）一台でほぼ全部やってるが、いよいよスペックが追い付かなくなってきたので上記のような設定変更を試していたんだけど、このザマだ。状況落ち着いて、かつリモート継続が完全に決定した段階で、貸与されてるデスクトップPCのほうを持ち帰ろうと思う。  </p>
+<h2>物件を探してる話</h2>
+<p>もともと今の住まいは結婚してからの一時的な賃貸で、状況に合わせて物件の購入、引越しを検討していた。<br>
+去年末ぐらいからぼちぼち考え始めてて、最初は通勤にある程度便利な都内のマンションを考えていたんだけど、今回のコロナ禍、リモート推奨の流れをうけて、もっと値段落として郊外の戸建てを買おうか案が浮上してる。<br>
+通勤しなくていいならそっちのほうが嬉しいので、これは有りな流れ。<br>
+いまは値段も落ちてる（逆にこのあと回復してきたら、今ほど落ちないみたい）状況なので、いくつか検討している中からそろそろ買いそうだなーの雰囲気がある。  </p>
+<p>ただ、妻の出産も近づいているので、引越しのタイミングはそのあとになるけど、うまいこと住宅ローン減税の適用期間に滑り込めるように調整したい …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/26/misc_20200526#misc_20200526">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/19/misc_20200519#misc_20200519">雑記 20200519</a></h2>
     <p>
       Posted on 2020-05-19(Tue) in <a href="../category/diary.html">雑記</a>
@@ -189,54 +219,6 @@ WFHのおかげで自分も家にいるので、分担しつついいカンジ�
         <br>
         <a class="btn"
            href="../posts/2020/05/17/misc_20200517#misc_20200517">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/26/misc_20200426#misc_20200426">雑記 20200426</a></h2>
-    <p>
-      Posted on 2020-04-26(Sun) in <a href="../category/diary.html">雑記</a>
-
-          &#8226; Tagged with
-              <a href="../tag/diary.html">雑記</a>
-    </p>
-  </header>
-  <div>
-      <p>このサイトのPelicanのテーマを変更したり、いろいろ調整したりなど。<br>
-タグに日本語を正しく指定できるようにして、theme や plugin をちゃんど submodule として取り込んでみたり。<br>
-そもそも git submodule という概念を知らなかったので調べて理解した。  </p>
-<p>このブログページに関するTodo:  </p>
-<ul>
-<li>サイドメニューをもう少し充実させる</li>
-<li>favicon 設置する</li>
-<li>コードブロックの表示において、1行目が特殊なブロックになってしまう</li>
-<li>コードブロックの表示において、非コードな文字列をいれると syntax error と判断されて、err の装飾がついてしまう
- → これ自体は正しい挙動なんだけど、コードブロックで例えば実行するコマンドを書いた場合などに、気に食わない感じになる。のをどうにかする。</li>
-</ul>
-<p>&lt;正しくコードが表示される&gt; ※ただし1行目のインラインブロック？は気に食わない</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="code-line">1</span>
-<span class="code-line">2</span>
-<span class="code-line">3</span>
-<span class="code-line">4</span>
-<span class="code-line">5</pre></div></td><td class="code"><div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/bin/bash</span></span>
-<span class="code-line"><span class="nb">set</span> -euC</span>
-<span class="code-line"></span>
-<span class="code-line"><span class="nb">echo</span> <span class="s2">&quot;Hello!&quot;</span></span>
-<span class="code-line"><span class="nb">exit</span> <span class="m">0</span></span>
-<span class="code-line"></code></pre></div>
-</td></tr></table>
-
-<p>スクショ:<br>
-<a target=_blank href="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png"><img src="https://blog.watarinohibi.tokyo/images/20200426_misc_codeblock1.png" width="500"></a> </p>
-<p>&lt;エラー表示になる&gt;</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># command1</span></span>
-<span class="code-line"><span class="err"># command2 …</span></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/26/misc_20200426#misc_20200426">
           Continue reading
         </a>
   </div>

@@ -121,6 +121,37 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/20/xfs#xfs">CentOS8 に xsf でフォーマットしたディスクをマウントする</a></h2>
+    <p>
+      Posted on 2020-05-20(Wed) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/centos8.html">CentOS8</a>,              <a href="../tag/xfs.html">xfs</a>
+    </p>
+  </header>
+  <div>
+      <p>CentOS8に追加ディスクを xfs でフォーマットしてマウントする手順メモ。<br>
+長いこと ext4 でしかフォーマットしてなかったから、何気 xfs はよくわかってない。。  </p>
+<p><a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs">XFS ファイルシステム</a><br>
+<a href="https://qiita.com/sion_cojp/items/bef955bba3dbf9d603f8">EXT4 vs XFS vs Btrfs vs ZFSをfioでベンチマークを取ってみました。</a>  </p>
+<h2>手順</h2>
+<div class="highlight"><pre><span class="code-line"><span></span><code>OSがディスクを認識していることを確認</span>
+<span class="code-line"></span>
+<span class="code-line"># fdisk -l</span>
+<span class="code-line">Disk /dev/sda: 20 GiB, 21474836480 bytes, 41943040 sectors</span>
+<span class="code-line">Units: sectors of 1 * 512 = 512 bytes</span>
+<span class="code-line">Sector size (logical/physical): 512 bytes / 4096 bytes</span>
+<span class="code-line">I/O size (minimum …</span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/20/xfs#xfs">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/17/abc168#abc168">AtCoder Beginner Contest 168</a></h2>
     <p>
       Posted on 2020-05-17(Sun) in <a href="../category/tech.html">Tech</a>
@@ -200,42 +231,6 @@ KとSの長さを比較して、Kのほうが長ければSをそのまま、Sの
         <br>
         <a class="btn"
            href="../posts/2020/05/16/practice_2020516#practice_2020516">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/15/prepare_past#prepare_past">来週のPASTに向けて</a></h2>
-    <p>
-      Posted on 2020-05-15(Fri) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/jing ji p.html">競技プログラミング</a>,              <a href="../tag/arugorizumu.html">アルゴリズム</a>
-    </p>
-  </header>
-  <div>
-      <p>来週 5/23(土) のPASTに申し込みました。今回は無料です。<br>
-<a href="https://past.atcoder.jp/">https://past.atcoder.jp/</a>  </p>
-<p>せっかくなので、がんばってエントリーぐらいは取りたいなぁ。<br>
-直近勉強してるのも含めて、以下の項目について改めてアルゴリズム部分の復習＆練習をしておこうと思う。  </p>
-<h2>参考ページ</h2>
-<p><a href="https://qiita.com/e869120/items/f1c6f98364d1443148b3">レッドコーダーが教える、競プロ・AtCoder上達のガイドライン【初級編：競プロを始めよう】</a>  </p>
-<h2>全探索</h2>
-<p><a href="https://qiita.com/e869120/items/f1c6f98364d1443148b3#1-6-4-%E5%85%A8%E6%8E%A2%E7%B4%A2%E3%81%AB%E6%85%A3%E3%82%8C%E3%82%8B">1-6-4. 全探索に慣れる！</a>  </p>
-<h2>二分探索</h2>
-<p><a href="https://qiita.com/gh_takumi/items/a0b2f38e7ea53e73c1d5">【AtCoder】二分探索の問題を解く</a><br>
-<a href="https://www.forcia.com/blog/001434.html">AtCoder灰・茶・緑色の方必見！二分探索を絶対にバグらせないで書く方法</a>  </p>
-<h2>DFS&amp;BFS</h2>
-<p><a href="https://pyteyon.hatenablog.com/entry/2019/03/01/211133">競プロ覚書：深さ優先探索，幅優先探索 まとめ</a><br>
-<a href="https://atcoder.jp/contests/atc001/tasks/dfs_a?lang=ja">A - 深さ優先探索</a><br>
-<a href="https://atcoder.jp/contests/abc007/tasks/abc007_3">C - 幅優先探索</a>  </p>
-<h2>bit全探索</h2>
-<p><a href="https://qiita.com/drken/items/7c6ff2aa4d8fce1c9361">ビット演算 (bit 演算) の使い方を総特集！ 〜 マスクビットから bit DP まで …</a></p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/15/prepare_past#prepare_past">
           Continue reading
         </a>
   </div>

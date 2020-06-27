@@ -121,6 +121,49 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/06/27/abc172#abc172">AtCoder Beginner Contest 172</a></h2>
+    <p>
+      Posted on 2020-06-27(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>本日は途中で妻帰宅等々のためABのみ。C以降はあとで復習しておこう。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_a">A - Calc</a>  </p>
+<p>問題通りの出力をすれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc172/submissions/14720828">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_a</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span></span>
+<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_b">B - Minor Change</a>  </p>
+<p>ちょっと考えて、要するにSとTで文字が違う回数をカウントすればよいので、<br>
+<code>set(t)</code> をループして <code>S</code> と <code>T</code> で文字数カウントを～～みたいなことを考えたけど、ぜんぜんちげーなってなって、<br>
+よく考えたら、制約で "SとTの長さは等しい" なので、1文字目から最後の文字まで順に比較して違ったらインクリメントで良いということに気付いて、その通り実装。  </p>
+<p><a href="https://atcoder.jp/contests/abc172/submissions/14732450">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_b</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">t</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">i …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/06/27/abc172#abc172">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/06/21/abc171#abc171">AtCoder Beginner Contest 171</a></h2>
     <p>
       Posted on 2020-06-21(Sun) in <a href="../category/tech.html">Tech</a>
@@ -202,31 +245,6 @@ Aの範囲が 0 から 10^18 …</p>
            href="../posts/2020/05/31/abc169#abc169">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/23/past3#past3">PAST3 受験しました</a></h2>
-    <p>
-      Posted on 2020-05-23(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/past.html">PAST</a>
-    </p>
-  </header>
-  <div>
-      <p>PAST3 リアルタイム受験しました。<br>
-目標だった初級がとれたのでとりあえずヨシ。  </p>
-<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_certificate.png" title="PAST3 Certificate">   </p>
-<blockquote>
-<p>検定の問題については、2020/6/6 18:00 JSTまで、口外することを禁止しております。口外した場合は、損害賠償などを請求する場合がありますので、ご注意ください。</p>
-</blockquote>
-<p>なので、この記事では問題には触れませんが、茶レベルで要求される基本的なプログラミング能力、データ構造と操作については、始めた当初よりだいぶできるようになったなを実感した。<br>
-A～Fまでで、だいたい3時間ほどかけてAC。次のG問題については、たぶん時間かけて（まだ2時間残ってたし）やれば十分できそうだなと感じたけど、今回はいったんここで切り上げ。<br>
-過去問として公開されたら、改めて挑戦しようと思う。</p>
-<p>引き続き、茶上位目指してがんばろう。  </p>
-<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_rate.png" title="AtCoder Rate">   </p>
   </div>
 </article>
 

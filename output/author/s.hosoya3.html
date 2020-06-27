@@ -121,6 +121,40 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/06/03/python_dns#python_dns">python でネームサーバを指定して dig/nslookup をしたい(memo)</a></h2>
+    <p>
+      Posted on 2020-06-03(Wed) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/python.html">Python</a>,              <a href="../tag/dns.html">DNS</a>
+    </p>
+  </header>
+  <div>
+      <p>そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。<br>
+いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。  </p>
+<p>実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。</p>
+<hr>
+<h2>参考</h2>
+<p>検索すると上位に出てくるサイトなど。</p>
+<p><a href="http://sonickun.hatenablog.com/entry/2014/10/30/183541">Pythonでnslookup(ドメインの正引きと逆引き)する</a><br>
+個人ブログ。<br>
+<code>socket.gethostbyname</code>, <code>socket.gethostbyaddr</code> による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。<br>
+そもそも <code>socket</code> は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。  </p>
+<p><a href="https://techacademy.jp/magazine/20868">Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】</a><br>
+テックアカデミーの記事。<br>
+これも名前解決のやり方で、NSの指定まではフォローしていない。  </p>
+<p><code>socket.gethostbyaddr</code> と <code>dnspython</code> について触れている。名前解決だけならこれでもまぁ十分。<br>
+<code>dnspython</code> のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/06/03/python_dns#python_dns">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/31/abc169#abc169">AtCoder Beginner Contest 169</a></h2>
     <p>
       Posted on 2020-05-31(Sun) in <a href="../category/tech.html">Tech</a>
@@ -190,44 +224,6 @@ Aの範囲が 0 から 10^18 …</p>
         <br>
         <a class="btn"
            href="../posts/2020/05/30/bookreading_20200530#bookreading_20200530">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/28/prom_20200528#prom_20200528">promethes久々に動かした</a></h2>
-    <p>
-      Posted on 2020-05-28(Thu) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/docker.html">docker</a>,              <a href="../tag/prometheus.html">prometheus</a>
-    </p>
-  </header>
-  <div>
-      <h1>Prometheus Meetup Tokyo #3 に参加した</h1>
-<p><a href="https://prometheus.connpass.com/event/175547/">Prometheus Meetup Tokyo #4</a><br>
-オンラインで開催していたので参加。<br>
-オンラインは人数制限なくて参加しやすいのがほんといいね。会場いかなくていいし。  </p>
-<p>1年ちょっと前ぐらいに、チームの監視ツールを munin &amp; zabbix から一新したくて、Prometheus と AlertManager に置き換えられないかなぁといろいろやって、<br>
-担当案件のリソース監視に勝手に突っ込んだりしてたけどうまく通せず、それっきりになってた。<br>
-その後チームの異動があったりでしばらく遠ざかってたけど、久々に監視ツール系でいい話が色々聞けた。  </p>
-<p>クラウドネイティブ、k8sの監視が前提なので、今更「オンプレなんですが。。。」とは言いにくいんだけど、<br>
-とはいえこの手のモダンな監視ツールは追っかけておきたい分野でもあるので、定期的にアップデートしておこう。</p>
-<p>ただ今日の話ははっきりいってほとんどついていけなかった。。(´；ω；｀)  </p>
-<h1>以前自分でつくったmonitoringツール用のrepo</h1>
-<p><a href="https://github.com/mollinaca/monitor">mollinaca/monitor</a><br>
-これも5ヶ月ぐらい前か。。あっという間。  </p>
-<p>ホストに、PrometheusとcAdvisorとnode_exporterとgrafanaのdockerイメージをpullしてきて、連携したgrafanaをすぐに立てられる。<br>
-久々にローカルVMに引っ張ってきて立ててみたら、なんかPrometheusのコンテナだけコケて、あれあれと思ってたけど、dockerコンテナにaddするvolumeの権限周りだったっぽい。<br>
-ファイルとディレクトリをえーいで777にしたら動いた。いいのかこれで。</p>
-<h1>やりたいことって何だったんだっけ</h1>
-<ul>
-<li>インフラの運用 …</li></ul>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/28/prom_20200528#prom_20200528">
           Continue reading
         </a>
   </div>

@@ -42,17 +42,17 @@
 
 
 <meta name="author" content="s.hosoya" />
-<meta name="description" content="Judge System Update Test Contest 202004 に参加しました。 A A - Walking Takahashi 現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い 提出 ちょっと冗長だった。absは不要だな。 以下でOK #!/usr/bin/env python3 # -*- coding: utf-8 -*- S,L,R = map(int,input().split()) if S &lt; L: print (L) elif R &lt; S: print (R) else: print (S) こっちのほうがシンプル。 B B - Picking Balls RとBの配列を持って置き …" />
+<meta name="description" content="本日は途中で妻帰宅等々のためABのみ。C以降はあとで復習しておこう。 A A - Calc 問題通りの出力をすれば良い。 提出 abc172_a.py n = int(input()) print (n+n**2+n**3) B B - Minor Change ちょっと考えて、要するにSとTで文字が違う回数をカウントすればよいので、 set(t) をループして S と T で文字数カウントを～～みたいなことを考えたけど、ぜんぜんちげーなってなって、 よく考えたら、制約で &#34;SとTの長さは等しい&#34; なので、1文字目から最後の文字まで順に比較して違ったらインクリメントで良いということに気付いて、その通り実装。 提出 abc172_b.py s = input() t = input() ans = 0 for i …" />
 <meta name="keywords" content="AtCoder, ABC, 競技プログラミング">
 
 
 <meta property="og:site_name" content="Days of migratory birds"/>
-<meta property="og:title" content="AtCoder Judge System Update Test Contest 202004"/>
-<meta property="og:description" content="Judge System Update Test Contest 202004 に参加しました。 A A - Walking Takahashi 現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い 提出 ちょっと冗長だった。absは不要だな。 以下でOK #!/usr/bin/env python3 # -*- coding: utf-8 -*- S,L,R = map(int,input().split()) if S &lt; L: print (L) elif R &lt; S: print (R) else: print (S) こっちのほうがシンプル。 B B - Picking Balls RとBの配列を持って置き …"/>
+<meta property="og:title" content="AtCoder Beginner Contest 172"/>
+<meta property="og:description" content="本日は途中で妻帰宅等々のためABのみ。C以降はあとで復習しておこう。 A A - Calc 問題通りの出力をすれば良い。 提出 abc172_a.py n = int(input()) print (n+n**2+n**3) B B - Minor Change ちょっと考えて、要するにSとTで文字が違う回数をカウントすればよいので、 set(t) をループして S と T で文字数カウントを～～みたいなことを考えたけど、ぜんぜんちげーなってなって、 よく考えたら、制約で &#34;SとTの長さは等しい&#34; なので、1文字目から最後の文字まで順に比較して違ったらインクリメントで良いということに気付いて、その通り実装。 提出 abc172_b.py s = input() t = input() ans = 0 for i …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="../../../../../posts/2020/04/05/testcontest_20200405"/>
+<meta property="og:url" content="../../../../../posts/2020/06/27/abc172"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2020-04-05 00:00:00+09:00"/>
+<meta property="article:published_time" content="2020-06-27 00:00:00+09:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="../../../../../author/s.hosoya.html">
 <meta property="article:section" content="Tech"/>
@@ -61,7 +61,7 @@
 <meta property="article:tag" content="競技プログラミング"/>
 <meta property="og:image" content="https://blog.watarinohibi.tokyo/images/static/profile.png">
 
-  <title>Days of migratory birds &ndash; AtCoder Judge System Update Test Contest 202004</title>
+  <title>Days of migratory birds &ndash; AtCoder Beginner Contest 172</title>
 
 </head>
 <body >
@@ -130,52 +130,51 @@
 <article class="single">
   <header>
       
-    <h1 id="testcontest_20200405">AtCoder Judge System Update Test Contest 202004</h1>
+    <h1 id="abc172">AtCoder Beginner Contest 172</h1>
     <p>
-      Posted on 2020-04-05(Sun) in <a href="../../../../../category/tech.html">Tech</a>
+      Posted on 2020-06-27(Sat) in <a href="../../../../../category/tech.html">Tech</a>
 
     </p>
   </header>
 
 
   <div>
-    <hr>
-<p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
-<h1>A</h1>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_a">A - Walking Takahashi</a><br>
-現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い</p>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11582231">提出</a><br>
-ちょっと冗長だった。absは不要だな。<br>
-以下でOK</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
-<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
-<span class="code-line"><span class="n">S</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span></span>
-<span class="code-line"><span class="k">if</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">L</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">elif</span> <span class="n">R</span> <span class="o">&lt;</span> <span class="n">S</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">S</span><span class="p">)</span></span>
+    <p>本日は途中で妻帰宅等々のためABのみ。C以降はあとで復習しておこう。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_a">A - Calc</a>  </p>
+<p>問題通りの出力をすれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc172/submissions/14720828">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_a</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span></span>
+<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span></span>
 <span class="code-line"></code></pre></div>
 
 
-<p>こっちのほうがシンプル。</p>
-<h1>B</h1>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_b">B - Picking Balls</a><br>
-RとBの配列を持って置き、入力を受けてR/Bどちらかの配列に append して、入力を受け終わったらソートして R → B の順番に出力すればよい。  </p>
-<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11583370">提出</a>  </p>
-<h1>C</h1>
-<p>ちょっと挑んで、あ！これ深さ優先探索だ！ってとこまではわかったけど、家庭の事情によりここで終了。<br>
-制約が小さいので、全部列挙して出力させたほうが早いのかも。ｗ</p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200405_c.jpg"><img src="https://blog.watarinohibi.tokyo/images/20200405_c.jpg" width="500"></a>  </p>
-<p>と思ったら、やってる人いた。<br>
-unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/JSUTC202004%E8%A7%A3%E8%AA%AC?src=hash&amp;ref_src=twsrc%5Etfw">#JSUTC202004解説</a><br>C問題です。 しっかり手を動かして10通り列挙しましょう。<br>これ以外の回答は認めません。 <a href="https://t.co/sGwr4vEy5V">pic.twitter.com/sGwr4vEy5V</a></p>&mdash; Reider (@Reider_AC) <a href="https://twitter.com/Reider_AC/status/1246786355666903040?ref_src=twsrc%5Etfw">April 5, 2020</a></blockquote>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_b">B - Minor Change</a>  </p>
+<p>ちょっと考えて、要するにSとTで文字が違う回数をカウントすればよいので、<br>
+<code>set(t)</code> をループして <code>S</code> と <code>T</code> で文字数カウントを～～みたいなことを考えたけど、ぜんぜんちげーなってなって、<br>
+よく考えたら、制約で "SとTの長さは等しい" なので、1文字目から最後の文字まで順に比較して違ったらインクリメントで良いということに気付いて、その通り実装。  </p>
+<p><a href="https://atcoder.jp/contests/abc172/submissions/14732450">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_b</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">t</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)):</span></span>
+<span class="code-line">    <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span></span>
+<span class="code-line">        <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span></span>
+<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="n">ans</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
 
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>B問題なので、TLEすることもなくこれでクリア。</p>
 <hr>
-<p>次回のABCで、茶になるぞー</p>
-<p>改めてトライする。</p>
+<p>本日はここまで。<br>
+C問題ちょっと読んで、うーんどうしようかなと考えてたら終わりになったので、そこで終わりにした。<br>
+さすがに2完はレート下がった（とはいえパフォが532だったので、そこまで下がったわけでもない、Cが難しかった？）けど、こういうことがあるのはしゃーないし今後増えてく。<br>
+その前提でがんばる。  </p>
   </div>
   <div class="tag-cloud">
     <p>
@@ -190,11 +189,11 @@ unratedなので、いろいろ遊んでる人もいるみたいｗ</p>
   <div class="related-posts">
     <h4>You might enjoy</h4>
     <ul class="related-posts">
-      <li><a href="../../../../../posts/2020/06/27/abc172">AtCoder Beginner Contest 172</a></li>
       <li><a href="../../../../../posts/2020/06/21/abc171">AtCoder Beginner Contest 171</a></li>
       <li><a href="../../../../../posts/2020/05/31/abc169">AtCoder Beginner Contest 169</a></li>
       <li><a href="../../../../../posts/2020/05/17/abc168">AtCoder Beginner Contest 168</a></li>
       <li><a href="../../../../../posts/2020/05/10/abc167">AtCoder Beginner Contest 167</a></li>
+      <li><a href="../../../../../posts/2020/05/03/abc166">AtCoder Beginner Contest 166</a></li>
     </ul>
   </div>
 

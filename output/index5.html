@@ -121,6 +121,36 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/05/26/misc_20200526#misc_20200526">雑記 20200526</a></h2>
+    <p>
+      Posted on 2020-05-26(Tue) in <a href="./category/diary.html">雑記</a>
+
+          &#8226; Tagged with
+              <a href="./tag/diary.html">雑記</a>
+    </p>
+  </header>
+  <div>
+      <p>今日は聊か体調不良でお休み。<br>
+朝起きたときからなんかモヤっとしてたけど、起き抜けでPCの設定変更して、いくらかパフォーマンス寄りへの変更を試していたら一気に気分が悪くなってしまった。車酔いのような間隔でディスプレイを見るのがつらく。</p>
+<p>Windows10の、画面を滑らかに表示するアニメーション関連のオプションを落としまくってたら急に気持ち悪くなってきた（とくに画面スクロールががくがくなのがしんどい）と感じたので、ここらへん削るべきじゃないんだなーと。  </p>
+<p>緊急事態宣言の解除に伴い、出社が必要な人に対して出社を認める方針にはなりつつあるけど、それよりも大きな方針として全社的に在宅・リモートワークの制度と環境を整える方針のようで、自分はもうずっとリモートになりそう。出社するの嫌いなのでこれはほんとありがたい流れになった。<br>
+ただその一方で、今業務で使ってるのが貸与ノートPC（Let's Note/4CPU/8GB/256GB SSD）一台でほぼ全部やってるが、いよいよスペックが追い付かなくなってきたので上記のような設定変更を試していたんだけど、このザマだ。状況落ち着いて、かつリモート継続が完全に決定した段階で、貸与されてるデスクトップPCのほうを持ち帰ろうと思う。  </p>
+<h2>物件を探してる話</h2>
+<p>もともと今の住まいは結婚してからの一時的な賃貸で、状況に合わせて物件の購入、引越しを検討していた。<br>
+去年末ぐらいからぼちぼち考え始めてて、最初は通勤にある程度便利な都内のマンションを考えていたんだけど、今回のコロナ禍、リモート推奨の流れをうけて、もっと値段落として郊外の戸建てを買おうか案が浮上してる。<br>
+通勤しなくていいならそっちのほうが嬉しいので、これは有りな流れ。<br>
+いまは値段も落ちてる（逆にこのあと回復してきたら、今ほど落ちないみたい）状況なので、いくつか検討している中からそろそろ買いそうだなーの雰囲気がある。  </p>
+<p>ただ、妻の出産も近づいているので、引越しのタイミングはそのあとになるけど、うまいこと住宅ローン減税の適用期間に滑り込めるように調整したい …</p>
+        <br>
+        <a class="btn"
+           href="./posts/2020/05/26/misc_20200526#misc_20200526">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/05/25/bookreading_20200525#bookreading_20200525">小川一水 天冥の標 I</a></h2>
     <p>
       Posted on 2020-05-25(Mon) in <a href="./category/book.html">Book</a>
@@ -172,37 +202,6 @@ A～Fまでで、だいたい3時間ほどかけてAC。次のG問題につい�
 過去問として公開されたら、改めて挑戦しようと思う。</p>
 <p>引き続き、茶上位目指してがんばろう。  </p>
 <p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_rate.png" title="AtCoder Rate">   </p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/05/20/xfs#xfs">CentOS8 に xsf でフォーマットしたディスクをマウントする</a></h2>
-    <p>
-      Posted on 2020-05-20(Wed) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/linux.html">Linux</a>,              <a href="./tag/centos8.html">CentOS8</a>,              <a href="./tag/xfs.html">xfs</a>
-    </p>
-  </header>
-  <div>
-      <p>CentOS8に追加ディスクを xfs でフォーマットしてマウントする手順メモ。<br>
-長いこと ext4 でしかフォーマットしてなかったから、何気 xfs はよくわかってない。。  </p>
-<p><a href="https://access.redhat.com/documentation/ja-jp/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-xfs">XFS ファイルシステム</a><br>
-<a href="https://qiita.com/sion_cojp/items/bef955bba3dbf9d603f8">EXT4 vs XFS vs Btrfs vs ZFSをfioでベンチマークを取ってみました。</a>  </p>
-<h2>手順</h2>
-<div class="highlight"><pre><span class="code-line"><span></span><code>OSがディスクを認識していることを確認</span>
-<span class="code-line"></span>
-<span class="code-line"># fdisk -l</span>
-<span class="code-line">Disk /dev/sda: 20 GiB, 21474836480 bytes, 41943040 sectors</span>
-<span class="code-line">Units: sectors of 1 * 512 = 512 bytes</span>
-<span class="code-line">Sector size (logical/physical): 512 bytes / 4096 bytes</span>
-<span class="code-line">I/O size (minimum …</span></pre></div>
-        <br>
-        <a class="btn"
-           href="./posts/2020/05/20/xfs#xfs">
-          Continue reading
-        </a>
   </div>
 </article>
 

@@ -121,6 +121,71 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/07/04/raspbberry#raspbberry">RasipberryPi 初期設定作業メモ</a></h2>
+    <p>
+      Posted on 2020-07-04(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/raspberrypi.html">RaspberryPi</a>,              <a href="../tag/raspbian.html">Raspbian</a>,              <a href="../tag/python.html">python</a>
+    </p>
+  </header>
+  <div>
+      <p>OS起動後からの個人設定に纏わるメモ  </p>
+<p><img alt="raspbian" src="https://blog.watarinohibi.tokyo/images/20200704_imager.png" title="raspbian">   </p>
+<h1>初回起動</h1>
+<h2>デスクトップ接続で初期設定</h2>
+<ul>
+<li>
+<p>Welcome to the Raspberry Pi Dsiktop!<br>
+ → Next</p>
+</li>
+<li>
+<p>Set Country<br>
+  Country: Japan<br>
+  Language: Japanese<br>
+  Timezone: Tokyo  </p>
+</li>
+<li>
+<p>Change Passwd<br>
+ → pi ユーザのパスワードを変更  </p>
+</li>
+<li>
+<p>Set Up Screen<br>
+ → 大丈夫ならそのまま Next  </p>
+</li>
+<li>
+<p>Wireless Network<br>
+ → 任意のWifiと接続  </p>
+</li>
+<li>
+<p>Update Software<br>
+ → Next  </p>
+</li>
+</ul>
+<p>上記で初期セットアップが完了するので reboot を行う。  </p>
+<h1>piユーザでログイン</h1>
+<ul>
+<li>ターミナルを起動  </li>
+<li>以下を設定していく  </li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1"># root 初期設定項目 #</span></span>
+<span class="code-line"></span>
+<span class="code-line">$ apt-get update</span>
+<span class="code-line">$ apt-get upgrade</span>
+<span class="code-line"> → 直前でアップデートを実施してるため何も変更されない</span>
+<span class="code-line"></span>
+<span class="code-line">$ apt-get install git</span>
+<span class="code-line"> → 既にインストール済み …</span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/07/04/raspbberry#raspbberry">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/06/27/abc172#abc172">AtCoder Beginner Contest 172</a></h2>
     <p>
       Posted on 2020-06-27(Sat) in <a href="../category/tech.html">Tech</a>
@@ -204,40 +269,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/06/21/abc171#abc171">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/06/03/python_dns#python_dns">python でネームサーバを指定して dig/nslookup をしたい(memo)</a></h2>
-    <p>
-      Posted on 2020-06-03(Wed) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/python.html">Python</a>,              <a href="../tag/dns.html">DNS</a>
-    </p>
-  </header>
-  <div>
-      <p>そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。<br>
-いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。  </p>
-<p>実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。</p>
-<hr>
-<h2>参考</h2>
-<p>検索すると上位に出てくるサイトなど。</p>
-<p><a href="http://sonickun.hatenablog.com/entry/2014/10/30/183541">Pythonでnslookup(ドメインの正引きと逆引き)する</a><br>
-個人ブログ。<br>
-<code>socket.gethostbyname</code>, <code>socket.gethostbyaddr</code> による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。<br>
-そもそも <code>socket</code> は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。  </p>
-<p><a href="https://techacademy.jp/magazine/20868">Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】</a><br>
-テックアカデミーの記事。<br>
-これも名前解決のやり方で、NSの指定まではフォローしていない。  </p>
-<p><code>socket.gethostbyaddr</code> と <code>dnspython</code> について触れている。名前解決だけならこれでもまぁ十分。<br>
-<code>dnspython</code> のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/06/03/python_dns#python_dns">
           Continue reading
         </a>
   </div>

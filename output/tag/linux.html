@@ -121,6 +121,71 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/07/04/raspbberry#raspbberry">RasipberryPi 初期設定作業メモ</a></h2>
+    <p>
+      Posted on 2020-07-04(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/raspberrypi.html">RaspberryPi</a>,              <a href="../tag/raspbian.html">Raspbian</a>,              <a href="../tag/python.html">python</a>
+    </p>
+  </header>
+  <div>
+      <p>OS起動後からの個人設定に纏わるメモ  </p>
+<p><img alt="raspbian" src="https://blog.watarinohibi.tokyo/images/20200704_imager.png" title="raspbian">   </p>
+<h1>初回起動</h1>
+<h2>デスクトップ接続で初期設定</h2>
+<ul>
+<li>
+<p>Welcome to the Raspberry Pi Dsiktop!<br>
+ → Next</p>
+</li>
+<li>
+<p>Set Country<br>
+  Country: Japan<br>
+  Language: Japanese<br>
+  Timezone: Tokyo  </p>
+</li>
+<li>
+<p>Change Passwd<br>
+ → pi ユーザのパスワードを変更  </p>
+</li>
+<li>
+<p>Set Up Screen<br>
+ → 大丈夫ならそのまま Next  </p>
+</li>
+<li>
+<p>Wireless Network<br>
+ → 任意のWifiと接続  </p>
+</li>
+<li>
+<p>Update Software<br>
+ → Next  </p>
+</li>
+</ul>
+<p>上記で初期セットアップが完了するので reboot を行う。  </p>
+<h1>piユーザでログイン</h1>
+<ul>
+<li>ターミナルを起動  </li>
+<li>以下を設定していく  </li>
+</ul>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1"># root 初期設定項目 #</span></span>
+<span class="code-line"></span>
+<span class="code-line">$ apt-get update</span>
+<span class="code-line">$ apt-get upgrade</span>
+<span class="code-line"> → 直前でアップデートを実施してるため何も変更されない</span>
+<span class="code-line"></span>
+<span class="code-line">$ apt-get install git</span>
+<span class="code-line"> → 既にインストール済み …</span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/07/04/raspbberry#raspbberry">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/20/xfs#xfs">CentOS8 に xsf でフォーマットしたディスクをマウントする</a></h2>
     <p>
       Posted on 2020-05-20(Wed) in <a href="../category/tech.html">Tech</a>
@@ -178,83 +243,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/05/04/cron_pyenv_pipenv#cron_pyenv_pipenv">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/02/wp#wp">CentOS8 に WordPress をインストールする</a></h2>
-    <p>
-      Posted on 2020-05-02(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/linux.html">Linux</a>,              <a href="../tag/centos8.html">CentOS8</a>,              <a href="../tag/wordpress.html">WordPress</a>,              <a href="../tag/php.html">php</a>,              <a href="../tag/apache.html">apache</a>,              <a href="../tag/mysql.html">mysql</a>
-    </p>
-  </header>
-  <div>
-      <h2>環境</h2>
-<ul>
-<li>ローカルVM  </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>モノ</th>
-<th>情報</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IPアドレス</td>
-<td>192.168.56.101</td>
-</tr>
-<tr>
-<td>/etc/redhat-release</td>
-<td>CentOS Linux release 8.1.1911 (Core)</td>
-</tr>
-<tr>
-<td>uname -r</td>
-<td>4.18.0-147.8.1.el8_1.x86_64</td>
-</tr>
-</tbody>
-</table>
-<h2>インストールするもの</h2>
-<table>
-<thead>
-<tr>
-<th>モノ</th>
-<th>バージョン</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>apache</td>
-<td>2.4</td>
-</tr>
-<tr>
-<td>php</td>
-<td>7.4</td>
-</tr>
-<tr>
-<td>MySQL</td>
-<td>8.0.17-3</td>
-</tr>
-<tr>
-<td>WordPress</td>
-<td>5.4.1</td>
-</tr>
-</tbody>
-</table>
-<h3>apache</h3>
-<ul>
-<li>インストール</li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err"># dnf -y install httpd …</span></code></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/02/wp#wp">
           Continue reading
         </a>
   </div>

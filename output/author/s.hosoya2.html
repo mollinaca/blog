@@ -121,6 +121,49 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/06/27/abc172#abc172">AtCoder Beginner Contest 172</a></h2>
+    <p>
+      Posted on 2020-06-27(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>本日は途中で妻帰宅等々のためABのみ。C以降はあとで復習しておこう。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_a">A - Calc</a>  </p>
+<p>問題通りの出力をすれば良い。  </p>
+<p><a href="https://atcoder.jp/contests/abc172/submissions/14720828">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_a</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span></span>
+<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_b">B - Minor Change</a>  </p>
+<p>ちょっと考えて、要するにSとTで文字が違う回数をカウントすればよいので、<br>
+<code>set(t)</code> をループして <code>S</code> と <code>T</code> で文字数カウントを～～みたいなことを考えたけど、ぜんぜんちげーなってなって、<br>
+よく考えたら、制約で "SとTの長さは等しい" なので、1文字目から最後の文字まで順に比較して違ったらインクリメントで良いということに気付いて、その通り実装。  </p>
+<p><a href="https://atcoder.jp/contests/abc172/submissions/14732450">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_b</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">t</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">i …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/06/27/abc172#abc172">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/06/21/abc171#abc171">AtCoder Beginner Contest 171</a></h2>
     <p>
       Posted on 2020-06-21(Sun) in <a href="../category/tech.html">Tech</a>
@@ -197,44 +240,6 @@ Sendgridで受信してそれをGmailに飛ばすみたいな組み合わせが�
         <br>
         <a class="btn"
            href="../posts/2020/06/21/misc_20200621#misc_20200621">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/06/15/misc_20200615#misc_20200615">雑記 20200615</a></h2>
-    <p>
-      Posted on 2020-06-15(Mon) in <a href="../category/diary.html">雑記</a>
-
-          &#8226; Tagged with
-              <a href="../tag/diary.html">雑記</a>
-    </p>
-  </header>
-  <div>
-      <h1>物件！</h1>
-<p>概ね決まった。契約に向けて進行中。<br>
-結局去年の年末から探し始めて、マンションをいろいろ見て、あーでもないこーでもないしてるうちにコロナが始まって、<br>
-しばらくおとなしくしてたらリモートワークが始まって、そのまま恒久リモートワークに移行して、なら郊外でよくない？になって。  </p>
-<p>最終的に会社のそばではなく妻の実家のそば、さらに妻が職場異動しても通いやすくて駅から遠いけどバスの便が良い（そもそも自分はほとんど電車乗る外出しなくなる）場所で、<br>
-駅が遠いせいでたいへんお値打ちな新築を発見。そこに決めてしまいました。  </p>
-<p>建売の新築だけどいろいろ交渉したら追加工事で壁内のLANケーブルの配線もやってくれるそうで、その他追加工事もお願いしていろいろいろいろやってくれそう。<br>
-広め3LDKで、子育て&amp;家でPC作業もできそうで大変良い感じで今から楽しみです。<br>
-工事やらなんやらと妻の出産予定が間に挟まるので引き渡しは11月予定、引越しは早くても12月かな。<br>
-9月末に出産予定なのでそこから3ヶ月後ぐらいを見て引越ししようと思います。  </p>
-<p>新宿、いい街だった。ありがとう。<br>
-ただいま埼玉。  </p>
-<h1>昨日のABC170</h1>
-<p>そんなこんなで最近は平日も週末も忙しくしておりあまり日記も更新できずにいたところで、昨日のABC170も欠席。<br>
-さきほど改めて問題といて、A,B,Cの3問はさくっとできたのでよかった。まぁCで2WAしたけど。。本番でなくてよかった。  </p>
-<p>昨日寝る前にTL見てたらだいぶ荒れててCの解説が煽ってる？みたいな雰囲気だったみたい。  </p>
-<p><a href="https://img.atcoder.jp/abc170/editorial.pdf">editorial.pdf</a>  </p>
-<p>うーん、これはたしかに、捉えようによっては、という感じ。<br>
-このCが解けなかった人にこれはちょっと足りないんじゃない（A,Bが丁寧なだけに、余計に）と感じるし …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/06/15/misc_20200615#misc_20200615">
           Continue reading
         </a>
   </div>

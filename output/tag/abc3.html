@@ -121,6 +121,46 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/03/abc166#abc166">AtCoder Beginner Contest 166</a></h2>
+    <p>
+      Posted on 2020-05-03(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日はDまでできた！よかったー。<br>
+Dも1WAしたけど、単純なポカミスをやらかしてしまいなので、ロジック的には1発で通せた。<br>
+今回は運がよかったというのも大分あるけど、久々の4完でちょっと嬉しい＾＾  </p>
+<hr>
+<h3>A</h3>
+<p><a href="https://atcoder.jp/contests/abc166/tasks/abc166_a">A - A?C</a>  </p>
+<p>入力が "ABC" なら "ARC" を出力、 "ARC" なら "ABC" を出力するというもの。<br>
+言われた通りに実装して終わり。</p>
+<p><a href="https://atcoder.jp/contests/abc166/submissions/12706363">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ABC&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s2">&quot;ARC&quot;</span> <span class="k">else</span> <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;ARC&quot;</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h3>B</h3>
+<p><a href="https://atcoder.jp/contests/abc166/tasks/abc166_b">B - Trick or Treat</a>  </p>
+<p>お菓子を持っていないすぬけ君の人数を出力すればよい。<br>
+最初に 1~N のリストを作り、お菓子を配られた番号は抜いていき、最後に残った要素数を出力した。</p>
+<p><a href="https://atcoder.jp/contests/abc166/submissions/12726298">提出</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr …</span></code></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/05/03/abc166#abc166">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/02/abc165#abc165">AtCoder Beginner Contest 165</a></h2>
     <p>
       Posted on 2020-05-02(Sat) in <a href="../category/tech.html">Tech</a>
@@ -190,40 +230,6 @@ Cまでぱぱっと解けたので、今日はDまでいけるのでは！と挑
         <br>
         <a class="btn"
            href="../posts/2020/04/26/abc164#abc164">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/19/abc163#abc163">AtCoder Beginner Contest 163</a></h2>
-    <p>
-      Posted on 2020-04-19(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
-円の半径が与えられるので円周を出力せよという問題<br>
-題意通りに実装すればOK  </p>
-<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="kn">import</span> <span class="nn">math</span></span>
-<span class="code-line"><span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
-問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/19/abc163#abc163">
           Continue reading
         </a>
   </div>

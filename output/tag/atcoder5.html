@@ -121,6 +121,40 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/19/abc163#abc163">AtCoder Beginner Contest 163</a></h2>
+    <p>
+      Posted on 2020-04-19(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
+円の半径が与えられるので円周を出力せよという問題<br>
+題意通りに実装すればOK  </p>
+<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="kn">import</span> <span class="nn">math</span></span>
+<span class="code-line"><span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
+問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/19/abc163#abc163">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/14/practice_2020414#practice_2020414">競プロ Practice 日記</a></h2>
     <p>
       Posted on 2020-04-14(Tue) in <a href="../category/tech.html">Tech</a>
@@ -181,48 +215,6 @@ FizzBuzzの応用？<br>
         <br>
         <a class="btn"
            href="../posts/2020/04/12/abc162#abc162">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/04/05/abc161#abc161">AtCoder Beginner Contest 161</a></h2>
-    <p>
-      Posted on 2020-04-05(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>開催告知見落としていて、すっぽかしてしまった＞＜<br>
-問題は、事後チャレンジ。今回もCまでは解けたなぁ。これとれてたら、茶になれてたかも。。  </p>
-<hr>
-<h1>A</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_a">A - ABC Swap</a><br>
-swap と書いてあるけど、入力数もswapの仕方も固定のため、固定で出力してやれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11565924">提出</a>  </p>
-<p>AC</p>
-<h1>B</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_b">B - Popular Vote</a><br>
-問題分の説明通り実装してあげればよい。<br>
-選ぶ候補の中から最も得票数の少ないものが条件を満たすかどうかのみチェックすれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc161/submissions/11566296">提出</a>  </p>
-<p>最初、判定条件の「未満」の部分で誤りがあり、1WAしてしまった。<br>
-修正して無事AC</p>
-<h1>C</h1>
-<p><a href="https://atcoder.jp/contests/abc161/tasks/abc161_c">C - Replacing Integer</a>
-数値を置き換える操作を繰り返す。<br>
-ただしそのまま愚直に実装するとO(N)となってしまい、制約からLTEになってしまう。  </p>
-<p>実際のところ置き換えを繰り返す作業は一回modをとることで完了するため、O(1)になる。<br>
-そのうえで、求めた mod が条件を満たす最低値かどうかもう一度判定してやればよかった。</p>
-<p>入力例3が親切で</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="err">1000000000000000000 1 …</span></code></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/04/05/abc161#abc161">
           Continue reading
         </a>
   </div>

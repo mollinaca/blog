@@ -163,6 +163,39 @@ C、見ても全然ピンと来ず、解説みて、うーん、bit全探索・�
 </article>
 <article>
   <header>
+    <h2><a href="./posts/2020/07/05/sendgrid#sendgrid">自前ドメインメールサーバをSendgridへ移行中</a></h2>
+    <p>
+      Posted on 2020-07-05(Sun) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/sendgrid.html">SendGrid</a>,              <a href="./tag/zapier.html">Zapier</a>
+    </p>
+  </header>
+  <div>
+      <p><a href="https://blog.watarinohibi.tokyo/posts/2020/04/25/mailserver/#mailserver">メモ記事</a>  </p>
+<p>上記に書いたような手順で、自前でEC2インスタンス + Postfix を使ってSMTPサーバを、もう5年ぐらい？運用してる。<br>
+もともとやりはじめたきっかけは、社会人としてインフラエンジニアになりました！となってから、インフラ運用の知識をプライベートでも得るために、<br>
+自分でドメインとって、なんらかサービス運用してみようの題材として独自ドメインのメールサーバを建てようと思ったのがきっかけ。<br>
+気が付けば大抵のことはこのメールサーバでホストされるメールアドレスでやりくりするようになった一方で、EC2フリープランは1年間しか使えないので毎年引越ししてたり、<br>
+使ってるドメインが .tokyo なこともあり お名前.com から googledomains へ移管できなかったりで、いろいろ不満がたまってきた。  </p>
+<p>ここらでなんか新しいもの知ろうと思い、SendGrid を使ったサーバレスへ移行を計画。<br>
+いろいろ調べてみたところ、まさになものを SendGrid 自身が紹介しており、試してみることにした。  </p>
+<p><a href="https://sendgrid.kke.co.jp/docs/Tutorials/E_Receive_Mail/receive_mail.html">メールを受信する</a><br>
+<a href="https://sendgrid.kke.co.jp/blog/?p=9806">SendGridで受信したメールの内容をメールクライアントで確認する</a>  </p>
+<hr>
+<p>SendGrid は本来（？）、マーケティングやビジネスメールの一斉配信用のサービスだけど、受信もできる。<br>
+MXレコードやらなんやらの設定がいるので、当然DNS周りの知識もいるけど別に難しくはない。<br>
+今回はSendGridのアカウントを得るのにDNS認証（TXTレコード認証）を使い、新しくとったドメインのサブドメインで MX レコードを利用して、ドメインへ飛んできたメールを SendGrid で取得し、さらにそれを …</p>
+        <br>
+        <a class="btn"
+           href="./posts/2020/07/05/sendgrid#sendgrid">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/07/04/raspbberry#raspbberry">RasipberryPi 初期設定作業メモ</a></h2>
     <p>
       Posted on 2020-07-04(Sat) in <a href="./category/tech.html">Tech</a>
@@ -223,30 +256,6 @@ C、見ても全然ピンと来ず、解説みて、うーん、bit全探索・�
            href="./posts/2020/07/04/raspbberry#raspbberry">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/07/01/bookreading_20200701#bookreading_20200701">小川一水 天冥の標Ⅳ 機械じかけの子息たち</a></h2>
-    <p>
-      Posted on 2020-07-01(Wed) in <a href="./category/book.html">Book</a>
-
-          &#8226; Tagged with
-              <a href="./tag/shu ping.html">書評</a>,              <a href="./tag/xiao chuan yi shui.html">小川一水</a>
-    </p>
-  </header>
-  <div>
-      <p>アソシエイトのリンクがなんか作れない。。<br>
-<a href="https://www.amazon.co.jp/gp/product/B00BN6HRMY">天冥の標Ⅳ 機械じかけの子息たち Kindle版</a>  </p>
-<p>天命の標第4巻終わり。<br>
-今回は全編、1作目に登場した &lt;&lt;恋人たち&gt;&gt;(ラバーズ) が主役の物語。  </p>
-<p>&lt;&lt;恋人たち&gt;&gt;といえば、メニーメニーシープでもそうだったように娼婦。本編はほぼ最初から最後までセックスし続ける。のでちょっと読み進めるのがしんどかった。。<br>
-小川一水の小説で性描写がでてきたのって完全に天命の標で初めて見て、そんなにしつこいわけじゃない（官能小説じゃないからそりゃそうだ）んだけど、とはいえ全編ずっとセックスしてるとさすがにちょっとしんどくなって読むのも途中でダレてしまった。。  </p>
-<p>物語のキーとしては、メニーメニーシープでも活躍するラゴスが登場し、彼が&lt;&lt;恋人たち&gt;&gt;においていかに重要なポジションになるか、ということが触れられる。<br>
-前巻、アウレーリアの一統の物語の直後の話で、冥王斑の患者群こと &lt;&lt;救世群&gt;&gt;(プラクティス) の青年キリアンが主人公で、&lt;&lt;恋人たち&gt;&gt;の危機に巻き込まれていく。  </p>
-<p>天命の標の壮大なストーリーの中では重要な一篇だと思うけど、とはいえ話の内容が大部分性描写なのがやや胃もたれな感じ。それも前半はけっこうキツい内容で、読んでてちょっとしんどかったというのが正直なところ。  </p>
-<p>早く次の巻へ進もう。  </p>
   </div>
 </article>
 

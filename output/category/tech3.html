@@ -121,6 +121,40 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/06/03/python_dns#python_dns">python でネームサーバを指定して dig/nslookup をしたい(memo)</a></h2>
+    <p>
+      Posted on 2020-06-03(Wed) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/python.html">Python</a>,              <a href="../tag/dns.html">DNS</a>
+    </p>
+  </header>
+  <div>
+      <p>そこそこの数のレコードをそこそこの数のネームサーバに対して dig を行い、各レコードがそれぞれのNSで一致することを確認する、というタスクに対応するためにスクリプトを書こうと思い。<br>
+いままでの自分だったらシェルで書いちゃうんだけど、Pythonがやりたいんだという強い意志の元pythonで実装していく。  </p>
+<p>実装にあたり、pythonで NSを指定した dig/nslookup みたいなことをできるライブラリないしやり方を探したが、あまりいい検索結果がでなかったので、まとめた内容はまたQiitaに書こうかなというところ。</p>
+<hr>
+<h2>参考</h2>
+<p>検索すると上位に出てくるサイトなど。</p>
+<p><a href="http://sonickun.hatenablog.com/entry/2014/10/30/183541">Pythonでnslookup(ドメインの正引きと逆引き)する</a><br>
+個人ブログ。<br>
+<code>socket.gethostbyname</code>, <code>socket.gethostbyaddr</code> による実装。これらは名前解決の正引き、逆引きはできるけどNSの指定は（たぶん）できない。<br>
+そもそも <code>socket</code> は通信レイヤ用のモジュールであり、DNSを扱うためのモジュールではない。名前解決はできる。  </p>
+<p><a href="https://techacademy.jp/magazine/20868">Pythonで名前解決する方法を現役エンジニアが解説【初心者向け】</a><br>
+テックアカデミーの記事。<br>
+これも名前解決のやり方で、NSの指定まではフォローしていない。  </p>
+<p><code>socket.gethostbyaddr</code> と <code>dnspython</code> について触れている。名前解決だけならこれでもまぁ十分。<br>
+<code>dnspython</code> のサンプルコードが、MXレコードなのがちょっと気になるけど。。普通Aレコードがよいのでは …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/06/03/python_dns#python_dns">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/31/abc169#abc169">AtCoder Beginner Contest 169</a></h2>
     <p>
       Posted on 2020-05-31(Sun) in <a href="../category/tech.html">Tech</a>
@@ -193,31 +227,6 @@ Aの範囲が 0 から 10^18 …</p>
            href="../posts/2020/05/28/prom_20200528#prom_20200528">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/23/past3#past3">PAST3 受験しました</a></h2>
-    <p>
-      Posted on 2020-05-23(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/past.html">PAST</a>
-    </p>
-  </header>
-  <div>
-      <p>PAST3 リアルタイム受験しました。<br>
-目標だった初級がとれたのでとりあえずヨシ。  </p>
-<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_certificate.png" title="PAST3 Certificate">   </p>
-<blockquote>
-<p>検定の問題については、2020/6/6 18:00 JSTまで、口外することを禁止しております。口外した場合は、損害賠償などを請求する場合がありますので、ご注意ください。</p>
-</blockquote>
-<p>なので、この記事では問題には触れませんが、茶レベルで要求される基本的なプログラミング能力、データ構造と操作については、始めた当初よりだいぶできるようになったなを実感した。<br>
-A～Fまでで、だいたい3時間ほどかけてAC。次のG問題については、たぶん時間かけて（まだ2時間残ってたし）やれば十分できそうだなと感じたけど、今回はいったんここで切り上げ。<br>
-過去問として公開されたら、改めて挑戦しようと思う。</p>
-<p>引き続き、茶上位目指してがんばろう。  </p>
-<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_rate.png" title="AtCoder Rate">   </p>
   </div>
 </article>
 

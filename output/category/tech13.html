@@ -121,6 +121,49 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/04/05/testcontest_20200405#testcontest_20200405">AtCoder Judge System Update Test Contest 202004</a></h2>
+    <p>
+      Posted on 2020-04-05(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <hr>
+<p><a href="https://atcoder.jp/contests/judge-update-202004">Judge System Update Test Contest 202004</a> に参加しました。</p>
+<h1>A</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_a">A - Walking Takahashi</a><br>
+現在位置がLとRの間ならそのまま出力、Lより小さいならLを、Rより大きいならRを出力すれば良い</p>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/submissions/11582231">提出</a><br>
+ちょっと冗長だった。absは不要だな。<br>
+以下でOK</p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="ch">#!/usr/bin/env python3</span></span>
+<span class="code-line"><span class="c1"># -*- coding: utf-8 -*-</span></span>
+<span class="code-line"><span class="n">S</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">R</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="k">if</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="n">L</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">L</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">elif</span> <span class="n">R</span> <span class="o">&lt;</span> <span class="n">S</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">R</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="n">S</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>こっちのほうがシンプル。</p>
+<h1>B</h1>
+<p><a href="https://atcoder.jp/contests/judge-update-202004/tasks/judge_update_202004_b">B - Picking Balls</a><br>
+RとBの配列を持って置き …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/04/05/testcontest_20200405#testcontest_20200405">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/04/04/pelican-theme#pelican-theme">python-pelican に theme を導入する</a></h2>
     <p>
       Posted on 2020-04-04(Sat) in <a href="../category/tech.html">Tech</a>
@@ -175,34 +218,6 @@ THEME変数に、ディレクトリへのパスを指定してあげればよい
 <p>あまりいい文章がかけたとは思えないけど、自分なりに、今回の判決内容を読んで、解釈して、自分にどう影響があるかを考えて、書いてみた。<br>
 この行為に意味があったと思い、最高裁の判決に期待したい。</p>
 <p>なお、原本を郵送で提出する必要があり、それはまだしてないので忘れないように。。。</p>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/03/29/practice_20200329#practice_20200329">競プロ Practice 日記</a></h2>
-    <p>
-      Posted on 2020-03-29(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <h2>AOJ に挑戦した</h2>
-<p>競プロの基礎練習編として、AOJがお勧めされていたのでトライしてみた。  </p>
-<p><a href="http://judge.u-aizu.ac.jp/onlinejudge/">AIZU ONLINE JUDGE</a><br>
-<a href="http://judge.u-aizu.ac.jp/onlinejudge/user.jsp?id=hstn2#3">mystatus</a>  </p>
-<p>入門編である ITP1 について、ITP1_1からITP1_6 まで、24問を解いた。<br>
-ABCでA/Bは概ねできてるのでほとんど躓かずにできたけど、一部やったことないタイプの問題とかもあって面白かった。<br>
-ITP1は全部挑戦しようと思います。</p>
-<h2>AtCoder 本日の練習</h2>
-<p>ABC133のA～Cに挑戦。<br>
-A/Bはさくっとできて、Cにまたちょっと苦戦。<br>
-最初見た時に、全探索すると計算量が間に合わないから計算量落とす工夫がいるなと思い、その過程で場合分け等々を考えて計算していたけど、そもそも答えがWAしてしまい導出ロジックがうまく組めず。。  </p>
-<p>結果的に難しく考えすぎてて、条件に収まる範囲での全探索であれば十分for文で行けることがわかったので、それで実装しなおしてACできた。  </p>
-<p><a target=_blank href="https://blog.watarinohibi.tokyo/images/20200329_acp.png"><img src="https://blog.watarinohibi.tokyo/images/20200329_acp.png" width="500"></a><br>
-うーん、あとで考えればあーこれで良いやなんだけど、これをさくっと思いつきたい。  </p>
   </div>
 </article>
 

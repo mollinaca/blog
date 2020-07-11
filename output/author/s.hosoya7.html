@@ -121,6 +121,31 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/23/past3#past3">PAST3 受験しました</a></h2>
+    <p>
+      Posted on 2020-05-23(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/past.html">PAST</a>
+    </p>
+  </header>
+  <div>
+      <p>PAST3 リアルタイム受験しました。<br>
+目標だった初級がとれたのでとりあえずヨシ。  </p>
+<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_certificate.png" title="PAST3 Certificate">   </p>
+<blockquote>
+<p>検定の問題については、2020/6/6 18:00 JSTまで、口外することを禁止しております。口外した場合は、損害賠償などを請求する場合がありますので、ご注意ください。</p>
+</blockquote>
+<p>なので、この記事では問題には触れませんが、茶レベルで要求される基本的なプログラミング能力、データ構造と操作については、始めた当初よりだいぶできるようになったなを実感した。<br>
+A～Fまでで、だいたい3時間ほどかけてAC。次のG問題については、たぶん時間かけて（まだ2時間残ってたし）やれば十分できそうだなと感じたけど、今回はいったんここで切り上げ。<br>
+過去問として公開されたら、改めて挑戦しようと思う。</p>
+<p>引き続き、茶上位目指してがんばろう。  </p>
+<p><img alt="certificate" src="https://blog.watarinohibi.tokyo/images/20200523_rate.png" title="AtCoder Rate">   </p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/20/xfs#xfs">CentOS8 に xsf でフォーマットしたディスクをマウントする</a></h2>
     <p>
       Posted on 2020-05-20(Wed) in <a href="../category/tech.html">Tech</a>
@@ -186,47 +211,6 @@ WFHのおかげで自分も家にいるので、分担しつついいカンジ�
         <br>
         <a class="btn"
            href="../posts/2020/05/19/misc_20200519#misc_20200519">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/17/abc168#abc168">AtCoder Beginner Contest 168</a></h2>
-    <p>
-      Posted on 2020-05-17(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日は無事(?)3完。<br>
-Dはチャレンジしたけどまだ勝てないやつだった、無念ナリ。  </p>
-<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_a">A - ∴ (Therefore)</a><br>
-入力された数字の1桁目の値による条件分岐。<br>
-1桁目の値をとるやり方はいくつかあると思うけど、今回はパッと思いついた文字列スライスの末尾から取得した。<br>
-桁和とかだったら10の余剰とかいろいろあるけど、今回はこれで十分。  </p>
-<p><a href="https://atcoder.jp/contests/abc168/submissions/13293727">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc168_a</span><span class="o">.</span><span class="n">py</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
-<span class="code-line"><span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">6</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;pon&quot;</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;bon&quot;</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
-<span class="code-line">    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;hon&quot;</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<p><a href="https://atcoder.jp/contests/abc168/tasks/abc168_b">B - ... (Triple Dots)</a><br>
-KとSの長さを比較して、Kのほうが長ければSをそのまま、Sのほうが長ければK分だけ出力して末尾に ... を足す、という処理 …</p>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/17/abc168#abc168">
           Continue reading
         </a>
   </div>

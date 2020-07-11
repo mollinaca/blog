@@ -121,6 +121,47 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/07/11/aising2020#aising2020">エイシング プログラミング コンテスト 2020</a></h2>
+    <p>
+      Posted on 2020-07-11(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>本日のコンテストはABC相当ということで、出場してみた。またアカンかった。。  </p>
+<hr>
+<p><a href="https://atcoder.jp/contests/aising2020/tasks/aising2020_a">A - Number of Multiples</a><br>
+シンプルな全探索で終わり。O(1) でもできると思う。  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">aising2020_a</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">d</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="n">d</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span></span>
+<span class="code-line">        <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span></span>
+<span class="code-line"><span class="n">print</span> <span class="p">(</span><span class="n">ans</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p><a href="https://atcoder.jp/contests/aising2020/tasks/aising2020_b">B - An Odd Problem</a><br>
+同様に全探索。<br>
+リストのすべての要素に対して条件にマッチするか確認する。  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">aising2020_b</span><span class="p">.</span><span class="n">py</span><span class="w"></span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span></span>
+<span class="code-line"><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="../posts/2020/07/11/aising2020#aising2020">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/07/05/abc173#abc173">AtCoder Beginner Contest 173</a></h2>
     <p>
       Posted on 2020-07-05(Sun) in <a href="../category/tech.html">Tech</a>
@@ -199,53 +240,6 @@ C、見ても全然ピンと来ず、解説みて、うーん、bit全探索・�
         <br>
         <a class="btn"
            href="../posts/2020/06/27/abc172#abc172">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/06/21/abc171#abc171">AtCoder Beginner Contest 171</a></h2>
-    <p>
-      Posted on 2020-06-21(Sun) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>前回 170 は参加できなかったので、久々ABC。<br>
-今回はなんとかDまで解いて4完だったけど、ちょっとあぶなかったし凡ミスWAがあったので反省。。  </p>
-<hr>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_a">A - αlphabet</a></p>
-<p>入力が小文字なら <code>a</code> を、大文字なら <code>A</code> を出力せよ、という問題。<br>
-最初問題を読み間違えていて、小文字が入力されたらそれを大文字で、大文字が入力されたらそれを小文字で出力せよと読み間違えて、1WA。<br>
-落ち着こう。</p>
-<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_a</span><span class="p">.</span><span class="n">py</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="k">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">isupper</span><span class="p">():</span></span>
-<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;A&quot;</span><span class="p">)</span></span>
-<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
-<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;a&quot;</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<p>※三項演算子でもっと短く書けるね  </p>
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_b">B - Mix Juice</a>  </p>
-<p>ソートして先頭からK個の和を出力するだけ。  </p>
-<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a></p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_b</span><span class="p">.</span><span class="n">py</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
-<span class="code-line"><span class="n">l …</span></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/06/21/abc171#abc171">
           Continue reading
         </a>
   </div>

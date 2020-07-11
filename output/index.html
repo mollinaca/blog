@@ -121,6 +121,47 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/07/11/aising2020#aising2020">エイシング プログラミング コンテスト 2020</a></h2>
+    <p>
+      Posted on 2020-07-11(Sat) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/atcoder.html">AtCoder</a>,              <a href="./tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>本日のコンテストはABC相当ということで、出場してみた。またアカンかった。。  </p>
+<hr>
+<p><a href="https://atcoder.jp/contests/aising2020/tasks/aising2020_a">A - Number of Multiples</a><br>
+シンプルな全探索で終わり。O(1) でもできると思う。  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">aising2020_a</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">d</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">if</span> <span class="n">i</span><span class="o">%</span><span class="n">d</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span></span>
+<span class="code-line">        <span class="n">ans</span> <span class="o">+=</span> <span class="mi">1</span></span>
+<span class="code-line"><span class="n">print</span> <span class="p">(</span><span class="n">ans</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p><a href="https://atcoder.jp/contests/aising2020/tasks/aising2020_b">B - An Odd Problem</a><br>
+同様に全探索。<br>
+リストのすべての要素に対して条件にマッチするか確認する。  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">aising2020_b</span><span class="p">.</span><span class="n">py</span><span class="w"></span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">int</span><span class="p">(</span><span class="k">input</span><span class="p">())</span><span class="w"></span></span>
+<span class="code-line"><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">list …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="./posts/2020/07/11/aising2020#aising2020">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/07/09/misc_20200709#misc_20200709">雑記 20200709</a></h2>
     <p>
       Posted on 2020-07-09(Thu) in <a href="./category/diary.html">雑記</a>
@@ -191,39 +232,6 @@ C、見ても全然ピンと来ず、解説みて、うーん、bit全探索・�
         <br>
         <a class="btn"
            href="./posts/2020/07/05/abc173#abc173">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/07/05/sendgrid#sendgrid">自前ドメインメールサーバをSendgridへ移行中</a></h2>
-    <p>
-      Posted on 2020-07-05(Sun) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/sendgrid.html">SendGrid</a>,              <a href="./tag/zapier.html">Zapier</a>
-    </p>
-  </header>
-  <div>
-      <p><a href="https://blog.watarinohibi.tokyo/posts/2020/04/25/mailserver/#mailserver">メモ記事</a>  </p>
-<p>上記に書いたような手順で、自前でEC2インスタンス + Postfix を使ってSMTPサーバを、もう5年ぐらい？運用してる。<br>
-もともとやりはじめたきっかけは、社会人としてインフラエンジニアになりました！となってから、インフラ運用の知識をプライベートでも得るために、<br>
-自分でドメインとって、なんらかサービス運用してみようの題材として独自ドメインのメールサーバを建てようと思ったのがきっかけ。<br>
-気が付けば大抵のことはこのメールサーバでホストされるメールアドレスでやりくりするようになった一方で、EC2フリープランは1年間しか使えないので毎年引越ししてたり、<br>
-使ってるドメインが .tokyo なこともあり お名前.com から googledomains へ移管できなかったりで、いろいろ不満がたまってきた。  </p>
-<p>ここらでなんか新しいもの知ろうと思い、SendGrid を使ったサーバレスへ移行を計画。<br>
-いろいろ調べてみたところ、まさになものを SendGrid 自身が紹介しており、試してみることにした。  </p>
-<p><a href="https://sendgrid.kke.co.jp/docs/Tutorials/E_Receive_Mail/receive_mail.html">メールを受信する</a><br>
-<a href="https://sendgrid.kke.co.jp/blog/?p=9806">SendGridで受信したメールの内容をメールクライアントで確認する</a>  </p>
-<hr>
-<p>SendGrid は本来（？）、マーケティングやビジネスメールの一斉配信用のサービスだけど、受信もできる。<br>
-MXレコードやらなんやらの設定がいるので、当然DNS周りの知識もいるけど別に難しくはない。<br>
-今回はSendGridのアカウントを得るのにDNS認証（TXTレコード認証）を使い、新しくとったドメインのサブドメインで MX レコードを利用して、ドメインへ飛んできたメールを SendGrid で取得し、さらにそれを …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/07/05/sendgrid#sendgrid">
           Continue reading
         </a>
   </div>

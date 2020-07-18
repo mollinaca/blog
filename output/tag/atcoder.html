@@ -121,6 +121,32 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/07/18/practice_2020718#practice_2020718">競プロ練習日記</a></h2>
+    <p>
+      Posted on 2020-07-18(Sat) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>AtCoder,A問題とB問題がようやく全部埋まりました。<br>
+Streakは136、やりはじめてからおよそ4ヶ月が立ってようやくここまで。<br>
+もともとゆっくりペースのつもりだったけど、とりあえず継続はできてよかった。  </p>
+<p><img alt="pie" src="https://blog.watarinohibi.tokyo/images/20200718_ac.png" title="pie chart">   </p>
+<p><img alt="daily effort" src="https://blog.watarinohibi.tokyo/images/20200718_de.png" title="daily effott">   </p>
+<p>当初目標の、競技プログラミングの練習の習慣と基本的なやり方は一通りできて、A問題B問題はさっと解けるようになったので、改めてがんばって次のステップへ進んでいこう。<br>
+自分の練習問題まとめを作った。これらの典型問題を繰り返しといて、それぞれの典型問題の解き方、アルゴリズムを覚えてく作業を継続したい。<br>
+おんなじ問題を何回も解いたりするので、ProblemsのStreakは打ち止めかなーと思うけど、これもできそうならまだ解いてないC問題を使って継続できれば。  </p>
+<p>https://github.com/mollinaca/ac/blob/master/code/problems_memo.md  </p>
+<p>練習問題消化には、より問題数が多い yukicoder もよさそうだし、<br>
+PaizaのBランク以上にも挑戦したい。  </p>
+<p>引き続きがんばろう。</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/07/11/aising2020#aising2020">エイシング プログラミング コンテスト 2020</a></h2>
     <p>
       Posted on 2020-07-11(Sat) in <a href="../category/tech.html">Tech</a>
@@ -197,49 +223,6 @@ C、見ても全然ピンと来ず、解説みて、うーん、bit全探索・�
         <br>
         <a class="btn"
            href="../posts/2020/07/05/abc173#abc173">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/06/27/abc172#abc172">AtCoder Beginner Contest 172</a></h2>
-    <p>
-      Posted on 2020-06-27(Sat) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>本日は途中で妻帰宅等々のためABのみ。C以降はあとで復習しておこう。  </p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_a">A - Calc</a>  </p>
-<p>問題通りの出力をすれば良い。  </p>
-<p><a href="https://atcoder.jp/contests/abc172/submissions/14720828">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_a</span><span class="o">.</span><span class="n">py</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span></span>
-<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc172/tasks/abc172_b">B - Minor Change</a>  </p>
-<p>ちょっと考えて、要するにSとTで文字が違う回数をカウントすればよいので、<br>
-<code>set(t)</code> をループして <code>S</code> と <code>T</code> で文字数カウントを～～みたいなことを考えたけど、ぜんぜんちげーなってなって、<br>
-よく考えたら、制約で "SとTの長さは等しい" なので、1文字目から最後の文字まで順に比較して違ったらインクリメントで良いということに気付いて、その通り実装。  </p>
-<p><a href="https://atcoder.jp/contests/abc172/submissions/14732450">提出</a>  </p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc172_b</span><span class="o">.</span><span class="n">py</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="n">t</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
-<span class="code-line"><span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span></span>
-<span class="code-line"><span class="k">for</span> <span class="n">i …</span></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/06/27/abc172#abc172">
           Continue reading
         </a>
   </div>

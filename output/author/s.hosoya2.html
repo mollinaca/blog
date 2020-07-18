@@ -121,6 +121,48 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/07/05/abc173#abc173">AtCoder Beginner Contest 173</a></h2>
+    <p>
+      Posted on 2020-07-05(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>うーん、精進不足！<br>
+今日もAとBの2完で終わってしまった。<br>
+C、見ても全然ピンと来ず、解説みて、うーん、bit全探索・・・？という感じでそれでもピンと来ず。<br>
+こういう感の鈍さは完全に経験不足なんだろうな。もっと精進詰まないと、このレベル（茶上位～緑ぐらい？）は歯が立たないと感じた。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc173/tasks/abc173_a">A - Payment</a><br>
+これもちょっと考えた。<br>
+下3桁のみに注目して、<br>
+<em> 0ならば0を出力<br>
+</em> 0でないなら1000から引いた値を出力<br>
+で解決した。  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc173_a</span><span class="o">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="nb">print</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">::])</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="nb">print</span> <span class="p">(</span><span class="mi">1000</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">::]))</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>すっきり書いたけど、ここに至るまでけっこうぐしゃぐしゃ書いて、4分ぐらいかかった。  </p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc173/tasks/abc173_b">B - Judge Status Summary</a></p>
+<p>これは考えなかった。<br>
+要素が決まってるので …</p>
+        <br>
+        <a class="btn"
+           href="../posts/2020/07/05/abc173#abc173">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/07/05/sendgrid#sendgrid">自前ドメインメールサーバをSendgridへ移行中</a></h2>
     <p>
       Posted on 2020-07-05(Sun) in <a href="../category/tech.html">Tech</a>
@@ -214,30 +256,6 @@ MXレコードやらなんやらの設定がいるので、当然DNS周りの知
            href="../posts/2020/07/04/raspbberry#raspbberry">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/07/01/bookreading_20200701#bookreading_20200701">小川一水 天冥の標Ⅳ 機械じかけの子息たち</a></h2>
-    <p>
-      Posted on 2020-07-01(Wed) in <a href="../category/book.html">Book</a>
-
-          &#8226; Tagged with
-              <a href="../tag/shu ping.html">書評</a>,              <a href="../tag/xiao chuan yi shui.html">小川一水</a>
-    </p>
-  </header>
-  <div>
-      <p>アソシエイトのリンクがなんか作れない。。<br>
-<a href="https://www.amazon.co.jp/gp/product/B00BN6HRMY">天冥の標Ⅳ 機械じかけの子息たち Kindle版</a>  </p>
-<p>天命の標第4巻終わり。<br>
-今回は全編、1作目に登場した &lt;&lt;恋人たち&gt;&gt;(ラバーズ) が主役の物語。  </p>
-<p>&lt;&lt;恋人たち&gt;&gt;といえば、メニーメニーシープでもそうだったように娼婦。本編はほぼ最初から最後までセックスし続ける。のでちょっと読み進めるのがしんどかった。。<br>
-小川一水の小説で性描写がでてきたのって完全に天命の標で初めて見て、そんなにしつこいわけじゃない（官能小説じゃないからそりゃそうだ）んだけど、とはいえ全編ずっとセックスしてるとさすがにちょっとしんどくなって読むのも途中でダレてしまった。。  </p>
-<p>物語のキーとしては、メニーメニーシープでも活躍するラゴスが登場し、彼が&lt;&lt;恋人たち&gt;&gt;においていかに重要なポジションになるか、ということが触れられる。<br>
-前巻、アウレーリアの一統の物語の直後の話で、冥王斑の患者群こと &lt;&lt;救世群&gt;&gt;(プラクティス) の青年キリアンが主人公で、&lt;&lt;恋人たち&gt;&gt;の危機に巻き込まれていく。  </p>
-<p>天命の標の壮大なストーリーの中では重要な一篇だと思うけど、とはいえ話の内容が大部分性描写なのがやや胃もたれな感じ。それも前半はけっこうキツい内容で、読んでてちょっとしんどかったというのが正直なところ。  </p>
-<p>早く次の巻へ進もう。  </p>
   </div>
 </article>
 

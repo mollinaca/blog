@@ -121,6 +121,36 @@
 
 <article>
   <header>
+    <h2><a href="../posts/2020/05/10/abc167#abc167">AtCoder Beginner Contest 167</a></h2>
+    <p>
+      Posted on 2020-05-10(Sun) in <a href="../category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="../tag/atcoder.html">AtCoder</a>,              <a href="../tag/abc.html">ABC</a>,              <a href="../tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>今日は2問だけ。。<br>
+復習しよう。  </p>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc167/tasks/abc167_a">A - Registration</a><br>
+Tから一文字削ったものがSと一致すればよい  </p>
+<p><a href="https://atcoder.jp/contests/abc167/submissions/13021806">提出</a></p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc167/tasks/abc167_b">B - Easy Linear Programming</a><br>
+ABCの順に並べ、K が A以下、A以上B以下、B以上C以下の3パターンで場合分けして求めればよい。  </p>
+<p><img alt="b" src="https://blog.watarinohibi.tokyo/images/20200510_abc167_b.jpg" title="b">    </p>
+<p><a href="https://atcoder.jp/contests/abc167/submissions/13041585">提出</a>  </p>
+<p>条件書き間違えて1WA...  </p>
+<hr>
+<p>Cをちょっと眺めたけど、今日は事情ありここで離脱。<br>
+たぶんCもできなかっただろうなこれ。。<br>
+別途復習しておこう。</p>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../posts/2020/05/09/pot4#pot4">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(4)</a></h2>
     <p>
       Posted on 2020-05-09(Sat) in <a href="../category/tech.html">Tech</a>
@@ -196,51 +226,6 @@
         <br>
         <a class="btn"
            href="../posts/2020/05/07/pot3#pot3">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../posts/2020/05/06/pot2#pot2">AWS EC2 と GitHub Pages で作る 無料ハニーポット&公開ページ（作成中）(2)</a></h2>
-    <p>
-      Posted on 2020-05-06(Wed) in <a href="../category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="../tag/aws.html">AWS</a>,              <a href="../tag/ec2.html">EC2</a>,              <a href="../tag/githubpages.html">GitHubPages</a>,              <a href="../tag/python.html">Python</a>,              <a href="../tag/hanipotsuto.html">ハニーポット</a>
-    </p>
-  </header>
-  <div>
-      <p><a href="https://blog.watarinohibi.tokyo/posts/2020/05/05/pot/#pot">昨日</a>の続き。  </p>
-<h2>現在のページ</h2>
-<p><img alt="current_index" src="https://blog.watarinohibi.tokyo/images/20200506_pot_current_index.png" title="current_index">   </p>
-<p>JSをがりがり書いて、ログを集計してテーブルで表示できるようになった。<br>
-この表示処理は、ページを onload したタイミングで実行される JavaScript で実行される。<br>
-JSのソースは <a href="https://github.com/mollinaca/pot/blob/master/docs/src/js/index.js">こちら</a></p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1">// index.js</span></span>
-<span class="code-line"><span class="c1">// called at last of index.html &lt;/body&gt;</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"><span class="c1">// Global Variables</span></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"><span class="kr">const</span> <span class="nx">API_ENDPOINT</span> <span class="o">=</span> <span class="s1">&#39;https://mollinaca.github.io/pot/api/&#39;</span></span>
-<span class="code-line"><span class="c1">//latestFilename = undefined;</span></span>
-<span class="code-line"><span class="c1">//let latest_log = undefined;</span></span>
-<span class="code-line"></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"><span class="c1">// Functions</span></span>
-<span class="code-line"><span class="c1">//------------------------</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="c1">// window.onload initialize</span></span>
-<span class="code-line"><span class="kd">function</span> <span class="nx">init</span><span class="p">()</span> <span class="p">{</span></span>
-<span class="code-line"><span class="c1">//    console.log (&quot;init()&quot;)</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="kd">let</span> <span class="nx">metadata</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest …</span></span></pre></div>
-        <br>
-        <a class="btn"
-           href="../posts/2020/05/06/pot2#pot2">
           Continue reading
         </a>
   </div>

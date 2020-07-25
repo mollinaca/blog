@@ -121,6 +121,58 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/04/25/mailserver#mailserver">自前メールサーバの構築手順メモ</a></h2>
+    <p>
+      Posted on 2020-04-25(Sat) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/postfix.html">Postfix</a>,              <a href="./tag/linux.html">Linux</a>,              <a href="./tag/aws.html">AWS</a>,              <a href="./tag/amazonlinux.html">AmazonLinux</a>
+    </p>
+  </header>
+  <div>
+      <p>EC2で運用してる自前メールサーバ(受信＆転送専用)の構築手順のメモ<br>
+https://github.com/mollinaca/til/blob/master/mail_server/メールサーバ構築メモ.md  </p>
+<hr>
+<h1>メールサーバ構築</h1>
+<h2>用途、前提</h2>
+<ul>
+<li>自前ドメインのメール受信用SMTPサーバの構築<ul>
+<li>自前ドメインで受けたメールを、専用のgmailへ転送する</li>
+</ul>
+</li>
+<li>上記以外に、GIPを持ってるサーバとしてちょこちょこ利用する</li>
+<li>なるべく AWS FreeTrial の範囲で<ul>
+<li>1年ごとの使い捨て</li>
+</ul>
+</li>
+</ul>
+<h2>EC2インスタンスを作成</h2>
+<ul>
+<li>AWSアカウントを作成<ul>
+<li>アカウント作成</li>
+<li>2FA設定</li>
+<li>ログイン・作業用IAM、API実行用IAM作成<ul>
+<li>作業用IAM: EC2, S3, へのフルアクセス権限</li>
+<li>作業用IAMでログイン</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>EC2インスタンス作成<ul>
+<li>AmazonLinux2</li>
+<li>SecurityGroup作成、アタッチ<ul>
+<li>inbound: sshログイン用ポート, smtp/25 を解法</li>
+<li>outbound: ICMP …</li></ul></li></ul></li></ul>
+        <br>
+        <a class="btn"
+           href="./posts/2020/04/25/mailserver#mailserver">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/04/21/truth_and_fact#truth_and_fact">真実と事実</a></h2>
     <p>
       Posted on 2020-04-21(Tue) in <a href="./category/social.html">Social</a>
@@ -194,40 +246,6 @@ WFHには、新たなリスク回避のメリットが加わったことから�
         <br>
         <a class="btn"
            href="./posts/2020/04/20/aftercovid19#aftercovid19">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/04/19/abc163#abc163">AtCoder Beginner Contest 163</a></h2>
-    <p>
-      Posted on 2020-04-19(Sun) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/atcoder.html">AtCoder</a>,              <a href="./tag/abc.html">ABC</a>,              <a href="./tag/jing ji p.html">競技プログラミング</a>
-    </p>
-  </header>
-  <div>
-      <p>今日はCまでできたけど、エラー多発により unrated になってしまった、また茶に上がれなかった ＞＜  <br>
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【ご報告】<br>・今回のUnratedは、サーバー負荷により問題が発生し、問題文を長時間閲覧出来ないユーザが多数存在したためです。こちらは現在原因を調査中です。<br>・IE(Internal Error)がジャッジ結果として表示された不具合は、現在は解決しております。こちらは負荷とは関係がありません。</p>&mdash; AtCoder (@atcoder) <a href="https://twitter.com/atcoder/status/1251860015448592384?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<h2>A</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_a">A - Circle Pond</a><br>
-円の半径が与えられるので円周を出力せよという問題<br>
-題意通りに実装すればOK  </p>
-<p>ちなみにpythonでは、π は math にあるので、以下のように実装すればよい</p>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="kn">import</span> <span class="nn">math</span></span>
-<span class="code-line"><span class="k">print</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span></span>
-<span class="code-line"></code></pre></div>
-
-
-<h2>B</h2>
-<p><a href="https://atcoder.jp/contests/abc163/tasks/abc163_b">B - Homework</a><br>
-問題文いろいろ書いてあるけど、要するに 2行目で入力される数字の和が n 以下ならば差を出力、大きければ …</p>
-        <br>
-        <a class="btn"
-           href="./posts/2020/04/19/abc163#abc163">
           Continue reading
         </a>
   </div>

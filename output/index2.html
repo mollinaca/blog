@@ -121,6 +121,41 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/07/09/misc_20200709#misc_20200709">雑記 20200709</a></h2>
+    <p>
+      Posted on 2020-07-09(Thu) in <a href="./category/diary.html">雑記</a>
+
+          &#8226; Tagged with
+              <a href="./tag/diary.html">雑記</a>,              <a href="./tag/integromat.html">Integromat</a>
+    </p>
+  </header>
+  <div>
+      <p><img alt="wine" src="https://blog.watarinohibi.tokyo/images/20200709_wine.jpg" title="wine">   </p>
+<h1>妻は妊娠後期</h1>
+<p>長かった妻の妊婦生活も残り2ヶ月ほどへ。<br>
+発覚からつわりのときは2月～3月ぐらいで寒さがつらかったけど、梅雨を迎えて湿気はじめじめ、蒸し暑い日々に。<br>
+お腹のあかちゃんは1000gを超えて、いよいよここからラストスパートで残り2ヶ月で一気に3000gまで増えるとか。現在でもだいぶお腹おっきくなってきたというのに、ここからさらに今の3倍になるとのことで大丈夫なのかちょっと心配でもあるけど、あと少しがんばってもらおう。<br>
+自分が在宅になったおかげで家のことはほとんど自分でできる。7月の残り14営業日ぐらいを出勤してもらったら、もう8月からはお休みにはいってもらうので、ほんとにあとすこし。<br>
+出産予定は9月末で、産まれてなんやかんやバタバタしたらもうあっというまに寒くなるんだろうな。そのタイミングで引越し予定。  </p>
+<p>ほんとにあっというまの1年間だった。まだ半ばだけどもう年末までのスケジュールがくっきり見えてる。</p>
+<h2>出産前最後のデートしてきた</h2>
+<p>というわけで、以前親族から頂いたギフトチケットを使って、椿山荘のディナーを楽しんできた。<br>
+一生のうち何度も味わえるものじゃない内容で、ほんとに美味しかったしほんとに満喫できた。子どもが生まれると、こうやって二人で出かけられるのはきっとだいぶしばらく先になるんだろうけど、それでもきっと楽しいことたくさんあると思えるからきっと大丈夫。  </p>
+<h1>ABC Pie Chart</h1>
+<p>なんやかんや続けてるStreakが 127days となり、およそ4か月。<br>
+わりと脳死でAB問題を解き続けてるだけだけど、現在 A 問題は 169/173、B問題は 161/173 でほとんど終わり。<br>
+週末に終わらせてしまおうかなぐらいのところまできた。<br>
+これが終わったら、C問題やARCの問題にも順次挑戦していこう。典型アルゴリズムの練習も忘れずに …</p>
+        <br>
+        <a class="btn"
+           href="./posts/2020/07/09/misc_20200709#misc_20200709">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/07/05/abc173#abc173">AtCoder Beginner Contest 173</a></h2>
     <p>
       Posted on 2020-07-05(Sun) in <a href="./category/tech.html">Tech</a>
@@ -189,71 +224,6 @@ MXレコードやらなんやらの設定がいるので、当然DNS周りの知
         <br>
         <a class="btn"
            href="./posts/2020/07/05/sendgrid#sendgrid">
-          Continue reading
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/07/04/raspbberry#raspbberry">RasipberryPi 初期設定作業メモ</a></h2>
-    <p>
-      Posted on 2020-07-04(Sat) in <a href="./category/tech.html">Tech</a>
-
-          &#8226; Tagged with
-              <a href="./tag/linux.html">Linux</a>,              <a href="./tag/raspberrypi.html">RaspberryPi</a>,              <a href="./tag/raspbian.html">Raspbian</a>,              <a href="./tag/python.html">python</a>
-    </p>
-  </header>
-  <div>
-      <p>OS起動後からの個人設定に纏わるメモ  </p>
-<p><img alt="raspbian" src="https://blog.watarinohibi.tokyo/images/20200704_imager.png" title="raspbian">   </p>
-<h1>初回起動</h1>
-<h2>デスクトップ接続で初期設定</h2>
-<ul>
-<li>
-<p>Welcome to the Raspberry Pi Dsiktop!<br>
- → Next</p>
-</li>
-<li>
-<p>Set Country<br>
-  Country: Japan<br>
-  Language: Japanese<br>
-  Timezone: Tokyo  </p>
-</li>
-<li>
-<p>Change Passwd<br>
- → pi ユーザのパスワードを変更  </p>
-</li>
-<li>
-<p>Set Up Screen<br>
- → 大丈夫ならそのまま Next  </p>
-</li>
-<li>
-<p>Wireless Network<br>
- → 任意のWifiと接続  </p>
-</li>
-<li>
-<p>Update Software<br>
- → Next  </p>
-</li>
-</ul>
-<p>上記で初期セットアップが完了するので reboot を行う。  </p>
-<h1>piユーザでログイン</h1>
-<ul>
-<li>ターミナルを起動  </li>
-<li>以下を設定していく  </li>
-</ul>
-<div class="highlight"><pre><span class="code-line"><span></span><code><span class="c1"># root 初期設定項目 #</span></span>
-<span class="code-line"></span>
-<span class="code-line">$ apt-get update</span>
-<span class="code-line">$ apt-get upgrade</span>
-<span class="code-line"> → 直前でアップデートを実施してるため何も変更されない</span>
-<span class="code-line"></span>
-<span class="code-line">$ apt-get install git</span>
-<span class="code-line"> → 既にインストール済み …</span></pre></div>
-        <br>
-        <a class="btn"
-           href="./posts/2020/07/04/raspbberry#raspbberry">
           Continue reading
         </a>
   </div>

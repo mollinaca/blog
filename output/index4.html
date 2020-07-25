@@ -121,6 +121,53 @@
 
 <article>
   <header>
+    <h2><a href="./posts/2020/06/21/abc171#abc171">AtCoder Beginner Contest 171</a></h2>
+    <p>
+      Posted on 2020-06-21(Sun) in <a href="./category/tech.html">Tech</a>
+
+          &#8226; Tagged with
+              <a href="./tag/atcoder.html">AtCoder</a>,              <a href="./tag/abc.html">ABC</a>,              <a href="./tag/jing ji p.html">競技プログラミング</a>
+    </p>
+  </header>
+  <div>
+      <p>前回 170 は参加できなかったので、久々ABC。<br>
+今回はなんとかDまで解いて4完だったけど、ちょっとあぶなかったし凡ミスWAがあったので反省。。  </p>
+<hr>
+<h2>A</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_a">A - αlphabet</a></p>
+<p>入力が小文字なら <code>a</code> を、大文字なら <code>A</code> を出力せよ、という問題。<br>
+最初問題を読み間違えていて、小文字が入力されたらそれを大文字で、大文字が入力されたらそれを小文字で出力せよと読み間違えて、1WA。<br>
+落ち着こう。</p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a>  </p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_a</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">s</span> <span class="o">=</span> <span class="k">input</span><span class="p">()</span></span>
+<span class="code-line"><span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">isupper</span><span class="p">():</span></span>
+<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;A&quot;</span><span class="p">)</span></span>
+<span class="code-line"><span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">    <span class="n">print</span> <span class="p">(</span><span class="ss">&quot;a&quot;</span><span class="p">)</span></span>
+<span class="code-line"></code></pre></div>
+
+
+<p>※三項演算子でもっと短く書けるね  </p>
+<h2>B</h2>
+<p><a href="https://atcoder.jp/contests/abc171/tasks/abc171_b">B - Mix Juice</a>  </p>
+<p>ソートして先頭からK個の和を出力するだけ。  </p>
+<p><a href="https://atcoder.jp/contests/abc171/submissions/14535550">提出</a></p>
+<div class="highlight"><pre><span class="code-line"><span></span><code><span class="n">abc171_b</span><span class="p">.</span><span class="n">py</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">n</span><span class="p">,</span><span class="n">m</span> <span class="o">=</span> <span class="k">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="k">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span></span>
+<span class="code-line"><span class="n">l …</span></span></pre></div>
+        <br>
+        <a class="btn"
+           href="./posts/2020/06/21/abc171#abc171">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./posts/2020/06/21/misc_20200621#misc_20200621">雑記 20200621</a></h2>
     <p>
       Posted on 2020-06-21(Sun) in <a href="./category/diary.html">雑記</a>
@@ -190,32 +237,6 @@ Sendgridで受信してそれをGmailに飛ばすみたいな組み合わせが�
            href="./posts/2020/06/15/misc_20200615#misc_20200615">
           Continue reading
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./posts/2020/06/09/bookreading_20200609#bookreading_20200609">小川一水 天冥の標Ⅲ</a></h2>
-    <p>
-      Posted on 2020-06-09(Tue) in <a href="./category/book.html">Book</a>
-
-          &#8226; Tagged with
-              <a href="./tag/shu ping.html">書評</a>,              <a href="./tag/xiao chuan yi shui.html">小川一水</a>
-    </p>
-  </header>
-  <div>
-      <iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="https://rcm-fe.amazon-adsystem.com/e/cm?ref=qf_sp_asin_til&t=watarinohibi-22&m=amazon&o=9&p=8&l=as1&IS2=1&detail=1&asins=B00BN6HRK6&linkId=d23ba71db3d9539a02ab0900def7867c&bc1=ffffff&lt1=_top&fc1=333333&lc1=0066c0&bg1=ffffff&f=ifr">
-</iframe>
-
-<p>天冥の標Ⅲ 読み終わったのでめもめも。<br>
-ⅡとⅠの間の時系列で、Ⅰでも重要な役割を占める酸素いらず（アンチ・オックス）の宇宙史における当代主人公の物語と、天冥の標における重要な要素である冥王斑とそれを齎したミスチフと、ミスチフから人類を守らんとするダダーの戦いの一幕が描かれる。  </p>
-<p>ⅠとⅡは物語の終わりと始まりという感じで、キーワードレベルでしかリンクしていなかったけど、今回の間を埋める物語でいろんなファクターが繋がってきた。<br>
-とはいえ、Ⅰに登場したけどⅡ、Ⅲにはでてきないものもまだまだあるので、間の歴史がこれからどう埋められていくのか、ますます楽しみになる。</p>
-<hr>
-<p>面白かった！という感想を書きたいんだけど、言葉がでてこない。</p>
-<hr>
-<p>typoかも。<br>
-<img alt="tenmei" src="https://blog.watarinohibi.tokyo/images/20200609_tenmei.png" title="typo?">   </p>
   </div>
 </article>
 
